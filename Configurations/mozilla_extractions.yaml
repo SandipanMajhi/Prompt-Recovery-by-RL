@@ -1,0 +1,24 @@
+Experiment Name: "Mozilla_Extraction"
+
+output_folder: "Datasets/Generic_Extractions/Mozilla_R4/"
+req_path: 
+ - "https://wiki.mozilla.org/Browser_History"
+
+tc_path: "https://www-archive.mozilla.org/quality/browser/front-end/testcases/history/"
+
+doc_type: "Mozilla_R4"
+
+is_md_make: false
+
+req_md: "Datasets/Generic_Extractions/Mozilla_R4/req.md"
+tc_md: "Datasets/Generic_Extractions/Mozilla_R4/tc.md"
+req_granularity: 7
+
+req_json: "Datasets/Generic_Extractions/Mozilla_R4/req.json"
+tc_links: "Datasets/Generic_Extractions/Mozilla_R4/tc_links.json"
+tc_json: "Datasets/Generic_Extractions/Mozilla_R4/tc.json"
+
+tc_req_map_name: "tc_req.json"
+reference_map_name: "references.json"
+
+hf_dataset_path: "Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4.hf"

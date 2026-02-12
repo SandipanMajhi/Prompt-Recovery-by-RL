@@ -1,0 +1,29 @@
+Experiment_Name: "Deepseek_Extractions_doc_1"
+
+output_folder: "Datasets/DeepSeek_Extractions/"
+req_img_folder: "Data/AVRCP_v1.6.3"
+tc_img_folder: "Data/AVRCP.TS_.p23"
+
+is_md_make: false
+is_md_clean: false
+
+granularity: 7
+
+req_md: "Datasets/DeepSeek_Extractions/Deepseek_Extractions_doc_1/req.md"
+tc_md: "Datasets/DeepSeek_Extractions/Deepseek_Extractions_doc_1/tc_markdown_prompt.md"
+tc_md_parent_dir: "Datasets/DeepSeek_Extractions/Deepseek_Extractions_doc_1/"
+
+req_json: "Datasets/DeepSeek_Extractions/Deepseek_Extractions_doc_1/req.json"
+tc_json: "Datasets/DeepSeek_Extractions/Deepseek_Extractions_doc_1/tc.json"
+
+req_references: "Datasets/DeepSeek_Extractions/Deepseek_Extractions_doc_1/req_references.json"
+
+clean_req_md: "Datasets/DeepSeek_Extractions/Deepseek_Extractions_doc_1/clean_req.md"
+clean_tc_md: "Datasets/DeepSeek_Extractions/Deepseek_Extractions_doc_1/clean_tc.md"
+
+tc_extraction_md: "Datasets/Generic_Extractions/tc.md"
+
+
+
+
+

@@ -1,0 +1,19 @@
+Experiment Name: "Generic_Extractions_doc_BAP"
+
+output_folder: "Datasets/Generic_Extractions/BAP/"
+req_pdf_path: "Data/BAP_v1.0.2.pdf"
+tc_pdf_path: "Data/BAP.TS.p10.pdf"
+
+doc_type: "BAP"
+
+is_md_make: false
+
+req_md: "req.md"
+tc_md: "tc.md"
+req_granularity: 7
+
+req_json: "req.json"
+tc_json: "tc.json"
+
+tc_req_map_name: "tc_req.json"
+reference_map_name: "references.json"

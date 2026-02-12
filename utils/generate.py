@@ -1,7 +1,7 @@
 from typing import List, Dict, Any
 from sentence_transformers import SentenceTransformer
 from accelerate import init_empty_weights, infer_auto_device_map
-from transformers import AutoTokenizer, AutoModelForCausalLM, AutoConfig, pipeline
+from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModel
 from peft import LoraConfig, TaskType, get_peft_model, PeftModelForCausalLM
 from dataclasses import dataclass
 from transformers import BitsAndBytesConfig, set_seed
@@ -10,8 +10,10 @@ import requests
 import re
 import ollama
 from typing import Union
-from vllm import LLM, SamplingParams
-from vllm.lora.request import LoRARequest
+import os
+import json
+
+
 
 
 quantization_config = BitsAndBytesConfig(
@@ -111,6 +113,12 @@ class OClientModel:
         self.seed = seed
 
     def __call__(self, prompt : str, **kwargs):
+
+        system_prompt = ''
+
+        if "system_prompt" in kwargs:
+            system_prompt = kwargs["system_prompt"]
+
         if "temperature" in kwargs:
             temperature = float(kwargs["temperature"])
         else:
@@ -126,19 +134,19 @@ class OClientModel:
         
 
         if top_p is None and temperature is None:
-            response = self.client.generate(model=self.model_name, prompt=prompt)
+            response = self.client.generate(model=self.model_name, prompt=prompt, system=system_prompt)
         
         if top_p is None and temperature is not None:
             response = self.client.generate(model = self.model_name, 
                                             prompt=prompt, 
                                             options= {"temperature" : temperature,
-                                                      "seed" : self.seed})
+                                                      "seed" : self.seed}, system=system_prompt)
             
         if top_p is not None and temperature is None:
             response = self.client.generate(model = self.model_name, 
                                             prompt=prompt, 
                                             options= {"top_p" : top_p,
-                                                      "seed": self.seed})
+                                                      "seed": self.seed}, system=system_prompt)
             
         if top_p is not None and temperature is not None:
             response = self.client.generate(model = self.model_name, 
@@ -147,7 +155,7 @@ class OClientModel:
                                                       "temperature" : temperature,
                                                       "seed" : self.seed
                                                     }
-                                            )
+                                            , system=system_prompt)
 
         if "deepseek" in self.model_name:
             response = re.sub(r"<think>.*?</think>", "", response.response, flags=re.DOTALL).strip()
@@ -256,50 +264,58 @@ class HCLientModel:
         
         return output
 
+class OCR:
+    def __init__(self, model_name : str = "deepseek-ai/DeepSeek-OCR"):
+        self.model_name = model_name
 
-
-class VLLMClient:
-    def __init__(self, model_name: str, lora_path: str = None):
-        # Pass the lora_path directly to the LLM constructor
-        self.llm = LLM(
-            model=model_name,
-            enable_lora=True,
-            max_loras=1, # Number of LoRAs that can be loaded simultaneously
-            max_lora_rank=64, # Maximum LoRA rank (usually 64 or 128)
-            trust_remote_code=True,
-            quantization="bitsandbytes"
-        )
-        self.lora_path = lora_path
-
-    def __call__(self, prompt: str, config):
-        # Create a LoRARequest object to specify the adapter to use for this request.
-        lora_request = LoRARequest(
-            lora_path=self.lora_path,
-            lora_name="QGen_adapter", # A name to identify the adapter
-            lora_int_id=1
-        )
-
-        system_prompt = "You are an helpful assistant who helps in solving a task according to given instruction."
-
-        messages = [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": prompt}
-        ]
-
-        tokenizer = self.llm.get_tokenizer(lora_request=lora_request)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+        self.model = AutoModel.from_pretrained(model_name, 
+                                               _attn_implementation='eager',
+                                               trust_remote_code=True, 
+                                               use_safetensors=True)
         
-        # Use the tokenizer to apply the model's specific chat template.
-        # This converts the list of dictionaries into a single string.
-        formatted_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        self.model = self.model.eval().cuda().to(torch.bfloat16)
+
+
+    def __call__(self, image_path : str, output_dir : str):
+        prompt = f""""{image_path}" Convert the document to markdown."""
         
+        # infer(self, tokenizer, prompt='', image_file='', output_path = ' ', base_size = 1024, image_size = 640, crop_mode = True, test_compress = False, save_results = False):
 
-        sampling_params = SamplingParams(**config.__dict__)
+        # Tiny: base_size = 512, image_size = 512, crop_mode = False
+        # Small: base_size = 640, image_size = 640, crop_mode = False
+        # Base: base_size = 1024, image_size = 1024, crop_mode = False
+        # Large: base_size = 1280, image_size = 1280, crop_mode = False
 
-        # Pass the lora_request to the generate method.
-        outputs = self.llm.generate(
-            prompts=formatted_prompt,
-            sampling_params=sampling_params,
-            lora_request=lora_request
-        )
+        # Gundam: base_size = 1024, image_size = 640, crop_mode = True
 
-        return outputs
+        res = self.model.infer(self.tokenizer, 
+                               prompt=prompt, 
+                               image_file=image_path, 
+                               output_path = output_dir, 
+                               base_size = 1024, 
+                               image_size = 640, 
+                               crop_mode=True, 
+                               save_results = True, 
+                               test_compress = True)
+            
+
+class deepseek_ocr:
+    def __init__(self, port : str):
+        self.port = port
+
+
+    def __call__(self, image_path : str, instruction : str):
+        url = f"http://localhost:{self.port}/api/generate"
+        data = {
+            "model": "deepseek-ocr:3b",
+            "prompt": f'{image_path} {instruction}',
+            "stream": True
+        }
+
+        response = requests.post(url, json=data)
+
+        if response.status_code == 200:
+            print(response.json()['response'])
+        else:
+            print(f"Error: {response.status_code}, {response.text}")

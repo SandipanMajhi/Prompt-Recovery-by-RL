@@ -1,0 +1,46 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "feature": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sub_feature": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "high_level_testcase": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "testcase": {
+      "feature": {
+        "content": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "title": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      "_type": "List"
+    },
+    "reference": {
+      "feature": {
+        "content": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "title": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      "_type": "List"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

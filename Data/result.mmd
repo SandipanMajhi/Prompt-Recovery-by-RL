@@ -1,0 +1,41 @@
+Changed Notification, the CT should not send any player specific command to the TG. In case the TG receives any player specific command for a player not yet successfully opened, it should reply with Error Code 0x13 (Player Not Addressed).
+
+When the addressed player is changed, whether locally on the TG or explicitly by the CT, the TG shall complete notifications following the mechanism described in Section 6.9.2.
+
+The parameters for the Set Addressed Player command and response are given in Section 6.9.1.1 and Section 6.9.1.2. An example of a SetAddressedPlayer command is given in Section 24.11.
+
+### 6.9.1.1 Command parameters
+
+**Player Id – 2 Octets**
+
+| Value | Parameter Description |
+|-------|----------------------|
+| 0xXXXX| Unique Media Player Id as defined in Section 6.10.2.1 |
+
+### 6.9.1.2 Response parameters
+
+**Status – 1 Octet**
+
+| Value | Parameter Description |
+|-------|----------------------|
+| Status as defined in Section 6.15.3 | The result of the SetAddressedPlayer operation. If an error has occurred then this is the only field present in the response. |
+
+### 6.9.2 Addressed Player Changed notification
+
+The Addressed Player Changed notification allows the CT to be informed if the addressed player on the TG is changed.
+
+This is an event which may be used for the Register Notification command described in Section 6.7.2, which is a vendor dependent AV/C Notify. The response format for this event is the Player Id of the addressed player.
+
+The interim response to the Notify shall contain the Player Id of the current addressed player. If the CT registers this Notify before sending a SetAddressedPlayer command the interim response contains the Player Id of the default player on the TG.
+
+The response parameters are given in Section 6.9.2.1. The command parameters are described in Section 6.7.2. It should be noted that the 4 octet playback interval field is present in the command parameters due to the definition of the Register Notification command but is ignored for this event.
+
+An example PDU for this command is given in Section 24.12.
+
+### 6.9.2.1 Response parameters
+
+**Player Id – 2 Octets**
+
+| Value | Parameter Description |
+|-------|
+| 0xXXXX| Unique Media Player Id as defined in Section 6.10

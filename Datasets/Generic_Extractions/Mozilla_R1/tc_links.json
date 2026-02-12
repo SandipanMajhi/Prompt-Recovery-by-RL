@@ -1,0 +1,269 @@
+[
+    {
+        "feature": "---",
+        "sub_feature": "---",
+        "description": "---",
+        "tc_name": null
+    },
+    {
+        "feature": "Bookmarks",
+        "sub_feature": "View Bookmarks",
+        "description": "Verify that bookmarks appear at the standard(4) access points",
+        "tc_name": {
+            "title": "view-bookmarks",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/view-bookmarks"
+        }
+    },
+    {
+        "feature": "Bookmarks",
+        "sub_feature": "Add Bookmark",
+        "description": "Verify that bookmarks are properly added to bookmarks file and appear in all access points.",
+        "tc_name": {
+            "title": "add-bookmark",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/add-bookmark"
+        }
+    },
+    {
+        "feature": "Bookmarks",
+        "sub_feature": "File Bookmark",
+        "description": "Add a new bookmark into a specific location within the bookmarks hierarchy.",
+        "tc_name": {
+            "title": "file-bookmark",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/file-bookmark"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Create new bookmark",
+        "description": "Verify new bookmarks can be created (not added).",
+        "tc_name": {
+            "title": "create-bookmark",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/create-bookmark"
+        }
+    },
+    {
+        "feature": "Bookmarks",
+        "sub_feature": "Delete Bookmark",
+        "description": "Verify that bookmarks are properly deleted from bookmarks file and disappear from all access points.",
+        "tc_name": {
+            "title": "delete-bookmark",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/delete-bookmark"
+        }
+    },
+    {
+        "feature": "Bookmarks",
+        "sub_feature": "Add/Delete Personal Toolbar bookmark",
+        "description": "Verify that items from the personal toolbar folder are properly added/deleted.",
+        "tc_name": {
+            "title": "add-delete-ptoolbar-bmark",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/add-delete-ptoolbar-bmark"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Create Folder",
+        "description": "Verify new folder creation and nesting of new folders.",
+        "tc_name": {
+            "title": "create-folder",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/create-folder"
+        }
+    },
+    {
+        "feature": "Bookmarks",
+        "sub_feature": "Surf Bookmark",
+        "description": "Verify that double-clicking on a bookmark causes it to be launched in a browser window",
+        "tc_name": {
+            "title": "surf-bookmark",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/surf-bookmark"
+        }
+    },
+    {
+        "feature": "Bookmarks",
+        "sub_feature": "Surf All Bookmarks",
+        "description": "Verify that there are no 'dead' default links.",
+        "tc_name": {
+            "title": "surf-all-bookmarks",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/surf-all-bookmarks"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Edit item properties",
+        "description": "Verify that changes to an item are saved without loss of item integrity.",
+        "tc_name": {
+            "title": "edit-properties",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/edit-properties"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Delete Folder",
+        "description": "Verify folder(s) are correctly deleted.",
+        "tc_name": {
+            "title": "delete-folder",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/delete-folder"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Show/Hide Folder",
+        "description": "Verify that disclosure triangles/folder icons are in sync.",
+        "tc_name": {
+            "title": "show-hide-folder",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/show-hide-folder"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Create/Delete separator",
+        "description": "Verify separators are properly added/deleted.",
+        "tc_name": {
+            "title": "create-delete-separator",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/create-delete-separator"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Save State",
+        "description": "Verify that changes are saved over restart/crash",
+        "tc_name": {
+            "title": "save-state",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/save-state"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "View item properties",
+        "description": "Verify that view properties works as appropriate for bookmarks, folders, and separators(negative)",
+        "tc_name": {
+            "title": "view-properties",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/view-properties"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Rename bookmark inline - not implemented",
+        "description": "Change the name of a bookmark without use of the bookmark properties dialog.",
+        "tc_name": {
+            "title": "rename-bookmark",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/rename-bookmark"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Custom Keywords",
+        "description": "surf using user-defined 'custom keyword'.",
+        "tc_name": {
+            "title": "custom-keywords",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/custom-keywords"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Sort by columns",
+        "description": "sort and reverse-sort per column",
+        "tc_name": {
+            "title": "sort-columns",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/sort-columns"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Resize columns",
+        "description": "Verify that columns are resizable to show/hide more of entries",
+        "tc_name": {
+            "title": "resize-columns",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/resize-columns"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Show/Hide columns",
+        "description": "Show and hide columns.",
+        "tc_name": {
+            "title": "show-hide-columns",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/show-hide-columns"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Drag & Drop to reorder columns - not implemented",
+        "description": "",
+        "tc_name": null
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Drag & Drop to reorder items",
+        "description": "",
+        "tc_name": {
+            "title": "reorder-item",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/reorder-item"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Drag & Drop to rearrange item hierarchy",
+        "description": "",
+        "tc_name": {
+            "title": "reorder-hierarchy",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/reorder-hierarchy"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Cut and Undo items",
+        "description": "",
+        "tc_name": {
+            "title": "cut-undo-redo-items",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/cut-undo-redo-items"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Copy-paste items",
+        "description": "",
+        "tc_name": {
+            "title": "copy-paste-items",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/copy-paste-items"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Paste items nested inot a folder",
+        "description": "",
+        "tc_name": {
+            "title": "paste-into-folder",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/paste-into-folder"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Delete multiple bookmarks",
+        "description": "Verify that several bookmarks are deleted at one time.",
+        "tc_name": {
+            "title": "delete-multiple-bookmarks",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/delete-multiple-bookmarks"
+        }
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Import bookmarks",
+        "description": "",
+        "tc_name": null
+    },
+    {
+        "feature": "Manage Bookmarks",
+        "sub_feature": "Export bookmarks",
+        "description": "",
+        "tc_name": null
+    },
+    {
+        "feature": "(negative/regresion test)",
+        "sub_feature": "Prevent bad drops",
+        "description": "Verify that it is NOT possible to drop an item onto itself or its immediate parent or child",
+        "tc_name": {
+            "title": "self-drop",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/bookmarks/self-drop"
+        }
+    }
+]

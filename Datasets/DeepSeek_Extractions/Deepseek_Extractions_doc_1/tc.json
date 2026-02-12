@@ -1,0 +1,3202 @@
+[
+    {
+        "section_id": "AVRCP/CT/SGSIT/SERR/BV-01-C",
+        "section_title": "Service record GSIT – AVRCP CT",
+        "sub_sections": "............................................. 15"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/ATTR/BV-01-C",
+        "section_title": "Attribute GSIT – Protocol Descriptor List",
+        "sub_sections": "..................................... 15"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/ATTR/BV-02-C",
+        "section_title": "Attribute GSIT – Additional Protocol Descriptor Lists, Browsing Channel",
+        "sub_sections": "... 15"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/ATTR/BV-03-C",
+        "section_title": "Attribute GSIT – Bluetooth Profile Descriptor List, AVRCP 1.5",
+        "sub_sections": "................. 15"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/ATTR/BV-04-C",
+        "section_title": "Attribute GSIT – Bluetooth Profile Descriptor List, AVRCP 1.6",
+        "sub_sections": "................. 15"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/ATTR/BP-05-C",
+        "section_title": "Attribute GSIT – Supported Features",
+        "sub_sections": "............................................... 15\n   4.2."
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/SERR/BV-01-C",
+        "section_title": "Service record GSIT – AVRCP TG",
+        "sub_sections": "..................................................... 16"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/ATTR/BV-01-C",
+        "section_title": "Attribute GSIT – Protocol DescriptorList",
+        "sub_sections": "............................................. 16"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/ATTR/BV-02-C",
+        "section_title": "Attribute GSIT – Additional Protocol Descriptor Lists, Browsing Channel",
+        "sub_sections": "... 16"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/ATTR/BV-03-C",
+        "section_title": "Attribute GSIT – Additional Protocol Descriptor Lists, Cover Art",
+        "sub_sections": "................. 16"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/ATTR/BV-04-C",
+        "section_title": "Attribute GSIT – Bluetooth Profile Descriptor List, AVRCP 1.5",
+        "sub_sections": "................. 16"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/ATTR/BP-05-C",
+        "section_title": "Attribute GSIT – Bluetooth Profile Descriptor List, AVRCP 1.6",
+        "sub_sections": ""
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/ATTR/BV-06-C",
+        "section_title": "Attribute GSIT – Supported Features",
+        "sub_sections": "............................................... 16\n   4.2."
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/OFFS/BV-01-C",
+        "section_title": "Attribute ID Offset String GSIT – Service Name",
+        "sub_sections": "..................................... 17"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/OFFS/BVP-02-C",
+        "section_title": "Attribute ID Offset String GSIT – Provider Name",
+        "sub_sections": ".................................. 17"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/OFFS/BV-03-C",
+        "section_title": "Attribute ID Offset String GSIT – Service Name",
+        "sub_sections": "..................................... 17\n    AVRC/CT/SGSIT/OFFS/BV-04-C [Attribute ID Offset String GSIT – Provider Name] .................................. 17\n   4."
+    },
+    {
+        "section_id": "AVRCP/CT/CGSIT/SFC/BV-01-C",
+        "section_title": "SDP Future Compatibility – IUT is AVRCP CT",
+        "sub_sections": "......................................... 18"
+    },
+    {
+        "section_id": "AVRCP/TG/CGSIT/SFC/BV-02-C",
+        "section_title": "SDP Future Compatibility – IUT is AVRCP TG",
+        "sub_sections": "......................................... 18\n    Connection Establishment for Browsing ................................................................................. 19"
+    },
+    {
+        "section_id": "AVRCP/CT/CON/BV-01-C",
+        "section_title": "Connection establishment for browsing – CT",
+        "sub_sections": ".................................................. 19"
+    },
+    {
+        "section_id": "AVRCP/TG/CON/BV-02-C",
+        "section_title": "Connection establishment for browsing – TG",
+        "sub_sections": ".................................................. 19"
+    },
+    {
+        "section_id": "AVRCP/TG/CON/BV-05-C",
+        "section_title": "Connection establishment for browsing – TG initiates control channel and CT\n    initiates browsing channel",
+        "sub_sections": "......................................................................................................... 20"
+    },
+    {
+        "section_id": "AVRCP/CT/CON/BV-03-C",
+        "section_title": "Connection release for browsing – CT",
+        "sub_sections": "21"
+    },
+    {
+        "section_id": "AVRCP/TG/CON/BV-04-C",
+        "section_title": "Connection release for browsing – TG",
+        "sub_sections": "22"
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-01-C",
+        "section_title": "SetAddressedPlayer – CT",
+        "sub_sections": "23"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-02-C",
+        "section_title": "SetAddressedPlayer – TG",
+        "sub_sections": "24"
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-03-C",
+        "section_title": "SetBrowsedPlayer – CT",
+        "sub_sections": "25"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-04-C",
+        "section_title": "SetBrowsedPlayer – TG",
+        "sub_sections": "26"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-05-C",
+        "section_title": "AddressedPlayerChanged notification – TG",
+        "sub_sections": "27"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-06-C",
+        "section_title": "PlayerFeatureBitmask – TG",
+        "sub_sections": "28"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-07-C",
+        "section_title": "AvailablePlayersChanged notification – TG",
+        "sub_sections": "29"
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-08-C",
+        "section_title": "GetFoldertItems – CT",
+        "sub_sections": "30"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-09-C",
+        "section_title": "GetFoldertItems – TG",
+        "sub_sections": "31"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-10-C",
+        "section_title": "DefaultAddressedPlayer – TG",
+        "sub_sections": "32"
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-11-C",
+        "section_title": "GetTotalNumberOfItems – CT",
+        "sub_sections": "33"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-12-C",
+        "section_title": "GetTotalNumberOfItems – TG",
+        "sub_sections": "34"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BI-01-C",
+        "section_title": "SetAddressedPlayer – TG",
+        "sub_sections": "35"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BI-02-C",
+        "section_title": "SetBrowsedPlayer – TG",
+        "sub_sections": "36"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-01-C",
+        "section_title": "GetFoldertItems – CT",
+        "sub_sections": "37"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFoldertItems – TG",
+        "sub_sections": "38"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-03-C",
+        "section_title": "GetFoldertItems – TG",
+        "sub_sections": "39"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-04-C",
+        "section_title": "ChangePath – CT",
+        "sub_sections": "40"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-05-C",
+        "section_title": "ChangePath – TG",
+        "sub_sections": "41"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-06-C",
+        "section_title": "ChangePath – TG",
+        "sub_sections": "42"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-07-C",
+        "section_title": "GettlemAttributes – CT",
+        "sub_sections": "43"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-08-C",
+        "section_title": "GettlemAttributes – TG",
+        "sub_sections": "44"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-09-C",
+        "section_title": "UIDcounter – TG",
+        "sub_sections": "45"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-10-C",
+        "section_title": "UIDcounter – TG",
+        "sub_sections": "46"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-11-C",
+        "section_title": "UIDcounter – TG",
+        "sub_sections": "47"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-12-C",
+        "section_title": "GetTotalNumberOfItems – CT",
+        "sub_sections": "48"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-13-C",
+        "section_title": "GetTotalNumberOfItems – TG",
+        "sub_sections": "49"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-01-C",
+        "section_title": "GetFoldertItems – TG",
+        "sub_sections": "50"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-02-C",
+        "section_title": "GetFoldertItems – TG",
+        "sub_sections": "51"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-03-C",
+        "section_title": "GetFoldertItems – TG",
+        "sub_sections": "52"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-04-C",
+        "section_title": "ChangePath – TG",
+        "sub_sections": "53"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-05-C",
+        "section_title": "UIDcounter – TG",
+        "sub_sections": "54"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-01-C",
+        "section_title": "Search – CT",
+        "sub_sections": "55"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-02-C",
+        "section_title": "Search – TG",
+        "sub_sections": "56"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-03-C",
+        "section_title": "GetFoldertItems – CT",
+        "sub_sections": "57"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-04-C",
+        "section_title": "GetFoldertItems – TG",
+        "sub_sections": "58"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-05-C",
+        "section_title": "GettlemAttributes – CT",
+        "sub_sections": "59"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-06-C",
+        "section_title": "GettlemAttributes – TG",
+        "sub_sections": "60"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-07-C",
+        "section_title": "GetTotalNumberOfItems – CT",
+        "sub_sections": "61"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-08-C",
+        "section_title": "GetTotalNumberOfItems – TG",
+        "sub_sections": "62"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-01-C",
+        "section_title": "PlayItem – CT",
+        "sub_sections": "63"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-02-C",
+        "section_title": "PlayItem – TG",
+        "sub_sections": "64"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-03-C",
+        "section_title": "AddToNowPlaying – CT",
+        "sub_sections": "65"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-04-C",
+        "section_title": "AddToNowPlaying – TG",
+        "sub_sections": "66"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-05-C",
+        "section_title": "GetFoldertItems – CT",
+        "sub_sections": "67"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-06-C",
+        "section_title": "GetFoldertItems – TG",
+        "sub_sections": "68"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-07-C",
+        "section_title": "NowPlayingContentChanged notification – TG",
+        "sub_sections": "69"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-08-C",
+        "section_title": "GettlemAttributes – CT",
+        "sub_sections": "70"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-09-C",
+        "section_title": "GettlemAttributes – TG",
+        "sub_sections": "................................................................................. 71"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-10-C",
+        "section_title": "GetTotalNumberOfItems – CT",
+        "sub_sections": "........................................................................ 72"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-11-C",
+        "section_title": "GetTotalNumberOfItems – TG",
+        "sub_sections": "........................................................................ 73"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BI-01-C",
+        "section_title": "PlayItem_Invalid – TG",
+        "sub_sections": "................................................................................. 74"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BI-02-C",
+        "section_title": "AddToNowPlaying_Invalid – TG",
+        "sub_sections": "..................................................................... 75\n\nVolume Level Handling ................................................................................................................. 76"
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-01-C",
+        "section_title": "SetAbsoluteVolume – CT",
+        "sub_sections": "................................................................................. 76"
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BV-02-C",
+        "section_title": "SetAbsoluteVolume – TG",
+        "sub_sections": "................................................................................. 77"
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-03-C",
+        "section_title": "NotifyVolumeChange – CT",
+        "sub_sections": "................................................................................. 78"
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BV-04-C",
+        "section_title": "NotifyVolumeChange – TG",
+        "sub_sections": "................................................................................. 79"
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BI-01-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – TG",
+        "sub_sections": ".......................................................... 80"
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BI-02-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – TG",
+        "sub_sections": ".......................................................... 81"
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BI-03-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – CT",
+        "sub_sections": ".......................................................... 82"
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BI-04-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – CT",
+        "sub_sections": ".......................................................... 83"
+    },
+    {
+        "section_id": "AVRCP/CT/PTH/BV-01-C",
+        "section_title": "Press and release – CT",
+        "sub_sections": "................................................................................. 84"
+    },
+    {
+        "section_id": "AVRCP/CT/PTH/BV-02-C",
+        "section_title": "Press and hold – CT",
+        "sub_sections": "....................................................................................... 85"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-01-C",
+        "section_title": "Use GetFolderItems to request Cover Art attribute – CT",
+        "sub_sections": "..................................... 86"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-02-C",
+        "section_title": "Use GetFolderItems to request Cover Art attribute – TG",
+        "sub_sections": "..................................... 88"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-03-C",
+        "section_title": "Use GettlemAttributes to request Cover Art attribute – CT",
+        "sub_sections": "................................ 89"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-04-C",
+        "section_title": "Use GettlemAttributes to request Cover Art attribute – TG",
+        "sub_sections": "................................ 90"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-05-C",
+        "section_title": "Use GetElementAttributes to request Cover Art attribute – CT",
+        "sub_sections": "........................ 91"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-06-C",
+        "section_title": "Use GetElementAttributes to request Cover Art attribute – TG",
+        "sub_sections": "........................ 92"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-07-C",
+        "section_title": "Use the Imaging Property Object – CT",
+        "sub_sections": ".................................................................. 94"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-08-C",
+        "section_title": "Use the Imaging Property Object – TG",
+        "sub_sections": ".................................................................. 95"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-09-C",
+        "section_title": "Pull an Image as a Thumbnail – CT",
+        "sub_sections": "........................................................................ 97"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-10-C",
+        "section_title": "Pull an Image as a Thumbnail – TG",
+        "sub_sections": "........................................................................ 98"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-11-C",
+        "section_title": "Pull a Thumbnail – CT",
+        "sub_sections": ".......................................................................................... 99"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-12-C",
+        "section_title": "Pull a Thumbnail – TG",
+        "sub_sections": ".......................................................................................... 101"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-13-C",
+        "section_title": "Pull a Native Image – CT",
+        "sub_sections": ".................................................................................... 102"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-14-C",
+        "section_title": "Pull a Native Image – TG",
+        "sub_sections": ".................................................................................... 103"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-15-C",
+        "section_title": "Cover Art SDP record – CT",
+        "sub_sections": ".................................................................................... 104"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-16-C",
+        "section_title": "Cover Art SDP record – TG",
+        "sub_sections": ".................................................................................... 105"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-17-C",
+        "section_title": "UIDs Changed during Cover Art – CT",
+        "sub_sections": ".................................................................... 106"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-18-C",
+        "section_title": "Database-Unaware Folder Change during Cover Art – CT",
+        "sub_sections": "................................ 108"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-01-C",
+        "section_title": "Retrieval of Cover Art attribute with no OBEX connection – TG",
+        "sub_sections": "........................ 110"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-04-C",
+        "section_title": "Retrieval of Cover Art attribute with no OBEX connection using GettlemAttributes – TG",
+        "sub_sections": "........................................................................................................................................ 111"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-05-C",
+        "section_title": "Retrieval of Cover Art attribute with no OBEX connection using GetElementAttributes – TG",
+        "sub_sections": "........................................................................................................................................ 112"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-06-C",
+        "section_title": "Request of Unsupported Image Type – TG",
+        "sub_sections": "............................................................... 113"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-07-C",
+        "section_title": "Request of Unsupported Image Type without browsing – TG",
+        "sub_sections": "................................ 115"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-08-C",
+        "section_title": "Use GetFolderItems to request Cover Art attribute – TG",
+        "sub_sections": "..................................... 116"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-09-C",
+        "section_title": "Use GettlemAttributes to request Cover Art attribute – TG",
+        "sub_sections": "................................ 117"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-10-C",
+        "section_title": "Use GetElementAttributes to request Cover Art attribute – TG",
+        "sub_sections": "........................ 118"
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-04-C",
+        "section_title": "Listing of available Media Players",
+        "sub_sections": ".................................................................. 119"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-01-C",
+        "section_title": "Listing of available Media Players",
+        "sub_sections": ".................................................................. 119\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-05-C",
+        "section_title": "Availability of Media Players",
+        "sub_sections": "........................................................................ 120"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-08-C",
+        "section_title": "Availability of Media Players",
+        "sub_sections": "........................................................................ 120\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-06-C",
+        "section_title": "PASS THROUGH functionality of Media Players",
+        "sub_sections": "............................................ 121"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-03-C",
+        "section_title": "PASS THROUGH functionality of Media Players",
+        "sub_sections": "121"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-08-C",
+        "section_title": "Browsing of the current folder",
+        "sub_sections": "121"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-01-C",
+        "section_title": "Browsing of the current folder",
+        "sub_sections": "121\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-02-C",
+        "section_title": "Browsing up",
+        "sub_sections": "122"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-14-C",
+        "section_title": "Browsing up",
+        "sub_sections": "122\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-03-C",
+        "section_title": "Browsing down",
+        "sub_sections": "123"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-15-C",
+        "section_title": "Browsing down",
+        "sub_sections": "123\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-10-C",
+        "section_title": "Playing of a track from the Virtual Media Player Filesystem",
+        "sub_sections": "123"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-04-C",
+        "section_title": "Playing of a track from the Virtual Media Player Filesystem",
+        "sub_sections": "123\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-05-C",
+        "section_title": "Change in media database",
+        "sub_sections": "124"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-16-C",
+        "section_title": "Change in media database",
+        "sub_sections": "124\n\nMedia data from Virtual Filesystem 124"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-06-C",
+        "section_title": "Metadata from Virtual Filesystem",
+        "sub_sections": "125"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-17-C",
+        "section_title": "Metadata from Virtual Filesystem",
+        "sub_sections": "125"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CBBV-07-C",
+        "section_title": "Browsing of a folder if the player is not addressed",
+        "sub_sections": "125"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-08-C",
+        "section_title": "Browsing of a folder in the player only when addressed",
+        "sub_sections": "126"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-09-C",
+        "section_title": "CT can retrieve the metadata Virtual Filesystem from TG with future SDP version",
+        "sub_sections": "126"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-08-C",
+        "section_title": "Search request",
+        "sub_sections": "127"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-01-C",
+        "section_title": "Search request",
+        "sub_sections": "127\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-09-C",
+        "section_title": "Browsing of the Search results",
+        "sub_sections": "128"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-05-C",
+        "section_title": "Browsing of the Search results",
+        "sub_sections": "128\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-10-C",
+        "section_title": "Play from Search results",
+        "sub_sections": "128"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-03-C",
+        "section_title": "Play from Search results",
+        "sub_sections": "128\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-11-C",
+        "section_title": "Metadata from Search results",
+        "sub_sections": "129"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-07-C",
+        "section_title": "Metadata from Search results",
+        "sub_sections": "129"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/PN/BV-11-C",
+        "section_title": "Playing of a track from the Now Playing folder",
+        "sub_sections": "130"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/PN/BV-01-C",
+        "section_title": "Playing of a track from the Now Playing folder",
+        "sub_sections": "130\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/PN/BV-12-C",
+        "section_title": "Adding a Filesystem track to Now Playing list",
+        "sub_sections": "130"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/PN/BV-08-C",
+        "section_title": "Adding a Filesystem track to Now Playing list",
+        "sub_sections": "130\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/PN/BV-13-C",
+        "section_title": "Adding a Search result track to Now Playing list",
+        "sub_sections": "131"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/PN/BV-03-C",
+        "section_title": "Adding a Search result track to Now Playing list",
+        "sub_sections": "131\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/PN/BV-14-C",
+        "section_title": "Local change of Now Playing list on TG",
+        "sub_sections": "132"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/PN/BV-10-C",
+        "section_title": "Local change of Now Playing list on TG",
+        "sub_sections": "132\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/PN/BV-15-C",
+        "section_title": "Metadata from Now Playing list",
+        "sub_sections": "132"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/PN/BV-05-C",
+        "section_title": "Metadata from Now Playing list",
+        "sub_sections": "132\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-16-C",
+        "section_title": "Browsing the Now Playing folder",
+        "sub_sections": "133"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-12-C",
+        "section_title": "Browsing the Now Playing folder",
+        "sub_sections": "133\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-17-C",
+        "section_title": "Adding a Playable Folder to Now Playing list",
+        "sub_sections": "134"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-13-C",
+        "section_title": "Adding a Playable Folder to Now Playing list",
+        "sub_sections": "134"
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-04-C",
+        "section_title": "Monitoring the TG volume on the CT",
+        "sub_sections": "134"
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BV-01-C",
+        "section_title": "Monitoring the TG volume on the CT",
+        "sub_sections": "134\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-05-C",
+        "section_title": "Changing the volume",
+        "sub_sections": "135"
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BV-03-C",
+        "section_title": "Changing the volume",
+        "sub_sections": "135"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-04-C",
+        "section_title": "Retrieval of multiple Cover Art images",
+        "sub_sections": "136"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-01-C",
+        "section_title": "Retrieval of multiple Cover Art images",
+        "sub_sections": "136\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-02-C",
+        "section_title": "Retrieval of Cover Art image for the currently playing track",
+        "sub_sections": "137"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-05-C",
+        "section_title": "Retrieval of Cover Art image for the currently playing track",
+        "sub_sections": "137\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-06-C",
+        "section_title": "Retrieval of Cover Art image for the currently playing track without browsing",
+        "sub_sections": "137"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-03-C",
+        "section_title": "Retrieval of Cover Art image for the currently playing track without browsing",
+        "sub_sections": "137"
+    },
+    {
+        "section_id": "AVRCP/CT/CEC/BV-01-C",
+        "section_title": "Connection establishment – CT",
+        "sub_sections": "138"
+    },
+    {
+        "section_id": "AVRCP/TG/CEC/BV-01-C",
+        "section_title": "Connection establishment – CT",
+        "sub_sections": "138\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/CEC/BV-02-C",
+        "section_title": "Connection establishment – TG",
+        "sub_sections": "139"
+    },
+    {
+        "section_id": "AVRCP/TG/CEC/BV-02-C",
+        "section_title": "Connection establishment – TG",
+        "sub_sections": "139\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/CRC/BV-01-C",
+        "section_title": "Connection release – CT",
+        "sub_sections": "140"
+    },
+    {
+        "section_id": "AVRCP/TG/CRC/BV-01-C",
+        "section_title": "Connection release – CT",
+        "sub_sections": "140\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/CRC/BV-02-C",
+        "section_title": "Connection release – TG",
+        "sub_sections": "140"
+    },
+    {
+        "section_id": "AVRCP/TG/CRC/BV-02-C",
+        "section_title": "Connection release – TG",
+        "sub_sections": "140"
+    },
+    {
+        "section_id": "AVRCP/CT/IIC/CBV-01-C",
+        "section_title": "Information collection by UNIT INFO command",
+        "sub_sections": "141"
+    },
+    {
+        "section_id": "AVRCP/TG/IIC/CBV-01-C",
+        "section_title": "Information collection by UNIT INFO command",
+        "sub_sections": "141\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/IIC/BV-02-C",
+        "section_title": "Information collection by SUBUNIT INFO command",
+        "sub_sections": "142"
+    },
+    {
+        "section_id": "AVRCP/TG/IIC/BV-02-C",
+        "section_title": "Information collection by SUBUNIT INFO command",
+        "sub_sections": "142"
+    },
+    {
+        "section_id": "AVRCP/CT/PTT/BV-01-C",
+        "section_title": "PASS THROUGH command transfer – category 1",
+        "sub_sections": "143"
+    },
+    {
+        "section_id": "AVRCP/TG/PTT/BV-01-C",
+        "section_title": "PASS THROUGH command transfer – category 1\n\n4.20.2 Category 2 of PASS THROUGH command ................................................................................ 144\n4.20.2.1 PASS THROUGH command transfer – category 2 ........................................................ 144\n   AVRCP/CT/PTT/BV-02-C [PASS THROUGH command transfer – category 2",
+        "sub_sections": "............................ 144"
+    },
+    {
+        "section_id": "AVRCP/TG/PTT/BV-02-C",
+        "section_title": "PASS THROUGH command transfer – category 2",
+        "sub_sections": "................................ 144\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/PTT/BV-03-C",
+        "section_title": "PASS THROUGH command transfer – category 3",
+        "sub_sections": "................................ 145"
+    },
+    {
+        "section_id": "AVRCP/TG/PTT/BV-03-C",
+        "section_title": "PASS THROUGH command transfer – category 3",
+        "sub_sections": "................................ 145\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/PTT/BV-04-C",
+        "section_title": "PASS THROUGH command transfer – category 4",
+        "sub_sections": "................................ 146"
+    },
+    {
+        "section_id": "AVRCP/TG/PTT/BV-04-C",
+        "section_title": "PASS THROUGH command transfer – category 4",
+        "sub_sections": "................................ 146\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/PTT/BV-05-C",
+        "section_title": "PASS THROUGH command transfer – press and hold",
+        "sub_sections": "............................ 147"
+    },
+    {
+        "section_id": "AVRCP/TG/PTT/BV-05-C",
+        "section_title": "PASS THROUGH command transfer – press and hold",
+        "sub_sections": "............................ 147"
+    },
+    {
+        "section_id": "AVRCP/CT/CFG/BV-01-C",
+        "section_title": "Get Capabilities – CT",
+        "sub_sections": "........................................................................ 148"
+    },
+    {
+        "section_id": "AVRCP/TG/CFG/BV-02-C",
+        "section_title": "Get Capabilities response – TG",
+        "sub_sections": ".......................................................... 148"
+    },
+    {
+        "section_id": "AVRCP/TG/CFG/BI-01-C",
+        "section_title": "Get Capabilities invalid behavior response – TG",
+        "sub_sections": "................................ 149\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-01-C",
+        "section_title": "List Player Application Setting Attributes – CT",
+        "sub_sections": ".................................. 150"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-02-C",
+        "section_title": "List Player Application Setting Attributes – TG",
+        "sub_sections": ".................................. 151"
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-03-C",
+        "section_title": "Get Player Application Setting Attribute Text – CT",
+        "sub_sections": "............................ 152"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-04-C",
+        "section_title": "Get Player Application Setting Attribute Text – TG",
+        "sub_sections": "............................ 153"
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-05-C",
+        "section_title": "List Player Application Setting Values – CT",
+        "sub_sections": "......................................... 154"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-06-C",
+        "section_title": "List Player Application Setting Values – TG",
+        "sub_sections": "......................................... 155"
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-07-C",
+        "section_title": "Get Player Application Setting Value Text – CT",
+        "sub_sections": ".................................. 156"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-08-C",
+        "section_title": "Get Player Application Setting Value Text – TG",
+        "sub_sections": ".................................. 157"
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-09-C",
+        "section_title": "Get Current Player Application Setting Value – CT",
+        "sub_sections": "............................ 158"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-10-C",
+        "section_title": "Get Current Player Application Setting Value – TG",
+        "sub_sections": "............................ 159"
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-11-C",
+        "section_title": "Set Player Application Setting Value – CT",
+        "sub_sections": "............................................ 160"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-01-C",
+        "section_title": "Get Player Application Settings Attribute Text invalid behavior – TG",
+        "sub_sections": "................ 161"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-02-C",
+        "section_title": "List Player Application Setting Values invalid behavior – TG",
+        "sub_sections": ".................... 162"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-03-C",
+        "section_title": "Get Player Application Setting Value Text invalid behavior – TG",
+        "sub_sections": "................ 163"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-04-C",
+        "section_title": "Get Current Player Application Setting Value invalid behavior – TG",
+        "sub_sections": "............. 164"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-05-C",
+        "section_title": "Set Player Application Setting Value invalid behavior – TG",
+        "sub_sections": ".................... 165\nMedia Information commands ...................................................................................................... 166"
+    },
+    {
+        "section_id": "AVRCP/CT/MDI/BV-01-C",
+        "section_title": "Get Play Status – CT",
+        "sub_sections": "........................................................................... 166"
+    },
+    {
+        "section_id": "AVRCP/TG/MDI/BV-02-C",
+        "section_title": "Get Play Status – TG",
+        "sub_sections": "........................................................................... 167"
+    },
+    {
+        "section_id": "AVRCP/CT/MDI/BV-03-C",
+        "section_title": "Get Element Attributes – CT",
+        "sub_sections": "................................................................... 168"
+    },
+    {
+        "section_id": "AVRCP/TG/MDI/BV-04-C",
+        "section_title": "Get Element Attributes – TG",
+        "sub_sections": "................................................................... 169"
+    },
+    {
+        "section_id": "AVRCP/TG/MDI/BV-05-C",
+        "section_title": "Get Element Attributes – TG",
+        "sub_sections": "................................................................... 170"
+    },
+    {
+        "section_id": "AVRCP/CT/MDI/BV-06-C",
+        "section_title": "CT can retrieve the Metadata for the currently playing track from TG with future SDP version – Get Element Attributes",
+        "sub_sections": "................................................................................ 171\nNotification commands .............................................................................................................. 172"
+    },
+    {
+        "section_id": "AVRCP/CT/NFY/BV-01-C",
+        "section_title": "Register Notification – CT",
+        "sub_sections": "................................................................... 172"
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-02-C",
+        "section_title": "Register Notification – TG",
+        "sub_sections": "..................................................................... 173"
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-03-C",
+        "section_title": "Register Notification EVENT_PLAYER_APPLICATION_SETTING_CHANGED – TG",
+        "sub_sections": "........................................................................................................................................ 174"
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-04-C",
+        "section_title": "Track Changed – No Selected Track – TG",
+        "sub_sections": ".................................................... 175"
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-05-C",
+        "section_title": "Track Changed – Playing Track – TG",
+        "sub_sections": ".......................................................... 176"
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-06-C",
+        "section_title": "Track Changed – Playing Track in NowPlaying – TG",
+        "sub_sections": ".................................. 177"
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-07-C",
+        "section_title": "Track Changed – Changing Track in NowPlaying – TG",
+        "sub_sections": "................................ 177"
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-08-C",
+        "section_title": "Track Changed – Selected Track – TG",
+        "sub_sections": "................................................................ 179"
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BI-01-C",
+        "section_title": "Register for events invalid behavior – TG",
+        "sub_sections": "........................................................ 179\n4."
+    },
+    {
+        "section_id": "AVRCP/TG/INV/BI-01-C",
+        "section_title": "Invalid PDU ID – TG",
+        "sub_sections": "................................................................................ 180"
+    },
+    {
+        "section_id": "AVRCP/TG/INV/BI-02-C",
+        "section_title": "General Reject – TG",
+        "sub_sections": "................................................................................ 181\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/BGN/BV-01-C",
+        "section_title": "Next Group command transfer",
+        "sub_sections": "................................................................ 183"
+    },
+    {
+        "section_id": "AVRCP/TG/BGN/BV-01-C",
+        "section_title": "Next Group command transfer",
+        "sub_sections": "................................................................ 183\n4.21."
+    },
+    {
+        "section_id": "AVRCP/CT/BGN/BV-02-C",
+        "section_title": "Previous Group command transfer",
+        "sub_sections": "............................................................ 183"
+    },
+    {
+        "section_id": "AVRCP/TG/BGN/BV-02-C",
+        "section_title": "Previous Group command transfer",
+        "sub_sections": "............................................................ 183\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/RCR/BV-01-C",
+        "section_title": "Request continuing response – CT",
+        "sub_sections": "................................................................ 184"
+    },
+    {
+        "section_id": "AVRCP/TG/RCR/BV-02-C",
+        "section_title": "Request continuing response – TG",
+        "sub_sections": "................................................................ 185"
+    },
+    {
+        "section_id": "AVRCP/CT/RCR/BV-03-C",
+        "section_title": "Abort continuing response – CT",
+        "sub_sections": "................................................................ 186"
+    },
+    {
+        "section_id": "AVRCP/TG/RCR/BV-04-C",
+        "section_title": "Abort continuing response – TG",
+        "sub_sections": "................................................................ 187\n\n5 Test case mapping ................................................................................................................ 189\n\n6 Appendix A – Operation_id list tables ................................................................................ 198"
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-06-C",
+        "section_title": "Volume Control - LowresolutionTG",
+        "sub_sections": "................................................................ 202"
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-07-C",
+        "section_title": "Volume Control - Higher resolution TG",
+        "sub_sections": "........................................................ 202\n\n8 Revision history and acknowledgments .................................................................................... 205\n\n1 Scope\n\nThis Bluetooth document contains the Test Suite Structure (TSS) and test cases to test the implementation of the Bluetooth Audio/Video Remote Control Profile (AVRCP) with the objective to provide a high probability of air interface interoperability between the tested implementation and other manufacturers’ Bluetooth devices.\n\nAVRCP provides support for multiple Media Player applications within the same physical device. Therefore, the features supported by an individual Media Player application might be a subset of the physical device’s features marked in the ICS [3]. Therefore, the AVRCP IXIT document [6] allows announcing an individual Media Player application’s features, see Figure 1.1.\n\n![Figure 1.1: IXIT dependencies for Media Player applications](image)\n\nThe IXIT contains a field to specify a player name to allow a player to be selected against which the browsing tests are run. Furthermore, the IXIT contains fields for one empty and one non-empty folder on the IUT.\n\n2 References, definitions, and abbreviations"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/SERR/BV-01-C",
+        "section_title": "Service record GSIT – AVRCP CT",
+        "sub_sections": "| [2] 8 | ServiceClassIDList | Universal | “AV Remote Control” (UUID), “AV Remote Control Controller” (UUID) | Present for CT |\n|"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/ATTR/BV-01-C",
+        "section_title": "Attribute GSIT – Protocol Descriptor List",
+        "sub_sections": "| [2] 8 | ProtocolDescriptorList | Universal | “L2CAP” (UUID): PSM – “AVCTP” (Uint16), “AVCTP” (UUID): Version – “0x0104” (Uint16) | Present for CT |\n|"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/ATTR/B-02-C",
+        "section_title": "Attribute GSIT – Additional Protocol Descriptor Lists, Browsing Channel",
+        "sub_sections": "| [2] 8 | AdditionalProtocolDescriptorLists | Universal | “L2CAP” (UUID): PSM – “AVCTP, Browsing” (Uint16), “AVCTP” (UUID): Version – “0x0014” (Uint16) | TCMT defined |\n|"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/ATTR/BV-03-C",
+        "section_title": "Attribute GSIT – Bluetooth Profile Descriptor List, AVRCP 1.5",
+        "sub_sections": "| [2] 8 | BluetoothProfileDescriptorList | Universal | “AV Remote Control” (UUID): Version – “0x0105” (Uint16) | TCMT defined |\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/SERR/BV-01-C",
+        "section_title": "Service record GSIT – AVRCP TG",
+        "sub_sections": "| [2] 8 | ServiceClassIDList | Universal | “A/V Remote Control Target” (UUID) | Present for TG |\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/ATTR/BV-01-C",
+        "section_title": "Attribute GSIT – Protocol Descriptor List",
+        "sub_sections": "| [2] 8 | ProtocolDescriptorList | Universal | “L2CAP” (UUID): PSM – “AVCTP” (Uint16), “AVCTP” (UUID): Version – “0x0104” (Uint16) | Present for TG |\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/ATTR/BY-02-C",
+        "section_title": "Attribute GSIT – Additional Protocol Descriptor Lists, Browsing Channel",
+        "sub_sections": "| [2] 8 | AdditionalProtocolDescriptorLists | Universal | “L2CAP” (UUID): PSM – “AVCTP_Browsing” (Uint16), “AVCTP” (UUID): Version – “0x1014” (Uint16) | TCMT defined |\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/ATTR/BV-03-C",
+        "section_title": "Attribute GSIT – Additional Protocol Descriptor Lists, Cover Art",
+        "sub_sections": "| [2] 8 | AdditionalProtocolDescriptorLists | Universal | “L2CAP\" (UUID): PSM – skip (Uint16), “OBEX” (UUID) | TCMT defined |\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/ATTR/AV-04-C",
+        "section_title": "Attribute GSIT – Bluetooth Profile Descriptor List, AVRCP 1.5",
+        "sub_sections": "| [2] 8 | BluetoothProfileDescriptorList | Universal | “A/V Remote Control” (UUID): Version – “0x0105” (Uint16) | TCMT defined |\n|"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/OFFS/BV-01-C",
+        "section_title": "Attribute ID Offset String GSIT – Service Name",
+        "sub_sections": "| [2] 8 | A/V Remote Control Controller | ServiceName | 0x0000 | Optionally present |\n|"
+    },
+    {
+        "section_id": "AVRCP/CT/SGSIT/OFFS/BV-02-C",
+        "section_title": "Attribute ID Offset String GSIT – Provider Name",
+        "sub_sections": "| [2] 8 | A/V Remote Control Controller | ProviderName | 0x0002 | Optionally present |\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/OFFS/BV-03-C",
+        "section_title": "Attribute ID Offset String GSIT – Service Name",
+        "sub_sections": "| [2] 8 | AV Remote Control Target | ServiceName | 0x0000 | Optionally present |\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/SGSIT/OFFS/BV04-C",
+        "section_title": "Attribute ID Offset String GSIT – Provider Name",
+        "sub_sections": "| [2] 8 | AV Remote Control Target | ProviderName | 0x0002 | Optionally present |\n\nTable 4.4: Input for the Audio/Video Remote Control Profile SGSIT Attribute ID Offset String tests\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/CGSIT/SFC/BV-01-C",
+        "section_title": "SDP Future Compatibility – IUT is AVRCP CT",
+        "sub_sections": "| [2] 8 | A/V Remote Control Target | The Lower Tester exposes an AVRCP TG SDP record. The version in the Bluetooth Profile Descriptor List is greater than the most recently adopted version. All bits are set in the supported features attribute, including RFU bits. An A2DP SDP record is exposed if specified by IXIT [6], and an A2DP connection may also be established. |\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/CGSIT/SFC/BV-02-C",
+        "section_title": "SDP Future Compatibility – IUT is AVRCP TG",
+        "sub_sections": "| [2] 8 | A/V Remote Control, A/V Remote Control Controller | The Lower Tester exposes an AVRCP CT SDP record. The version in the Bluetooth Profile Descriptor List is greater than the most recently adapted version. All bits are set in the supported features attribute, including RFU bits. An A1DP SDP record is exposed if specified by IXIT [6], and an A2DP link connection may also be established. |\n\nTable 4.5: Input for the Client CGSIT SDP future compatibility tests"
+    },
+    {
+        "section_id": "AVRCP/CT/CON/BV-01-C",
+        "section_title": "Connection establishment for browsing – CT",
+        "sub_sections": "• Test Purpose\n   Verify the connection establishment for browsing initiated by the CT.\n\n• Reference\n   [5], [8] 4."
+    },
+    {
+        "section_id": "AVRCP/CT/CON/BV-01-C",
+        "section_title": "Connection establishment for browsing – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n   Pass verdict\n   The IUT initiates the establishment of the AVCTP control channel and immediately afterwards the IUT initiates the establishment of the AVCTP browsing channel."
+    },
+    {
+        "section_id": "AVRCP/TG/CON/BV-02-C",
+        "section_title": "Connection establishment for browsing – TG",
+        "sub_sections": "• Test Purpose\n   Verify the connection establishment for the control channel and the browsing channel, both initiated by the TG.\n\n• Reference\n  [5], [8] 4."
+    },
+    {
+        "section_id": "AVRCP/TG/CON/BV-02-C",
+        "section_title": "Connection establishment for browsing – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The IUT initiates the establishment of the AVCTP control channel and immediately afterwards the IUT initiates the establishment of the AVCTP browsing channel."
+    },
+    {
+        "section_id": "AVRCP/TG/CON/BV-05-C",
+        "section_title": "Connection establishment for browsing – TG initiates control channel and CT initiates browsing channel",
+        "sub_sections": "• Test Purpose\n  Verify the connection establishment for browsing channel initiated by the CT after the TG has initiated the control channel establishment.\n\n• Reference\n  [5], [8] 4."
+    },
+    {
+        "section_id": "AVRCP/TG/CON/BV-05-C",
+        "section_title": "Connection establishment for browsing – TG initiates control channel and CT initiates browsing channel",
+        "sub_sections": "MSC](image)\n\n- **Expected Outcome**\n  - Pass verdict\n  - The IUT initiates the establishment of the AVCTP control channel.\n  - The IUT successfully responds to the Lower Tester initiation to establish the AVCTP browsing channel.\n  - In the alternative scenario where the IUT supports browsing channel initiation and immediately initiates the browsing channel establishment following the control channel establishment, the IUT successfully responds to the Lower Tester’s request to initiate the browsing channel release and subsequently allows the Lower Tester to initiate the AVCTP browsing channel establishment."
+    },
+    {
+        "section_id": "AVRCP/CT/CON/BV-03-C",
+        "section_title": "Connection release for browsing – CT",
+        "sub_sections": "- **Test Purpose**\n  - Verify the connection release for browsing initiated by the CT.\n\n- **Reference**\n  - [5], [8] 4."
+    },
+    {
+        "section_id": "AVRCP/CT/CON/BV-03-C",
+        "section_title": "Connection release for browsing – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The IUT initiates the release of the AVCTP browsing channel and immediately afterwards the IUT initiates the release of the AVCTP control channel."
+    },
+    {
+        "section_id": "AVRCP/TG/CON/BV-04-C",
+        "section_title": "Connection release for browsing – TG",
+        "sub_sections": "• Test Purpose\n  Verify the connection release for browsing initiated by the TG.\n\n• Reference\n  [5], [8] 4."
+    },
+    {
+        "section_id": "AVRCP/TG/CON/BV-04-C",
+        "section_title": "Connection release for browsing – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT initiates the release of the AVCThompson channel and immediately afterwards the IUT initiates the release of the AVCThompson control channel."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-01-C",
+        "section_title": "SetAddressedPlayer – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the SetAddressedPlayer command issued by the CT.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-08-C",
+        "section_title": "GetFolderltems – CT",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Upper Tester triggers the IUT to set the addressed player.\n\nFigure 4.6:"
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-01-C",
+        "section_title": "SetAddressedPlayer – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a SetAddressedPlayer command with Parameter Length = 0x2 and a valid PlayerId."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-02-C",
+        "section_title": "SetAddressedPlayer – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the SetAddressedPlayer response issued by the TG.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-09-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a SetAddressedPlayer command containing a valid PlayerId to the IUT.\n\nFigure 4.7:"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-02-C",
+        "section_title": "SetAddressedPlayer – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a valid status field indicating that no error occurred."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-03-C",
+        "section_title": "SetBrowsedPlayer – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the SetBrowsedPlayer command issued by the CT.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-08-C",
+        "section_title": "GetFolderItems – CT",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Upper Tester triggers the IUT to set the browsed player to a valid PlayerID.\n\nFigure 4.8:"
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-03-C",
+        "section_title": "SetBrowsedPlayer – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a SetBrowsedPlayer command with a valid PlayerId."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-04-C",
+        "section_title": "SetBrowsedPlayer – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the SetBrowsedPlayer response issued by the TG.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-09-C",
+        "section_title": "GetFolderltems – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a valid SetBrowsedPlayer command to the IUT.\n\nFigure 4.9:"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-04-C",
+        "section_title": "SetBrowsedPlayer – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a valid Status field in the SetBrowsedPlayer response. The fields UID Counter, Number of Items, Character Set Id, Folder Depth, Folder Name Size and Folder Name are correctly formatted reflecting the current folder."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-05-C",
+        "section_title": "AddressedPlayerChanged notification – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the AddressedPlayerChanged Notification issued by the TG and the procedure associated to this.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-05-C",
+        "section_title": "AddressedPlayerChanged notification – TG",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n    The IUT issues a correctly AddressedPlayerChanged notification final response with the correct value of PlayerId and UID Counter for the Player selected by the Upper Tester.\n    The IUT completes all player specific notifications with AV/C type rejected."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-06-C",
+        "section_title": "PlayerFeatureBitmask – TG",
+        "sub_sections": "- Test Purpose\n  Verify the PlayerFeatureBitmask issued by the TG.\n\n- Reference\n  [5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-06-C",
+        "section_title": "PlayerFeatureBitmask – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe features announced in each Media Player’s feature bitmask are according to the Media Player’s IXIT entry."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-07-C",
+        "section_title": "AvailablePlayersChanged notification – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the AvailablePlayersChanged Notification issued by the TG.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-07-C",
+        "section_title": "AvailablePlayersChanged Notification – TG",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n  - The IUT issues a correctly formatted AvailablePlayersChanged notification final response."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-08-C",
+        "section_title": "GetFolderltems – CT",
+        "sub_sections": "- Test Purpose\n  - Verify the GetFolderltems command issued by the CT on the Media Player List.\n- Reference\n  - [5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-08-C",
+        "section_title": "GetFolderItems – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a GetFolderItems command with the scope of MediaPlayerList and valid parameters for StartItem, EndItem, AttributeCount and AttributeList."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-09-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the GetFolderItems response for the Media Player List issued by the TG.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-09-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted list of available Media Player Items with correct entries for each field in each Media Player Item."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-10-C",
+        "section_title": "DefaultAddressedPlayer – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the Default Addressed Player on the TG.\n\n• Reference\n\n[5], [8]"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-10-C",
+        "section_title": "DefaultAddressedPlayer – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with valid PASS THROUGH responses indicating success and starts playing."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-11-C",
+        "section_title": "GetTotalNumberOftitems – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the GetTotalNumberOftitems command issued by the IUT (CT) for the Media Player List scope.\n\n• Reference\n\n[8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-11-C",
+        "section_title": "GetTotalNumberOftlems – CT",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n    The IUT issues a GetTotalNumberOftlems command to the Lower Tester with the scope parameter set to Media Player List."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-12-C",
+        "section_title": "GetTotalNumberOftlems – TG",
+        "sub_sections": "- Test Purpose\n  Verify that the IUT (TG) correctly responds to the GetTotalNumberOftlems command issued from the CT for the Media Player List scope.\n\n- Reference\n  [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-12-C",
+        "section_title": "GetTotalNumberOftlems – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a well-formatted GetTotalNumberOftlems response message to the Lower Tester.\n\nThe GetTotalNumberOftlems response message indicates the correct number of available media players.\n\nThe total number of items returned by the IUT is the correct number for the current folder as specified in the IXIT [6]."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BI-01-C",
+        "section_title": "SetAddressedPlayer – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the SetAddressedPlayer response issued by the TG when an invalid player is requested.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-09-C",
+        "section_title": "GetFolderltems – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a SetAddressedPlayer command to the IUT with an invalid PlayerID.\n\nFigure 4.18:"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BI-01-C",
+        "section_title": "SetAddressedPlayer – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with an ‘Invalid Player Id’ status response."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BI-02-C",
+        "section_title": "SetBrowsedPlayer – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the SetBrowsedPlayer response issued by the TG when an invalid player is requested.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-09-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a SetBrowsedPlayer command to the IUT with an invalid PlayerID.\n\nFigure 4.19:"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BI-02-C",
+        "section_title": "SetBrowsedPlayer – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with an ‘Invalid Player Id’ status response."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-01-C",
+        "section_title": "GetFoldertlms – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the GetFoldertlms command issued by the CT.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-01-C",
+        "section_title": "GetFoldertems – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a GetFoldertems command with the scope of Virtual Filesystem and valid parameters for StartItem, EndItem, AttributeCount, and AttributeList."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFoldertems – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the GetFoldertems response issued by the TG for a folder.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted list of only Folder Items and Media Items."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-03-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the GetFolderItems response issued by the TG while the BrowsedPlayer is other than the AddressedPlayer.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-09-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": ".\n  - The IUT has at least two media player applications available.\n\n• Test Procedure\n\n1. The Lower Tester sets the addressed and browsed players on the IUT to valid PlayerID values\n2. The Lower Tester sends a GetFolderItems command to the IUT with the VirtualFilesystem as\n   Scope parameter and valid entries for Start Item, End Item, AttributeCount and AttributeList.\n\nFigure 4.22:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-03-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n    The IUT responds with a correctly formatted list of only Folder Items and Media Items of the current folder on PlayerB."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-04-C",
+        "section_title": "ChangePath – CT",
+        "sub_sections": "- Test Purpose\n  Verify the ChangePath command issued by the CT.\n\n- Reference\n  [5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-01-C",
+        "section_title": "GetFolderItems – CT",
+        "sub_sections": ".\n  - The IUT has successfully issued a SetBrowseredPlayer command to the player specified in the IXIT [6] as the browsable player.\n\n• Test Procedure\n\nThe Upper Tester triggers the IUT to issue the ChangePath command with a valid UIDCounter, FolderUID, and Direction indication FolderDown.\n\nFigure 4.23:"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-04-C",
+        "section_title": "ChangePath – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a ChangePath command with the valid parameters for Direction and FolderUID."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-05-C",
+        "section_title": "ChangePath – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the ChangePath response issued by the TG.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFolderltems – TG",
+        "sub_sections": ".\n- The Lower Tester has successfully issued a SetBrowserPlayer command to the player specified in the IXIT [6] as the browsable player.\n\n• Test Procedure\n\nThe Lower Tester sends a ChangePath command to the IUT containing a currently valid UIDCounter, FolderUID, and the Direction indication Folder Down.\n\nFigure 4.24:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-05-C",
+        "section_title": "ChangePath – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted ChangePath Response with the correct Number of Items of the current folder on the IUT."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-06-C",
+        "section_title": "ChangePath – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the ChangePath response issued by the TG when the Direction is FolderUp.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-06-C",
+        "section_title": "ChangePath – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted ChangePath Response with the correct Number of Items of the current folder on the IUT."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-07-C",
+        "section_title": "GettlemAttributes – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the GettlemAttributes command issued by the CT on a Media Item in the Virtual Media Player Filesystem other than the currently playing one.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-01-C",
+        "section_title": "GetFolderItems – CT",
+        "sub_sections": ".\n  - The IUT has successfully issued a SetBrowserPlayer command to the player specified in the IXIT [6] as the browsable player.\n\n• Test Procedure\n\nThe Upper Tester triggers the IUT to issue the GettlemAttributes command for a currently valid Media Item UID other than the currently playing media item.\n\nFigure 4.26:"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-07-C",
+        "section_title": "GettlemAttributes – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a GettlemAttributes command with valid parameters for UID, UIDcounter, NumberOfAttributes, and AttributeID list."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-08-C",
+        "section_title": "GettlemAttributes – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the GettlemAttributes response issued by the TG on a Media Item in the Virtual Media Player Filesystem other than the currently playing one.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": ".\n  - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified in the IXIT [6] as the browsable player.\n\n• Test Procedure\n\nThe Lower Tester sends a GettlemAttributes command to the IUT containing the VirtualFilesystem as Scope parameter and valid entries for UID, UIDcounter, Number of Attributes, and AttributeID list.\n\nFigure 4.27:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-08-C",
+        "section_title": "GettlemAttributes – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted GettlemAttributes Response with the expected values for Number of Attributes and Attribute Value List."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-09-C",
+        "section_title": "UIDcounter – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the initial value of the UID counter if the TG is a database unaware player.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-09-C",
+        "section_title": "UIDcounter – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues an InterimResponse for the EVENT_UIDS_CHANGED with a UID Counter=0."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-10-C",
+        "section_title": "UIDcounter – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the initial value of the UID counter if the TG is a database aware player.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-10-C",
+        "section_title": "UIDcounter – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues an InterimResponse for the EVENT_UIDS_CHANGED with 0x1<=UID Counter<=0xFFFF."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-11-C",
+        "section_title": "UIDcounter – TG",
+        "sub_sections": "• Test Purpose\n\nVerify that the TG increments the UID counter and sends a UIDSCchangedNotification when updates on existing UIDs occur if the TG is database aware.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-11-C",
+        "section_title": "UID counter – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a FinalResponse for the EVENT_UIDS_CHANGED with UIDcounterB not equal to UIDcounterA.\n\nThe IUT issues an Interim response after the second Registration for the EVENT_UIDS_CHANGED with UIDcounterB."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-12-C",
+        "section_title": "GetTotalNumberOftlems – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the GetTotalNumberOftlems command issued by the IUT (CT) for the Virtual Media Player Filesystem scope.\n\n• Reference\n\n[8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-12-C",
+        "section_title": "GetTotalNumberOfltems – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a GetTotalNumberOfltems command to the Lower Tester with the scope parameter set to Virtua Media Player Filesystem."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-13-C",
+        "section_title": "GetTotalNumberOfltems – TG",
+        "sub_sections": "• Test Purpose\n\nVerify that the IUT (TG) correctly responds to the GetTotalNumberOfltems command issued from the CT for the Virtual Media Player Filesystem scope.\n\n• Reference\n\n[8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-13-C",
+        "section_title": "GetTotalNumberOfItems – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe status parameter of the GetTotalNumberOfItems response message from the IUT to the Lower Tester indicates that the operation completed without error.\n\nThe total number of items returned by the IUT is the correct number of playable media items in the current folder [6]."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-01-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the GetFolderItems response issued by the TG when the command contains invalid parameters.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-01-C",
+        "section_title": "GetFoldertlms – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with error code 0x0B (Range out of Bounds)."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-02-C",
+        "section_title": "GetFoldertlms – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the GetFoldertlms response issued by the TG for an empty folder when the command contains invalid parameters.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-02-C",
+        "section_title": "GetFoldertems – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with error code 0x0B (Range out of Bounds)."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-03-C",
+        "section_title": "GetFoldertems – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the GetFoldertems response issued by the TG when the command contains invalid parameters accessing items beyond the end of a folder.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-03-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with error code 0x0B (Range out of Bounds)."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-04-C",
+        "section_title": "ChangePath – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the ChangePath response issued by the TG when an invalid Folder UID is requested.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": ".\n  - The Lower Tester has successfully issued a SetBrowseredPlayer command to the player specified in the IXIT [6] as the browsable player.\n\n• Test Procedure\n\nThe Lower Tester sends a ChangePath command to the IUT containing a currently invalid UIDCounter, FolderUID and the Direction indicating Folder Down.\n\nFigure 4.36:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-04-C",
+        "section_title": "ChangePath – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with an error code indicating an invalid Folder UID."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-05-C",
+        "section_title": "UIDcounter – TG",
+        "sub_sections": "• Test Purpose\n\nVerify that the TG issues an error when receiving a command for an invalid UID counter.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-05-C",
+        "section_title": "UIDcounter – TG",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n  - The IUT issues a GetItemAttributes Response with Status Code UID Changed."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-01-C",
+        "section_title": "Search – CT",
+        "sub_sections": "- Test Purpose\n  - Verify the Search command issued by the CT.\n- Reference\n  - [5], [8]"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-01-C",
+        "section_title": "Search – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a Search command with the expected parameters for Character Set, Length and Search String."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-02-C",
+        "section_title": "Search – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the Search response issued by the TG.\n\n• Reference\n\n[5], [8]"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-02-C",
+        "section_title": "Search – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted Search response with correct entries for all parameters."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-03-C",
+        "section_title": "GetFolderltems – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the GetFolderltems command issued by the CT on the Search folder.\n\n• Reference\n\n[5], [8] 6.10.4.2,"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-01-C",
+        "section_title": "Search – CT",
+        "sub_sections": ".\n  - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified in the IXIT [6] as the browsable player.\n\n• Test Procedure\n\nThe Upper Tester triggers the IUT to retrieve the Search folder content.\n\nFigure 4.40:"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-03-C",
+        "section_title": "GetFoldertems – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a GetFoldertems command with the scope of Search folder and valid parameters for StartItem, EndItem, AttributeCount and AttributeList."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-04-C",
+        "section_title": "GetFoldertems – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the GetFoldertems response for the Search folder issued by the TG.\n\n• Reference\n\n[5], [8] 6.10.4.2,"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-02-C",
+        "section_title": "Search – TG",
+        "sub_sections": ".\n- The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified in the IXIT [6] as the browsable player.\n\n• Test Procedure\n\nThe Lower Tester sends a GetFolderItems command to the IUT containing the Search folder as Scope parameter and valid entries for Start Item, End Item, AttributeCount and AttributeList.\n\nFigure 4.41:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-04-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted list of only Media Items."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-05-C",
+        "section_title": "GetItemAttributes – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the GetItemAttributes command issued by the CT on a Media Item in the Search folder other than the currently playing one.\n\n• Reference\n\n[5], [8] 6.10.4.3,"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-01-C",
+        "section_title": "Search – CT",
+        "sub_sections": ".\n  - The IUT is aware of the currently valid Media Item UIDs exposed by the Lower Tester. This can be achieved by executing"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-03-C",
+        "section_title": "GetFolderItems – CT",
+        "sub_sections": ".\n  - The IUT has successfully issued a SetBrowserPlayer command to the player specified in the IXIT [6] as the browsable player.\n\n• Test Procedure\n\nThe Upper Tester triggers the GettlemAttributes command for a currently valid Search result Media Item UID other than the currently playing media item.\n\nFigure 4.42:"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-05-C",
+        "section_title": "GettlemAttributes – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a GettlemAttributes command with valid parameters for UID, UIDcounter, NumberOfAttributes and AttributeID list."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-06-C",
+        "section_title": "GettlemAttributes – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the GettlemAttributes response issued by the TG on a Media Item in the Search folder other than the currently playing one.\n\n• Reference\n\n[5], [8] 6.10.4.3,"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-02-C",
+        "section_title": "Search – TG",
+        "sub_sections": ".\n\n- The Lower Tester is aware of the currently valid Media Item UIDs in the Search folder exposed by the IUT. This can be achieved by executing `"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-04-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": "`.\n\n- The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified in the IXIT [6] as the browsable player.\n\n- **Test Procedure**\n\nThe Lower Tester sends a GettlemAttributes command to the IUT containing the Search folder as Scope parameter and valid entries for UID, UIDcounter, Number of Attributes and AttributeID list.\n\n![Figure 4.43:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-06-C",
+        "section_title": "GettlemAttributes – TG",
+        "sub_sections": "MSC](image)\n\n- **Expected Outcome**\n\n  Pass verdict\n\nThe IUT responds with a correctly formatted GettlemAttributes Response with the expected values for Number of Attributes and Attribute Value List."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-07-C",
+        "section_title": "GetTotalNumberOfItems – CT",
+        "sub_sections": "- **Test Purpose**\n\n  Verify the GetTotalNumberOfItems command issued by the IUT (CT) for the Search scope.\n\n- **Reference**\n\n  [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-01-C",
+        "section_title": "Search – CT",
+        "sub_sections": ".\n\n- Test Procedure\n\n  1. The Upper Tester triggers the IUT to issue a GetTotalNumberOfItems command to the Lower Tester with the scope parameter set to Search.\n  \n  2. Upon receipt of a GetTotalNumberOfItems command from the IUT, the Lower Tester issues an appropriate GetTotalNumberOfItems response message.\n\n![Figure 4.44:"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-07-C",
+        "section_title": "GetTotalNumberOfItems – CT",
+        "sub_sections": "MSC](image)\n\n- Expected Outcome\n  - Pass verdict\n  The IUT issues a GetTotalNumberOfItems command to the Lower Tester with the scope parameter set to Search."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-08-C",
+        "section_title": "GetTotalNumberOfItems – TG",
+        "sub_sections": "- Test Purpose\n  Verify that the IUT (TG) correctly responds to the GetTotalNumberOfItems command issued from the CT for the Search scope.\n\n- Reference\n  [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-02-C",
+        "section_title": "Search – TG",
+        "sub_sections": ".\n\n- **Test Procedure**\n\nThe Lower Tester issues a GetTotalNumberOftItems command to the IUT with the scope parameter set to Search.\n\n![Figure 4.45:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-08-C",
+        "section_title": "GetTotalNumberOftItems – TG",
+        "sub_sections": "MSC](image)\n\n- **Expected Outcome**\n  - Pass verdict\n  - The status parameter of the GetTotalNumberOftItems response message from the IUT to the Lower Tester indicates that the operation completed without error.\n  - The total number of items returned by the IUT is the correct number of playable media items in the search result as specified in the IXIT [6]."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-01-C",
+        "section_title": "PlayItem – CT",
+        "sub_sections": "- **Test Purpose**\n  - Verify the PlayItem command issued by the CT.\n\n- **Reference**\n  - [5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-01-C",
+        "section_title": "GetFolderItems – CT",
+        "sub_sections": ".\n\n- **Test Procedure**\n\nThe Upper Tester triggers the execution of the PlayItem command on the IUT for a currently playable Media Item on the Lower Tester in a valid Scope (Media Filesystem, Search or NowPlaying).\n\n![Figure 4.46:"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-01-C",
+        "section_title": "PlayItem – CT",
+        "sub_sections": "MSC](image)\n\n- **Expected Outcome**\n  - Pass verdict\n\nThe IUT issues a PlayItem command with the expected parameters as triggered by the Upper Tester for Scope and UID and the currently valid UID counter."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-02-C",
+        "section_title": "PlayItem – TG",
+        "sub_sections": "- **Test Purpose**\n  - Verify the PlayItem response issued by the TG.\n\n- **Reference**\n  - [5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a PlayItem Command to the IUT with valid entries for all parameters. The UID must be a UID for a currently playable UID.\n\nFigure 4.47:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-02-C",
+        "section_title": "PlayItem – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted PlayItem Response with the status indicating success."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-03-C",
+        "section_title": "AddToNowPlaying – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the AddToNowPlaying command issued by the CT.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-01-C",
+        "section_title": "GetFolderItems – CT",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Upper Tester triggers the AddToNowPlaying command from the IUT for a currently playable UID.\n\nFigure 4.48:"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-03-C",
+        "section_title": "AddToNowPlaying – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues an AddToNowPlaying command with the expected parameters as triggered by the Upper Tester for Scope and UID and the currently valid UID counter."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-04-C",
+        "section_title": "AddToNowPlaying – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the AddToNowPlaying response issued by the TG.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFoldertems – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends an AddToNowPlaying command with a currently playable UID to the IUT.\n\nFigure 4.49:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-04-C",
+        "section_title": "AddToNowPlaying – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted AddToNowPlaying Response with the status indicating success."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-05-C",
+        "section_title": "GetFolderItems – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the GetFolderItems command issued by the CT on the Now Playing folder.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-05-C",
+        "section_title": "GetFoldertems – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a GetFoldertems command with the scope of Now Playing folder and valid parameters for StartItem, EndItem, AttributeCount and AttributeList."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-06-C",
+        "section_title": "GetFoldertems – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the GetFoldertems response for the Now Playing folder issued by the TG.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-06-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted list of only Media Items."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-07-C",
+        "section_title": "NowPlayingContentChanged notification – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the NowPlayingContentChanged notification issued by the TG.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-07-C",
+        "section_title": "NowPlayingContentChanged notification – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a FinalResponse for the EVENT_NOW_PLAYING_CONTENT_CHANGED."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-08-C",
+        "section_title": "GettlemAttributes – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the GettlemAttributes command issued by the CT on a Media Item in the Now Playing folder.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-05-C",
+        "section_title": "GetFoldertems – CT",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Upper Tester triggers the IUT to send a GettlemAttributes command for a currently valid UID in the Now Playing folder.\n\nFigure 4.53:"
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-08-C",
+        "section_title": "GettlemAttributes – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a GettlemAttributes command with the Scope of NowPlaying and valid parameters for UID, UIDcounter, NumberOfAttributes and AttributeID list."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-09-C",
+        "section_title": "GettlemAttributes – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the GettlemAttributes response issued by the TG on a Media Item in the Now Playing folder.\n\n• Reference\n\n[5], [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-06-C",
+        "section_title": "GetFolderltems – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a GettlemAttributes command to the IUT containing the Now Playing folder as Scope parameter and valid entries for UID (other than 0x0), UID Counter, Number of Attributes, and AttributeID list.\n\nFigure 4.54:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-09-C",
+        "section_title": "GettlemAttributes – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted GettlemAttributes Response with the expected values for Number of Attributes and Attribute Value List."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-10-C",
+        "section_title": "GetTotalNumberOfltems – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the GetTotalNumberOfltems command issued from the IUT (CT) for the Now Playing scope.\n\n• Reference\n\n[8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-10-C",
+        "section_title": "GetTotalNumberOftlems – CT",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n    The IUT issues a GetTotalNumberOftlems command to the Lower Tester with the scope parameter set to Now Playing."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-11-C",
+        "section_title": "GetTotalNumberOftlems – TG",
+        "sub_sections": "- Test Purpose\n  Verify that the IUT (TG) correctly responds to the GetTotalNumberOftlems command issued from the CT for the Now Playing scope.\n\n- Reference\n  [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-11-C",
+        "section_title": "GetTotalNumberOffitems – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe status parameter of the GetTotalNumberOffitems response message from the IUT to the Lower Tester indicates that the operation completed without error.\n\nThe total number of items returned by the IUT is the correct number of the currently playable media items as specified in the IXIT [6]."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BI-01-C",
+        "section_title": "PlayItem_Invalid – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the PlayItem response issued by the TG when an invalid UID is requested.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFoldertems – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a Playltem Command to the IUT with a UID that is currently not playable.\n\nFigure 4.57:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BI-01-C",
+        "section_title": "Playltem_Invalid – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted Playltem Response with the Status indicating the UID does not exist."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BI-02-C",
+        "section_title": "AddToNowPlaying_Invalid – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the AddToNowPlaying response issued by the TG when an invalid UID is requested.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFoldertems – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends an AddToNowPlaying command to the IUT with an invalid UID.\n\nFigure 4.58:"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BI-02-C",
+        "section_title": "AddToNowPlaying_Invalid – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted AddToNowPlaying Response with the status indicating that the UID does not exist."
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-01-C",
+        "section_title": "SetAbsoluteVolume – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the SetAbsoluteVolume command issued by the CT.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-01-C",
+        "section_title": "SetAbsoluteVolume – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a correctly formatted SetAbsoluteVolume command with a valid value of volume."
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BV-02-C",
+        "section_title": "SetAbsoluteVolume – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the behavior of the TG receiving a valid SetAbsoluteVolume command.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BV-02-C",
+        "section_title": "SetAbsoluteVolume – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted SetAbsoluteVolume Response with the current value for volume."
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-03-C",
+        "section_title": "NotifyVolumeChange – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the NotifyVolumeChange command issued by the CT.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-03-C",
+        "section_title": "NotifyVolumeChange – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a correctly formatted RegisterNotification for the EVENT_VOLUME_CHANGED."
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BV-04-C",
+        "section_title": "NotifyVolumeChange – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the NotifyVolumeChange response issued by the TG.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BV-04-C",
+        "section_title": "NotifyVolumeChange – TG",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n  - The IUT issues a FinalResponse for the EVENT_VOLUME_CHANGED with a valid value for Absolute Volume."
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BI-01-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – TG",
+        "sub_sections": "- Test Purpose\n  - Verify the behavior of the TG receiving an invalid SetAbsoluteVolume command.\n\n- Reference\n  - [5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BI-01-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted SetAbsoluteVolume Response indicating failure. If the IUT does not return Invalid Parameter Content (0x02), then the Lower Tester gives a warning."
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BI-02-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the behavior of the TG receiving a SetAbsoluteVolume command with the top level bit set.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BI-02-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT responds with a correctly formatted SetAbsoluteVolume Response with the current value and the top bit set to zero."
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BI-03-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the behavior of the CT receiving a SetAbsoluteVolume Response with the top bit (bit 7) set.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BI-03-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – CT",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n    The IUT ignores the top bit (bit 7) and considers only the lower seven bits for the current value for volume."
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BI-04-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – CT",
+        "sub_sections": "- Test Purpose\n  Verify the behavior of the CT receiving an Interim and Final Response for Absolute Volume change notification with the top bit (bit 7) set.\n\n- Reference\n  [5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BI-04-C",
+        "section_title": "SetAbsoluteVolume invalid behavior – CT",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n    The IUT ignores the top bit (bit 7) and considers only the lower seven bits of the Interim and Final Response for the absolute volume on TG."
+    },
+    {
+        "section_id": "AVRCP/CT/PTH/BV-01-C",
+        "section_title": "Press and release – CT",
+        "sub_sections": "- Test Purpose Verify that the button release is sent following a button press when the CT issues a PASS THROUGH command.\n- Reference\n  - [2], [7] 4."
+    },
+    {
+        "section_id": "AVRCP/CT/PTH/BV-01-C",
+        "section_title": "Press and release – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a correctly formatted PASS THROUGH command with the state flag set to button press, followed within 2 seconds by a correctly formatted PASS THROUGH command with the same operation id with the state flag set to button release."
+    },
+    {
+        "section_id": "AVRCP/CT/PTH/BV-02-C",
+        "section_title": "Press and hold – CT",
+        "sub_sections": "• Test Purpose\n\nVerify that when a button to send a PASS THROUGH command is held down the CT continues to issue button presses every 2 seconds until the button is released.\n\n• Reference\n\n[2], [7] 4."
+    },
+    {
+        "section_id": "AVRCP/CT/PTH/BV-02-C",
+        "section_title": "Press and hold – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a correctly formatted PASS THROUGH command with the state flag set to button press.\n\nAnother PASS THROUGH command with the same operation id and state flag set to button press is issued within 2 seconds of each previous PASS THROUGH command until the button is released.\n\nAt least two PASS THROUGH commands are sent with the state flag set to button press.\n\nA final PASS THROUGH command with the same operation id and state flag set to button release is sent within 2 seconds of the last button press."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-01-C",
+        "section_title": "Use GetFolderItems to request Cover Art attribute – CT",
+        "sub_sections": "• Test Purpose\n\nVerify that the IUT can correctly use the GetFolderItems function with the scope of Virtual Media Player Filesystem to retrieve the Cover Art Image Handle.\n\n• Reference\n\n[8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-01-C",
+        "section_title": "Use GetFoldertems to request Cover Art attribute – CT",
+        "sub_sections": "MSC*\n\n• Expected Outcome\n\n  Pass verdict\n\n  The IUT issues a well-formatted GetFoldertems command to the Lower Tester.\n\n  The GetFoldertems command has the scope parameter set to Virtual Media Player Filesystem.\n\n  The Cover Art attribute is among the attributes requested in the GetFoldertems command.\n\nNotes\n\nNote that although the test does not directly use the Cover Art OBEX connection, it must exist for there to be valid Image Handles available on the TG (Imaging Responder)."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-02-C",
+        "section_title": "Use GetFolderItems to request Cover Art attribute – TG",
+        "sub_sections": "- Test Purpose\n\nVerify that the IUT can correctly respond to a GetFolderItems request with the scope of Virtual Media Player Filesystem to retrieve the Cover Art Image Handle.\n\n- Reference\n\n[8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-02-C",
+        "section_title": "Use GetFolderItems to request Cover Art attributes – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\n  Pass verdict\n\n  The IUT issues a well-formatted GetFolderltems response message to the Lower Tester.\n\n  The GetFolderltems response message contains at least one item with a Cover Art Image Handle.\n\n• Notes\n\n  The linkage between the returned Image Handle and retrieval of an image is covered in other tests ("
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-08-C",
+        "section_title": "Use the Imaging Property Object – TG",
+        "sub_sections": ","
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-10-C",
+        "section_title": "Pull an Image as a Thumbnail – TG",
+        "sub_sections": ","
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-12-C",
+        "section_title": "Pull a Thumbnail – TG",
+        "sub_sections": "and"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-14-C",
+        "section_title": "Pull a Native Image – TG",
+        "sub_sections": "). Note that although the test does not directly use the Cover Art OBEX connection, it must exist for there to be valid Image Handles available on the TG (Imaging Responder)."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-03-C",
+        "section_title": "Use GeltlemAttributes to request Cover Art attribute – CT",
+        "sub_sections": "• Test Purpose\n\n  Verify that the IUT can correctly use the GeltlemAttributes function with the scope of Virtual Media Player Filesystem to retrieve the Cover Art Image Handle.\n\n• Reference\n\n  [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-03-C",
+        "section_title": "Use GeltlemAttributes to request Cover Art attribute – CT",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n    - The IUT issues a well-formatted GeltlemAttributes command to the Lower Tester.\n    - The GeltlemAttributes command has the scope parameter set to Virtual Media Player Filesystem.\n    - The Cover Art AttributeID is among the AttributeIDs requested in the GeltlemAttributes command."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-04-C",
+        "section_title": "Use GeltlemAttributes to request Cover Art attribute – TG",
+        "sub_sections": "- Test Purpose\n  - Verify that the IUT can correctly respond to a GeltlemAttributes with the scope of Virtual Media Player Filesystem to retrieve the Cover Art Image Handle.\n- Reference\n  - [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFoldertems – TG",
+        "sub_sections": ".\n\n- The Tester has successfully issued a SetBrowserPlayer command to the player specified in the IXIT [6] as the browsable player.\n- The Tester has successfully issued any necessary ChangePath commands to navigate to a folder on the Browsed Player of the IUT, containing at least one item with Cover Art as specified in the IXIT [6].\n\n- **Test Procedure**\n\n  The Lower Tester issues a GettlemAttributes command to the IUT with the scope parameter set to Virtual Media Player Filesystem and with valid entries for UID, UID Counter, Number of Attributes and AttributeID list. The AttributeID list contains the Cover Art AttributeID.\n\n  ![Diagram of Test Procedure]\n\n  Figure 4.72:"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-04-C",
+        "section_title": "Use GettlemAttributes to request Cover Art attribute – TG",
+        "sub_sections": "MSC\n\n- **Expected Outcome**\n\n  Pass verdict\n\n  The IUT issues a well-formatted GettlemAttributes response message to the Lower Tester.\n\n  The GettlemAttributes response message contains at least one item with a Cover Art Image Handle.\n\n- **Notes**\n\n  The linkage between the returned Image Handle and retrieval of an image is covered in other tests ("
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-08-C",
+        "section_title": "Use the Imaging Property Object – TG",
+        "sub_sections": ","
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-10-C",
+        "section_title": "Pull an Image as a Thumbnail – TG",
+        "sub_sections": ","
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-12-C",
+        "section_title": "Pull a Thumbnail – TG",
+        "sub_sections": "and"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-14-C",
+        "section_title": "Pull a Native Image – TG",
+        "sub_sections": ")."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-05-C",
+        "section_title": "Use GetElementAttributes to request Cover Art attribute – CT",
+        "sub_sections": "- **Test Purpose**\n\n  Verify that the IUT can correctly use the GetElementAttributes function to retrieve the Cover Art Image Handle of the currently playing item.\n\n- **Reference**\n\n  [8] 6."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-05-C",
+        "section_title": "Use GetElementAttributes to request Cover Art attribute – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The IUT issues a well-formatted GetElementAttributes command to the Lower Tester.\n  The GetElementAttributes command has the identifier parameter set to Playing.\n  The Cover Art AttributeID is among the AttributeIDs requested in the GetElementAttributes command."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-06-C",
+        "section_title": "Use GetElementAttributes to request Cover Art attribute – TG",
+        "sub_sections": "• Test Purpose\n  Verify that the IUT can correctly respond to a GetElementAttributes command to retrieve the Cover Art Image Handle of the currently playing item.\n\n• Reference\n\n[8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-06-C",
+        "section_title": "Use GetElementAttributes to request Cover Art attribute – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a well-formatted GetElementAttributes response message to the Lower Tester.\n\nThe GetElementAttributes response message contains the Cover Art Image Handle.\n\n• Notes\n\nThe linkage between the returned Image Handle and retrieval of an image is covered in other tests ("
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-08-C",
+        "section_title": "Use the Imaging Property Object – TG",
+        "sub_sections": ","
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-10-C",
+        "section_title": "Pull an Image as a Thumbnail – TG",
+        "sub_sections": ","
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-12-C",
+        "section_title": "Pull a Thumbnail – TG",
+        "sub_sections": "and"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-14-C",
+        "section_title": "Pull a Native Image – TG",
+        "sub_sections": ")."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-07-C",
+        "section_title": "Use the Imaging Property Object – CT",
+        "sub_sections": "• Test Purpose\nVerify that the IUT can correctly use the image-properties object to individually check images for versions other than the native format, and request an image in a format other than the native one or the mandatory imaging thumbnail.\n\n• Reference\n[8] 5.14, 6.6.1, 6.10.4.2, 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-08-C",
+        "section_title": "Use the Imaging Property Object – TG",
+        "sub_sections": "• Test Purpose\n\nVerify that the IUT can correctly handle the image-properties object, and individually provide image versions other than the native format, and respond with an image in a format other than the native one or the mandatory imaging thumbnail.\n\n• Reference\n\n[8] 5.14, 6.6.1, 6.10.4.2, 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-08-C",
+        "section_title": "Use the Imaging Property Object – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\n  Pass verdict\n\n  The IUT responds to the GetImageProperties requests from the Lower Tester.\n\n  The IUT responds to the GetImage request from the Lower Tester with a non-thumbnail format Image.\n\n• Notes\n\n  The IUT will make sure that the variant is offered in at least one format other than the native one or the mandatory imaging thumbnail. For IUTs that support only the mandatory imaging thumbnail format, this test does not apply."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-09-C",
+        "section_title": "Pull an Image as a Thumbnail – CT",
+        "sub_sections": "• Test Purpose\n\n  Verify that the IUT can correctly retrieve the thumbnail format of the available images.\n\n• Reference\n\n  [8] 5.14, 6.6.1, 6.10.4.2, 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-10-C",
+        "section_title": "Pull an Image as a Thumbnail – TG",
+        "sub_sections": "- Test Purpose\n  Verify that the IUT can correctly respond to requests for the thumbnail format of the available images.\n\n- Reference\n  [8] 5.14, 6.6.1, 6.10.4.2, 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-10-C",
+        "section_title": "Pull an Image as a Thumbnail – TG",
+        "sub_sections": "MSC](image)\n\n- Expected Outcome\n  Pass verdict\n  The IUT responds to the Getlmage request from the Lower Tester with a Thumbnail Image."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-11-C",
+        "section_title": "Pull a Thumbnail – CT",
+        "sub_sections": "- Test Purpose\n  Verify that the IUT can correctly retrieve thumbnails.\n\n- Reference\n  [8] 5.14, 6.6.1, 6.10.4.2, 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-12-C",
+        "section_title": "Pull a Thumbnail – TG",
+        "sub_sections": "- Test Purpose\n\n  Verify that the IUT can correctly respond to requests for thumbnails.\n\n- Reference\n\n  [8] 5.14, 6.6.1, 6.10.4.2, 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-13-C",
+        "section_title": "Pull a Native Image – CT",
+        "sub_sections": "- Test Purpose\n  Verify that the IUT can correctly retrieve an available image in native format.\n\n- Reference\n  [9] 5.14, 4.4.6.2, 4.4.7.2, 4."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-13-C",
+        "section_title": "Pull a Native Image – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a well-formatted GetImage request to the Lower Tester.\n\nThe ConnectionID and Image Handle parameters in the GetImage request are present and valid.\n\nThe Image Descriptor parameter in the GetImage request is empty."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-14-C",
+        "section_title": "Pull a Native Image – TG",
+        "sub_sections": "• Test Purpose\n\nVerify that the IUT can correctly respond to requests for an available image in native format.\n\n• Reference\n\n[9] 5.14, 4.4.6.2, 4.4.7.2, 4."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-15-C",
+        "section_title": "Cover Art SDP record – CT",
+        "sub_sections": "- Test Purpose\n  - Verify that the IUT can retrieve the AVRCP SDP record to determine the PSM on which the Cover Art OBEX service is running.\n\n• Reference [8] 8\n  [10]"
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-15-C",
+        "section_title": "Cover Art SDP record – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The IUT uses SDP to request the PSM associated with AVRCP Cover Art.\n  The IUT creates an L2CAP channel on the PSM published in the Lower Tester’s AVRCP SDP record.\n  The IUT issues an OBEX CONNECT [0x80] request on the created L2CAP channel."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-16-C",
+        "section_title": "Cover Art SDP record – TG",
+        "sub_sections": "• Test Purpose\n  Verify that the IUT correctly publishes an AVRCP SDP record indicating support for the Cover Art feature and the PSM on which the Cover Art OBEX service is running.\n\n• Reference [8] 8\n  [10]"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-16-C",
+        "section_title": "Cover Art SDP record – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The IUT responds with an appropriate SDP response, which contains the requested attribute containing the L2CAP PSM associated with AVRCP Cover Art.\n  The OBEX CONNECT response from the IUT is well-formatted and indicates success."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-17-C",
+        "section_title": "UIDs Changed during Cover Art – CT",
+        "sub_sections": "• Test Purpose\n  Verify that when there is an OBEX Cover Art connection and the Lower Tester is a database aware player, the IUT disconnects OBEX connection when Lower Tester issues a UIDs Changed notification.\n\n• Reference\n\n[8] 6.10.3.3, 6.10.4.2, 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-18-C",
+        "section_title": "Database-Unaware Folder Change during Cover Art – CT",
+        "sub_sections": "• Test Purpose\n\nVerify that when there is an OBEX Cover Art connection and the Lower Tester is a database-unaware player, then when the IUT changes folder, OBEX is disconnected by the IUT.\n\n• Reference\n\n[8] 6.6.1, 6.10.4.1, 6.10.4.2, 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-01-C",
+        "section_title": "Retrieval of Cover Art attribute with no OBEX connection – TG",
+        "sub_sections": "- Test Purpose\n\nVerify that when the Lower Tester attempts to retrieve the Cover Art attribute when no OBEX connection exists, the IUT does not return an image handle.\n\n- Reference\n\n[8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-01-C",
+        "section_title": "Retrieval of Cover Art attribute with no OBEX connection – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The IUT issues a well-formed GetFolderItems response.\n  The number of returned items in the response is 0 and the Item List is empty."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-04-C",
+        "section_title": "Retrieval of Cover Art attribute with no OBEX connection using GettemAttributes – TG",
+        "sub_sections": "• Test Purpose\n  Verify that the IUT does not return an image handle, when the Lower Tester attempts to retrieve the Cover Art attribute using GettemAttributes when no OBEX connection exists.\n\n• Reference\n  [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-04-C",
+        "section_title": "Retrieval of Cover Art attribute with no OBEX connection using GettlemAttributes – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The IUT issues a well-formed GettlemAttributes response.\n  The GettlemAttributes response does not contain an Attribute Value for the Cover Art attribute for any elements."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-05-C",
+        "section_title": "Retrieval of Cover Art attribute with no OBEX connection using GettElementAttributes – TG",
+        "sub_sections": "• Test Purpose\n  Verify that the IUT does not return an image handle, when the Lower Tester attempts to retrieve the Cover Art attribute using GettElementAttributes when no OBEX connection exists.\n\n• Reference\n\n[8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-05-C",
+        "section_title": "Retrieval of Cover Art attribute with no OBEX connection using GetElementAttributes – TG",
+        "sub_sections": "MSC](image)\n\n• Expected Outcome\n\n  - Pass verdict\n\n  The IUT issues a well-formed GetElementAttributes response.\n\n  The GetElementAttributes response does not contain an Attribute Value for the Cover Art attribute."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-06-C",
+        "section_title": "Request of Unsupported Image Type – TG",
+        "sub_sections": "• Test Purpose\n\n  Verify that when the IUT receives a request for an unsupported image type it can respond correctly.\n\n• Reference\n\n  [9] 4."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFolderItems – TG",
+        "sub_sections": "`.\n- The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified in the IXIT [6] as the browsable player.\n- The Lower Tester has successfully issued any necessary ChangePath commands to navigate to a folder on the Browsed Player of the IUT containing at least one item with Cover Art [6].\n- The Lower Tester has issued a GetItemAttributes command to the IUT with the scope parameter set to Virtual Media Player Filesystem and valid entries for UID, UIDcounter, Number of Attributes and AttributeID list. The AttributeID list contains the Cover Art AttributeID.\n- The Lower Tester issues a GetImageProperties to receive the imaging properties supported by the IUT.\n\nTest Procedure\n\nThe Lower Tester issues a well-formed GetImage request to the IUT, with the Image Handle set to a valid handle discovered during the setup of the initial condition, and an Image Descriptor parameter describing an image format unsupported by the IUT, according to the imaging properties received in the Initial Conditions.\n\n![Image](image.png)\n\n*Figure 4.90:"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-06-C",
+        "section_title": "Request of Unsupported Image Type – TG",
+        "sub_sections": "MSC*\n\n• Expected Outcome\n  Pass verdict\n  The IUT issues a well-formed GetImage response.\n  The GetImage response contains a well-formed OBEX error code (e.g., ‘Not Acceptable’, etc.)."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-07-C",
+        "section_title": "Request of Unsupported Image Type without browsing – TG",
+        "sub_sections": "• Test Purpose\n  Verify that when the IUT receives a request for an unsupported image type it can respond correctly.\n\n• Reference\n  [9] 4."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-07-C",
+        "section_title": "Request of Unsupported Image Type without browsing - TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The IUT issues a well-formed GetImage response."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-08-C",
+        "section_title": "Use GetFolderItems to request Cover Art attribute – TG",
+        "sub_sections": "• Test Purpose\n  Verify that when the Lower Tester attempts to retrieve the Cover Art attribute using GetFolderItems, and when no item in the selected folder has associated Cover Art, then the IUT does not return an image handle.\n\n• Reference\n  [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-09-C",
+        "section_title": "Use GettlemAttributes to request Cover Art attribute – TG",
+        "sub_sections": "- Test Purpose\n  Verify that when the Lower Tester attempts to retrieve the Cover Art attribute using GettlemAttributes, and when the selected item has no associated Cover Art, then the IUT does not return an image handle.\n\n- Reference\n  [8] 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-02-C",
+        "section_title": "GetFodlerltems – TG",
+        "sub_sections": ".\n\n- The Lower Tester has successfully issued a SetBrowserPlayer command to the player specified in [6] as the browsable player.\n- The Lower Tester has successfully issued any necessary ChangePath commands to navigate to a folder on the Browser Player on the IUT containing only items with no associated Cover Art [6].\n\n- **Test Procedure**\n\n  The Lower Tester issues a GettlemAttributes command to the IUT, with the scope parameter set to Virtual Media Player Filesystem, and valid entries for UID, UIDcounter, Number of Attributes and AttributeID list. The AttributeID list contains the Cover Art AttributeID.\n\n  Figure 4.93:"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-09-C",
+        "section_title": "Use GettlemAttributes to request Cover Art attribute – TG",
+        "sub_sections": "MSC\n\n- **Expected Outcome**\n\n  Pass verdict\n\n  The IUT issues a well-formatted GettlemAttributes response message to the Lower Tester.\n\n  The GettlemAttributes response message does not contain a Cover Art Image Handle."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-10-C",
+        "section_title": "Use GetElementAttributes to request Cover Art attribute – TG",
+        "sub_sections": "- **Test Purpose**\n\n  Verify that when the Lower Tester attempts to retrieve the Cover Art attribute using GettlemAttributes with the Playing identifier, and when the selected element has no associated Cover Art, that the IUT does not return an image handle.\n\n- **Reference**\n\n  [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BI-10-C",
+        "section_title": "Use GetElementAttributes to request Cover Art attribute – TG",
+        "sub_sections": "MSC](image)\n\n- **Expected Outcome**\n  - Pass verdict\n  - The IUT issues a well-formatted GetElementAttributes response message to the Lower Tester.\n  - The GetElementAttributes response message does not contain a Cover Art Image Handle."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-04-C",
+        "section_title": "Listing of available Media Players",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-01-C",
+        "section_title": "Listing of available Media Players",
+        "sub_sections": "|\n\n*Table 4.6: Listing of available Media Players test cases*\n\n• Test Procedure\n  CT: Initiate the action on the CT to list the Media Players available on the TG.\n  TG: No action is required.\n\n• Expected Outcome\n  Pass verdict\n  The CT displays the list of Media Players that are available on the TG.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-05-C",
+        "section_title": "Availability of Media Players",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-08-C",
+        "section_title": "Availability of Media Players",
+        "sub_sections": "|\n\nTable 4.7: Availability of Media Players test cases\n\n• Test Procedure\n  CT: For each Media Player in the list of available Media Players, initiate an action on the CT, e.g., browsing or playing a title.\n  TG: No action is required.\n\n• Expected Outcome\n  Pass verdict\n  An action can be performed on each of the available Media Players without any user interaction required on the TG device.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MPS/BV-06-C",
+        "section_title": "PASS THROUGH functionality of Media Players",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MPS/BV-03-C",
+        "section_title": "PASS THROUGH functionality of Media Players",
+        "sub_sections": "|\n\nTable 4.8: PASS THROUGH functionality of Media Players test cases\n\n• Test Procedure\n  CT: Initiate the required user actions (e.g., press button) to perform all operations that are listed in the\n  IXIT MediaPlayerFeature table for each Media Player in [6].\n  TG: No action is required.\n\n• Expected Outcome\n  Pass verdict\n  The TG reacts to all performed PASS THROUGH commands sent from the CT according to the\n  “Expected operation to be performed by the TG” of the section “operation_id list” in Section 6\n  Appendix A – Operation_id list tables without any user interaction on the TG."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-08-C",
+        "section_title": "Browsing of the current folder",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-01-C",
+        "section_title": "Browsing of the current folder",
+        "sub_sections": "|\n\nTable 4.9: Browsing of the current folder test cases\n\n• Test Procedure\n  CT: Initiate the action on the CT to browse through the media content of the currently selected folder on the TG.\n  TG: No action is required.\n\n• Expected Outcome\n  Pass verdict\n  The expected media content is displayed on the CT.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-02-C",
+        "section_title": "Browsing up",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-14-C",
+        "section_title": "Browsing up",
+        "sub_sections": "|\n\nTable 4.10: Browsing up test cases\n\n• Test Procedure\n  CT: Initiate the action on the CT to change into the folder superior to the current folder in the folder hierarchy (‘folder up’).\n  TG: No action is required.\n\n• Expected Outcome\n  Pass verdict\n  The CT indicates the superordinate folder as current folder.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-03-C",
+        "section_title": "Browsing down",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-15-C",
+        "section_title": "Browsing down",
+        "sub_sections": "|\n\nTable 4.11: Browsing down test cases\n\n• Test Procedure\n  CT: Initiate the action on the CT to change into one of the subfolders of the current folder in the folder hierarchy (‘folder down’).\n  TG: No action is required.\n\n• Expected Outcome\n  Pass verdict\n  The CT indicates the selected subfolder as current folder.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/TC/MCN/CB/BV-10-C",
+        "section_title": "Playing of a track from the Virtual Media Player Filesystem",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-04-C",
+        "section_title": "Playing of a track from the Virtual Media Player Filesystem",
+        "sub_sections": "|\n\nTable 4.12: Playing of a track from the Virtual Media Player Filesystem test cases\n\n• Test Procedure\n  CT: Initiate the action on the CT to start playback of a track from the Virtual Filesystem.\n  TG: No action is required.\n\n• Expected Outcome\n  Pass verdict\n  The desired media track is played on the TG.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-05-C",
+        "section_title": "Change in media database",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-16-C",
+        "section_title": "Change in media database",
+        "sub_sections": "|\n\nTable 4.13: Change in media database test cases\n\n• Test Procedure\n  CT: No action is required.\n  TG: Initiate the action on the TG to apply a change to the media database.\n\n• Expected Outcome\n  Pass verdict\n  The CT indicates it correctly handles the database change on the TG, e.g., by updating the information displayed.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-06-C",
+        "section_title": "Metadata from Virtual Filesystem",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-17-C",
+        "section_title": "Metadata from Virtual Filesystem",
+        "sub_sections": "|\n\n*Table 4.14: Metadata from Virtual Filesystem test cases*\n\n• Test Procedure\n  CT: Initiate the action on the CT to request metadata information for a track other than the currently playing one from the Virtual Filesystem.\n  TG: No action required.\n\n• Expected Outcome\n  Pass verdict\n  The CT displays the correct metadata information for the desired track."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BV-07-C",
+        "section_title": "Browsing of a folder if the player is not addressed",
+        "sub_sections": "• Test Purpose\n  TG: Verify that the CT is able to correctly browse the folder on a player that is not the currently addressed player as requested by the CT.\n\n• Reference\n  [5], [8] 5.13, 6.9, 6.10."
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/CB/BI-08-C",
+        "section_title": "Browsing of a folder in the player only when addressed",
+        "sub_sections": "- Test Purpose\n  TG: Verify that the TG is able to reject browsing requests when browsing of non-addressed players is not supported.\n\n- Reference\n  [5], [8] 5.13, 6.9, 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/CB/BV-09-C",
+        "section_title": "CT can retrieve the metadata Virtual Filesystem from TG with future SDP version",
+        "sub_sections": "- Test Purpose\n  Verify that the CT is able to request metadata information for a track other than currently playing one from the Virtual Filesystem when the TG supports a later profile version.\n\n- Reference\n  [5], [8] 5.13.2, 6.10."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-08-C",
+        "section_title": "Search request",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-01-C",
+        "section_title": "Search request",
+        "sub_sections": "|\n\nTable 4.15: Search request test cases\n\n• Test Procedure\n  CT: Initiate the action on the CT to Search for a media item on the TG.\n  TG: No action required.\n\n• Expected Outcome\n  Pass verdict\n  The CT displays the expected search results.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-09-C",
+        "section_title": "Browsing of the Search results",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-05-C",
+        "section_title": "Browsing of the Search results",
+        "sub_sections": "|\n\nTable 4.16: Browsing of the Search results test cases\n\n• Test Procedure\nCT: Initiate the action on the CT to browse through the Search results.\nTG: No action required.\n\n• Expected Outcome\nPass verdict\nThe CT displays the expected Search results.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MNC/SRC/BV-10-C",
+        "section_title": "Play from Search results",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-03-C",
+        "section_title": "Play from Search results",
+        "sub_sections": "|\n\nTable 4.17: Play from Search results test cases\n\n• Test Procedure\nCT: Initiate the action on the CT to play a media item from the Search results.\nTG: No action required.\n\n• Expected Outcome\nPass verdict\nThe TG plays the selected media item.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/SRC/BV-11-C",
+        "section_title": "Metadata from Search results",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/SRC/BV-07-C",
+        "section_title": "Metadata from Search results",
+        "sub_sections": "|\n\nTable 4.18: Metadata from Search results test cases\n\n• Test Procedure\nCT: Initiate the action on the CT to request metadata information for a track other than the currently playing one from the Search results.\nTG: No action required.\n\n• Test Condition\nThe TG might or might not be currently playing a track. In case a track is currently playing, the metadata is not requested for the currently playing track.\nExpected Outcome\nPass verdict\nThe CT displays the correct metadata information for the desired track."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-11-C",
+        "section_title": "Playing of a track from the Now Playing folder",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-01-C",
+        "section_title": "Playing of a track from the Now Playing folder",
+        "sub_sections": "|\n\n*Table 4.19: Playing of a track from the Now Playing folder test cases*\n\n• Test Procedure\n  CT: Initiate the action on the CT to start playback of a track in the Now Playing list.\n  TG: No action required.\n\n• Expected Outcome\n  Pass verdict\n  The TG starts playback of the selected track.\n  The CT correctly displays the Now Playing list and the currently playing item.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/TC/MCN/NP/BV-12-C",
+        "section_title": "Adding a Filesystem track to Now Playing list",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-08-C",
+        "section_title": "Adding a Filesystem track to Now Playing list",
+        "sub_sections": "|\n\n*Table 4.20: Adding a Filesystem track to Now Playing list test cases*\n\n• Test Procedure\n  CT: Initiate the action on the CT to add a track from the Virtual Filesystem to the Now Playing folder.\n  TG: No action required.\n\n• Expected Outcome\n  Pass verdict\n  The CT correctly displays the Now Playing list containing the newly added media item.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-13-C",
+        "section_title": "Adding a Search result track to Now Playing list",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-03-C",
+        "section_title": "Adding a Search result track to Now Playing list",
+        "sub_sections": "|\n\nTable 4.21: Adding a Search result track to Now Playing list test cases\n\n• Test Procedure\n  CT: Initiate the action on the CT to add a track from the Search result list to the Now Playing folder.\n  TG: No action required.\n\n• Expected Outcome\n  Pass verdict\n  The CT correctly displays the Now Playing list containing the newly added media item.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-14-C",
+        "section_title": "Local change of Now Playing list on TG",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-10-C",
+        "section_title": "Local change of Now Playing list on TG",
+        "sub_sections": "|\n\nTable 4.22: Local change of Now Playing list on TG test cases\n\n• Test Procedure\n  CT: No action required.\n  TG: Initiate the action on the TG to change the content of the Now Playing folder.\n\n• Expected Outcome\n  Pass verdict\n  The CT correctly displays the Now Playing list containing the newly selected media item(s).\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/TC/MCN/NP/BV-15-C",
+        "section_title": "Metadata from Now Playing list",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-05-C",
+        "section_title": "Metadata from Now Playing list",
+        "sub_sections": "|\n\nTable 4.23: Metadata from Now Playing list test cases\n\n• Test Procedure\n  CT: Initiate the action on the CT to request metadata information for a track other than the currently playing one from the Now Playing folder.\n  TG: No action required.\n\n• Test Condition\n  The TG might or might not be currently playing a track. In case a track is currently playing, the metadata is not requested for the currently playing track.\n\n• Expected Outcome\n  Pass verdict\n  The CT displays the correct metadata information for the desired track.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-16-C",
+        "section_title": "Browsing the Now Playing folder",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-12-C",
+        "section_title": "Browsing the Now Playing folder",
+        "sub_sections": "|\n\nTable 4.24: Browsing the Now Playing folder test cases\n\n• Test Procedure\n  CT: Initiate the action on the CT to browse through the Now Playing folder.\n  TG: No action required.\n\n• Expected Outcome\n  Pass verdict\n  The CT displays the expected media items in the Now Playing folder.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MCN/NP/BV-17-C",
+        "section_title": "Adding a Playable Folder to Now Playing list",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/MCN/NP/BV-13-C",
+        "section_title": "Adding a Playable Folder to Now Playing list",
+        "sub_sections": "|\n\nTable 4.25: Adding a Playable Folder to Now Playing list test cases\n\n• Test Procedure\n  CT: Initiate the action on the CT to add a Playable Folder from the Virtual Filesystem to the Now Playing folder.\n  TG: No action required.\n\n• Expected Outcome\n  Pass verdict\n  The CT correctly displays the Now Playing list containing the media items from the Playable Folder."
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-04-C",
+        "section_title": "Monitoring the TG volume on the CT",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BV-01-C",
+        "section_title": "Monitoring the TG volume on the CT",
+        "sub_sections": "|\n\nTable 4.26: Monitoring the TG volume on the CT test cases\n\n• Test Procedure\n  Category 2 CT: No action required.\n  Category 2 TG: Initiate the action on the TG to change the volume.\n\n• Expected Outcome\n  Pass verdict\n  The category 2 CT correctly receives the Volume Changed events from the TG and updates any corresponding local state accordingly.\n  The volume on the category 2 TG is changed.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-05-C",
+        "section_title": "Changing the volume",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/VLH/BV-03-C",
+        "section_title": "Changing the volume",
+        "sub_sections": "|\n\nTable 4.27: Changing the volume test cases\n\n• Test Procedure\n  Category 2 CT: Initiate the action on the CT to set the volume on the TG.\n  Category 2 TG: No action required.\n\n• Expected Outcome\n  Pass verdict\n  The TG changes to the new volume level."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-04-C",
+        "section_title": "Retrieval of multiple Cover Art images",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-01-C",
+        "section_title": "Retrieval of multiple Cover Art images",
+        "sub_sections": "|\n\nTable 4.28: Retrieval of multiple Cover Art images test cases\n\n• Test Procedure\n\n  CT: Initiate the action on the CT to browse through the media content and retrieve the matching Cover Art in any format for all items in the current folder.\n  TG: No action is required.\n\n• Expected Outcome\n\n  Pass verdict\n  The appropriate Cover Art is displayed on the CT for each item in the folder.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/CA/BV-02-C",
+        "section_title": "Retrieval of Cover Art image for the currently playing track",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/CA/BV-05-C",
+        "section_title": "Retrieval of Cover Art image for the currently playing track",
+        "sub_sections": "|\n\nTable 4.29: Retrieval of Cover Art image for the currently playing track test cases\n\n• Test Procedure\nCT: Initiate the action on the CT to display Cover Art, if necessary.\nTG: No action is required.\n\n• Expected Outcome\nPass verdict\nThe appropriate Cover Art is displayed on the CT for the track currently playing on the TG.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/TA/BV-06-C",
+        "section_title": "Retrieval of Cover Art image for the currently playing track without browsing",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/TA/BV-03-C",
+        "section_title": "Retrieval of Cover Art image for the currently playing track without browsing",
+        "sub_sections": "|\n\nTable 4.30: Retrieval of Cover Art image for the currently playing track without browsing test cases\n\n• Test Procedure\n  CT: Initiate the action on the CT to display Cover Art, if necessary.\n  TG: No action is required.\n\n• Expected Outcome\n  Pass verdict\n  The appropriate Cover Art is displayed on the CT for the track currently playing on the TG."
+    },
+    {
+        "section_id": "AVRCP/CT/CEC/BV-01-C",
+        "section_title": "Connection establishment – CT",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/CEC/BV-01-C",
+        "section_title": "Connection establishment – CT",
+        "sub_sections": "|\n\nTable 4.31: Connection establishment – CT test cases\n\n• Test Procedure\n  CT: Initiate the user action (e.g., press button) on the CT to establish a connection to the TG.\n  TG: No user action is required.\n\n• Expected Outcome\n  Pass verdict\n  CT: It is possible to control the TG by the subsequent user action performed on the CT. It may be indicated that connection for control is established.\n  TG: It may be indicated that connection for control is established.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/CEC/BV-02-C",
+        "section_title": "Connection establishment – TG",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/CEC/BV-02-C",
+        "section_title": "Connection establishment – TG",
+        "sub_sections": "|\n\n*Table 4.32: Connection establishment – TG test cases*\n\n• Test Procedure\n  CT: No user action is required.\n  TG: Initiate the user action (e.g., press button) on the TG to establish a connection to the CT.\n\n• Expected Outcome\n  Pass verdict\n  CT: It is possible to control the TG by the subsequent user action performed on the CT. It may be indicated that connection for control is established.\n  TG: It may be indicated that connection for control is established.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/CRC/BV-01-C",
+        "section_title": "Connection release – CT",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/CRC/BV-01-C",
+        "section_title": "Connection release – CT",
+        "sub_sections": "|\n\nTable 4.33: Connection release – CT test cases\n\n• Test Procedure\n  CT: Initiate the user action (e.g., press button) on the CT to release a connection to the TG.\n  TG: No user action is required.\n\n• Expected Outcome\n  Pass verdict\n  The user action on the CT releases the connection for control.\n  CT: The CT returns to standby mode. It may be indicated that connection for control is released.\n  TG: The TG returns to standby mode. It may be indicated that connection for control is released.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/CRC/BV-02-C",
+        "section_title": "Connection release – TG",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/CRC/BV-02-C",
+        "section_title": "Connection release – TG",
+        "sub_sections": "|\n\nTable 4.34: Connection release – TG test cases\n\n• Test Procedure\n  CT: No user action is required.\n  TG: Initiate the user action (e.g., press button) on the TG to release the connection to the CT.\n\n• Expected Outcome\n  Pass verdict\n  The user action on the TG releases the connection for control.\n  CT: The CT returns to standby mode. It may be indicated that connection for control is released.\n  TG: The TG returns to standby mode. It may be indicated that connection for control is released."
+    },
+    {
+        "section_id": "AVRCP/CTJCC/BV-01-C",
+        "section_title": "Information collection by UNIT INFO command",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/ICC/BV-01-C",
+        "section_title": "Information collection by UNIT INFO command",
+        "sub_sections": "|\n\nTable 4.35: Information collection by UNIT INFO command test cases\n\n• Test Procedure\n  CT: Initiate the user action (e.g., press button) on the CT to collect information of TG by UNIT INFO command.\n  TG: No user action is required.\n\nExpected Outcome\n\nPass verdict\n\nCT: It is indicated that UNIT INFO response is received from the TG. The method for indication depends on the device implementation.\n\nTG: The UNIT INFO command is received from the CT and the UNIT INFO response is sent from the TG.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/ICC/BV-02-C",
+        "section_title": "Information collection by SUBUNIT INFO command",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/ICC/BV-02-C",
+        "section_title": "Information collection by SUBUNIT INFO command",
+        "sub_sections": "|\n\nTable 4.36: Information collection by SUBUNIT INFO command test cases\n\n- Test Procedure\n  CT: Initiate the user action (e.g., press button) on the CT to collect information of TG by SUBUNIT INFO command.\n  TG: No user action is required.\n\n- Expected Outcome\n  Pass verdict\n  CT: It is indicated that SUBUNIT INFO response is received from the TG. The method for indication depends on the device implementation.\n  TG: The SUBUNIT INFO command is received from the CT and the SUBUNIT INFO response is sent by the TG."
+    },
+    {
+        "section_id": "AVRCP/CT/PTT/BV-01-C",
+        "section_title": "PASS THROUGH command transfer – category 1",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/PTT/BV-01-C",
+        "section_title": "PASS THROUGH command transfer – category 1) |\n\nTable 4.37: PASS THROUGH command transfer – category 1 test cases\n\n- Test Procedure\n\nCT: Initiate the required user actions (e.g., press button) to perform all operations that are listed in the category 1 “operation_id list” table in Appendix A – Operation_id list tables and indicated as supported in Table 3: Operation_id of category 1 for CT in [3",
+        "sub_sections": ".\n\nTG: No user action is required.\n\n- Expected Outcome\n\nPass verdict\n\nCT: The CT sends PASS THROUGH commands in category 1 to the TG that are listed in the category 1 “operation_id list” table in Appendix A – Operation_ids list tables and indicated as supported in Table 3: Operation_id of category 1 for CT.\n\nTG: The TG reacts to all performed PASS THROUGH commands in category 1 sent from the CT according to the “Expected operation to be performed by the TG” that are listed in the operation_id list table in Appendix A – Operation_id list tables.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/PTT/BV-02-C",
+        "section_title": "PASS THROUGH command transfer – category 2",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/PTT/BV-02-C",
+        "section_title": "PASS THROUGH command transfer – category 2) |\n\nTable 4.38: PASS THROUGH command transfer – category 2 test cases\n\n- Test Procedure\n\nCT: Initiate the required user actions (e.g., press button) to perform all operations that are listed in the operation_id list table in Appendix A – Operation_id list tables and indicated as supported in Table 4: Operation_id of category 2 for CT in [3",
+        "sub_sections": ".\n\nTG: No user action is required.\n\n- Expected Outcome\n\nPass verdict\n\nCT: The CT sends PASS THROUGH commands in category 2 to the TG that are listed in the category 2 “operation_id list” table in Appendix A – Operation_id list tables and indicated as supported in Table 4: Operation_ids of category 2 for CT in [3].\n\nTG: The TG reacts to all performed PASS THROUGH commands in category 2 sent from the CT according to the “Expected operation to be performed by the TG” that are listed in the operation_id list table in Appendix A – Operation_id list tables.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/PTT/BV-03-C",
+        "section_title": "PASS THROUGH command transfer – category 3",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/PTT/BV-03-C",
+        "section_title": "PASS THROUGH command transfer – category 3) |\n\nTable 4.39: PASS THROUGH command transfer – category 3 test cases\n\n- Test Procedure\n\nCT: Initiate the required user actions (e.g., press button) to perform all operations that are listed in the operation_id list table in Appendix A – Operation_id list tables and indicated as supported in Table 5: Operation_id of category 3 for CT in [3",
+        "sub_sections": ".\n\nTG: No user action is required.\n\n- Expected Outcome\n\nPass verdict\n\nCT: The CT sends PASS THROUGH commands in category 3 to the TG that are listed in the category 3 “operation_id list” table in Appendix A – Operation_id list tables and indicated as supported in Table 5: Operation_ID of category 3 for CT in [3].\n\nTG: The TG reacts to all performed PASS THROUGH commands in category 3 sent from the CT according to the “Expected operation to be performed by the TG” that are listed in the operation_id list table in Appendix A – Operation_id list tables.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/PTT/BV-04-C",
+        "section_title": "PASS THROUGH command transfer – category 4",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/PTT/BV-04-C",
+        "section_title": "PASS THROUGH command transfer – category 4) |\n\nTable 4.40: PASS THROUGH command transfer – category 4 test cases\n\n• Test Procedure\n  CT: Initiate the required user actions (e.g., press button) to perform all operations that are listed in the operation_id list table in Appendix A – Operation_id list tables and indicated as supported in Table 6: Operation_id of category 4 for CT in [3",
+        "sub_sections": ".\n\n  TG: No user action is required.\n\n• Expected Outcome\n\n  Pass verdict\n  CT: The CT sends PASS THROUGH commands in category 4 to the TG that are listed in the category 4 “operation_id list” table in Appendix A – Operation_id list tables and indicated as supported in Table 6: Operation_ID of category 4 for CT in [3].\n\n  TG: The TG reacts to all performed PASS THROUGH commands in category 4 sent from the CT according to the “Expected operation to be performed by the TG” that are listed in the operation_id list table in Appendix A – Operation_id list tables.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/PTT/BV-05-C",
+        "section_title": "PASS THROUGH command transfer – press and hold",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/PTT/BV-05-C",
+        "section_title": "PASS THROUGH command transfer – press and hold",
+        "sub_sections": ". |\n\nTable 4.41: PASS THROUGH command transfer – press and hold test cases\n\n- Test Procedure\n\n  CT: Initiate the required user actions (e.g., press button) to indicate that a button is being held down for a selected PASS THROUGH operation. The button should be held for longer than 2 seconds. Actions should then be performed to indicate that the button has been released.\n\n  TG: No user action is required.\n\n- Expected Outcome\n\n  Pass verdict\n\n  CT: As long as the button is held down the CT sends PASS THROUGH commands with the state flag set to button press, and with an interval of no more than 2 seconds. When the button is released the CT sends a PASS THROUGH command with the state flag set to button release.”\n\n  TG: The TG indicates that the button is being held down on the CT."
+    },
+    {
+        "section_id": "AVRCP/CT/CFG/BV-01-C",
+        "section_title": "Get Capabilities – CT",
+        "sub_sections": "• Test Purpose\n  Verify the Get Capabilities command issued from the CT.\n\n• Reference\n  [7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/CFG/BV-01-C",
+        "section_title": "Get Capabilities – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The Lower Tester receives the GetCapabilities."
+    },
+    {
+        "section_id": "AVRCP/TG/CFG/BV-02-C",
+        "section_title": "Get Capabilities response – TG",
+        "sub_sections": "• Test Purpose\n  Verify the Get Capabilities response issued from the TG.\n\n• Reference\n  [7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/CFG/BV-02-C",
+        "section_title": "Get Capabilities response – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The Lower Tester receives from the IUT the supported COMPANY_IDs. The first COMPANY_ID is the Bluetooth SIG COMPANY_ID."
+    },
+    {
+        "section_id": "AVRCP/TG/CFG/BI-01-C",
+        "section_title": "Get Capabilities invalid behavior response – TG",
+        "sub_sections": "• Test Purpose\n  Verify the Get Capabilities response issued from the TG when an invalid capability is requested.\n\n• Reference\n  [7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/CFG/BI-01-C",
+        "section_title": "Get Capabilities invalid behavior response – TG",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n  The IUT responds to the Lower Tester with the Error status Invalid Parameter indicating that the capability ID issued was invalid.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-01-C",
+        "section_title": "List Player Application Setting Attributes – CT",
+        "sub_sections": "- Test Purpose\n  Verify the List Player Application Setting Attributes command issued from the CT.\n\n- Reference\n  [7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-01-C",
+        "section_title": "List Player Application Setting Attributes – CT",
+        "sub_sections": "MSC\n\n- Expected Outcome\n  - Pass verdict\n  - The Lower Tester receives the List Player Application Settings Attributes command."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-02-C",
+        "section_title": "List Player Application Setting Attributes – TG",
+        "sub_sections": "- Test Purpose\n  - Verify the List Player Application Setting Attributes response issued from the TG.\n\n- Reference\n  - [7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-02-C",
+        "section_title": "List Player Application Setting Attributes – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns a response with zero or more attributes."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-03-C",
+        "section_title": "Get Player Application Setting Attribute Text – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the Get Player Application Settings Attribute Text command issued from the CT.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-03-C",
+        "section_title": "Get Player Application Setting Attribute Text – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe Get Player Application Setting Attribute Text command is received by the Lower Tester."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-04-C",
+        "section_title": "Get Player Application Setting Attribute Text – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the Get Player Application Setting Attribute Text response issued from the TG.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-02-C",
+        "section_title": "List Player Application Setting Attributes – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a GetPlayerApplicationSettingAttributeText command to the IUT with an attribute ID listed in the available attributes for the IUT.\n\nFigure 4.101:"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-04-C",
+        "section_title": "Get Player Application Setting Attribute Text – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns the values in UTF-8 format as specified by the Lower Tester. The values are Manufacturer dependent."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-05-C",
+        "section_title": "List Player Application Setting Values – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the List Player Application Setting Values command issued from the CT.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-01-C",
+        "section_title": "List Player Application Setting Attributes – CT",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Upper Tester triggers the IUT to send a ListPlayerApplicationSettingValues command with an attribute ID listed in the available attributes for the Lower Tester.\n\nFigure 4.102:"
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-05-C",
+        "section_title": "List Player Application Setting Values – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe List Player Application Setting Values is received by the Lower Tester."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-06-C",
+        "section_title": "List Player Application Setting Values – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the List Player Application Setting Values response issued from the TG.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-02-C",
+        "section_title": "List Player Application Setting Attributes – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a ListPlayerApplicationSettingValues command to the IUT with an attribute ID listed in the available attributes for the IUT.\n\nFigure 4.103:"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-06-C",
+        "section_title": "List Player Application Setting Values – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns the list of setting values for that Attribute ID as defined by the manufacturer."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-07-C",
+        "section_title": "Get Player Application Setting Value Text – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the Player Application Setting Value Text command issued from the CT.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-01-C",
+        "section_title": "List Player Application Setting Attributes – CT",
+        "sub_sections": "and"
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-05-C",
+        "section_title": "List Player Application Setting Values – CT",
+        "sub_sections": ".\n\n• Test Procedure\n\nInitiated by the Upper Tester, the IUT sends a Get Player Application Setting Value Text command to the Lower Tester, with attribute and value IDs listed in the available attributes and corresponding values for the Lower Tester.\n\nFigure 4.104:"
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-07-C",
+        "section_title": "Get Player Application Setting Value Text – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe Get Player Application Setting Value Text is received by the Lower Tester."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-08-C",
+        "section_title": "Get Player Application Setting Value Text – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the Get Player Application Setting Value Text response issued from the TG.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-02-C",
+        "section_title": "List Player Application Setting Attributes – TG",
+        "sub_sections": "and"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-06-C",
+        "section_title": "List Player Application Setting Values – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a Get Player Application Setting Value Text command to the IUT, with attribute and value IDs listed in the available attributes and corresponding values for the IUT.\n\nFigure 4.105:"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-08-C",
+        "section_title": "Get Player Application Setting Value Text – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns the values in UTF-8 format as requested by the Lower Tester. The values are manufacturer dependent."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-09-C",
+        "section_title": "Get Current Player Application Setting Value – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the Get Current Player Application Setting Value command issued from the CT.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-01-C",
+        "section_title": "List Player Application Setting Attributes – CT",
+        "sub_sections": ".\n\n• Test Procedure\n\nInitiated by the Upper Tester, the IUT sends a Get Current Player Application Setting Value command to the Lower Tester containing an attribute ID listed in the available attributes for the Lower Tester.\n\nFigure 4.106:"
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-09-C",
+        "section_title": "Get Current Player Application Setting Value – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe Lower Tester receives the Get Current Player Application Setting Value command."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-10-C",
+        "section_title": "Get Current Player Application Setting Value – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the Get Current Player Application Setting Value response issued from the TG.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-02-C",
+        "section_title": "List Player Application Setting Attributes – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a Get Current Player Application Setting Value command to the IUT with an attribute ID listed in the available attributes for the IUT.\n\nFigure 4.107:"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-10-C",
+        "section_title": "Get Current Player Application Setting Value – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns the list of values for the requested Attribute IDs as defined by the manufacturer."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-11-C",
+        "section_title": "Set Player Application Setting Value – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the Set Player Application Setting Value command issued from the CT.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-01-C",
+        "section_title": "List Player Application Setting Attributes – CT",
+        "sub_sections": "and"
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-05-C",
+        "section_title": "List Player Application Setting Values – CT",
+        "sub_sections": ".\n\n• Test Procedure\n\nInitiated by the Upper Tester, the IUT sends a Set Player Application Setting Value command to the Lower Tester, with attribute and value IDs listed in the available attributes and corresponding values for the Lower Tester.\n\nFigure 4.108:"
+    },
+    {
+        "section_id": "AVRCP/CT/PAS/BV-11-C",
+        "section_title": "Set Player Application Setting Value – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe Lower Tester receives the SetPlayerApplicationSettingValue command the correct attribute and value ID."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-01-C",
+        "section_title": "Get Player Application Settings Attribute Text invalid behavior – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the behavior of the target when a Get Player Application Settings Attribute Text command is issued with an invalid parameter.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-01-C",
+        "section_title": "Get Player Application Settings Attribute Text invalid behavior – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The IUT returns an error response with error code 0x01 indicating that an invalid parameter was passed."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-02-C",
+        "section_title": "List Player Application Setting Values invalid behavior – TG",
+        "sub_sections": "• Test Purpose\n  Verify the ability of the TG to respond to a List Player Application Setting Values command with invalid parameters.\n\n• Reference\n  [7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-02-C",
+        "section_title": "List Player Application Setting Values invalid behavior – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns an error response with error code 0x01 indicating that an invalid parameter was passed."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-03-C",
+        "section_title": "Get Player Application Setting Value Text invalid behavior – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the ability of the TG to respond to a Get Player Application Setting Value Text command with invalid parameters.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BV-02-C",
+        "section_title": "List Player Application Setting Attributes – TG",
+        "sub_sections": ".\n\n• Test Procedure\n\nThe Lower Tester sends a Get Player Application Setting Value Text command to the IUT. The attribute ID passed is listed in the available attributes for the IUT. The other parameter settings are Num Player Application Settings = 1 and Player Application Setting Value = 0x7F.\n\nFigure 4.111:"
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-03-C",
+        "section_title": "Get Player Application setting Value Text invalid behavior – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns an error response with error code 0x01 indicating that an invalid parameter was passed."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-04-C",
+        "section_title": "Get Current Player Application Setting Value invalid behavior – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the ability of the TG to respond to a Get Current Player Application Setting Value command with invalid parameters.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-04-C",
+        "section_title": "Get Current Player Application Setting Value invalid behavior – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns an error response with error code 0x01 indicating that an invalid parameter was passed."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-05-C",
+        "section_title": "Set Player Application Setting Value invalid behavior – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the ability of the TG to respond to a Set Player Application Setting Value command with invalid parameters.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/PAS/BI-05-C",
+        "section_title": "Set Player Application Setting Value invalid behavior – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns an error response with error code 0x01 indicating that an invalid parameter was passed.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/MDI/BV-01-C",
+        "section_title": "Get Play Status – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the Get Play Status command issued from the CT.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/MDI/BV-01-C",
+        "section_title": "Get play status – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe Lower Tester receives the GetPlayStatus command."
+    },
+    {
+        "section_id": "AVRCP/TG/MDI/BV-02-C",
+        "section_title": "Get Play Status – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the Get Play Status response issued from the TG. Test to be conducted for all three modes of play status on the TG – Playing, Paused, and Stop status.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/MDI/BV-02-C",
+        "section_title": "Get Play Status – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns the correct current play status of the MP."
+    },
+    {
+        "section_id": "AVRCP/CT/MDI/BV-03-C",
+        "section_title": "Get Element Attributes – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the Get Element Attributes command issued from the CT.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/MDI/BV-03-C",
+        "section_title": "Get Element Attributes – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe Lower Tester receives the Get Element Attributes command."
+    },
+    {
+        "section_id": "AVRCP/TG/MDI/BV-04-C",
+        "section_title": "Get Element Attributes – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the Get Element Attributes response for getting all attributes issued from the TG.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/MDI/BV-04-C",
+        "section_title": "Get Element Attributes – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns all attribute information.\n\n• Notes\n\nThe test case is used to retrieve all the elements (NumAttributes = 0x00) of a selected entry on the target."
+    },
+    {
+        "section_id": "AVRCP/TG/MDI/BV-05-C",
+        "section_title": "Get Element Attributes – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the Get Element Attributes response for getting selected attributes issued from the TG.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/MDI/BV-05-C",
+        "section_title": "Get Element Attributes – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns attribute information.\n\n• Notes\n\nThe test case is used to retrieve specific elements of a selected entry on the target."
+    },
+    {
+        "section_id": "AVRCP/CT/MDI/BV-06-C",
+        "section_title": "CT can retrieve the Metadata for the currently playing track from TG with future SDP version – Get Element Attributes",
+        "sub_sections": "• Test Purpose\n\nVerify that the IUT, which does not support browsing, can retrieve the Metadata for the currently playing track when the TG supports a later profile version.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/MDI/BV-06-C",
+        "section_title": "CT can retrieve the Metadata for the currently playing track from TG with future SDP version – Get Element Attributes",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT is able to successfully retrieve Metadata from the Lower Tester and provide it to the Upper Tester.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/NFY/BV-01-C",
+        "section_title": "Register Notification – CT",
+        "sub_sections": "• Test Purpose\n\nVerify the Register Notification command issued from the CT.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/NFY/BV-01-C",
+        "section_title": "Register Notification – CT",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\n  Pass verdict\n\n  The Lower Tester receives the Register Notification command."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-02-C",
+        "section_title": "Register Notification – TG",
+        "sub_sections": "• Test Purpose\n\n  Verify the Register Notification response issued from the TG.\n\n• Reference\n\n  [7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-02-C",
+        "section_title": "Register Notification – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns an INTERIM response with the current status.\n\nAfter the track change happens, the IUT sends a CHANGED response indicating that the event EVENT_TRACK_CHANGED has been triggered.\n\n• Notes\n\nThe event used for the test is EVENT_TRACK_CHANGED (ID 0x02) which is registered with the IUT."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-03-C",
+        "section_title": "Register Notification EVENT_PLAYER_APPLICATION_SETTING_CHANGED – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the TG response for a register notification command for EVENT_PLAYER_APPLICATION_SETTING_CHANGED with all player application setting attributes.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-03-C",
+        "section_title": "Register Notification EVENT_PLAYER_APPLICATION_SETTING_CHANGED – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns an INTERIM response with the current status.\n\nFollowing the player application setting changes, the IUT sends a CHANGED response indicating that the event EVENT_PLAYER_APPLICATION_SETTING_CHANGED has been triggered.\n\nThe notification response contains all player application setting attributes with their current values.\n\n• Notes\n\nThe event used for the test is EVENT_PLAYER_APPLICATION_SETTING_CHANGED (ID 0x08), which is registered with the IUT."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-04-C",
+        "section_title": "Track Changed – No Selected Track – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the Track Changed INTERIM response when no track is selected.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-04-C",
+        "section_title": "Track Changed – No Selected Track – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a correctly formatted RegisterNotification Interim Response for the EVENT_TRACK_CHANGED with the Identifier Parameter set to 0xFFFFFFFFFFFFFFFF."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-05-C",
+        "section_title": "Track Changed – Playing Track – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the Track Changed INTERIM response when a track is playing.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-06-C",
+        "section_title": "Track Changed – Playing Track in NowPlaying – TG",
+        "sub_sections": "• Test Purpose\n   Verify the Track Changed INTERIM response in the context of the Now Playing list when a track is playing.\n\n• Reference\n   [5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-06-C",
+        "section_title": "Track Changed – Playing Track in NowPlaving – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n   Pass verdict\n   The IUT issues a correctly formatted RegisterNotification Interim Response for the EVENT_TRACK_CHANGED with:\n   - The Identifier Parameter set to a UID that is listed in the Now Playing list\n   - That UID being the UID of the track that is currently played"
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-07-C",
+        "section_title": "Track Changed – Changing Track in NowPlaying – TG",
+        "sub_sections": "• Test Purpose\n   Verify the Track Changed INTERIM response when changing a track in NowPlaying.\n\n• Reference\n  [5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-07-C",
+        "section_title": "Track Changed – Changing Track in NowPlaying – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n  Pass verdict\n  The IUT returns the UID of the track in the Now Playing list that is currently played.\n  The IUT returns an interim response for each RegisterNotification command received.\n  The IUT returns the response for the EVENT_TRACK_CHANGED notification."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BV-08-C",
+        "section_title": "Track Changed – Selected Track – TG",
+        "sub_sections": "• Test Purpose\n   Verify the Track Changed INTERIM response when the track is SELECTED.\n\n• Reference\n   [7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BI-01-C",
+        "section_title": "Register for events invalid behavior – TG",
+        "sub_sections": "• Test Purpose\n   Verify that the TG can handle an invalid event ID sent from the CT.\n\n• Reference\n   [7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/NFY/BI-01-C",
+        "section_title": "Register for events invalid behavior – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns the error code 0x01 indicating that an invalid parameter has been passed.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/TG/INV/BI-01-C",
+        "section_title": "Invalid PDU ID – TG",
+        "sub_sections": "• Test Purpose\n\nVerify that the TG can handle an invalid PDU ID sent from the CT.\n\n• Reference\n\n[7]"
+    },
+    {
+        "section_id": "AVRCP/TG/INV/BI-01-C",
+        "section_title": "Invalid PDU ID – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT returns an Error Response with error code 0x00 indicating that the PDU was not understood."
+    },
+    {
+        "section_id": "AVRCP/TG/INV/BI-02-C",
+        "section_title": "General Reject – TG",
+        "sub_sections": "• Test Purpose\n\nVerify the General Reject response issued by the TG.\n\n• Reference\n\n[5], [8] 6."
+    },
+    {
+        "section_id": "AVRCP/TG/INV/BI-02-C",
+        "section_title": "General Reject – TG",
+        "sub_sections": "MSC\n\n• Expected Outcome\n\nPass verdict\n\nThe IUT issues a General Reject response with the error code indicating an invalid command.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/BGN/BV-01-C",
+        "section_title": "Next Group command transfer",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/BGN/BV-01-C",
+        "section_title": "Next Group command transfer",
+        "sub_sections": "|\n\nTable 4.42: Next Group command transfer test cases\n\n• Test Procedure\nCT: Initiate the required user actions (e.g., press button) to perform Next Group function.\nTG: No user action is required.\n\n• Expected Outcome\nPass verdict\nCT: The Next Group command is sent.\nTG: The TG reacts to Next Group command sent from the CT to move to the first song in the next group.\n\n4.21."
+    },
+    {
+        "section_id": "AVRCP/CT/BGM/BV-02-C",
+        "section_title": "Previous Group command transfer",
+        "sub_sections": "|\n|"
+    },
+    {
+        "section_id": "AVRCP/TG/BGM/BV-02-C",
+        "section_title": "Previous Group command transfer",
+        "sub_sections": "|\n\nTable 4.43: Previous Group command transfer test cases\n\n• Test Procedure\nCT: Initiate the required user actions (eg., press button) to perform Previous Group function.\nTG: No user action is required.\n\n• Expected Outcome\n  Pass verdict\n  CT: The Next Group command is sent.\n  TG: The TG reacts to Previous Group command sent from the CT to move to the first song in the previous group.\n\n4."
+    },
+    {
+        "section_id": "AVRCP/CT/RCR/BV-01-C",
+        "section_title": "Request continuing response – CT",
+        "sub_sections": "• Test Purpose\n  Verify that the CT can handle fragmentation correctly.\n\n• Reference\n  [7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/RCB/BV-01-C",
+        "section_title": "Request continuing response – CT",
+        "sub_sections": "MSC\n\n• Test Condition\nThe Lower Tester is configured so a GetElementAttributes command response is larger than the 512-byte limit on AVC frames but the response is smaller than the Maximum number of accepted AVC fragments valued specified in the IXIT [6].\n\n• Expected Outcome\nPass verdict\nRequest(s) for continuing response packets are sent by the IUT, until the entire GetElementAttributes command response has been received via the control channel.\nIn the event that the lower test exceeds the Maximum number of accepted AVC fragments value, the CT may send AbortContinuingResponse command before receiving the entire response."
+    },
+    {
+        "section_id": "AVRCP/TG/RCB/BV-02-C",
+        "section_title": "Request continuing response – TG",
+        "sub_sections": "• Test Purpose\nVerify that the TG can handle fragmentation correctly.\n\n• Reference\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/RCB/BV-03-C",
+        "section_title": "Abort continuing response – CT",
+        "sub_sections": "- **Test Purpose**\n  Verify that the CT aborts fragmentation correctly.\n- **Reference**\n  [7] 5."
+    },
+    {
+        "section_id": "AVRCP/CT/RCR/BV-03-C",
+        "section_title": "Abort continuing response – CT",
+        "sub_sections": "MSC](image)\n\n• Test Condition\n\nThe Lower Tester is configured so a GetElementAttributes command response is larger than the 512 byte limit on AV/C frames. The Lower Tester has sufficient response to satisfy the Maximum number of accepted AV/C fragments condition so the IUT can send the AbortContinuingResponse.\n\n• Expected Outcome\n\nPass verdict\n\nAn AbortContinuingResponse command is sent by the IUT after the fragmented GetElementAttributes command response(s) are received."
+    },
+    {
+        "section_id": "AVRCP/TG/RCR/BV-04-C",
+        "section_title": "Abort continuing response – TG",
+        "sub_sections": "• Test Purpose\n\nVerify that the TG can accept abort fragmentation correctly.\n\n• Reference\n\n[7] 5."
+    },
+    {
+        "section_id": "AVRCP/TG/RCR/BV-04-C",
+        "section_title": "Abort continuing response – TG",
+        "sub_sections": "MSC\n\n• Test Condition\n  The IUT is configured so a GetElementAttributes command response will be larger than the 512-byte limit on AV/C frames.\n\n• Expected Outcome\n  Pass verdict\n  The IUT does not send any fragmented GetElementAttributes responses via the control channel to the Lower Tester, after an AbortContinuingResponse command is received.\n\n5 Test case mapping\n\nThe Test Case Mapping Table (TCMT) maps test cases to specific requirements in the ICS. The IUT is tested in all roles for which support is declared in the ICS document.\n\nThe columns for the TCMT are defined as follows:\n\nItem: Contains a logical expression based on specific entries from the associated ICS document. Contains a logical expression (using the operators AND, OR, NOT as needed) based on specific entries from the applicable ICS document(s). The entries are in the form of y/x references, where y corresponds to the table number and x corresponds to the feature number as defined in the ICS document for AVRCP [3].\n\nIf a test case is mandatory within the respective layer, then the y/x reference is omitted.\n\nFeature: A brief, informal description of the feature being tested.\n\nTest Case(s): The applicable test case identifiers are required for Bluetooth Qualification if the corresponding y/x references defined in the Item column are supported. Further details about the function of the TCMT are elaborated in [4].\n\nFor the purpose and structure of the ICS/IXIT, refer to [4].\n\n| Item                  | Feature                                                                 | Test Case(s)                                                                 |\n|-----------------------|----------------------------------------------------------------------|--------------------------------------------------------------------------|\n| AVRCP 1/1            | Controller Service Discovery                                          |"
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-06-C",
+        "section_title": "Volume Control - Low resolution TG",
+        "sub_sections": "| Low Resolution |\n|"
+    },
+    {
+        "section_id": "AVRCP/CT/VLH/BV-07-C",
+        "section_title": "Volume Control - Higher resolution TG",
+        "sub_sections": "| Higher Resolution |\n\nTable 7.1: CT Handles Different TG Volume Resolutions test cases\n\n• Test Procedure\n\nLower Tester (TG)\n\nIUT (CT)\n\nUpper Tester\n\nOne ACL connection exists between the IUT and the Lower Tester. AVCTP connection exists between the IUT and the Lower Tester. The IUT used the Register Notification command to receive the notification of a change in the TG volume.\n\nFor Rounds 1 to 3\n\nTrigger Volume Change\n\nSetAbsoluteVolume (Commanded Volume)\n\nSetAbsoluteVolume Response (TG Volume)\n\nReported CT Volume\n\nSimulate Local Change\n\nRegisterNotification response (CHANGED, EVENT, VOLUME_CHANGED)\n\nNotification must precede Response, volume report to Upper Tester can occur at any time\n\nRegisterNotification (EVENT, VOLUME_CHANGED)\n\nRegisterNotification response (INTERIM, EVENT, VOLUME_CHANGED)\n\nReported CT Volume\n\nFigure 7.1: CT Handles Different TG Volume Resolutions test cases MSC\n\n| Round | Commanded Volume | Low Resolution Test Dataset | Higher Resolution Test Dataset |\n|-------|------------------|---------------------------|-----------------------------|\n|       |                  | TG Volume | CT Volume 1 | Local Volume | CT Volume 2 | TG Volume | CT Volume 1 | Local Volume | CT Volume 2 |\n| 1     | 0% (0x00)        | 0% (0x00)   | 0%            | 20% (0x19)  | 10% to 30% | 0% (0x00)  | 0%            | 5% (0x06)   | 0% to 15%      |\n| 2     | 50% (0x3F)        | 40% (0x33)  | 30% to 50%   | 60% (0x4C)  | 50% to 70% | 50% (0x3F) | 40% to 60%  | 55% (0x46)  | 45% to 65%     |\n| 3     | 100% (0x7F)       | 100% (0x7F) | 100%           | 80% (0x66)  | 70% to 90% | 100% (0x7F) | 100%           | 95% (0x79)  | 85% to 100%    |\n\nTable 7.2: CT Handles Different TG Volume Resolutions test parameters\n\n1. Repeat Steps 2 through 6 for each round specified in Table"
+    }
+]

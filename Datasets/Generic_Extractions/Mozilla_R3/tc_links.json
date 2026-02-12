@@ -1,0 +1,202 @@
+[
+    {
+        "feature": "Feature/Function/Test Case",
+        "description": "Description",
+        "tc_name": null
+    },
+    {
+        "feature": "---",
+        "description": "---",
+        "tc_name": null
+    },
+    {
+        "feature": "Master Password prompt",
+        "description": "Verify that the master password is visually distinctive from other password prompts (indicates the functionality and importance of the master password)",
+        "tc_name": null
+    },
+    {
+        "feature": "Replace Forgotten Master Password",
+        "description": "Verify that the process to replace a forgotten master password is easier/more discoverable (though encrypted information should still be lost to the user who has forgotten their password).",
+        "tc_name": null
+    },
+    {
+        "feature": "Feature/Function/Test Case",
+        "description": "Description",
+        "tc_name": null
+    },
+    {
+        "feature": "---",
+        "description": "---",
+        "tc_name": null
+    },
+    {
+        "feature": "Save username and password, yes",
+        "description": "Verify that the browser behaves correctly after selections are made in the save password dialog box",
+        "tc_name": {
+            "title": "password-dialog-yes",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/password-dialog-yes"
+        }
+    },
+    {
+        "feature": "Save username and password, never for this site",
+        "description": "Verify that the browser behaves correctly after selections are made in the save password dialog box",
+        "tc_name": {
+            "title": "password-dialog-never",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/password-dialog-never"
+        }
+    },
+    {
+        "feature": "Save username and password, no",
+        "description": "Verify that the browser behaves correctly after selections are made in the save password dialog box",
+        "tc_name": {
+            "title": "password-dialog-no",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/password-dialog-no"
+        }
+    },
+    {
+        "feature": "Activation, disable after saved",
+        "description": "Verify that when the password manager has been disabled, it is no longer in use, even for passwords already saved",
+        "tc_name": {
+            "title": "disable-after-save",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/disableaftersave"
+        }
+    },
+    {
+        "feature": "Activiation, Http Authentication",
+        "description": "Need a good working case for this, working on it",
+        "tc_name": null
+    },
+    {
+        "feature": "Actitvation, ftp",
+        "description": "Need a good working case for this, working on it",
+        "tc_name": null
+    },
+    {
+        "feature": "Password Manager, multiple users",
+        "description": "Verify that when you have saved multiple username's and password's for a website, you are later presented with those same choices",
+        "tc_name": {
+            "title": "multiple-users",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/multiple-users"
+        }
+    },
+    {
+        "feature": "Password Manager, multiple passwords",
+        "description": "Verify that when you have saved a username and password for a website and you later change the password, that password manager picks up the new password",
+        "tc_name": {
+            "title": "multiple-pass",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/multiple-pass"
+        }
+    },
+    {
+        "feature": "Preferences disable",
+        "description": "Verify that when you disable password manager from the preferences panel, you no longer are asked if you would like to save passwords and longer get prefilled info on sites",
+        "tc_name": {
+            "title": "pass-pref-disable",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/passprefdisable"
+        }
+    },
+    {
+        "feature": "Preferences enable",
+        "description": "Verify that when you enable password manager from the preferences panel, you are asked if you would like to save usernames and passwords and get prefilled info on sites",
+        "tc_name": {
+            "title": "pass-pref-enable",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/passprefenable"
+        }
+    },
+    {
+        "feature": "Preferences, view saved passwords",
+        "description": "Verify that when you have saved a username and password in password manager, this information can be viewed in the password manager through preferences",
+        "tc_name": {
+            "title": "view-saved-pass",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/viewsavedpass-pref"
+        }
+    },
+    {
+        "feature": "Preferences, view passwords never saved",
+        "description": "Verify that when you have designated not to ever save a username and password in password manager, this information can be viewed in the password manager through preferences (expedia.com)",
+        "tc_name": {
+            "title": "view-never-save-pass",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/viewneversavedpass"
+        }
+    },
+    {
+        "feature": "Preferences, passwords saved, remove",
+        "description": "Verify that you can remove a username and password for a given site and it will no longer autofill on that sight nor will it be listed in password manager (espn.com)",
+        "tc_name": {
+            "title": "remove-pass-saved",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/removesavedpass-pref"
+        }
+    },
+    {
+        "feature": "Preferences, passwords saved, remove all",
+        "description": "Verify that you can remove all username and password information and it will no longer autofill nor will anything be listed in password manager",
+        "tc_name": {
+            "title": "remove-all-saved-pass",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/removeallsavedpass-pref"
+        }
+    },
+    {
+        "feature": "Preferences, passwords never saved, remove",
+        "description": "Verify that you can remove a site and username from the passwords never saved section of password manager (ivillage.com)",
+        "tc_name": {
+            "title": "remove-never-saved-pass",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/removeneversavedpass-pref"
+        }
+    },
+    {
+        "feature": "Preferences, passwords never saved, remove all",
+        "description": "Verify that you can remove all site and username information from the passwords never saved section of password manager (ivillage.com)",
+        "tc_name": {
+            "title": "remove-all-never-saved-pref",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/removeallneversaved-pref"
+        }
+    },
+    {
+        "feature": "Tasks, view saved passwords",
+        "description": "Verify that when you have saved a username and password in password manager, this information can be viewed in the password manager through tasks",
+        "tc_name": {
+            "title": "view-saved-pass-task",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/viewsavedpasstask"
+        }
+    },
+    {
+        "feature": "Tasks, view passwords never saved",
+        "description": "Verify that when you have designated not to ever save a username and password in password manager, this information can be viewed in the password manager through tasks (nbci.com)",
+        "tc_name": {
+            "title": "view-never-saved-pass-task",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/viewneversavedpasstask"
+        }
+    },
+    {
+        "feature": "Tasks, passwords saved, remove",
+        "description": "Verify that you can remove a username and password for a given site and it will no longer autofill on that sight nor will it be listed in password manager (netscape.com)",
+        "tc_name": {
+            "title": "remove-saved-pass-task",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/removesavedpass-task"
+        }
+    },
+    {
+        "feature": "Tasks, passwords saved, remove all",
+        "description": "Verify that you can remove all username and password information and it will no longer autofill nor will anything be listed in password manager (lycos.com)",
+        "tc_name": {
+            "title": "remove-all-saved-pass-task",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/removeallsavedpass-task"
+        }
+    },
+    {
+        "feature": "Tasks, passwords never saved, remove",
+        "description": "Verify that you can remove a site and username from the passwords never saved section of password manager",
+        "tc_name": {
+            "title": "remove-pass-never-saved-task",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/removeneversavedtask"
+        }
+    },
+    {
+        "feature": "Tasks, passwords never saved, remove all",
+        "description": "Verify that you can remove all site and username information from the passwords never saved section of password manager",
+        "tc_name": {
+            "title": "remove-all-never-saved-task",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/password-manager/removeallneversaved-task"
+        }
+    }
+]

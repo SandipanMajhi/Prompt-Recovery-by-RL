@@ -1,0 +1,102 @@
+[
+    {
+        "feature": "Feature/Function/Test Case",
+        "description": "Description",
+        "tc_name": null
+    },
+    {
+        "feature": "---",
+        "description": "---",
+        "tc_name": null
+    },
+    {
+        "feature": "Check for Themes",
+        "description": "Verify both Classic and Modern exist under the themes preferences",
+        "tc_name": {
+            "title": "ThemeTest_Acc.html",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/themes/themetest_acc"
+        }
+    },
+    {
+        "feature": "Testing under Classic theme",
+        "description": "Verify Classic theme works as advertised",
+        "tc_name": {
+            "title": "Classic_Acc.html",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/themes/classic_acc"
+        }
+    },
+    {
+        "feature": "Check the appearance of browser",
+        "description": "Visually inspect menu bar, floating component bar and all the tool bars",
+        "tc_name": {
+            "title": "Classic_Acc2.html",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/themes/classic_acc2"
+        }
+    },
+    {
+        "feature": "Testing under Modern theme",
+        "description": "Verify Modern theme works as advertised",
+        "tc_name": {
+            "title": "Modern_Acc.html",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/themes/modern_acc"
+        }
+    },
+    {
+        "feature": "Check the appearance of browser",
+        "description": "Visually inspect menu bar, floating component bar and all the tool bars",
+        "tc_name": {
+            "title": "Modern_Acc2.html",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/themes/modern_acc2"
+        }
+    },
+    {
+        "feature": "Checking View menu",
+        "description": "Verify if themes exist under View menu",
+        "tc_name": {
+            "title": "ThemesVerify_Acc.html",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/themes/themesverify_acc"
+        }
+    },
+    {
+        "feature": "Feature/Function/Test Case",
+        "description": "Description",
+        "tc_name": null
+    },
+    {
+        "feature": "---",
+        "description": "---",
+        "tc_name": null
+    },
+    {
+        "feature": "Verify all the selectable items work under Classic theme",
+        "description": "Click through all the items on menu bar, tool bars, and floating component bar under Classic theme",
+        "tc_name": {
+            "title": "Functional1.html",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/themes/functional1"
+        }
+    },
+    {
+        "feature": "Verify all the selectable items on other applications under Classic theme",
+        "description": "Click through all the items on menu bar and tool bars under AIM, Composer, Mail and Address book to see all the looks and feel are consistence under Classic theme",
+        "tc_name": {
+            "title": "Functional2.html",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/themes/functional2"
+        }
+    },
+    {
+        "feature": "Verify all the selectable items work under Modern theme",
+        "description": "Click through all the items on menu bar, tool bars, and floating component bar under Modern theme",
+        "tc_name": {
+            "title": "Functional3.html",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/themes/functional3"
+        }
+    },
+    {
+        "feature": "Verify all the selectable items on other applications under Modern theme",
+        "description": "Click through all the items on menu bar and tool bars under AIM, Composer, Mail and Address book to see all the looks and feel are consistence under Modern theme",
+        "tc_name": {
+            "title": "Functional4.html",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/themes/functional4"
+        }
+    }
+]

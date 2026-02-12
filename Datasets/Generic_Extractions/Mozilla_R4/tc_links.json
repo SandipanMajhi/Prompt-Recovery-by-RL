@@ -1,0 +1,197 @@
+[
+    {
+        "feature": "---",
+        "sub_feature": "---",
+        "description": "---",
+        "tc_name": null
+    },
+    {
+        "feature": "Global History",
+        "sub_feature": "Record sites",
+        "description": "Verify that visited links are recorded.",
+        "tc_name": {
+            "title": "record-links",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/record-links"
+        }
+    },
+    {
+        "feature": "Global History",
+        "sub_feature": "Record after redirect",
+        "description": "Verify that the correct link is recorded after a server redirect.",
+        "tc_name": {
+            "title": "record-redirect",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/record-redirect"
+        }
+    },
+    {
+        "feature": "Global History",
+        "sub_feature": "Load recorded url",
+        "description": "Verify that double-clicking on a history link causes it to be launched in a browser window.",
+        "tc_name": {
+            "title": "surf-history",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/surf-history"
+        }
+    },
+    {
+        "feature": "Global History",
+        "sub_feature": "Delete one entry",
+        "description": "Delete a History entry",
+        "tc_name": {
+            "title": "delete-link",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/delete-link"
+        }
+    },
+    {
+        "feature": "Global History",
+        "sub_feature": "Delete multiple entries",
+        "description": "Delete multiple History entries",
+        "tc_name": {
+            "title": "delete-multiple-links",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/delete-multiple-links"
+        }
+    },
+    {
+        "feature": "Global History",
+        "sub_feature": "Erase all",
+        "description": "Clear all of history",
+        "tc_name": {
+            "title": "clear-history",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/clear-history"
+        }
+    },
+    {
+        "feature": "Global History",
+        "sub_feature": "",
+        "description": "",
+        "tc_name": null
+    },
+    {
+        "feature": "---",
+        "sub_feature": "---",
+        "description": "---",
+        "tc_name": null
+    },
+    {
+        "feature": "Global History",
+        "sub_feature": "Change grouping",
+        "description": "Change the History View to Group by Day",
+        "tc_name": {
+            "title": "change-group",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/change-group"
+        }
+    },
+    {
+        "feature": "Global History",
+        "sub_feature": "Sort by columns",
+        "description": "sort and reverse-sort per column",
+        "tc_name": {
+            "title": "sort-columns",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/sort-columns"
+        }
+    },
+    {
+        "feature": "Global History",
+        "sub_feature": "Resize columns",
+        "description": "Verify that columns are resizable to show/hide more of entries",
+        "tc_name": {
+            "title": "resize-columns",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/resize-columns"
+        }
+    },
+    {
+        "feature": "Global History",
+        "sub_feature": "Show/Hide columns",
+        "description": "Show and hide columns.",
+        "tc_name": {
+            "title": "show-hide-columns",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/show-hide-columns"
+        }
+    },
+    {
+        "feature": "(Negative test)",
+        "sub_feature": "Don't record everything",
+        "description": "Verify that things that aren't supposed to be added to history aren't (eg chorme:/// url's)",
+        "tc_name": null
+    },
+    {
+        "feature": "(Regression test)",
+        "sub_feature": "Don't show 302 redirect",
+        "description": "Don't ever show 302 redirects in history",
+        "tc_name": {
+            "title": "Bug 102043",
+            "content": "https://www-archive.mozilla.org/https://bugzilla.mozilla.org/show_bug.cgi?id=102043"
+        }
+    },
+    {
+        "feature": "---",
+        "sub_feature": "---",
+        "description": "---",
+        "tc_name": null
+    },
+    {
+        "feature": "Session History",
+        "sub_feature": "Go menu list",
+        "description": "Verify correct recently visited sites are in go menu.",
+        "tc_name": {
+            "title": "gomenu-list",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/gomenu-list"
+        }
+    },
+    {
+        "feature": "Session History",
+        "sub_feature": "Back and Forward button dropdowns",
+        "description": "Verify recently visited sites are in Back and Forward button dropdown menu and work.",
+        "tc_name": {
+            "title": "button-dropdown",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/button-dropdown"
+        }
+    },
+    {
+        "feature": "Session History",
+        "sub_feature": "Surf Go menuitems",
+        "description": "Verify browser goes back and forward to recently visited sites",
+        "tc_name": {
+            "title": "surf-golinks",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/surf-golinks"
+        }
+    },
+    {
+        "feature": "Session History",
+        "sub_feature": "Back and forward with frames",
+        "description": "Verify browser goes back and forward correctly from page with frames.",
+        "tc_name": {
+            "title": "frame-history",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/frame-history"
+        }
+    },
+    {
+        "feature": "Session History",
+        "sub_feature": "New session",
+        "description": "Verify that a new session is started with a new browser window or a restart.",
+        "tc_name": {
+            "title": "new-session",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/new-session"
+        }
+    },
+    {
+        "feature": "---",
+        "sub_feature": "---",
+        "description": "---",
+        "tc_name": null
+    },
+    {
+        "feature": "Session History",
+        "sub_feature": "Back and forward with named anchors",
+        "description": "Verify browser goes back and forward correctly from sites that use named anchors",
+        "tc_name": {
+            "title": "anchor-history",
+            "content": "https://www-archive.mozilla.org//quality/browser/front-end/testcases/history/anchor-history"
+        }
+    },
+    {
+        "feature": "(Regression Test)",
+        "sub_feature": "Retain scroll position",
+        "description": "Verify that browser remembers scroll state when returning to pages in SH",
+        "tc_name": null
+    }
+]

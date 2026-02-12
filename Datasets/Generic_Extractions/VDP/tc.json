@@ -1,0 +1,118 @@
+[
+    {
+        "section_id": "VDP/SNK/SYN/BV-02-C",
+        "section_title": "Delay Reporting with VDP video playback",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "The presentation of audio and video is synchronized, e.g., the presentation has to occur without a\nnoticeable delay."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "4.1.18"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The Source is connected with an A2DP sink and a VDP sink (IUT)."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "Start streaming of a test video.\n\n\nA sample video [8] is provided that contains a sequence of numbers that are spoken by a user and\ndisplayed at the same time. An acoustic marker appears whenever the number changes.\n\n\nIt is up to the manufacturer to use the provided video or to apply their own test procedure to ensure\naudio and video presentation is synchronized if the sample video cannot be used for some reason."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\n\n\nAudio and video are synchronized.\n\n\nThis means the spoken number needs to be the same as the number shown on the screen and the\nnumber change in the video needs to be aligned with the corresponding acoustic marker in the video."
+            },
+            {
+                "title": "Notes",
+                "content": "If the test video is not used the manufacturer is responsible to use an effective method to verify the\nsynchronization."
+            }
+        ]
+    },
+    {
+        "section_id": "VDP/SNK/SYN/BV-01-C",
+        "section_title": "Delay Value",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that the reported delay value is correct."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "4.1.18"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- A stream connection is established.\n\n\n   - IUT is SNK."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "Start streaming and receive a delay report from SNK."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\n\n\nThe reported delay value is within a given range expected by the manufacturer."
+            },
+            {
+                "title": "Notes",
+                "content": "This is a subjective plausibility test.\n\n#### **4.8 H.263 baseline Codec Conformance Test**\n\n\nVerify that the mandatory codec H.263 baseline is properly implemented.\n\n\nThis conformance test is conducted locally by the implementer. Furthermore, the intent of this test is to\nassure basic conformity to the codec specification and is not to control the quality or performance of the\ncodec implementation. The quality and performance of the codec is up to the implementation as far as it\ncomplies with the specification.\n\n\nThe conformance test of H.263 baseline codec is performed according to the MPEG-4 conformance\ntesting [5] and its reference software [6]. It is mandated to satisfy the requirement described in [5] to be\ncompliant with H.263 baseline. The reasons for utilizing MPEG-4 conformance test [5] to H.263 baseline\ncodec are:\n\n\n   - There is no conformance Test Suite in ITU standard for H.263 baseline codec available in public.\n\n\n   - H.263 baseline (without annexes) is incorporated as part of MPEG-4 visual specification (known\nas ‘short header’ in the specification), and the conformance Test Suite of MPEG-4 [5] covers\nH.263 baseline as well.\n\n\n\n\n\n**4.8.1** **H.263 baseline Decoder Conformance**\n\n\nVerify that H.263 baseline decoder is properly implemented."
+            }
+        ]
+    },
+    {
+        "section_id": "VDP/SNK/HC/BV-01-C",
+        "section_title": "H.263 baseline Conformance – Decoder",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that H.263 baseline decoder is properly implemented on the SNK.\n\n\nCheck that the decoder satisfies the requirement for conformance. See [5] and [6]."
+            },
+            {
+                "title": "Reference",
+                "content": []
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- SNK device is in decoding mode of H.263 baseline bitstreams.\n\n\n   - IUT in normal operation with supported parameters defined in Section 4.3 in [1]."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "Input test bitstreams in the electronics annex in [5]. The bitstream files are located on the CD-ROM\nwhich is included as an electronic annex in reference [5] as following:\n./CONFORMANCE_BITSTREAMS_CD1/Visual/natural/simple/Short.zip."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\n\n\nThe video output of the decoder satisfies the requirement in [5].\n\n\n**4.8.2** **H.263 baseline Encoder Conformance**\n\n\nVerify that H.263 baseline Encoder is properly implemented."
+            }
+        ]
+    },
+    {
+        "section_id": "VDP/SRC/HC/BV-02-C",
+        "section_title": "H.263 baseline Conformance – Encoder",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that H.263 baseline encoder is properly implemented on the SRC.\n\n\nCheck that the bitstreams produced by the encoder satisfies the requirement for conformance. See\n\n[5] and [6]."
+            },
+            {
+                "title": "Reference",
+                "content": []
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- SRC device is in encoding mode of H.263 baseline.\n\n\n   - IUT in normal operation with supported parameters defined Section 4.3 in [1]."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "Activate the encoder and input video sequence."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\n\n\nThe video output of the encoder satisfies the requirement in [5]. Furthermore, in detail, the following\nitems are observed:\n\n\n   - The reference decoder [6] can decode the bitstreams encoded by the implementation without an\nerror.\n\n\n   - It is confirmed that the reference decoder [6] can decode the bitstreams encoded by the\nimplementation as a short header bitstream.\n\n\n\n\n## **5 Test case mapping**\n\n\nThe Test Case Mapping Table (TCMT) maps test cases to specific requirements in the ICS. The IUT is\ntested in all roles for which support is declared in the ICS document.\n\n\nThe columns for the TCMT are defined as follows:\n\n\n**Item:** Contains a logical expression based on specific entries from the associated ICS document.\nContains a logical expression (using the operators AND, OR, NOT as needed) based on specific entries\nfrom the applicable ICS document(s). The entries are in the form of y/x references, where y corresponds\nto the table number and x corresponds to the feature number as defined in the ICS document for Video\nDistribution Profile (VDP) [3].\n\n\nIf a test case is mandatory within the respective layer, then the y/x reference is omitted.\n\n\n**Feature:** A brief, informal description of the feature being tested.\n\n\n**Test Case(s):** The applicable test case identifiers are required for Bluetooth Qualification if the\ncorresponding y/x references defined in the Item column are supported. Further details about the function\nof the TCMT are elaborated in [7].\n\n\nFor purpose and structure of the ICS/IXIT, refer to [7].\n\n\n\n\n\n\n\n\n\n\n\n\n|Item|Feature|Test Case(s)|\n|---|---|---|\n|VDP 1/1|VDP Source SDP Service|VDP/SRC/SGSIT/SERR/BV-01-C<br>VDP/SRC/SGSIT/ATTR/BV-01-C<br>VDP/SRC/SGSIT/OFFS/BV-01-C<br>VDP/SRC/SGSIT/OFFS/BV-02-C<br>VDP/SRC/CGSIT/SFC/BV-01-C|\n|VDP 0/2 AND VDP 1/1|VDP Source SDP Service, VDP 1.1|VDP/SRC/SGSIT/ATTR/BV-03-C|\n|VDP 1/2|VDP Sink SDP Service|VDP/SNK/SGSIT/SERR/BV-02-C<br>VDP/SNK/SGSIT/ATTR/BV-04-C<br>VDP/SNK/SGSIT/OFFS/BV-03-C<br>VDP/SNK/SGSIT/OFFS/BV-04-C|\n|VDP 1/2 AND VDP 4/1|Successful Connection with future<br>SDP Record value – VDP Sink|VDP/SNK/CGSIT/SFC/BV-02-C|\n|VDP 0/2 AND VDP 1/2|VDP Sink SDP Service, VDP 1.1|VDP/SNK/SGSIT/ATTR/BV-06-C|\n|VDP 2/1|Connection Establishment by SRC|VDP/SRC/SET/BV-01-C|\n|VDP 4/2|Connection Establishment by SRC|VDP/SNK/SET/BV-01-C|\n|VDP 2/2|Connection Establishment by SNK|VDP/SRC/SET/BV-02-C|\n|VDP 4/1|Connection Establishment by SNK|VDP/SNK/SET/BV-02-C|\n|VDP 2/3|Start Streaming by SRC|VDP/SRC/SET/BV-03-C|\n|VDP 4/4|Start Streaming by SRC|VDP/SNK/SET/BV-03-C|\n|VDP 2/4|Start Streaming by SNK|VDP/SRC/SET/BV-04-C|\n|VDP 4/3|Start Streaming by SNK|VDP/SNK/SET/BV-04-C|\n|VDP 2/5|H.263 baseline Video Stream|VDP/SRC/VS/BV-01-C|\n|VDP 4/5|H.263 baseline Video Stream|VDP/SNK/VS/BV-01-C|\n|VDP 2/6 OR VDP 2/7 OR<br>VDP 2/8|Other Video Streams|VDP/SRC/VS/BV-02-C|\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n|Item|Feature|Test Case(s)|\n|---|---|---|\n|VDP 4/6 OR VDP 4/7 OR<br>VDP 4/8|Other Video Streams|VDP/SNK/VS/BV-02-C|\n|VDP 2/10|Connection Release by SRC|VDP/SRC/REL/BV-01-C|\n|VDP 4/10|Connection Release by SRC|VDP/SNK/REL/BV-01-C|\n|VDP 2/11|Connection Release by SNK|VDP/SRC/REL/BV-02-C|\n|VDP 4/9|Connection Release by SNK|VDP/SNK/REL/BV-02-C|\n|VDP 2/12|Suspend by SRC|VDP/SRC/SUS/BV-01-C|\n|VDP 4/12|Suspend by SRC|VDP/SNK/SUS/BV-01-C|\n|VDP 2/13|Suspend by SNK|VDP/SRC/SUS/BV-02-C|\n|VDP 4/11|Suspend by SNK|VDP/SNK/SUS/BV-02-C|\n|VDP 5/2|Decode H.263 baseline|VDP/SNK/HC/BV-01-C|\n|VDP 3/2|Encode H.263 baseline|VDP/SRC/HC/BV-02-C|\n|VDP 4/13|Delay Reporting with VDP video<br>playback|VDP/SNK/SYN/BV-02-C|\n|VDP 4/13|Delay Value|VDP/SNK/SYN/BV-01-C|\n\n\n_Table 5.1: Test case mapping_\n\n\n\n\n## **6 Revision history and acknowledgments**\n\n\n_**Revision History**_\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n|Publication<br>Number|Revision<br>Number|Date|Comments|\n|---|---|---|---|\n|0|D10r00|2004-08-11|Clarification amended in section 4.6.1.1.|\n|1|1.0.1r1|2006-02-28|Editorial Updates|\n|2|1.2.0|2006-05-31|Update document number, prepare for publication|\n||1.1.0r1|2011-03-01|Update after AV F2F|\n||1.1.0r2|2011-11-01|Incorporated changes from Core Spec 2.1+EDR<br>updates|\n||1.1.0r3|2012-04-01|BTI comment resolution|\n||1.1.0r4|2012-04-15|Removed redundant references from Section 2.1|\n||1.1.0r5|2012-05-01|Changed the TCMT to align with the revised PICS|\n||1.1.0r6|2012-06-01|Added a Conformance section with the current text to<br>4.2.1. Miscellaneous editing of bulleting in test cases.|\n||1.1.0r7|2012-07-01|Added reference to A/V synchronization test video<br>and referred to this from test case VDP/SNK/SYN/BV-<br>01-I (legacy test case ID TP/SYN/BV-01-I).|\n|3|1.1.0|2012-07-24|Prepare for publication.|\n||1.1.1r00|2016-08-03|Converted to new Test Case ID conventions as<br>defined in TSTO v4.1.|\n||1.1.1r01|2016-11-06|Converted test specification template.|\n|4|1.1.1|2016-12-13|Approved by BTI. Prepared for TCRL 2016-2<br>publication.|\n||p5r00|2022-02-25 –<br>2022-02-28|TSE 17931 (rating 2): Updated the TCMT to reflect<br>the renumbered VDP Sink features and codecs tables<br>to align with Launch Studio.<br>Template-related editorials, including aligning the<br>copyright page with v2 of the DNMD and assigning<br>publication number 4 to previous v1.1.1.|\n|5|p5|2022-06-28|Approved by BTI on 2022-05-31. Prepared for<br>TCRL 2022-1 publication.|\n||p6r00–r05|2023-10-24 –<br>2024-04-09|TSE 23889 (rating 1): Converted -I tests to -C tests as<br>appropriate; updated the TCMT and TCRL<br>accordingly. Removed intro text in the TSS overview<br>related to interoperability. Renumbered<br>VDP/SNK/SYN/BV-01-I to VDP/SNK/SYN/BV-02-C to<br>avoid duplicate created by the -I to -C conversion.<br>TSE 24538 (rating 4): Added new GSIT section with<br>new TCs VDP/SRC/CGSIT/SFC/BV-01-C,<br>VDP/SRC/SGSIT/SERR/BV-01-C,<br>VDP/SRC/SGSIT/OFFS/BV-01-C and -02-C,<br>VDP/SRC/SGSIT/ATTR/BV-01-C – -03-C,<br>VDP/SNK/CGSIT/SFC/BV-02-C,<br>VDP/SNK/SGSIT/SERR/BV-02-C,<br>VDP/SNK/SGSIT/OFFS/BV-03-C and -04-C, and<br>VDP/SNK/SGSIT/ATTR/BV-04-C – -06-C. Updated<br>the TCMT accordingly. Added a reference to the SDP|\n\n\n\n\n\n\n\n\n\n\n\n\n\n|Publication<br>Number|Revision<br>Number|Date|Comments|\n|---|---|---|---|\n||||TS. Updated the Test Groups and TC Conventions<br>sections. Modernized test language/format globally.<br>Editorials to align the document with the latest TS<br>template, including simplifying the test groups section,<br>adding the boilerplate test strategy, and removing<br>draft rev history entries.|\n|6|p6|2024-07-01|Approved by BTI on 2024-05-22. Prepared for<br>TCRL 2024-1 publication.|\n||p7r00–r02|2024-10-15 –<br>2024-12-09|TSE 25420 (rating 2): Updated TCMT for<br>VDP/SNK/CGSIT/SFC/BV-02-C.<br>TSE 26775 (rating 2): Deleted<br>VDP/SRC/SGSIT/ATTR/BV-02-C and<br>VDP/SNK/SGSIT/ATTR/BV-05-C because VDP v1.0<br>is deprecated. Updated the TCMT accordingly.<br>Updated the TCMT introduction to align with the<br>current TS template.|\n|7|p7|2025-02-18|Approved by BTI on 2024-12-25. Prepared for TCRL<br>2025-1 publication.|\n\n\n_**Acknowledgments**_\n\n|Name|Company|\n|---|---|\n|Rüdiger Mosig|Berner and Mattner|\n|Alicia Courtney|Broadcom|\n|Ash Kapur|Broadcom|\n|Allan Madsen|CSR|\n|David Trainor|CSR|\n|Morgan Lindqvist|Ericsson|\n|Tsuyoshi Okada|Matsushita Electric Industrial|\n|Toshio Sakimura|Matsushita Electric Industrial|\n|Stephen Raxter|National Analysis Center|\n|Janne Hamalainen|Nokia|\n|Miska M. Hannuksela|Nokia|\n|Kalervo Kontola|Nokia|\n|Thierry Wœlfflé|Parrot|\n|Scott Walsh|Plantronics|\n|Wilhelm Hagg|Sony|\n|Masahiko Seki|Sony|\n|Makoto Kobayashi|Toshiba|\n|Yoshiaki Takabatake|Toshiba|\n\n\n\nBluetooth SIG Proprietary Page **26 of 26**"
+            }
+        ]
+    }
+]

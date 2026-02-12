@@ -24,7 +24,7 @@ from utils.generate import OClientModel, OModelConfig, HCLientModel, HModelConfi
 from transformers import set_seed
 
 
-class RLEntityPRL:
+class PRLTrainer:
     def __init__(self,
                  policy_model_name : str,
                  max_seq_len : int = 8192,
@@ -51,7 +51,8 @@ class RLEntityPRL:
                 load_in_4bit=True,
                 max_lora_rank=lora_rank,
                 gpu_memory_utilization=0.5,
-                fast_inference = True
+                fast_inference = True,
+                max_seq_length=max_seq_len
             )
 
             self.model = FastLanguageModel.get_peft_model(
@@ -162,10 +163,10 @@ class RLEntityPRL:
                            max_seq_len : int = 4196):
         
 
-        def extract_xml_answer(text : str):
-            answer = text.split("<output>")[-1]
-            answer = answer.split("</output>")[0]
-            return answer.strip()
+        def extract_xml_tag(text : str, tag : str):
+            think = text.split(f"<{tag}>")[-1]
+            think = think.split(f"</{tag}>")[0]
+            return think.strip()
         
         prompt_ = [
             {"role": "system", "content": system_prompt},
@@ -194,7 +195,7 @@ class RLEntityPRL:
             for output in outputs:
                 decoded_output = {
                                 "prompt_with_think" : output,
-                                "prompt" : extract_xml_answer(output)
+                                "prompt" : extract_xml_tag(output, tag="prompt")
                     }
                 
                 decoded_outputs.append(decoded_output)
@@ -203,7 +204,7 @@ class RLEntityPRL:
 
             text = self.tokenizer.apply_chat_template(
                 prompt_,
-                add_generation_prompt = True, # Must add for generation
+                add_generation_prompt = True,
                 tokenize = False,
             )
 
@@ -226,54 +227,10 @@ class RLEntityPRL:
                 # print(f"\n\n")
                 output = {
                                 "prompt_with_think" : output,
-                                "prompt" : extract_xml_answer(output)
+                                "prompt" : extract_xml_tag(output, tag="prompt")
                     }
 
                 decoded_outputs.append(output)
 
 
         return decoded_outputs
-    
-
-    def get_best_inference_reward(self, 
-                             sequences : List[str], 
-                             context : str, 
-                             answer_list : List[str], 
-                             rewards : RewardFuncs,
-                             topk : int):
-        
-        completions = [[{"content": sequence }] for sequence in sequences]
-
-        special_token_reward = rewards.special_token_reward(completions=completions)
-        exact_structure_reward = rewards.exact_structure_reward(completions = completions)
-        format_reward = rewards.answer_format_reward(completions=completions, context = context)
-        factoid_reward = rewards.factoid_ans_reward(completions=completions, context = context)
-        # span_presence_reward = rewards.span_presence_reward(completions = completions, context=context)
-        # correct_reward = rewards.correctness_reward(completions=completions, answer=answer_list, context = context)
-
-        ########## Optional choice by output string length ###############
-        len_reward = rewards.long_output_reward(completions=completions)
-
-        net_reward = [
-            sp_ + ex_ + form_ + fact_ + l_ 
-            for sp_, ex_, form_, fact_, l_ in zip(
-                special_token_reward, 
-                exact_structure_reward, 
-                format_reward, 
-                factoid_reward,
-                len_reward     
-            )
-        ]
-        
-        sequences = [(sequence, reward_) for sequence, reward_ in zip(sequences, net_reward)]
-        sequences = sorted(sequences, key = lambda x : x[1], reverse = True)
-
-        return sequences[:topk]
-
-
-
-
-
-
-        
-

@@ -1,6 +1,6 @@
 import argparse
 from functools import partial
-from utils.rl_ans_trainer import RLEntityPRL
+from utils.rl_trainer import RLEntityPRL
 from utils.prepare_dataset import RLAnsDataset
 from utils.generate import OClientModel, OModelConfig
 from utils.rewards import RewardFuncs, CreativeRewardFuncs

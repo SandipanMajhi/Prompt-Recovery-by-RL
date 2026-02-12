@@ -1,0 +1,41 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "testcase": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "requirements": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Analysis": {
+      "alignment_index": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "is_fine_tuning_ready": {
+        "dtype": "bool",
+        "_type": "Value"
+      },
+      "missing_elements": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      },
+      "score": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "technical_critique": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

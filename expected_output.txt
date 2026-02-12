@@ -1,0 +1,106 @@
+{
+  "test_spec_name": "Improved Test Spec",
+  "notes": "This test verifies TCS+ availability within 1.2 s after ignition ON and confirms no LTCS+ activation during normal drive-off on a standard surface. All sensors must be operational; the vehicle must be stationary before measurement begins.",
+  "preconditions": [
+    {
+      "id": "P1",
+      "description": "Turn System ON",
+      "stimulation": "Set battery to 12.6V; switch ignition OFF",
+      "expected": "—"
+    },
+    {
+      "id": "P2",
+      "description": "Vehicle in standstill",
+      "stimulation": "Gear Drive; Accel 0%; Brake 0%",
+      "expected": "—"
+    },
+    {
+      "id": "P3",
+      "description": "Clear failure memory",
+      "stimulation": "Clear Bosch, Customer, OBD memories",
+      "expected": "Failure memories are empty (online eval: true)"
+    },
+    {
+      "id": "P4",
+      "description": "Full System",
+      "stimulation": "Evaluate lamp states per Full_System strategy",
+      "expected": "—"
+    },
+    {
+      "id": "P5",
+      "description": "Set default μ surface",
+      "stimulation": "Road friction 0.85 / 0.85 (L/R wheels)",
+      "expected": "—"
+    }
+  ],
+  "actions_steps": [
+    {
+      "id": "A1",
+      "description": "Start Measurement",
+      "stimulation_maneuver": "Begin trace recording for all recording groups",
+      "expected": "Recording active; signals logging (online eval: false)"
+    },
+    {
+      "id": "A2",
+      "description": "Ignition ON",
+      "stimulation_maneuver": "Switch ignition to ON",
+      "expected": "TCS+ fully available ≤ 1.2 s after ignition ON (online eval: true)"
+    },
+    {
+      "id": "A3",
+      "description": "Apply moderate accel",
+      "stimulation_maneuver": "Increase accelerator linearly to 25%",
+      "expected": "sDrvPedalRaw ≥ 24 (online eval: false)"
+    },
+    {
+      "id": "A4",
+      "description": "Release accel",
+      "stimulation_maneuver": "Set accelerator to 0%",
+      "expected": "—"
+    },
+    {
+      "id": "A5",
+      "description": "Apply brake",
+      "stimulation_maneuver": "Set brake to 40%",
+      "expected": "—"
+    },
+    {
+      "id": "A6",
+      "description": "Release brake",
+      "stimulation_maneuver": "Set brake to 0%",
+      "expected": "—"
+    },
+    {
+      "id": "A7",
+      "description": "Read failure memories",
+      "stimulation_maneuver": "Read Bosch & Customer memories",
+      "expected": "Failure memories empty (online eval: true)"
+    },
+    {
+      "id": "A8",
+      "description": "Read lamps",
+      "stimulation_maneuver": "Evaluate LTCS+ lamp state",
+      "expected": "LTCS+ OFF; no activation/blink (online eval: false)"
+    },
+    {
+      "id": "A9",
+      "description": "Stop Measurement",
+      "stimulation_maneuver": "Stop trace recording",
+      "expected": "Recording stopped (online eval: false)"
+    }
+  ],
+  "postconditions": [
+    {
+      "id": "C1",
+      "description": "Read lamps",
+      "stimulation": "Evaluate LTCS+ lamp state",
+      "expected": "LTCS+ OFF; no activation/blink"
+    },
+    {
+      "id": "C2",
+      "description": "Undo manipulations",
+      "stimulation": "Reset road friction to 0.85 for all wheels",
+      "expected": "—"
+    }
+  ]
+}

@@ -1,0 +1,693 @@
+[
+    {
+        "section_id": "BAP/UCL/DISC/BV-05-C",
+        "section_title": "Discover Supported Audio Contexts",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Unicast Client IUT can read the value of the Supported Audio Contexts characteristic on\na Unicast Server."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "5.4"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- Establish a Bearer connection between the Lower Tester and the IUT as described in\nSection 4.4.1, if using ATT over an LE transport, or Section 4.4.2 if using ATT over a BR/EDR\ntransport, or Section 4.4.3 if using EATT over an LE transport, or Section 4.4.4 if using EATT over\na BR/EDR transport.\n- The IUT is a Unicast Client.\n- The Lower Tester is a Unicast Server including an instantiation of the Published Audio\nCapabilities Service.\nBluetooth SIG Proprietary Page **38 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to discover the Published Audio Capabilities Service on the\nLower Tester by executing the GATT Discover All Primary Services or GATT Discover Primary\nServices by Service UUID sub-procedure.\n2. The Upper Tester orders the IUT to discover the Supported Audio Contexts characteristic on the\nLower Tester by executing the GATT Discover All Characteristics of a Service or Discover\nCharacteristic by UUID sub-procedure for the Published Audio Capabilities Service.\n3. The Upper Tester orders the IUT to read the value of the Supported Audio Contexts characteristic\ndiscovered in Step 2 by executing the GATT Read Characteristic Value sub-procedure for the\nSupported Audio Contexts characteristic discovered in Step 2."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT successfully reads the value of the Supported Audio Contexts characteristic on the Lower\nTester."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/USR/DISC/BV-07-C",
+        "section_title": "Expose Supported Audio Contexts",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Unicast Server IUT returns the value of its Supported Audio Contexts characteristic when\nread by a Unicast Client."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "5.4"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- Establish a Bearer connection between the Lower Tester and the IUT as described in\nSection 4.4.1, if using ATT over an LE transport, or Section 4.4.2 if using ATT over a BR/EDR\ntransport, or Section 4.4.3 if using EATT over an LE transport, or Section 4.4.4 if using EATT over\na BR/EDR transport.\n- The IUT is a Unicast Server including an instantiation of the Published Audio Capabilities Service.\n- The Lower Tester is a Unicast Client."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Lower Tester discovers the Published Audio Capabilities Service on the IUT by executing the\nGATT Discover All Primary Services sub-procedure.\n2. The Lower Tester discovers the Supported Audio Contexts characteristic on the IUT by executing\nthe GATT Discover All Characteristics of a Service sub-procedure for the Published Audio\nCapabilities Service.\n3. The Lower Tester reads the value of the Supported Audio Contexts characteristic discovered in\nStep 2 by executing the GATT Read Characteristic Value sub-procedure for the Supported Audio\nContexts characteristic discovered in Step 2."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT successfully returns the value of its Supported Audio Contexts characteristic when read by\nthe Lower Tester.\nBluetooth SIG Proprietary Page **39 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/UCL/DISC/BV-06-C",
+        "section_title": "Discover Available Audio Contexts",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Unicast Client IUT can read the value of the Available Audio Contexts characteristic on a\nUnicast Server to retrieve audio data Context Type values available for reception or transmission."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "5.5"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- Establish a Bearer connection between the Lower Tester and the IUT as described in\nSection 4.4.1, if using ATT over an LE transport, or Section 4.4.2 if using ATT over a BR/EDR\ntransport, or Section 4.4.3 if using EATT over an LE transport, or Section 4.4.4 if using EATT over\na BR/EDR transport.\n- The IUT is a Unicast Client.\n- The Lower Tester is a Unicast Server including an instantiation of the Published Audio\nCapabilities Service."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to discover the Published Audio Capabilities Service on the\nLower Tester by executing the GATT Discover All Primary Services or GATT Discover Primary\nServices by Service UUID sub-procedure.\n2. The Upper Tester orders the IUT to discover the Available Audio Contexts characteristic on the\nLower Tester by executing the GATT Discover All Characteristics of a Service or Discover\nCharacteristic by UUID sub-procedure for the Published Audio Capabilities Service.\n3. The Upper Tester orders the IUT to read the value of the Available Audio Contexts characteristic\ndiscovered in Step 2."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT successfully reads the value of the Available Audio Contexts characteristic on the Lower\nTester."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/USR/DISC/BV-06-C",
+        "section_title": "Expose Available Audio Contexts",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Unicast Server IUT returns the value of its Available Audio Contexts characteristic when\nread by a Unicast Client."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "5.5"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- Establish a Bearer connection between the Lower Tester and the IUT as described in\nSection 4.4.1, if using ATT over an LE transport, or Section 4.4.2 if using ATT over a BR/EDR\ntransport, or Section 4.4.3 if using EATT over an LE transport, or Section 4.4.4 if using EATT over\na BR/EDR transport.\n- The IUT is a Unicast Server.\n- The Lower Tester is a Unicast Client.\nBluetooth SIG Proprietary Page **40 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Lower Tester discovers the Published Audio Capabilities Service on the IUT by executing the\nGATT Discover All Primary Services sub-procedure.\n2. The Lower Tester discovers the Available Audio Contexts characteristic on the IUT by executing\nthe GATT Discover All Characteristics of a Service sub-procedure for the Published Audio\nCapabilities Service.\n3. The Lower Tester reads the value of the Available Audio Contexts characteristic discovered in\nStep 2 by executing the GATT Read Characteristic Value sub-procedure for the Available Audio\nContexts characteristic discovered in Step 2."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT returns the value of its Available Audio Contexts characteristic when read by the Lower\nTester."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/UCL/ADV/BV-01-C",
+        "section_title": "Unicast Client Receives Extended Advertising PDUs",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Unicast Client IUT can receive extended advertising PDUs including Available Audio\nContexts."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "3.5.3"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Unicast Client.\n- The Lower Tester is a Unicast Server transmitting connectable extended advertising PDUs\ncontaining the following fields: Service Data AD type data, Audio Stream Control Service UUID,\nAnnouncement Type, Available Audio Contexts, Metadata_Length, and Metadata."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to scan for advertising packets containing the Audio Stream\nControl Service UUID.\n2. The IUT receives an Extended Advertising PDU.\n3. The Upper Tester verifies the extended advertising data."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT receives an Extended Advertising PDU containing the fields and data defined for the Lower\nTester within the Initial Condition."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/USR/SCC/BV-033-C",
+        "section_title": "USR SNK Config Codec, VS",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Unicast Server Audio Sink IUT can perform a Config Codec operation initiated by a\nUnicast Client for a vendor-specific codec for an ASE in the Idle state, the Codec Configured state,\nand the QoS Configured state."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "5.6.1"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- Establish a Bearer connection between the Lower Tester and the IUT as described in\nSection 4.4.1, if using ATT over an LE transport, or Section 4.4.2 if using ATT over a BR/EDR\ntransport, or Section 4.4.3 if using EATT over an LE transport, or Section 4.4.4 if using EATT over\na BR/EDR transport.\n- The IUT is a Unicast Server and has an instantiation of the Audio Stream Control Service with at\nleast one Sink ASE characteristic and an instantiation of the Published Audio Capabilities\nService.\n- The Lower Tester is a Unicast Client."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "|Round|Preamble|\n|---|---|\n|1|Section4.4.6 Transition ASE to the Idle State|\n|2|Section4.4.7 Transition ASE to the Codec Configured State|\n|3|Section4.4.8 Transition ASE to the QoS Configured State|\n_Table 4.25: Rounds for Unicast Server as Audio Sink Performs Config Codec Vendor-Specific_\nRepeat Steps 1–5 for each round in Table 4.25.\n1. Execute the Preamble specified in Table 4.25.\n2. The Lower Tester reads the characteristic value of the specified ASE characteristic by executing\nthe GATT Read Characteristic Value sub-procedure.\nBluetooth SIG Proprietary Page **66 of 270**\n**Basic Audio Profile (BAP) /** Test Suite\n3. The Lower Tester writes to the ASE Control Point on the IUT by executing the GATT Write\nWithout Response sub-procedure with the opcode set to 0x01 (Config Codec) and:\n- Number_of_ASEs set to 1\n- ASE_ID[0] set to Test_ASE_ID\n- Target_Latency[0] and Target_PHY set to values supported by the IUT\n- Codec_ID[0] set to TSPX_VS_Codec_ID\n- Codec_Specific_Configuration_Length[0] set to the length of the\nCodec_Specific_Configuration field value\n- Codec_Specific_Configuration[0] set to the parameters specified in\nTSPX_VS_Codec_Specific_Configuration [7]\n4. The IUT sends a notification of the ASE Control Point characteristic.\n5. The IUT sends a notification of the ASE characteristic for the ASE_ID in Step 3."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT sends a notification of the ASE Control Point characteristic with the Response_Code field set\nto 0x00 (Success) for the requested ASE_ID and opcode.\nThe IUT sends a notification of the ASE specified in Step 3. The notified ASE characteristic value is\ncorrectly formatted: the ASE_State field is set to 0x01 (Codec Configured), the ASE_ID field is set to\nTest_ASE_ID, and the Additional_ASE_Parameters field contains the values requested in Step 3 and\nvalid values for Server preferred QoS parameters."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/USR/SCC/BV-034-C",
+        "section_title": "USR SRC Config Codec, VS",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Unicast Server Audio Source IUT can perform a Config Codec operation initiated by a\nUnicast Client for a vendor-specific codec for a Source ASE in the Idle state, the Codec Configured\nstate, and the QoS Configured state."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "5.6.1"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- Establish a Bearer connection between the Lower Tester and the IUT as described in\nSection 4.4.1, if using ATT over an LE transport, or Section 4.4.2 if using ATT over a BR/EDR\ntransport, or Section 4.4.3 if using EATT over an LE transport, or Section 4.4.4 if using EATT over\na BR/EDR transport.\n- The IUT is a Unicast Server and has an instantiation of the Audio Stream Control Service with at\nleast one Source ASE characteristic and an instantiation of the Published Audio Capabilities\nService."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "|Round|Preamble|\n|---|---|\n|1|Section4.4.6 Transition ASE to the Idle State|\n|2|Section4.4.7 Transition ASE to the Codec Configured State|\n|3|Section4.4.8 Transition ASE to the QoS Configured State|\n_Table 4.26: Rounds for Unicast Server Audio Source Performs Config Codec Vendor-Specific_\nBluetooth SIG Proprietary Page **67 of 270**\n**Basic Audio Profile (BAP) /** Test Suite\nRepeat Steps 1–5 for each round in Table 4.26.\n1. Execute the Preamble specified in Table 4.26.\n2. The Lower Tester reads the characteristic value of the specified ASE characteristic by executing\nthe GATT Read Characteristic Value sub-procedure.\n3. The Lower Tester writes to the ASE Control Point on the IUT by executing the GATT Write\nWithout Response sub-procedure with the opcode set to 0x01 (Config Codec) and:\n- Target_Latency[0] and Target_PHY[0] set to values supported by the IUT\n- Codec_ID[0] set to TSPX_VS_Codec_ID\n- Codec_Specific_Configuration_Length[0] set to the length of the\nCodec_Specific_Configuration field value\n- Codec_Specific_Configuration[0] set to the parameters specified in\nTSPX_VS_Codec_Specific_Configuration [7]\n4. The IUT sends a notification of the ASE Control Point characteristic.\n5. The IUT sends a notification of the ASE characteristic for the ASE_ID in Step 3."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT sends a notification of the ASE Control Point characteristic with the Response_Code field set\nto 0x00 (Success) for the requested ASE_ID and opcode.\nThe IUT sends a notification of the ASE specified in Step 3. The notified ASE characteristic value is\ncorrectly formatted: the ASE_State field is set to 0x01 (Codec Configured), the ASE_ID field is set to\nTest_ASE_ID, and the Additional_ASE_Parameters field contains the values requested in Step 3 and\nvalid values for Server preferred QoS parameters."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/UCL/STR/BV-296-C",
+        "section_title": "UCL, AC 6(i), VS",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Unicast Client IUT can transmit audio data using a vendor-specific codec via two\nunidirectional CISes on two ASEs to a Unicast Server Audio Sink that supports two audio locations\nwith one audio channel per ASE. This test group applies to Audio Configuration 6(i), as referenced in\nSection 3.2.1."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "4.4.6"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Unicast Client.\n- The Lower Tester is a Unicast Server.\n- Establish a Bearer connection between the Lower Tester and the IUT as described in\nSection 4.4.1, if using ATT over an LE transport, or Section 4.4.2 if using ATT over a BR/EDR\ntransport, or Section 4.4.3 if using EATT over an LE transport, or Section 4.4.4 if using EATT over\na BR/EDR transport.\n- The IUT has discovered all ASCS characteristics of the Lower Tester by executing either the\nGATT Discover All Primary Services sub-procedure or the GATT Discover Primary Services by\nService UUID.\n- The Lower Tester exposes a Sink_Audio_Locations characteristic with value including at least\ntwo bits set to 0b1.\n- The Lower Tester exposes at least two Sink ASE characteristics.\n- The Lower Tester exposes a sink PAC record, ASEs, and Audio Locations.\n- If the Sink PAC record contains a Supported_Audio_Channel_Counts parameter, bit 0 is set\nto 0b1. The Sink Audio Locations characteristic contains two bits set to 0b1.\n- The IUT enables notification for the selected ASEs by writing the value 0x0001 using the GATT\nWrite Characteristic Descriptors sub-procedure for the ASE CCCD.\n- The IUT enables notification by writing the value 0x0001 using the GATT Write Characteristic\nDescriptors sub-procedure for the ASE Control Point CCCD.\n- The IUT selects two Sink ASE characteristics and reads the characteristic values by executing\nthe GATT Read Characteristic Value sub-procedure. The IUT caches the ASE_ID field values as\nTest_ASE_ID1 and Test_ASE_ID2.\nBluetooth SIG Proprietary Page **112 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            },
+            {
+                "title": "Test Procedure",
+                "content": "_Figure 4.15: UCL Streaming 1 Server 2 Streams 2 Sinks – Vendor Specific MSC_\n1. The Upper Tester orders the IUT to execute the GATT Write Without Response sub-procedure\nfor the ASE Control Point characteristic with the opcode set to 0x01 (Config Codec) and:\n- Number_of_ASEs set to 2\n- ASE_ID[0] set to Test_ASE_ID1\n- ASE_ID[1] set to Test_ASE_ID2\n- Target_Latency[0] and [1] set to a valid value\n- Target_PHY[0] and [1] set to a valid value\n- Codec_ID[0] and [1] set to TSPX_VS_Codec_ID\n- Codec_Specific_Configuration_Length[0] and [1] set to the length of the\nCodec_Specific_Configuration field value\n- Codec_Specific_Configuration[0] and [1] set to the parameters specified in\nTSPX_VS_Codec_Specific_Configuration [7], including the Audio_Channel_Allocation LTV\nstructure. The Audio_Channel_Allocation value contains one bit set to 0b1 and which\nmatches a bit set to 0b1 in the Sink_Audio_Locations characteristic value. The\nAudio_Channel_Allocation value for ASE_ID[0] is different from the\nAudio_Channel_Allocation value for ASE_ID[1].\n2. The Lower Tester sends the IUT a notification of the ASE Control Point characteristic.\n3. The Lower Tester sends notifications for both Sink ASE characteristics with the ASE_IDs used in\nStep 1.\nBluetooth SIG Proprietary Page **113 of 270**\n**Basic Audio Profile (BAP) /** Test Suite\n4. The IUT executes the LE_Set_CIG_Parameters command with CIS_Count = 2 and remaining\nparameters set using values from TSPX_CIG_Parameters if HCI is used, or configures a CIS by\nother means.\n5. If HCI is used, the IUT receives a Command Complete event with a Status of 0x00 in response to\nthe LE_Set_CIG_Parameters command; otherwise, the QoS parameters are retrieved by other\nmeans.\n6. The IUT executes the GATT Write Without Response sub-procedure for the ASE Control Point\ncharacteristic with the opcode set to 0x02 (Config QoS) and:\n- Number_of_ASEs = 2\n- ASE_ID[0] set to Test_ASE_ID1\n- ASE_ID[1] set to Test_ASE_ID2\n- CIG_ID and CIS_ID set to the values obtained in Step 5, with CIS_ID[0] and CIS_ID[1] set to\ndifferent values\n- SDU_Interval[0] and [1] set to TSPX_VS_QoS_SDU_Interval\n- Framing[0] and [1] set to TSPX_VS_QoS_Framing\n- PHY[0] and [1] set to TSPX_VS_QoS_PHY\n- Max_SDU[0] and [1] set to TSPX_VS_QoS_Max_SDU\n- Retransmission_Number[0] and [1] set to TSPX_VS_QoS_Retransmission_Number\n- Max_Transport_Latency[0] and [1] set to TSPX_VS_QoS_Max_Transport_Latency\n- Presentation_Delay[0] and [1] set to TSPX_VS_QoS_Presentation_Delay\n7. The Lower Tester sends the IUT a notification of the ASE Control Point characteristic.\n8. The Lower Tester sends the IUT a notification of the ASE characteristic for the ASE_ID that was\nset in Step 6.\n9. The IUT executes the GATT Write Without Response sub-procedure for the ASE Control Point\ncharacteristic with the opcode set to 0x03 (Enable) and:\n- Number_of_ASEs set to 2\n- ASE_ID[0] set to Test_ASE_ID1\n- ASE_ID[1] set to Test_ASE_ID2\n- Metadata set to the TSPX_Metadata IXIT entry\n10. The Lower Tester sends the IUT a notification of the ASE Control Point characteristic.\n11. The Lower Tester sends the IUT a notification of the ASE characteristic that corresponds to\nTest_ASE_ID1.\n12. The Lower Tester sends the IUT a notification of the ASE characteristic that corresponds to\nTest_ASE_ID2.\n13. The IUT establishes two unidirectional CISes by using the Connected Isochronous Stream\nCentral Establishment procedure defined in Volume 3, Part C, Section 9.3.13 in [1].\n14. The Lower Tester accepts the establishment of both CISes by using the Connected Isochronous\nStream Peripheral Establishment procedure defined in Volume 3, Part C, Section 9.3.14 in [1].\n15. The Lower Tester sends notifications for both Sink ASE characteristics with the ASEs in the\nStreaming state.\n16. On both audio streams, the IUT sends CIS Data PDUs or CIS Null PDUs."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nOn both audio streams, the IUT sends SDUs with a zero or more length using the LC3 Media Packet\nformat (defined in [3] Section 4.2).\nBluetooth SIG Proprietary Page **114 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/UCL/STR/BV-329-C",
+        "section_title": "UCL, AC 6(ii) – VS",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Unicast Client IUT can transmit audio data using a vendor-specific codec via two\nsynchronized streams to two Unicast Servers. The Unicast Server Lower Testers each support at\nleast one audio location. This test applies to Audio Configuration 6(ii), as referenced in Section 3.2.1."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "4.4.7"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Unicast Client.\n- There are two Unicast Server Lower Testers: Lower Tester 1 and Lower Tester 2.\n- For each Lower Tester, establish a Bearer connection between the Lower Tester and the IUT as\ndescribed in Section 4.4.1, if using ATT over an LE transport, or Section 4.4.2 if using ATT over a\nBR/EDR transport, or Section 4.4.3 if using EATT over an LE transport, or Section 4.4.4 if using\nEATT over a BR/EDR transport.\n- The Lower Tester exposes an ASCS server with at least two Sink ASE characteristics.\n- If the TSPX_EXPOSE_CSIS IXIT Entry is set to True, Lower Tester 1 and Lower Tester 2 include\nan instance of CSIS that conforms to the CAP Acceptor Role.\n- The IUT has discovered all ASCS characteristics of the Lower Tester by executing either the\nGATT Discover All Primary Services sub-procedure or the GATT Discover Primary Services by\nService UUID.\n- The IUT has discovered the Audio Locations and PAC records on each Lower Tester by running\nBAP/UCL/DISC/BV-01-C [Discover Audio Sink Capabilities] or BAP/UCL/DISC/BV-02-C\n[Discover Audio Source Capabilities], or by other means.\n- For each Lower Tester, the IUT enables notification for the selected ASE by writing the value\n0x0001 using the GATT Write Characteristic Descriptors sub-procedure for the ASE CCCD.\n- For each Lower Tester, the IUT enables notification by writing the value 0x0001 using the GATT\nWrite Characteristic Descriptors sub-procedure for the ASE Control Point CCCD.\n- Lower Tester 1 exposes a sink PAC record, ASEs, and Audio Locations.\n- If the Sink PAC record contains a Supported_Audio_Channel_Counts parameter, bit 0 is set\nto 0b1. The Sink Audio Locations characteristic contains one bit set to 0b1 and is different\nfrom the Sink Audio Locations characteristic bit set to 0b1 by Lower Tester 2.\nBluetooth SIG Proprietary Page **118 of 270**\n**Basic Audio Profile (BAP) /** Test Suite\n- Lower Tester 2 exposes a sink PAC record, ASEs, and Audio Locations.\n- If the Sink PAC record contains a Supported_Audio_Channel_Counts parameter, bit 0 is set\nto 0b1. The Sink Audio Locations characteristic contains one bit set to 0b1 and is different\nfrom the Sink Audio Locations characteristic bit set to 0b1 by Lower Tester 1.\n- For each Lower Tester, the IUT selects a Sink ASE characteristic and reads the characteristic\nvalue by executing the GATT Read Characteristic Value sub-procedure. The IUT caches the\nASE_ID field values as Test_ASE_ID1 (Lower Tester 1) and Test_ASE_ID2 (Lower Tester 2).\nTest Case Configuration\n|Round|Target|ASE_ID|\n|---|---|---|\n|1|Lower Tester 1|Test_ASE_ID1|\n|2|Lower Tester 2|Test_ASE_ID2|\n_Table 4.49: Rounds for Unicast Client Transmits Synchronized Audio Data to Two Unicast Servers – Vendor-_\n_specific Codec_"
+            },
+            {
+                "title": "Test Procedure",
+                "content": "_Figure 4.17: Unicast Client Transmits Synchronized Audio Data to Two Unicast Servers – Vendor-specific Codec_\n_MSC_\nBluetooth SIG Proprietary Page **119 of 270**\n**Basic Audio Profile (BAP) /** Test Suite\nExecute Steps 1–3 for each round in Table 4.49 against the Lower Tester specified in Table 4.49.\n1. The Upper Tester orders the IUT to the ASE Control Point on the IUT by executing the GATT\nWrite Without Response sub-procedure with the opcode set to 0x01 (Config Codec) and:\n- Number_of_ASEs set to 1\n- ASE_ID[0] set to the ASE_ID specified in Table 4.49\n- Target_Latency[0] and Target_PHY set to values supported by the IUT\n- Codec_ID[0] set to TSPX_VS_Codec_ID\n- Codec_Specific_Configuration_Length[0] set to the length of the\nCodec_Specific_Configuration field value\n- Codec_Specific_Configuration[0] set to the parameters specified in\nTSPX_VS_Codec_Specific_Configuration [7]\n2. The Lower Tester sends the IUT a notification of the ASE Control Point characteristic.\n3. The Lower Tester sends the IUT a notification of the ASE characteristic for the ASE_ID that was\nset in Step 1.\n4. The IUT executes the LE_Set_CIG_Parameters command with CIS_Count = 1 and remaining\nparameters set using values from TSPX_CIG_Parameters if HCI is used, or configures a CIS by\nother means.\n5. If HCI is used, the IUT receives a Command Complete event with a Status of 0x00 in response to\nthe LE_Set_CIG_Parameters command; otherwise, the QoS parameters are retrieved by other\nmeans.\nExecute Steps 6–8 for each round in Table 4.49 against the Lower Tester specified in Table 4.49.\n6. The Upper Tester orders the IUT to execute the GATT Write Without Response sub-procedure\nfor the ASE Control Point characteristic with the opcode set to 0x02 (Config QoS) and:\n- Number_of_ASEs = 1\n- ASE_ID[0] set to the ASE_ID specified in Table 4.49\n- CIG_ID[0] and CIS_ID[0] set to values matching values used in Step 2\n- SDU_Interval[0] set to TSPX_VS_QoS_SDU_Interval\n- Framing[0] set to TSPX_VS_QoS_Framing\n- PHY[0] set to TSPX_VS_QoS_PHY\n- Max_SDU[0] set to TSPX_VS_QoS_Max_SDU\n- Retransmission_Number[0] set to TSPX_VS_QoS_Retransmission_Number\n- Max_Transport_Latency[0] set to TSPX_VS_QoS_Max_Transport_Latency\n- Presentation_Delay[0] set to TSPX_VS_QoS_Presentation_Delay\n7. The Lower Tester sends the IUT a notification of the ASE Control Point characteristic.\n8. The Lower Tester sends the IUT a notification of the ASE characteristic for the ASE_ID that was\npassed in Step 6.\nExecute Steps 9–14 for each round in Table 4.49 against the Lower Tester specified in Table 4.49.\n9. The IUT executes the GATT Write Without Response sub-procedure for the ASE Control Point\ncharacteristic with the opcode set to 0x03 (Enable) and:\n- Number_of_ASEs set to 1\n- ASE_ID[0] set to the ASE_ID specified in Table 4.49\n- Metadata set to the TSPX_Metadata IXIT entry\n10. The Lower Tester sends the IUT a notification of the ASE Control Point characteristic.\n11. The Lower Tester sends the IUT a notification of the ASE characteristic that corresponds to the\nASE_ID that was set in Step 9.\n12. The IUT establishes a CIS by using the Connected Isochronous Stream Central Establishment\nprocedure defined in Volume 3, Part C, Section 9.3.13 in [1].\nBluetooth SIG Proprietary Page **120 of 270**\n**Basic Audio Profile (BAP) /** Test Suite\n13. The Lower Tester accepts the establishment of a CIS by using the Connected Isochronous\nStream Peripheral Establishment procedure defined in Volume 3, Part C, Section 9.3.14 in [1].\n14. The IUT sends CIS Data PDUs or CIS Null PDUs."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT sends SDUs with a zero or more length to both Lower Testers."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/USR/SPE/BI-04-C",
+        "section_title": "Enable ASE – Invalid Parameters",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify the behavior of a Unicast Server IUT when a Unicast Client initiates the Enable operation with\ninvalid parameters."
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- Establish a Bearer connection between the Lower Tester and the IUT as described in\nSection 4.4.1, if using ATT over an LE transport, or Section 4.4.2 if using ATT over a BR/EDR\ntransport, or Section 4.4.3 if using EATT over an LE transport, or Section 4.4.4 if using EATT over\na BR/EDR transport.\n- The Lower Tester is a Unicast Client and has cached the ASCS service and characteristics\nhandles (e.g., by running the procedures in Section 4.5).\n- The Lower Tester enables notifications by writing the value 0x0001 using the GATT Write\nCharacteristic Descriptors sub-procedure for the ASE Control Point CCCD.\n- The IUT is a Unicast Server with one ASE in the QoS Configured state.\n- The Lower Tester has established a CIS with the IUT by using the Connected Isochronous\nStream Central Establishment procedure defined in Volume 3, Part C, Section 9.3.13 in [1]."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "Repeat Steps 1–2 for each round in Table 4.71.\n1. The Lower Tester executes the GATT Write Characteristic Value sub-procedure for the ASE\nControl Point with the opcode set to 0x03 (Enable) and:\n- Number_of_ASEs set to 1\n- ASE_ID[0] set to Test_ASE_ID\n- Metadata_Length[0] set to the length of the Metadata[0] parameter\n- Metadata[0] configured as specified in Table 4.71.\n2. The IUT sends a GATT Characteristic Value Notification for the ASE Control Point characteristic.\n|Round|Parameters|Response Code|\n|---|---|---|\n|1|Includes Metadata Type unsupported by server|Unsupported Metadata (0x0A) or<br>Rejected Metadata (0x0B)|\n|2|Includes incorrectly formatted Metadata value|Rejected Metadata (0x0B) or<br>Invalid Metadata (0x0C)|\n|3|Streaming_Audio_Contexts LTV with a value of zero|Rejected Metadata (0x0B) or<br>Invalid Metadata (0x0C)|\n_Table 4.71: Rounds for Enable ASE – Invalid Parameters_"
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT sends an ASE Control Point notification with the Response_Code field value as specified in\nTable 4.71 and the Reason field set to the value of the Metadata Type field in error for each round.\nBluetooth SIG Proprietary Page **175 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/USR/SPE/BI-05-C",
+        "section_title": "Update Metadata – Invalid Parameters",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify the behavior of a Unicast Server IUT when a Client initiates the Update Metadata operation\nwith invalid parameters."
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Unicast Server with one ASE in the Streaming state."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "Repeat Steps 1–2 for each round in Table 4.72.\n1. The Lower Tester executes the GATT Write Characteristic Value sub-procedure for the ASE\nControl Point with the opcode set to 0x07 (Update Metadata) and:\n- Number_of_ASEs set to 1\n- ASE_ID[0] set to Test_ASE_ID\n- Metadata_Length[0] set to the length of the Metadata[0] parameter\n- Metadata[0] configured as specified in Table 4.72.\n2. The IUT sends a GATT Characteristic Value Notification for the ASE Control Point characteristic.\n|Round|Metadata|Error Reason|\n|---|---|---|\n|1|Includes Metadata Type not supported by server|Unsupported Metadata (0x0A) or<br>Rejected Metadata (0x0B)|\n|2|Includes incorrectly formatted Metadata value|Rejected Metadata (0x0B) or<br>Invalid Metadata (0x0C)|\n|3|Streaming_Audio_Contexts LTV with a value of zero|Rejected Metadata (0x0B) or<br>Invalid Metadata (0x0C)|\n_Table 4.72: Rounds for Update Metadata – Invalid Parameters_"
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT sends an ASE Control Point notification with the Response_Code field set to the value\nspecified in Table 4.72 and the Reason field set to the value of the Metadata Type field in error.\n####"
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BSRC/SCC/BV-34-C",
+        "section_title": "Reconfigures Broadcast",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Broadcast Source IUT can reconfigure the broadcast Audio Stream and update the\nBASE configuration."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.3.1",
+                    "6.3.3"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Source and has configured a broadcast Audio Stream using\nBAP/BSRC/SCC/BV-01-C [Config Broadcast, LC3 8_1_1], or by other means.\nBluetooth SIG Proprietary Page **178 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to reconfigure a broadcast stream using values of the\nTSPX_BASE_UPDATE IXIT entry.\n2. The IUT updates its Periodic Advertising mode with the BASE information in the AdvData field of\nAUX_SYNC_IND and optionally AUX_CHAIN_IND PDUs.\n3. The Lower Tester synchronizes to the PA associated with the broadcast Audio Stream\nestablished by the IUT by using the Periodic Advertising Synchronization Establishment\nprocedure."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT sends AUX_SYNC_IND and optionally AUX_CHAIN_IND PDUs with values from the BASE\ninformation in Step 1. The AdvData field of AUX_SYNC_IND contains updated BASE information.\nBIGInfo data is not present in the PA."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BSRC/SCC/BV-35-C",
+        "section_title": "Establishes Broadcast",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Broadcast Source IUT can establish a broadcast Audio Stream."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.3.2"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Source and has configured a broadcast Audio Stream using\nBAP/BSRC/SCC/BV-01-C [Config Broadcast, LC3 8_1_1], or by other means."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to enter Broadcast Isochronous Broadcasting mode.\n2. The Upper Tester orders the IUT to enter Broadcast Isochronous Synchronizability mode. The\nIUT sends AUX_SYNC_IND PDUs with BIGInfo in the ACAD field of the Extended Header field in\nthe PA.\n3. The Upper Tester orders the IUT to set up the audio data path.\n4. The Lower Tester synchronizes to the PA associated with the broadcast Audio Stream\nestablished by the IUT using the Periodic Advertising Synchronization Establishment procedure.\n5. The Upper Tester orders the IUT to send BIS Data PDUs over the established broadcast Audio\nStream."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT sends AUX_SYNC_IND PDUs with an Extended Header containing BIGInfo in the ACAD\nfield.\nThe IUT sends BIS Data PDUs over the broadcast Audio Stream.\nBluetooth SIG Proprietary Page **179 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BSRC/SCC/BV-36-C",
+        "section_title": "Disables Broadcast",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Broadcast Source IUT can disable a broadcast Audio Stream."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.3.4"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Source and has established a broadcast Audio Stream using\nBAP/BSRC/SCC/BV-01-C [Config Broadcast, LC3 8_1_1], or by other means."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to disable the broadcast Audio Stream."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT sends a BIG_TERMINATE_IND PDU in Step 1."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BSRC/SCC/BV-37-C",
+        "section_title": "Releases Broadcast",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Broadcast Source IUT can release a broadcast Audio Stream and transition from\nConfigured state to Idle state."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.3.5"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Source.\n- The IUT has disabled a broadcast Audio Stream using BAP/BSRC/SCC/BV-36-C [Disables\nBroadcast], or by other means."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Lower Tester synchronizes to the PA associated with the broadcast Audio Stream\nestablished by the IUT.\n2. The Upper Tester orders the IUT to release the broadcast Audio Stream."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT stops transmitting periodic advertising."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BSRC/SCC/BV-38-C",
+        "section_title": "Multi BIG Configuration",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Broadcast Source IUT can configure two broadcast Audio Streams over two BIGs that\nhave different Broadcast_ID."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "3.7.2.1",
+                    "6.3"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Source and has a BASE set to the TSPX_BASE IXIT entry in [7].\n- The IUT can create multiple BIGs.\n- The Lower Tester is a Broadcast Sink."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to configure at least two broadcast audio streams in different\nBIGs using the broadcast Audio Stream Config Settings 16_2 and the Codec Specific\nConfiguration values 16_2_1.\n2. The Upper Tester orders the IUT to enter Periodic Advertising mode with configured BASE\ninformation in the AdvData field of AUX_SYNC_IND and optionally AUX_CHAIN_IND PDUs for\neach BIG.\n3. The IUT enters Periodic Advertising Synchronizability mode including Service Data AD data type\ncontaining the Broadcast Audio Announcement Service UUID and Broadcast_ID in the service\ndata for each BIG.\n4. The Lower Tester scans for advertisements with the Broadcast Audio Announcement Service\nUUID.\nFor each advertisement train discovered from the IUT:\n5. The Lower Tester synchronizes to the PA associated with the broadcast Audio Stream\nestablished by the IUT by using the Periodic Advertising Synchronization Establishment\nprocedure."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nIn Step 2, the AdvData field of AUX_SYNC_IND and optionally AUX_CHAIN_IND PDUs contains the\nconfigured BASE information.\nIn Step 3, the IUT transmits the PA synchronization information in the SyncInfo field of the Extended\nHeader field of AUX_ADV_IND PDUs.\n- The AUX_ADV_IND PDUs include the Service Data AD Type in the AdvData field with the\nService UUID equal to the Broadcast Audio Announcement Service UUID.\n- The additional service data includes Broadcast_ID which is different for each BIG."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BA/BASS/BV-01-C",
+        "section_title": "Receives Extended Advertisements",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Broadcast Assistant IUT can receive Scan Delegator extended advertisements."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.5.2"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Assistant.\n- The Lower Tester has an instance of BASS with one Broadcast Receive State characteristic.\n- The Lower Tester is transmitting extended advertising PDUs including the following fields:\nService Data AD data type, Broadcast Audio Scan Service UUID."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to discover Scan Delegators.\n2. The Upper Tester confirms that the IUT discovered the Lower Tester.\nBluetooth SIG Proprietary Page **184 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe Upper Tester confirms that the IUT receives extended advertising events."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BA/BASS/BV-02-C",
+        "section_title": "Initiate Remote Scan Start Operation",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Broadcast Assistant IUT can initiate a Remote Scan Start operation."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.5.3"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Assistant.\n- The Lower Tester has an instance of Published Audio Capabilities Service and instantiates and\nexposes at least one Sink PAC characteristic.\n- The Lower Tester has an instance of BASS and instantiates one Broadcast Receive State\ncharacteristic.\n- The Lower Tester is transmitting extended advertising PDUs including the following fields:\nService Data AD data type, Broadcast Audio Scan Service UUID.\n- The IUT has discovered the Lower Tester by executing BAP/BA/BASS/BV-01-C [Receives\nExtended Advertisements], or by other means.\n- Establish a Bearer connection between the Lower Tester and the IUT as described in\nSection 4.4.1, if using ATT over an LE transport, or Section 4.4.2 if using ATT over a BR/EDR\ntransport, or Section 4.4.3 if using EATT over an LE transport, or Section 4.4.4 if using EATT over\na BR/EDR transport.\n- The IUT has discovered the Broadcast Audio Scan Service and Characteristics and has saved\nthe handle ranges."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to execute the GATT Write Without Response sub-procedure\nfor the Broadcast Audio Scan Control Point characteristic with the opcode set to 0x01 (Remote\nScan Start)."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT successfully writes the Remote Scan Start opcode to the Broadcast Audio Scan Control\nPoint."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BA/BASS/BV-03-C",
+        "section_title": "Initiate Remote Scan Stop Operation",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Broadcast Assistant IUT can stop Remote Scanning for the Lower Tester."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.5.3"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Assistant.\n- The Lower Tester includes an instantiation of the Published Audio Capabilities Service with at\nleast one instance of the Sink PAC characteristic.\n- The Lower Tester has an instance of Broadcast Audio Scan Service with one Broadcast Receive\nState characteristic.\n- The Lower Tester is transmitting extended advertising PDUs including the following fields:\nService Data AD data type, Broadcast Audio Scan Service UUID.\n- The IUT has discovered the Lower Tester by executing BAP/BA/BASS/BV-01-C [Receives\nExtended Advertisements], or by other means.\n- Establish a Bearer connection between the Lower Tester and the IUT as described in\nSection 4.4.1, if using ATT over an LE transport, or Section 4.4.2 if using ATT over a BR/EDR\ntransport, or Section 4.4.3 if using EATT over an LE transport, or Section 4.4.4 if using EATT over\na BR/EDR transport.\n- The IUT has discovered the Broadcast Audio Scan Service and Characteristics and has saved\nthe handle ranges."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to execute the GATT Write Characteristic Value sub-procedure\nfor the Broadcast Audio Scan Control Point characteristic with the opcode value set to 0x00\n(Remote Scan Stop)."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT successfully writes the Remote Scan Stop opcode to the Broadcast Audio Scan Control\nPoint."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BA/BASS/BV-04-C",
+        "section_title": "Initiate Add Source Operation",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Broadcast Assistant IUT can add a Broadcast Source to a Scan Delegator."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.5.4"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Assistant.\n- Lower Tester 2 is a Broadcast Source advertising on a random Advertising Address Type with\none BIS.\n- Lower Tester 1 is a Scan Delegator including an instantiation of the Published Audio Capabilities\nService with at least one instance of the Sink PAC characteristic.\n- Lower Tester 1 has an instance of BASS with one Broadcast Receive State characteristic.\n- Lower Tester 1 is transmitting extended advertising PDUs including the following fields: Service\nData AD data type, Broadcast Audio Scan Service UUID.\n- The IUT has discovered Lower Tester 2 by executing BAP/BA/ADV/BV-01-C [BA Receives Basic\nAudio Announcements], or by other means.\nBluetooth SIG Proprietary Page **186 of 270**\n**Basic Audio Profile (BAP) /** Test Suite\n- The IUT has discovered Lower Tester 1 by executing BAP/BA/BASS/BV-01-C [Receives\nExtended Advertisements], or by other means.\n- The IUT enables notification by writing the value 0x0001 using the GATT Write Characteristic\nDescriptors sub-procedure for the Broadcast Receive State CCCD."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to add the broadcast source on Lower Tester 1.\n2. The Upper Tester orders the IUT to execute the GATT Write Without Response sub-procedure\nfor the Broadcast Audio Scan Control Point characteristic with the opcode value set to 0x02 (Add\nSource) and:\n- Advertising_Address_Type, Advertiser_Address, and Advertising_SID fields set to those\ndiscovered from Lower Tester 2\n- Broadcast_ID set to the Broadcast_ID retrieved from Lower Tester 2\n- PA_Sync set to 0x01 or 0x02\n- PA_Interval set to the SyncInfo field Interval value\n- Num_Subgroups set to 0x01\n- BIS_Sync[0] set to 0x00000001 or 0xFFFFFFFF\n- Metadata_Length and Metadata set to valid values\n3. The Lower Tester sends the IUT a notification of the Broadcast Receive State characteristic."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT successfully writes the Add Source opcode to the Broadcast Audio Scan Control Point\ncharacteristic with the parameters being broadcast from Lower Tester 2."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BA/BASS/BV-05-C",
+        "section_title": "Initiate Modify Source Operation",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Test that Broadcast Assistant IUT can modify the Broadcast Source on a Scan Delegator."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.5.5"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Assistant.\n- Lower Tester 2 is a Broadcast Source transmitting a broadcast Audio Stream on a random\nAdvertising Address Type.\n- Lower Tester 1 is a Scan Delegator including an instantiation of the Published Audio Capabilities\nService with at least one instance of the Sink PAC characteristic.\n- Lower Tester 1 has an instance of BASS with one Broadcast Receive State characteristic.\n- Lower Tester 1 is transmitting extended advertising PDUs including the following fields: Service\nData AD data type, Broadcast Audio Scan Service UUID.\n- The IUT has added Lower Tester 2 as a source by executing BAP/BA/BASS/BV-04-C [Initiate\nAdd Source Operation], or by other means.\n- The IUT enables notification by writing the value 0x0001 using the GATT Write Characteristic\nDescriptors sub-procedure for the Broadcast Receive State CCCD.\nBluetooth SIG Proprietary Page **187 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to modify the broadcast source on Lower Tester 2.\n2. The Upper Tester orders the IUT to execute the GATT Write Without Response sub-procedure\nfor the Broadcast Audio Scan Control Point characteristic with the opcode value set to 0x03\n(Modify Source) and:\n- PA_Sync set to 0x00\n- BIS_Sync[0] set to 0x00000000\n- All other required fields set to valid values\n3. Lower Tester 1 sends the IUT a notification of the Broadcast Receive State Characteristic with\nthe PA_Sync_State set to 0x00 and BIS_Sync_State set to 0x00000000."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT successfully writes the Modify Source opcode to the Broadcast Audio Scan Control Point\ncharacteristic with the parameters being broadcast from Lower Tester 2."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BA/BASS/BV-06-C",
+        "section_title": "Initiates Remove Source Operation",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Test that a Broadcast Assistant IUT can remove the Broadcast Source on the Scan Delegator."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.5.8"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Assistant.\n- Lower Tester 1 is a Scan Delegator that includes an instantiation of the Published Audio\nCapabilities Service with at least one instance of the Sink PAC characteristic.\n- Lower Tester 2 is a Broadcast Source transmitting a broadcast Audio Stream on a random BIS\nindex and random Advertising Address Type.\n- Lower Tester 1 has an instance of BASS with one Broadcast Receive State characteristic. The\nvalues of the PA_Sync_State and BIS_Sync_State fields are set to 0 by executing\nBAP/BA/BASS/BV-05-C [Initiate Modify Source Operation], or by other means. The\nNum_Subgroups field is set to the Num_Subgroups parameter value of the BASE.\n- Lower Tester 1 is transmitting extended advertising PDUs including the following fields: Service\nData AD data type, Broadcast Audio Scan Service UUID.\n- The IUT has added Lower Tester 2 as a source by executing BAP/BA/BASS/BV-04-C [Initiate\nAdd Source Operation], or by other means.\n- The IUT enables notification by writing the value 0x0001 using the GATT Write Characteristic\nDescriptors sub-procedure for the Broadcast Receive State CCCD.\nBluetooth SIG Proprietary Page **188 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to remove the Broadcast Source on Lower Tester 1.\n2. The Upper Tester orders the IUT to execute the GATT Write Without Response sub-procedure\nfor the Broadcast Audio Scan Control Point characteristic with the opcode set to 0x05 (Remove\nSource) and:\n- Source_ID set to the Source ID of the Broadcast Receive State characteristic of Lower\nTester 2\n3. Lower Tester 1 sends the IUT a notification of the Broadcast Receive State Characteristic with all\nfields set to zero except Source_ID. BIS_Sync_State, Metadata_Length, and Metadata fields are\nnot present."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT successfully writes the Remove Source opcode to the Broadcast Audio Scan Control Point\ncharacteristic with the specified Source_ID value."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BA/BASS/BV-07-C",
+        "section_title": "Set Broadcast Code",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Test that a Broadcast Assistant IUT can set a Broadcast Code for an encrypted BIG so that a Scan\nDelegator can decrypt."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.5.7"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Assistant.\n- Lower Tester 2 is a Broadcast Source transmitting an encrypted broadcast Audio Stream.\n- Lower Tester 1 is a Scan Delegator and includes an instantiation of the Published Audio\nCapabilities Service with at least one instance of the Sink PAC characteristic.\n- Lower Tester 1 has an instance of BASS with one Broadcast Receive State characteristic.\n- Lower Tester 1 is transmitting extended advertising PDUs including the following fields: Service\nData AD data type, Broadcast Audio Scan Service UUID.\n- The IUT has discovered Lower Tester 2 by executing BAP/BA/ADV/BV-01-C [BA Receives Basic\nAudio Announcements], or by other means.\n- The IUT has discovered Lower Tester 1 by executing BAP/BA/BASS/BV-01-C [Receives\nExtended Advertisements], or by other means.\n- The IUT enables notification by writing the value 0x0001 using the GATT Write Characteristic\nDescriptors sub-procedure for the Broadcast Receive State CCCD.\nBluetooth SIG Proprietary Page **189 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to add the broadcast source on Lower Tester 1.\n2. The Upper Tester orders the IUT to execute the GATT Write Without Response sub-procedure\nfor the Broadcast Audio Scan Control Point characteristic with the opcode set to 0x02 (Add\nSource) and:\n- Advertising_Address_Type, Advertiser_Address, and Advertising_SID fields set to values\ndiscovered from Lower Tester 2\n- Broadcast_ID set to the value of the Broadcast_ID retrieved from Lower Tester 2\n- PA_Sync set to 0x01 or 0x02\n- BIS_Sync[0] set to 0x00000001\n3. The Lower Tester sends the IUT a notification of the Broadcast Receive State characteristic with\nthe PA_Sync_State = 0x02 and BIS_Sync_State = 0x0 and BIG_Encryption = 0x01.\n4. The Upper Tester orders the IUT to execute the GATT Write Without Response sub-procedure\nfor the Broadcast Audio Scan Control Point characteristic with the opcode set to 0x04 (Set\nBroadcast Code) and:\n- Source_ID of the Broadcast Receive State characteristic\n- Broadcast Code set to the TSPX_Broadcast_Code IXIT entry\n5. The Lower Tester sends the IUT a notification of the Broadcast Receive State characteristic with:\n- PA_Sync_State set to 0x02\n- BIS_Sync_State set to the 0x00000001\n- BIG_Encryption set to 0x02"
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nIn Step 4, the IUT successfully writes the Set Broadcast Code opcode to the Broadcast Audio Scan\nControl Point characteristic with the specified parameters."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BA/BASS/BV-08-C",
+        "section_title": "Transfers SyncInfo Data to Scan Delegator",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Test that a Broadcast Assistant IUT can transfer SyncInfo data to a Scan Delegator using the PAST\nprocedure."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "6.5.6"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Assistant.\n- Lower Tester 2 is a Broadcast Source transmitting an encrypted broadcast Audio Stream.\n- Lower Tester 1 is a Scan Delegator and includes an instantiation of the Published Audio\nCapabilities Service with at least one instance of the Sink PAC characteristic.\n- Lower Tester 1 has an instance of BASS with one Broadcast Receive State characteristic.\n- Lower Tester 1 is transmitting extended advertising PDUs including the following fields: Service\nData AD data type, Broadcast Audio Scan Service UUID.\n- The IUT has discovered Lower Tester 2 by executing BAP/BA/ADV/BV-01-C [BA Receives Basic\nAudio Announcements], or by other means.\nBluetooth SIG Proprietary Page **190 of 270**\n**Basic Audio Profile (BAP) /** Test Suite\n- The IUT has discovered Lower Tester 1 by executing BAP/BA/BASS/BV-01-C [Receives\nExtended Advertisements], or by other means.\n- The IUT enables notification by writing the value 0x0001 using the GATT Write Characteristic\nDescriptors sub-procedure for the Broadcast Receive State CCCD."
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to execute the GATT Write Without Response sub-procedure\nfor the Broadcast Audio Scan Control Point characteristic with the opcode set to 0x02 (Add\nSource) and:\n- Advertiser_Address_Type, Advertiser_Address, and Advertising_SID fields set to values\ndiscovered from Lower Tester 2\n- Broadcast_ID set to the value of the Broadcast_ID retrieved from Lower Tester 2\n- PA_Sync set to 0x01\n- BIS_Sync[0] set to 0x00000001\n2. Lower Tester 1 sends a notification of the Broadcast Receive State Characteristic with:\n- Source_Address_Type set to the Address Type value of Lower Tester 2\n- Source_Adv_SID set to the Advertising_SID value of Lower Tester 2\n- PA_Sync_State set to 0x01\n- Num_Subgroups set to the number of subgroups\n- BIS_Sync set to 0x00000000\n- Metadata_Length set to length of Metadata field\n- Metadata set to valid LTV-formatted Metadata\n3. The IUT sends an LL_PERIODIC_SYNC_IND PDU to Lower Tester 1 containing the SyncInfo\ndata of Lower Tester 2."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nIn Step 3, the IUT sends an LL_PERIODIC_SYNC_IND PDU."
+            }
+        ]
+    },
+    {
+        "section_id": "BAP/BA/BASS/BV-09-C",
+        "section_title": "Discover Sink Audio Locations",
+        "content": [
+            {
+                "title": "Test Purpose",
+                "content": "Verify that a Broadcast Assistant IUT can discover Published Audio Capabilities Service\ncharacteristics on a Broadcast Sink."
+            },
+            {
+                "title": "Reference",
+                "content": [
+                    "3.10",
+                    "6.5.1"
+                ]
+            },
+            {
+                "title": "Initial Condition",
+                "content": "- The IUT is a Broadcast Assistant.\n- The Lower Tester is a Broadcast Sink including an instantiation of the Published Audio\nCapabilities Service with an instance of the Sink Audio Locations characteristic.\n- The Lower Tester is transmitting extended advertising PDUs including the following fields:\nService Data AD data type, Broadcast Audio Scan Service UUID.\n- The IUT has discovered the Lower Tester by executing BAP/BA/BASS/BV-01-C [Receives\nExtended Advertisements], or by other means.\nBluetooth SIG Proprietary Page **191 of 270**\n**Basic Audio Profile (BAP) /** Test Suite"
+            },
+            {
+                "title": "Test Procedure",
+                "content": "1. The Upper Tester orders the IUT to execute the GATT Discover All Characteristics of a Service\nsub-procedure or the GATT Discover Characteristics by Characteristic UUID sub-procedure to\ndiscover the Sink Audio Location characteristic and its CCCD.\n2. The Upper Tester orders the IUT to enable notification by writing the value 0x0001 using the\nGATT Write Characteristic Descriptors sub-procedure for the retrieved in Step 1.\n3. The Lower Tester sends a notification of the Sink Audio Locations characteristic."
+            },
+            {
+                "title": "Expected Outcome",
+                "content": "Pass verdict\nThe IUT discovers the Sink Audio Locations characteristic and enables notifications successfully.\n####"
+            }
+        ]
+    }
+]
