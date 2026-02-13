@@ -1,5 +1,31 @@
 # Prompt-Recovery-by-RL
 
+## Requirements
+You might want to delete some packages from the list if it is not needed.
+```
+  pickle
+  torch
+  numpy
+  matplotlib
+  scikit-learn
+  transformers
+  xformers
+  datasets
+  peft
+  pandas
+  rouge_score
+  evaluate
+  nltk
+  stanza
+  accelerate
+  bitsandbytes
+  bert-score
+  sentence-transformers
+  trl
+  vllm
+  unsloth
+```
+
 ## Dataset USage
 
 ## Bluetooth
