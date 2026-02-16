@@ -83,6 +83,14 @@ You might want to delete some packages from the list if it is not needed.
   Mozilla_R4: Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4_GPT_OSS_20b_references.hf
 ```
 
+### How to import and use
+
+```
+  from datasets import load_from_disk
+
+  samples = load_from_disk("Datasets/Generic_Extractions/Mozilla_R1/Mozilla_R1_GPT_OSS_20b_references.hf")
+```
+
 
 
 
