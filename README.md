@@ -61,6 +61,16 @@ You might want to delete some packages from the list if it is not needed.
   ....
 ```
 
+### Column Description and probable usage:
+
+```
+  'references' : Text from Requirement Document [Input]
+  'testcases' : Original Full length test cases for the feature [Output]
+  'item' : Item ID [Input]
+  'feature' : Feature Name [Input]
+  'test_cases_ids' : Original TestCase ID [Probably Output]
+```
+
 ## Mozilla TestCases
 
 ### File Paths:
@@ -89,6 +99,16 @@ You might want to delete some packages from the list if it is not needed.
   from datasets import load_from_disk
 
   samples = load_from_disk("Datasets/Generic_Extractions/Mozilla_R1/Mozilla_R1_GPT_OSS_20b_references.hf")
+```
+
+### Column Description and probable usage:
+
+```
+  'features': Main name of the feature [Input]
+  'sub_feature': Sub feature name [Input] (Sometimes empty)
+  'high_level_testcase': High level testcase description [Output probably] 
+  'reference': Full Reference document (Almost 16k tokens) [Input]
+  'gpt_oss_references': GPT-OSS-20B generated top-3 sections from the reference doc
 ```
 
 
