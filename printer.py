@@ -1,13 +1,16 @@
 import datasets 
 from datasets import load_from_disk
 from tqdm import tqdm
+import pickle as pkl
 
 
 
 if __name__ == "__main__":
+
     samples = load_from_disk("Datasets/Generic_Extractions/Mozilla_R1/Mozilla_R1_GPT_OSS_20b_references.hf")
-    print(samples[-1])
-    
+    print(samples)
+    # print(samples[-1])
+
     # is_fintunable = 0
     # score = 0
 
