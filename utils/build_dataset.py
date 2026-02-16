@@ -11,6 +11,12 @@ import html2text
 import requests
 import evaluate
 import datasets
+from utils.generate import OClientModel, OModelConfig, OClientModelv2
+import datasets
+from datasets import load_dataset, load_from_disk
+import ast
+import random
+from typing import List, Dict
 
 
 
@@ -832,3 +838,132 @@ class MozillaMd:
     
         augmented_samples = datasets.Dataset.from_dict(augmented_samples)
         return augmented_samples
+
+
+
+
+class MozillaReferences:
+    def __init__(self, model_name : str, port : str, think_effort : str = "low"):
+        self.model = OClientModelv2(model_name=model_name, port = port)
+        self.model_config = OModelConfig(temperature=0.7, think = think_effort)
+
+
+    def __call__(self, prompt : str):
+        response = self.model(prompt = prompt, **self.model_config.__dict__).response
+        return response
+    
+    def _design_prompt(self, sample : dict):
+        
+        if len(sample["sub_feature"]) > 0:
+            prompt = f"""You are given a feature, a sub feature, a high level test case and a complete test case. You are also given a list of references with section title and section content. Find out top 3 best matching content in references which could be used to generate the test case. You have to return your answer in a list of dictionaries. Also while picking out the best matching references avoid "contents" section.
+    
+Feature: {sample['feature']}
+Sub Feature: {sample['sub_feature']}
+
+High Level Test Case: {sample['high_level_testcase']}
+Test Case: {sample['testcase']}
+
+References: {sample['reference']}
+
+You only have to produce the selected sections as a list of dictionaries as your answer and nothing else."""
+            
+        else:
+            prompt = f"""You are given a feature, a high level test case and a complete test case. You are also given a list of references with section title and section content. Find out top 3 best matching content in references which could be used to generate the test case. You have to return your answer in a list of dictionaries. Also while picking out the best matching references avoid "contents" section.
+    
+Feature: {sample['feature']}
+
+High Level Test Case: {sample['high_level_testcase']}
+Test Case: {sample['testcase']}
+
+References: {sample['reference']}
+
+You only have to produce the selected sections as a list of dictionaries as your answer and nothing else."""
+            
+
+        return prompt
+    
+    def _json_decoded(self, text : str):
+        try:
+            data = json.loads(text)
+            return data
+        except json.JSONDecodeError:
+            print("Unable to decode json")
+            pass
+
+        try:
+            cleaned = text.strip()
+            if cleaned.startswith("```json"):
+                cleaned = cleaned.replace("```json", "", 1).replace("```", "", 1).strip()
+            elif cleaned.startswith("```"):
+                cleaned = cleaned.strip("```").strip()
+                
+            return json.loads(cleaned)
+        except Exception as e:
+            return None
+        
+
+    def _extract_references(self,
+                            references : List[Dict],
+                            json_output : List[Dict]):
+        
+        extractions = []
+        for section_ in json_output:
+            for ref_ in references:
+                if section_["title"] == ref_["title"] :
+                    extractions.append(ref_)
+
+        return extractions
+
+
+
+    def build_refs(self, 
+                   data_path : str, 
+                   save_path : str,
+                   num_trials : int = 3):
+        
+        try:
+            samples = load_from_disk(data_path)
+        except:
+            return None
+        
+        augmented_samples = defaultdict(list)
+        
+        for idx in tqdm(range(len(samples))):
+            # feature = samples[idx]["feature"]
+            # sub_feature = samples[idx]["sub_feature"]
+            # high_level_test_case = samples[idx]["high_level_testcase"]
+            # reference = samples[idx]["reference"]
+
+            prompt = self._design_prompt(sample = samples[idx])
+            output = self.model(prompt = prompt, **self.model_config.__dict__).response
+
+            # print(f"Model Output = {output}", flush = True)
+
+            # json_output = self._json_decoded(text = output)
+            # print(f"JSON Decoded Output = {json_output}", flush = True)
+            
+            # trials = num_trials
+            # while not json_output and trials >= 0:
+            #     config = OModelConfig(temperature=0.7, seed = random.randint(0, 324555))
+            #     output = self.model(prompt = prompt, **config.__dict__).response
+            #     json_output = self._json_decoded(text = output)
+            #     trials -= 1
+
+            if output:
+                augmented_samples["features"].append(samples[idx]["feature"])
+                augmented_samples["sub_feature"].append(samples[idx]["sub_feature"])
+                augmented_samples["high_level_testcase"].append(samples[idx]["high_level_testcase"])
+                augmented_samples["reference"].append(samples[idx]["reference"])
+                augmented_samples["gpt_oss_references"].append(output)
+
+            if idx % 10 == 0:
+                hf_samples = datasets.Dataset.from_dict(augmented_samples)
+                hf_samples.save_to_disk(save_path)
+
+
+        augmented_samples = datasets.Dataset.from_dict(augmented_samples)
+        augmented_samples.save_to_disk(save_path)
+
+
+
+

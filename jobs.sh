@@ -35,3 +35,8 @@ nohup python deepseek_ocr_extraction_test.py \
     --config Configurations/deepseek_ocr_extraction.yaml \
     > test.log &
 
+
+
+#### Build up mozilla references ###
+nohup python generate_mozilla_references.py > mozilla_1_builder.log &
+

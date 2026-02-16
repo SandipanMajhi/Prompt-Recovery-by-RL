@@ -9,6 +9,7 @@ import torch
 import requests
 import re
 import ollama
+from ollama import chat
 from typing import Union
 import os
 import json
@@ -26,6 +27,7 @@ class OModelConfig:
     temperature : float = 0.0
     top_p : float = 0.9
     seed : int = 42
+    think : str = False
 
 @dataclass
 class HModelConfig:
@@ -100,6 +102,27 @@ class OModel:
 
     def __call__(self, prompt):
         return ollama.generate(model=self.model_name, prompt=prompt)
+    
+
+class OClientModelv2:
+    def __init__(self, model_name : str, port : str):
+        self.model_name = model_name
+    
+    def __call__(self, prompt : str, **kwargs):
+        response = chat(
+            model=self.model_name,
+            messages=[
+                {"role": "user", "content": prompt}
+            ],
+            options={
+                "temperature": kwargs["temperature"],
+                "top_p" : kwargs["top_p"],
+                "seed" : kwargs["seed"]
+            },
+            think= kwargs["think"]
+        )
+
+        return ResponseBase(response=response["message"]["content"])
     
 
 class OClientModel:

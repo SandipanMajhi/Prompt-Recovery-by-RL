@@ -5,23 +5,25 @@ from tqdm import tqdm
 
 
 if __name__ == "__main__":
-    samples = load_from_disk("Datasets/Generic_Extractions/generic_dataset_v1.hf")
-    is_fintunable = 0
-    score = 0
-
-    print(samples)
+    samples = load_from_disk("Datasets/Generic_Extractions/Mozilla_R1/Mozilla_R1_GPT_OSS_20b_references.hf")
     print(samples[-1])
+    
+    # is_fintunable = 0
+    # score = 0
 
-    for idx in tqdm(range(len(samples))):
-        analysis = samples[idx]["Analysis"]
-        score += analysis["score"]
+    # print(samples)
+    # print(samples[-1])
 
-        if analysis["is_fine_tuning_ready"]:
-            is_fintunable += 1
+    # for idx in tqdm(range(len(samples))):
+    #     analysis = samples[idx]["Analysis"]
+    #     score += analysis["score"]
+
+    #     if analysis["is_fine_tuning_ready"]:
+    #         is_fintunable += 1
         
 
-    print(f"Average Dataset Score = {score/len(samples)}")
-    print(f"Ratio of finetunable examples = {is_fintunable/len(samples)}")
+    # print(f"Average Dataset Score = {score/len(samples)}")
+    # print(f"Ratio of finetunable examples = {is_fintunable/len(samples)}")
 
 
     

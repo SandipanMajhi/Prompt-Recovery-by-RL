@@ -1,0 +1,15 @@
+Experiment Name: "Mozilla_Extraction"
+
+output_folder: "Datasets/Generic_Extractions/Mozilla_R4/"
+
+doc_type: "Mozilla_R4"
+
+# ollama_model_name: "gpt-oss:20b"
+ollama_model_name: "gpt_oss_20b_20k_ctx:latest"
+think: "low"
+ollama_port: "11434"
+num_trials: 3
+
+
+hf_dataset_path: "Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4.hf"
+hf_dataset_new_path: "Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4_GPT_OSS_20b_references.hf"
