@@ -44,6 +44,14 @@ You might want to delete some packages from the list if it is not needed.
   VDP: Datasets/Generic_Extractions/VDP/bluetooth_4.pkl 
 ```
 
+#### HF files: (152 test Cases)
+
+```
+  AVRCP: Datasets/Generic_Extractions/AVRCP/bluetooth_1.hf
+  BAP: Datasets/Generic_Extractions/BAP/bluetooth_2.hf
+  HFP: Datasets/Generic_Extractions/HFP/bluetooth_3.hf
+```
+
 ### Dataset Description: 
 
 ```
@@ -66,6 +74,13 @@ You might want to delete some packages from the list if it is not needed.
   ....
 ```
 
+Load HF Files:
+
+```
+  from datasets import load_from_disk
+  samples = load_from_disk(hf_path)
+```
+
 ### Column Description and probable usage:
 
 ```
@@ -74,6 +89,13 @@ You might want to delete some packages from the list if it is not needed.
   'item' : Item ID [Input]
   'feature' : Feature Name [Input]
   'test_cases_ids' : Original TestCase ID [Probably Output]
+```
+
+#### Columns in HF files: (Explanations just like before)
+
+You can use `name` as input
+```
+  'references', 'testcase', 'name', 'feature', 'item'
 ```
 
 ## Mozilla TestCases
