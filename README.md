@@ -1,5 +1,10 @@
 # Prompt-Recovery-by-RL
 
+## Generation Workflow 
+
+Inputs : Features, Sub Features, References, Item, High Level Test Case (May be ignore this)  
+Output : Full Length Test Case
+
 ## Requirements
 You might want to delete some packages from the list if it is not needed.
 ```
