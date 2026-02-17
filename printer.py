@@ -7,8 +7,25 @@ import pickle as pkl
 
 if __name__ == "__main__":
 
-    samples = load_from_disk("Datasets/Generic_Extractions/Mozilla_R1/Mozilla_R1_GPT_OSS_20b_references.hf")
-    print(samples)
+    with open("Datasets/Generic_Extractions/VDP/bluetooth_4.pkl", "rb") as fp:
+        samples = pkl.load(fp)
+
+    num_samples = len(samples["testcases"])
+
+    id = 4
+
+    print(samples["references"][id])
+    print("\n\n")
+    print(samples["testcases"][id])
+    print("\n\n")
+    print(samples["item"][id])
+    print("\n\n")
+    print(samples["feature"][id])
+    print("\n\n")
+    print(samples["test_cases_ids"][id])
+
+    # samples = load_from_disk("Datasets/Generic_Extractions/AVRCP/bluetooth_1.pkl")
+    # print(samples)
     # print(samples[-1])
 
     # is_fintunable = 0

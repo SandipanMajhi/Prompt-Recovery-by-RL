@@ -1,0 +1,8 @@
+Experiment Name: "Bluetooth_References"
+
+output_folder: "Datasets/Generic_Extractions/VDP"
+
+doc_type: "VDP"
+
+dataset_path: "Datasets/Generic_Extractions/VDP/bluetooth_4.pkl"
+output_path: "Datasets/Generic_Extractions/VDP/bluetooth_4.hf"
