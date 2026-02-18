@@ -1,7 +1,0 @@
-Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.14.1             Please see https://github.com/pytorch/ao/issues/2919 for more info
-Consider using the pymupdf_layout package for a greatly improved page layout analysis.
-  0%|          | 0/10 [00:00<?, ?it/s]
-Saving the dataset (0/1 shards):   0%|          | 0/1 [00:00<?, ? examples/s][A
-Saving the dataset (1/1 shards): 100%|██████████| 1/1 [00:00<00:00, 394.83 examples/s][ASaving the dataset (1/1 shards): 100%|██████████| 1/1 [00:00<00:00, 374.32 examples/s]
- 10%|█         | 1/10 [00:22<03:21, 22.42s/it] 20%|██        | 2/10 [00:42<02:47, 20.92s/it] 30%|███       | 3/10 [01:01<02:20, 20.09s/it] 40%|████      | 4/10 [01:18<01:52, 18.79s/it] 50%|█████     | 5/10 [01:38<01:37, 19.45s/it] 60%|██████    | 6/10 [01:59<01:19, 19.91s/it] 70%|███████   | 7/10 [02:19<00:59, 19.91s/it] 80%|████████  | 8/10 [02:38<00:39, 19.67s/it] 90%|█████████ | 9/10 [02:57<00:19, 19.35s/it]100%|██████████| 10/10 [03:16<00:00, 19.23s/it]100%|██████████| 10/10 [03:16<00:00, 19.63s/it]
-Saving the dataset (0/1 shards):   0%|          | 0/10 [00:00<?, ? examples/s]Saving the dataset (1/1 shards): 100%|██████████| 10/10 [00:00<00:00, 3087.45 examples/s]Saving the dataset (1/1 shards): 100%|██████████| 10/10 [00:00<00:00, 2947.51 examples/s]
