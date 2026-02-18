@@ -120,6 +120,15 @@ You can use `name` as input
   Mozilla_R4: Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4_GPT_OSS_20b_references.hf
 ```
 
+#### Mozilla Test Cases Ready in string formats
+
+```
+  Mozilla_R1: Datasets/Generic_Extractions/Mozilla_R1/Mozilla_R1_final.hf
+  Mozilla_R2: Datasets/Generic_Extractions/Mozilla_R1/Mozilla_R2_final.hf
+  Mozilla_R3: Datasets/Generic_Extractions/Mozilla_R1/Mozilla_R3_final.hf
+  Mozilla_R4: Datasets/Generic_Extractions/Mozilla_R1/Mozilla_R4_final.hf
+```
+
 ### How to import and use
 
 ```
