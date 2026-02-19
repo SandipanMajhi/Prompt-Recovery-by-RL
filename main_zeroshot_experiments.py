@@ -7,27 +7,7 @@ from pathlib import Path
 from collections import defaultdict
 from datasets import load_from_disk 
 from utils.generate import OClientModel, OClientModelv2, OModelConfig
-
-
-def parse_predicted(pred_ : str):
-    pattern = r"### (.*?):\s*(.*?)(?=###|$)"
-    matches = re.findall(pattern, pred_, re.DOTALL)
-    parsed_data = {header.strip(): content.strip() for header, content in matches}
-    return parsed_data
-
-
-def parse_reference(ref_ : str):
-    target_sections = [
-        "Test Purpose", 
-        "Initial Condition", 
-        "Test Procedure", 
-        "Expected Outcome"
-    ]
-
-    header_pattern = "|".join(map(re.escape, target_sections))
-    pattern = rf"^({header_pattern}):\s*(.*?)(?=^(?:{header_pattern}):|\Z)"
-    matches = re.finditer(pattern, ref_, re.MULTILINE | re.DOTALL)
-    return {match.group(1).strip(): match.group(2).strip() for match in matches}
+from utils.evaluate import TCEval
 
 
 def generate_prompt(tc_name : str, reference : str, feature : str):
@@ -87,11 +67,10 @@ if __name__ == "__main__":
     with open("Configurations/zeroshot_test.yaml", "r") as file:
         config = yaml.safe_load(file)
 
-    # dir_path = Path(config["output_folder"])
-    # dir_path.mkdir(parents = True, exist_ok=True)
-
     model = OClientModel(model_name = config["model_name"], port = config["port"])
     model_config = OModelConfig(temperature=0.7)
+
+    testcase_evaluator = TCEval(model = model)
 
     samples = load_from_disk(config["dataset_path"])
     print(samples)
@@ -114,26 +93,28 @@ if __name__ == "__main__":
                                  feature = feature)
         
         output = model(prompt=prompt, **model_config.__dict__).response
-        key_info = key_information(tc_= output, model = model, num_trials=3)
-        key_info_tc = key_information(tc_ = testcase, model = model, num_trials=3)
+
         
-        print(f"Model Response = {output}", flush = True)
-        print("\n\n\n")
+        # key_info = key_information(tc_= output, model = model, num_trials=3)
+        # key_info_tc = key_information(tc_ = testcase, model = model, num_trials=3)
+        
+        # print(f"Model Response = {output}", flush = True)
+        # print("\n\n\n")
 
-        print(f"Original TC = {testcase}", flush = True)
-        print("\n\n\n")
+        # print(f"Original TC = {testcase}", flush = True)
+        # print("\n\n\n")
 
-        print(f"Parsed Model Response = {parse_predicted(output)}", flush= True)
-        print("\n\n\n")
+        # print(f"Parsed Model Response = {parse_predicted(output)}", flush= True)
+        # print("\n\n\n")
 
-        print(f"Parsed Original TC = {parse_reference(testcase)}", flush= True)
-        print("\n\n\n")
+        # print(f"Parsed Original TC = {parse_reference(testcase)}", flush= True)
+        # print("\n\n\n")
 
-        print(f"Key Information = {key_info}", flush = True)
-        print("\n\n")
+        # print(f"Key Information = {key_info}", flush = True)
+        # print("\n\n")
 
-        print(f"Key Information Gold = {key_info_tc}", flush= True)
-        print("\n\n")
+        # print(f"Key Information Gold = {key_info_tc}", flush= True)
+        # print("\n\n")
 
         break
 
