@@ -278,7 +278,7 @@ Parameters:
     
     def __init__(
         self,
-        exp_name = 'generic_extraction_test',
+        exp_name = 'main_runner',
         run_name = '',
         seed = 3407,
         log_with = None,

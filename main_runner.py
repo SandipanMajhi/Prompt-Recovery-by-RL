@@ -1,246 +1,95 @@
 import argparse
+import yaml
+from pathlib import Path
 from functools import partial
 from utils.rl_trainer import PRLTrainer
-from utils.prepare_dataset import RLPRLDataset
-from utils.generate import OClientModel, OModelConfig
-from utils.rewards import RewardFuncs
+from utils.prepare_dataset import PromptOptimDataset
+from utils.generate import OClientModel, OModelConfig, OClientModelv2
+from utils.rewards import RewardFuncsv2
 
 def main():
     """
     Main training function to be executed by accelerate.
     """
 
-    parser = argparse.ArgumentParser("RLHF Trainer arguments")
-    parser.add_argument("--ollama_model_name", type=str, help="ollama model name")
-    parser.add_argument("--port", help="ollama port", type=str)
-    parser.add_argument("--policy_model_name", type=str, help="Policy model", default="unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit")
-    parser.add_argument("--max_seq_len", type = int, default=8192, help = "Maximum Sequence Length")
-    parser.add_argument("--lora_rank", type=int, help="Lora Rank", default=64)
-    parser.add_argument("--saved_model_name", type=str, help="Saved model name")
-    parser.add_argument("--num_train_samples", type=int, help="num train samples")
-    parser.add_argument("--train_steps", type=int, help="Num Training steps", default=500)
-    parser.add_argument("--max_prompt_len", type=int, help="max prompt length", default=2064)
-    parser.add_argument("--output_dir", type = str, help = "Checkpoint save path")
-    parser.add_argument("--beta", type = float, default=0, help = "KL penalty beta")
+    with open("Configurations/PromptOptim_Trainerv1.yaml", "r") as file:
+        config = yaml.safe_load(file)
 
-    args = parser.parse_args()
+    dir_path = Path(config["output_dir"])
+    dir_path.mkdir(parents = True, exist_ok=True)
 
-    model = OClientModel(model_name=args.ollama_model_name, port=args.port)
-    config = OModelConfig()
+    model = OClientModel(model_name=config["ollama_model_name"], port=config["port"])
+    # model = OClientModelv2(model_name = config["ollama_model_name"], port = config["port"])
+    model_config = OModelConfig()
+    # model_config = OModelConfig(think="low")
 
-    system_prompt = """You are an automative expert who specializes in generating diverse and effective prompts for generating test specifications for another model. Your primary goal is to analyze a given purpose and requirements, generate a *new, refined prompt* that aims to elicit a different, yet highly effective, set of answers.
-
-Your entire response MUST follow a strictly defined structure with four main sections enclosed in specific tags:
-
-1.  **<think>...</think>**: Detail your reasoning and analyze how to build the prompt.
-2.  **<requirement analysis>...</requirement analysis>**: Provide an analysis of the requirements in the inputs from the expected output.
-3.  **<verification analysis>...</verification analysis>**: Provide an analysis of the verification criteria present in the inputs from the expected output.
-4.  **<quality analysis>...</quality analysis>**: Provide an analysis how quality of new prompt should be judged.
-5.  **<output structure analysis>...</output structure analysis>**: Provide an analysis for the output structure in the output.
-6.  **<prompt>...</prompt>**: Provide your new refined prompt.
-
-### Response Format:
-
+    system_prompt = """A conversation between User and Assistant. The user gives a task, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user
+with the output. The reasoning process must be enclosed within <think> </think> tags and the output must be enclosed within <output> </output> tags, i.e., the format should be,
 <think>
-[Detailed analysis of the base prompt and strategy for refinement goes here. Focus on identifying and mitigating narrow focus or low diversity in potential answers.]
+reasoning process here.
 </think>
-<requirement analysis>
-[Analysis of the requirements in the inputs, focusing on testable parameters and completeness.]
-</requirement analysis>
-<verification analysis>
-[Analysis of the necessary verification criteria, emphasizing measurability and pass/fail conditions.]
-</verification analysis>
-<quality analysis>
-[Analysis of how the new prompt's quality should be judged (e.g., novelty, specificity, utility of the generated output).]
-</quality analysis>
-<output structure analysis>
-[Analysis of the mandatory structured output format (e.g., JSON, Markdown table) required from the final prompt.]
-</output structure analysis>
-<prompt>
-[The complete, actionable new prompt string goes here.]
-</prompt>"""
-        
-    base_task_prompt = """Given an input and output pair, produce the prompt that produced the output for the input. The output must be a JSON compatible.
-<input>
-Purpose: Verify TCS+ availability and no LTCS+ activation within 1.2 seconds after ignition ON during normal drive-off on a standard surface.
-
-Requirements & Verification Criteria
-
-R1 — Availability (ESP)
-Requirement (summarized):
-
-TCS+ shall become fully available ≤ 1.2 s after ignition ON.
-A temporary performance compromise during early parameter identification (e.g., tyre radii) is acceptable, but full performance must be reached within 2 km of driving under normal conditions (straight-ahead and moderate torque).
-If signal quality is sufficient, no signal monitoring shall keep traction deactivated.
-Legal requirements must be met at all times.
-Background: certain identification routines (learning, sensor checks, tyre tolerance) need time to complete.
-
-RB Verification Criteria (R1):
-Drive off immediately after ignition ON (engine running) on low-μ surface: TCS+ engages ≈ 1.2 s after ignition ON.
-Traction: 70% of the max possible acceleration shall be reached within a certain (situation-dependent) time; delay depends on driving situation and reference speed initialization.
-
-R2 — Proper operation when switching SYSTEM-OFF → SYSTEM-ON while rolling
-Requirement (summarized):
-The system shall operate properly when switching from SYSTEM-OFF to SYSTEM-ON (with ignition) while the vehicle is rolling.
-Note: SYSTEM-ON/OFF modes are defined in the ESP System Requirements Spec (SysRS) and the System Architecture for ESP.
-
-RB Verification Criteria (R2):
-On a standard surface with engine ON, move to low-μ, perform ignition OFF, then ON, apply throttle: if all sensors are operational, TCS+ shall be available.
-With the vehicle rolling, switch to ignition ON, then immediately provoke a TCS+ intervention (e.g., accelerate on low-μ) → TCS+ works immediately.
-
-Test Design
-Techniques: State Transition Testing; Decision Table Testing; Equivalence Class/Partitioning.
-State Model (high-level)
-TCS_Off (system not available)
-→ Ignition ON, sensors OK, standard/low-μ → TCS_Initializing
-TCS_Initializing
-→ Init complete, < 1.2 s after ignition ON → TCS_Available
-TCS_Available
-→ Low-μ + high accel demand (e.g., pedal 95%) → TCS_Active
-→ Standard surface + moderate accel (≤ 25%) → TCS_Available
-→ Ignition OFF → TCS_Off
-TCS_Active
-→ Traction restored / demand removed → TCS_Available
-→ Ignition OFF → TCS_Off
-Scenario (from design)
-1. TCS_Off → (Ignition ON, sensors OK, standard surface) → TCS_Initializing
-2. TCS_Initializing → Init complete < 1.2 s after ignition ON → TCS_Available
-3. TCS_Available → (Standard surface, accel ≤ 25%) → TCS_Available
-</input>
 <output>
-{
-  "test_spec_name": "Improved Test Spec",
-  "notes": "This test verifies TCS+ availability within 1.2 s after ignition ON and confirms no LTCS+ activation during normal drive-off on a standard surface. All sensors must be operational; the vehicle must be stationary before measurement begins.",
-  "preconditions": [
-    {
-      "id": "P1",
-      "description": "Turn System ON",
-      "stimulation": "Set battery to 12.6V; switch ignition OFF",
-      "expected": "—"
-    },
-    {
-      "id": "P2",
-      "description": "Vehicle in standstill",
-      "stimulation": "Gear Drive; Accel 0%; Brake 0%",
-      "expected": "—"
-    },
-    {
-      "id": "P3",
-      "description": "Clear failure memory",
-      "stimulation": "Clear Bosch, Customer, OBD memories",
-      "expected": "Failure memories are empty (online eval: true)"
-    },
-    {
-      "id": "P4",
-      "description": "Full System",
-      "stimulation": "Evaluate lamp states per Full_System strategy",
-      "expected": "—"
-    },
-    {
-      "id": "P5",
-      "description": "Set default μ surface",
-      "stimulation": "Road friction 0.85 / 0.85 (L/R wheels)",
-      "expected": "—"
-    }
-  ],
-  "actions_steps": [
-    {
-      "id": "A1",
-      "description": "Start Measurement",
-      "stimulation_maneuver": "Begin trace recording for all recording groups",
-      "expected": "Recording active; signals logging (online eval: false)"
-    },
-    {
-      "id": "A2",
-      "description": "Ignition ON",
-      "stimulation_maneuver": "Switch ignition to ON",
-      "expected": "TCS+ fully available ≤ 1.2 s after ignition ON (online eval: true)"
-    },
-    {
-      "id": "A3",
-      "description": "Apply moderate accel",
-      "stimulation_maneuver": "Increase accelerator linearly to 25%",
-      "expected": "sDrvPedalRaw ≥ 24 (online eval: false)"
-    },
-    {
-      "id": "A4",
-      "description": "Release accel",
-      "stimulation_maneuver": "Set accelerator to 0%",
-      "expected": "—"
-    },
-    {
-      "id": "A5",
-      "description": "Apply brake",
-      "stimulation_maneuver": "Set brake to 40%",
-      "expected": "—"
-    },
-    {
-      "id": "A6",
-      "description": "Release brake",
-      "stimulation_maneuver": "Set brake to 0%",
-      "expected": "—"
-    },
-    {
-      "id": "A7",
-      "description": "Read failure memories",
-      "stimulation_maneuver": "Read Bosch & Customer memories",
-      "expected": "Failure memories empty (online eval: true)"
-    },
-    {
-      "id": "A8",
-      "description": "Read lamps",
-      "stimulation_maneuver": "Evaluate LTCS+ lamp state",
-      "expected": "LTCS+ OFF; no activation/blink (online eval: false)"
-    },
-    {
-      "id": "A9",
-      "description": "Stop Measurement",
-      "stimulation_maneuver": "Stop trace recording",
-      "expected": "Recording stopped (online eval: false)"
-    }
-  ],
-  "postconditions": [
-    {
-      "id": "C1",
-      "description": "Read lamps",
-      "stimulation": "Evaluate LTCS+ lamp state",
-      "expected": "LTCS+ OFF; no activation/blink"
-    },
-    {
-      "id": "C2",
-      "description": "Undo manipulations",
-      "stimulation": "Reset road friction to 0.85 for all wheels",
-      "expected": "—"
-    }
-  ]
-}
+output here 
 </output>"""
+        
+    base_task_prompt = """You are an advanced Prompt Engineering Assistant specializing in QA Engineering and Test Automation specializing in Bluetooth.
+Your primary goal is to analyze a given base prompt prefix and generate a new refined prompt prefix that aims to elicit a proper test case for the feature. You only have to generate the refined prefix prompt. 
+Please do not generate any few-shot examples with arbitrary reference, feature, test case name and items. 
+
+Constraints:
+- Do not generate any few-shot examples.
+- Do not provide reference, feature, test case name and items.
+- Output ONLY the refined prompt prefix.
+
+Base Task prompt prefix: Given the following feature, test case name, item and references you have to design testcases for it. 
+Your test case must have the following sections section title, Test Purpose, Initial Condition, Test Procedure and Expected Outcome.
+
+Output Format:
+### Test Purpose:
+<content>
+
+### Initial Condition:
+<content>
+
+### Test Procedure:
+<content>
+
+### Expected Outcome:
+<content>
+
+Only output your test case in the above output format with sections mentioned in markdown format and nothing else.
+
+New Refined Prompt Prefix:"""
 
     
-    rewards = RewardFuncs(ollama_model = model, ollama_config=config)
+    rewards = RewardFuncsv2(ollama_model = model, ollama_config=model_config)
 
     reward_functions = [
-                        rewards.special_token_reward,
-                        rewards.exact_structure_reward,
-                        rewards.answer_verification_reward,
+                        rewards.answer_format_reward,
+                        rewards.think_length_reward, 
+                        rewards.output_length_reward,
+                        rewards.section_presence_reward,
+                        rewards.sectionwise_overlap_reward,
+                        rewards.keyword_overlap_reward,
+                        rewards.special_token_reward
                         ]
     
-    reward_weights = [1.0] * 3
+    reward_weights = [1.0] * 7
 
-    rl_prl = PRLTrainer(policy_model_name=args.policy_model_name, 
-                                lora_rank=int(args.lora_rank),
-                                max_seq_len=int(args.max_seq_len))
+    rl_prl = PRLTrainer(policy_model_name=config["policy_model_name"], 
+                                lora_rank=int(config["lora_rank"]),
+                                max_seq_len=int(config["max_seq_len"]))
     
-    rl_dataset = RLPRLDataset(num_samples = int(args.num_train_samples))
-    train_dataset = rl_dataset.prepare_dataset(base_task_prompt=base_task_prompt, system_prompt=system_prompt)
+    rl_dataset = PromptOptimDataset(num_samples=int(config["num_train_samples"]))
+    train_dataset = rl_dataset.prepare_dataset(user_prompt=base_task_prompt, system_prompt=system_prompt, data_paths=config["data_paths"])
 
     rl_prl.train(reward_functions=reward_functions, 
-                        saved_model_name = args.saved_model_name,
+                        saved_model_name = config["saved_model_name"],
                         dataset = train_dataset,
-                        output_dir = args.output_dir,
-                        max_steps = int(args.train_steps),
-                        max_prompt_length=int(args.max_prompt_len),
-                        beta=float(args.beta), 
+                        output_dir = config["output_dir"],
+                        max_steps = int(config["train_steps"]),
+                        max_prompt_length=int(config["max_prompt_len"]),
+                        beta=float(config["beta"]), 
                         reward_weights=reward_weights)
 
 

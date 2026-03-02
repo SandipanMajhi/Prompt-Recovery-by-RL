@@ -3,6 +3,16 @@ from datasets import load_from_disk
 from tqdm import tqdm
 import pickle as pkl
 import json
+import re
+
+
+def gold_testcase_parser(text : str):
+    headers = ["Test Purpose", "Initial Condition", "Test Procedure", "Expected Outcome"]
+    pattern = "|".join(headers)
+    regex_pattern = rf"({pattern}):\s*(.*?)(?=\n(?:{'|'.join(headers)}):|$)"
+    matches = re.findall(regex_pattern, text, re.DOTALL)
+    extracted_data = {header.strip(): content.strip() for header, content in matches}
+    return extracted_data
 
 
 
@@ -26,14 +36,20 @@ if __name__ == "__main__":
     # print(samples["test_cases_ids"][id])
 
     # samples = load_from_disk("Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4_GPT_OSS_20b_references.hf")
-    samples = load_from_disk("Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4_final.hf")
+    samples = load_from_disk("Datasets/Generic_Extractions/AVRCP/bluetooth_1.hf")
+
+    print(samples)
+    print(samples[0])
     
-    for idx in tqdm(range(len(samples))):
-        print(f"IDX = {idx}")
-        print(samples["references"][idx])
-        # print(samples["gpt_oss_references"][idx])
-        # print(json.loads(samples["gpt_oss_references"][idx]))
-        print("\n\n")
+    # for idx in tqdm(range(len(samples))):
+    #     print(f"IDX = {idx}")
+    #     # print(samples["references"][idx])
+    #     # print(samples["gpt_oss_references"][idx])
+    #     # print(json.loads(samples["gpt_oss_references"][idx]))
+    #     print("\n\n")
+    #     print(gold_testcase_parser(samples["testcase"][idx]))
+    #     # print(samples["testcase"][idx])
+    #     print("\n\n")
 
     # print(samples[-1])
 

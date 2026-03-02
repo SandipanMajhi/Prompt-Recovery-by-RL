@@ -18,9 +18,6 @@ import re
 from tqdm import tqdm
 from string import Template
 from vllm import SamplingParams
-import evaluate
-from utils.rewards import RewardFuncs
-from utils.generate import OClientModel, OModelConfig, HCLientModel, HModelConfig
 from transformers import set_seed
 
 
@@ -50,7 +47,7 @@ class PRLTrainer:
                 model_name=policy_model_name,
                 load_in_4bit=True,
                 max_lora_rank=lora_rank,
-                gpu_memory_utilization=0.5,
+                gpu_memory_utilization=0.6,
                 fast_inference = True,
                 max_seq_length=max_seq_len
             )
@@ -102,7 +99,7 @@ class PRLTrainer:
                   dataset : datasets.Dataset, 
                   output_dir : str = "outputs", 
                   max_steps : int = 1, 
-                  max_prompt_length : int = 512,
+                  max_prompt_length : int = 2048,
                   beta : float = 0.0,
                   reward_weights : List[float] = None
                   ):
@@ -132,7 +129,7 @@ class PRLTrainer:
             max_completion_length = self.max_seq_len - max_prompt_length,
             # num_train_epochs = 1, # Set to 1 for a full training run
             max_steps = max_steps,
-            save_steps = 250,
+            save_steps = 100,
             max_grad_norm = 1.0,
             report_to = "none", 
             output_dir = output_dir,
@@ -234,3 +231,4 @@ class PRLTrainer:
 
 
         return decoded_outputs
+        

@@ -40,3 +40,7 @@ nohup python deepseek_ocr_extraction_test.py \
 #### Build up mozilla references ###
 nohup python generate_mozilla_references.py > mozilla_1_builder.log &
 
+
+#### Prompt Optim Training ####
+CUDA_VISIBLE_DEVICES=1 nohup python main_runner.py > prompt_optim_test.log &
+

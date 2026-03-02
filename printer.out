@@ -1,0 +1,1020 @@
+Dataset({
+    features: ['references', 'testcase', 'name', 'feature', 'item'],
+    num_rows: 127
+})
+IDX = 0
+
+
+
+{'Test Purpose': 'Verify that the button release is sent following a button press when the CT issues a PASS THROUGH\ncommand.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is acting as AVRCP CT.', 'Test Procedure': 'The Upper Tester triggers the IUT to issue commands for button press and release.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a correctly formatted PASS THROUGH command with the state flag set to button\npress, followed within 2 seconds by a correctly formatted PASS THROUGH command with the same\noperation id with the state flag set to button release.'}
+
+
+
+IDX = 1
+
+
+
+{'Test Purpose': 'Verify that when a button to send a PASS THROUGH command is held down the CT continues to\nissue button presses every 2 seconds until the button is released.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is acting as AVRCP CT.', 'Test Procedure': 'The Upper Tester triggers the IUT to issue commands for button press and release. The button is\nheld for longer than 2 seconds.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a correctly formatted PASS THROUGH command with the state flag set to button\npress.\nAnother PASS THROUGH command with the same operation id and state flag set to button press is\nissued within 2 seconds of each previous PASS THROUGH command until the button is released.\nAt least two PASS THROUGH commands are sent with the state flag set to button press.\nA final PASS THROUGH command with the same operation id and state flag set to button release is\nsent within 2 seconds of the last button press.'}
+
+
+
+IDX = 2
+
+
+
+{'Test Purpose': 'Verify the Get Capabilities command issued from the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.', 'Test Procedure': 'The Upper Tester triggers the IUT to send a GetCapabilities command with the METADATA\nTRANSFER_GetCapabilities PDU containing any valid CapabilityID value.', 'Expected Outcome': 'Pass verdict\nThe Lower Tester receives the GetCapabilities.'}
+
+
+
+IDX = 3
+
+
+
+{'Test Purpose': 'Verify the List Player Application Setting Attributes command issued from the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.', 'Test Procedure': 'The Upper Tester triggers the IUT to send a ListPlayerApplicationSettingAttributes command. No\nparameter needs to be passed for this PDU.', 'Expected Outcome': 'Pass verdict\nThe Lower Tester receives the List Player Application Settings Attributes command.'}
+
+
+
+IDX = 4
+
+
+
+{'Test Purpose': 'Verify the List Player Application Setting Values command issued from the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is aware of the available attributes for the Lower Tester. This can be retrieved from the\nresult of AVRCP/CT/PAS/BV-01-C [List Player Application Setting Attributes – CT].', 'Test Procedure': 'The Upper Tester triggers the IUT to send a ListPlayerApplicationSettingValues command with an\nattribute ID listed in the available attributes for the Lower Tester.', 'Expected Outcome': 'Pass verdict\nThe List Player Application Setting Values is received by the Lower Tester.'}
+
+
+
+IDX = 5
+
+
+
+{'Test Purpose': 'Verify the Get Current Player Application Setting Value command issued from the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is aware of the available attributes on the Lower Tester. This can be retrieved from the\nresult of AVRCP/CT/PAS/BV-01-C [List Player Application Setting Attributes – CT].', 'Test Procedure': 'Initiated by the Upper Tester, the IUT sends a Get Current Player Application Setting Value command\nto the Lower Tester containing an attribute ID listed in the available attributes for the Lower Tester.', 'Expected Outcome': 'Pass verdict\nThe Lower Tester receives the Get Current Player Application Setting Value command.'}
+
+
+
+IDX = 6
+
+
+
+{'Test Purpose': 'Verify the Set Player Application Setting Value command issued from the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is aware of the available attributes and corresponding values for the Lower Tester. This\ncan be retrieved from the result of AVRCP/CT/PAS/BV-01-C [List Player Application Setting\nAttributes – CT] and AVRCP/CT/PAS/BV-05-C [List Player Application Setting Values – CT].', 'Test Procedure': 'Initiated by the Upper Tester, the IUT sends a Set Player Application Setting Value command to the\nLower Tester, with attribute and value IDs listed in the available attributes and corresponding values\nfor the Lower Tester.', 'Expected Outcome': 'Pass verdict\nThe Lower Tester receives the SetPlayerApplicationSettingValue command the correct attribute and\nvalue ID.'}
+
+
+
+IDX = 7
+
+
+
+{'Test Purpose': 'Verify the Get Player Application Settings Attribute Text command issued from the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.', 'Test Procedure': 'The Upper Tester triggers the IUT to send a GetPlayerApplicationSettingAttributeText command\ncontaining one or more attribute IDs.', 'Expected Outcome': 'Pass verdict\nThe Get Player Application Setting Attribute Text command is received by the Lower Tester.'}
+
+
+
+IDX = 8
+
+
+
+{'Test Purpose': 'Verify the Player Application Setting Value Text command issued from the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is aware of the available attributes and corresponding values for the Lower Tester. This\ncan be retrieved from the result of AVRCP/CT/PAS/BV-01-C [List Player Application Setting\nAttributes – CT] and AVRCP/CT/PAS/BV-05-C [List Player Application Setting Values – CT].', 'Test Procedure': 'Initiated by the Upper Tester, the IUT sends a Get Player Application Setting Value Text command to\nthe Lower Tester, with attribute and value IDs listed in the available attributes and corresponding\nvalues for the Lower Tester.', 'Expected Outcome': 'Pass verdict\nThe Get Player Application Setting Value Text is received by the Lower Tester.'}
+
+
+
+IDX = 9
+
+
+
+{'Test Purpose': 'Verify the Get Element Attributes command issued from the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': 'Initiated by the Upper Tester, the IUT sends a Get Element Attributes command to the Lower Tester.', 'Expected Outcome': 'Pass verdict\nThe Lower Tester receives the Get Element Attributes command.'}
+
+
+
+IDX = 10
+
+
+
+{'Test Purpose': 'Verify the Get Play Status command issued from the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': 'Initiated by the Upper Tester, the IUT sends a Get Play Status command to the Lower Tester. No\nparameters need to be passed for this command.', 'Expected Outcome': 'Pass verdict\nThe Lower Tester receives the GetPlayStatus command.'}
+
+
+
+IDX = 11
+
+
+
+{'Test Purpose': 'Verify the Register Notification command issued from the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': 'Initiated by the Upper Tester, the IUT sends a Register Notification command to the Lower Tester.', 'Expected Outcome': 'Pass verdict\nThe Lower Tester receives the Register Notification command.'}
+
+
+
+IDX = 12
+
+
+
+{'Test Purpose': 'Verify the connection establishment for browsing initiated by the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - No AVCTP connection is established between the IUT and the Lower Tester.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has performed an SDP query with the Lower Tester exposing AVRCP browse support.', 'Test Procedure': 'The Upper Tester triggers the IUT to establish an AVRCP connection.\n|One ACL connection exists betwee<br>No AVCTP conne|n the IUT and the test system.<br>ction exists.|\n|---|---|\n|AVCTP Control Channel establishment|AVRCP connection initiated<br>(Manufacturer Specific)|\n|AVCTP Browsing Channel establishment|AVCTP Browsing Channel establishment|', 'Expected Outcome': 'Pass verdict\nThe IUT initiates the establishment of the AVCTP control channel and immediately afterwards the IUT\ninitiates the establishment of the AVCTP browsing channel.'}
+
+
+
+IDX = 13
+
+
+
+{'Test Purpose': 'Verify the connection release for browsing initiated by the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - An AVCTP Control and an AVCTP Browsing channel are established.\n   - The IUT is acting as AVRCP CT role in category 1.', 'Test Procedure': 'The Upper Tester triggers the IUT to release the AVRCP connection.', 'Expected Outcome': 'Pass verdict\nThe IUT initiates the release of the AVCTP browsing channel and immediately afterwards the IUT\ninitiates the release of the AVCTP control channel.'}
+
+
+
+IDX = 14
+
+
+
+{'Test Purpose': 'Verify the SetAddressedPlayer command issued by the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - Available PlayerIds have to be provided to the IUT. This can be achieved by executing\nAVRCP/CT/MPS/BV-08-C [GetFolderItems – CT].', 'Test Procedure': 'The Upper Tester triggers the IUT to set the addressed player.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a SetAddressedPlayer command with Parameter Length = 0x2 and a valid PlayerId.'}
+
+
+
+IDX = 15
+
+
+
+{'Test Purpose': 'Verify the SetBrowsedPlayer command issued by the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has retrieved the list of available players on the Lower Tester. This can be achieved by\nexecuting AVRCP/CT/MPS/BV-08-C [GetFolderItems – CT].', 'Test Procedure': 'The Upper Tester triggers the IUT to set the browsed player to a valid PlayerID.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a SetBrowsedPlayer command with a valid PlayerId.'}
+
+
+
+IDX = 16
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems command issued by the CT on the Media Player List.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.', 'Test Procedure': 'The Upper Tester triggers the IUT to retrieve the MediaPlayerList.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetFolderItems command with the scope of MediaPlayerList and valid parameters\nfor StartItem, EndItem, AttributeCount and AttributeList.'}
+
+
+
+IDX = 17
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems command issued by the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has successfully issued a SetBrowsedPlayer command to the player specified in the IXIT\n[6] as the browsable player.', 'Test Procedure': 'The Upper Tester triggers the IUT to retrieve the Current Folder content in the Virtual Filesystem.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetFolderItems command with the scope of Virtual Filesystem and valid parameters\nfor StartItem, EndItem, AttributeCount, and AttributeList.'}
+
+
+
+IDX = 18
+
+
+
+{'Test Purpose': 'Verify the ChangePath command issued by the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has retrieved the currently valid Folder UIDs on the Lower Tester. This can be achieved\nby executing AVRCP/CT/MCN/CB/BV-01-C [GetFolderItems – CT].\n   - The IUT has successfully issued a SetBrowsedPlayer command to the player specified in the IXIT\n[6] as the browsable player.', 'Test Procedure': 'The Upper Tester triggers the IUT to issue the ChangePath command with a valid UIDCounter,\nFolderUID, and Direction indication FolderDown.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a ChangePath command with the valid parameters for Direction and FolderUID.'}
+
+
+
+IDX = 19
+
+
+
+{'Test Purpose': 'Verify the GetItemAttributes command issued by the CT on a Media Item in the Virtual Media Player\nFilesystem other than the currently playing one.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT is aware of the currently valid Media Item UIDs exposed by the Lower Tester. This can\nbe achieved by executing AVRCP/CT/MCN/CB/BV-01-C [GetFolderItems – CT].\n   - The IUT has successfully issued a SetBrowsedPlayer command to the player specified in the IXIT\n[6] as the browsable player.', 'Test Procedure': 'The Upper Tester triggers the IUT to issue the GetItemAttributes command for a currently valid Media\nItem UID other than the currently playing media item.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetItemAttributes command with valid parameters for UID, UIDcounter,\nNumberOfAttributes, and AttributeID list.'}
+
+
+
+IDX = 20
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems command issued by the CT on the Search folder.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - A successful Search operation has been performed by the IUT with the Search results still being\nvalid; see AVRCP/CT/MCN/SRC/BV-01-C [Search – CT].\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Upper Tester triggers the IUT to retrieve the Search folder content.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetFolderItems command with the scope of Search folder and valid parameters for\nStartItem, EndItem, AttributeCount and AttributeList.'}
+
+
+
+IDX = 21
+
+
+
+{'Test Purpose': 'Verify the GetItemAttributes command issued by the CT on a Media Item in the Search folder other\nthan the currently playing one.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - A successful Search operation has been performed by the IUT with the Search results still being\nvalid; see AVRCP/CT/MCN/SRC/BV-01-C [Search – CT].\n   - The IUT is aware of the currently valid Media Item UIDs exposed by the Lower Tester. This can\nbe achieved by executing AVRCP/CT/MCN/SRC/BV-03-C [GetFolderItems – CT].\n   - The IUT has successfully issued a SetBrowsedPlayer command to the player specified in the IXIT\n[6] as the browsable player.', 'Test Procedure': 'The Upper Tester triggers the GetItemAttributes command for a currently valid Search result Media\nItem UID other than the currently playing media item.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetItemAttributes command with valid parameters for UID, UIDcounter,\nNumberOfAttributes and AttributeID list.'}
+
+
+
+IDX = 22
+
+
+
+{'Test Purpose': 'Verify the PlayItem command issued by the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT is aware of the currently playable Media Items on the Lower Tester. This can be\nachieved by executing AVRCP/CT/MCN/CB/BV-01-C [GetFolderItems – CT].', 'Test Procedure': 'The Upper Tester triggers the execution of the PlayItem command on the IUT for a currently playable\nMedia Item on the Lower Tester in a valid Scope (Media Filesystem, Search or NowPlaying).', 'Expected Outcome': 'Pass verdict\nThe IUT issues a PlayItem command with the expected parameters as triggered by the Upper Tester\nfor Scope and UID and the currently valid UID counter.'}
+
+
+
+IDX = 23
+
+
+
+{'Test Purpose': 'Verify the AddToNowPlaying command issued by the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT is aware of the currently playable UIDs. This can be achieved by executing\nAVRCP/CT/MCN/CB/BV-01-C [GetFolderItems – CT].', 'Test Procedure': 'The Upper Tester triggers the AddToNowPlaying command from the IUT for a currently playable UID.', 'Expected Outcome': 'Pass verdict\nThe IUT issues an AddToNowPlaying command with the expected parameters as triggered by the\nUpper Tester for Scope and UID and the currently valid UID counter.'}
+
+
+
+IDX = 24
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems command issued by the CT on the Now Playing folder.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has successfully issued a SetBrowsedPlayer command to the player specified in the IXIT\n[6] as the browsable player.', 'Test Procedure': 'The Upper Tester triggers the IUT to retrieve the Now Playing folder content.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetFolderItems command with the scope of Now Playing folder and valid\nparameters for StartItem, EndItem, AttributeCount and AttributeList.'}
+
+
+
+IDX = 25
+
+
+
+{'Test Purpose': 'Verify the GetItemAttributes command issued by the CT on a Media Item in the Now Playing folder.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT is aware of the currently valid UIDs in the Now Playing folder. This can be achieved by\nexecuting AVRCP/CT/MCN/NP/BV-05-C [GetFolderItems – CT].', 'Test Procedure': 'The Upper Tester triggers the IUT to send a GetItemAttributes command for a currently valid UID in\nthe Now Playing folder.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetItemAttributes command with the Scope of NowPlaying and valid parameters for\nUID, UIDcounter, NumberOfAttributes and AttributeID list.'}
+
+
+
+IDX = 26
+
+
+
+{'Test Purpose': 'Verify the SetAbsoluteVolume command issued by the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is acting as AVRCP CT role in category 2.', 'Test Procedure': 'The Upper Tester triggers the IUT to send a SetAbsoluteVolume command.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a correctly formatted SetAbsoluteVolume command with a valid value of volume.'}
+
+
+
+IDX = 27
+
+
+
+{'Test Purpose': 'Verify the behavior of the CT receiving a SetAbsoluteVolume Response with the top bit (bit 7) set.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is acting as AVRCP CT role in category 2.\n   - The EVENT_VOLUME_CHANGED notification is registered at the IUT.', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a Valid Set Absolute volume command to the Lower\nTester.\n2. The Lower Tester issues the response for Set Absolute volume Response with the top bit (bit 7)\nof absolute volume parameter set (Volume).\n|Lower Tester IUT Upper Tester<br>One ACL connection exists between the IUT and the test system.<br>AVCTP connection exists between the IUT and the test system.<br>Trigger Volume Change<br>SetAbsoluteVolume Command<br>(volume)<br>SetAbsoluteVolume Response<br>(Absolute Volume with top bit (bit 7) set)|Col2|\n|---|---|\n|||', 'Expected Outcome': 'Pass verdict\nThe IUT ignores the top bit (bit 7) and considers only the lower seven bits for the current value for\nvolume.'}
+
+
+
+IDX = 28
+
+
+
+{'Test Purpose': 'Verify the behavior of the CT receiving an Interim and Final Response for Absolute Volume change\nnotification with the top bit (bit 7) set.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is acting as AVRCP CT role in category 2.\n   - The EVENT_VOLUME_CHANGED notification is registered at the IUT.', 'Test Procedure': '1. The Upper Tester triggers the IUT to register for Volume Change Notification\n2. Subsequently the Lower Tester issues an interim response EVENT_VOLUME_CHANGED with\nthe top bit (bit 7) of absolute volume parameter set.\n3. Subsequently the Lower Tester issues a final response EVENT_VOLUME_CHANGED with the\ntop bit (bit 7) of absolute volume parameter set.', 'Expected Outcome': 'Pass verdict\nThe IUT ignores the top bit (bit 7) and considers only the lower seven bits of the Interim and Final\nResponse for the absolute volume on TG.'}
+
+
+
+IDX = 29
+
+
+
+{'Test Purpose': 'Verify the NotifyVolumeChange command issued by the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is acting as AVRCP CT role in category 2.', 'Test Procedure': 'The Upper Tester triggers the IUT to register for Volume Change Notification.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a correctly formatted RegisterNotification for the EVENT_VOLUME_CHANGED.'}
+
+
+
+IDX = 30
+
+
+
+{'Test Purpose': 'Verify that the CT can handle fragmentation correctly.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': '1. The IUT sends a Get Element Attributes command to the Lower Tester, which meets the test\ncondition (see below).\n2. The Lower Tester sends a 512-byte response with UTF-8 characters for the attribute string(s),\nalong with the START indication (0x1) as packet type.\n3. The IUT sends a Request Continuing Response command to the Lower Tester.\n4. The Lower Tester sends Get Element Attributes response.\n5. Repeat Steps 3 and 4, as necessary, until the IUT receives all of the remaining characters from\nthe Lower Tester. The final Get Element Attributes response is indicated with 0x3 (END) for\npacket type. Any additional Get Element Attributes responses between the START (0x1) and\nEND (0x3) should have a packet type of CONTINUE (0x2).\n|Lower Tester IUT Upper Tester<br>One ACL connection exists between the IUT and the test system.<br>AVCTP connection exists between the IUT and the test system.<br>GetElementAttributes initiated<br>(Manufacturer Specific)<br>GetElementAttributes Command<br>GetElementAttributes<br>512 bytes<br>Response/continue PDU<br>RequestContinuingResponse Command<br>GetElementAttributes Response|Col2|\n|---|---|\n|||\n\nTest Condition:\nThe Lower Tester is configured so a GetElementAttributes command response is larger than the 512byte limit on AV/C frames but the response is smaller than the Maximum number of accepted AV/C\nfragments valued specified in the IXIT [6].', 'Expected Outcome': 'Pass verdict\nRequest(s) for continuing response packets are sent by the IUT, until the entire GetElementAttributes\ncommand response has been received via the control channel.\nIn the event that the lower test exceeds the Maximum number of accepted AV/C fragments value, the\nCT may send AbortContinuingResponse command before receiving the entire response.'}
+
+
+
+IDX = 31
+
+
+
+{'Test Purpose': 'Verify that the CT aborts fragmentation correctly.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': '1. The IUT sends a Get Element Attributes command to the Lower Tester, which meets the test\ncondition (see below).\n2. The Lower Tester sends a 512-byte response with UTF-8 characters for the attribute string(s),\nalong with the START indication (0x1) as packet type.\n3. The IUT either sends an Abort-Continuing Response command or a RequestContinuing\nResponse command to the Lower Tester.\n4. Continuation occurs by the Lower Tester until the IXIT entry Maximum number of accepted AV/C\nfragments value [6] has been reached triggering the AbortContinuingResponse command\nresponse from the IUT.\n5. The Lower Tester sends an AbortContinuingResponse command response.\n\nTest Condition:\nThe Lower Tester is configured so a GetElementAttributes command response is larger than the\n512 byte limit on AV/C frames. The Lower Tester has sufficient response to satisfy the Maximum\nnumber of accepted AV/C fragments condition so the IUT can send the AbortContinuingResponse.', 'Expected Outcome': 'Pass verdict\nAn AbortContinuingResponse command is sent by the IUT after the fragmented GetElementAttributes\ncommand response(s) are received.'}
+
+
+
+IDX = 32
+
+
+
+{'Test Purpose': 'Verify the GetTotalNumberOfItems command issued by the IUT (CT) for the Media Player List scope.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - AVCTP control and browsing channels between the IUT and the Lower Tester are established.\n   - The IUT is acting as AVRCP CT role in category 1.', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a GetTotalNumberOfItems command to the Lower\nTester with the scope parameter set to Media Player List.\n2. Upon receipt of a GetTotalNumberOfItems command from the IUT, the Lower Tester issues an\nappropriate GetTotalNumberOfItems response message.\n|Lower Tester IUT Upper Tester<br>One ACL connection exists between the IUT and the test system.<br>AVCTP connection exists between the IUT and the test system.<br>GetTotalNumberOfItems<br>(MediaPlayerList) initiated<br>(Manufacturer Specific)<br>GetTotalNumberOfItems Command<br>(Media Player List)<br>GetTotalNumberOfItems Response|Col2|\n|---|---|\n|||', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetTotalNumberOfItems command to the Lower Tester with the scope parameter\nset to Media Player List.'}
+
+
+
+IDX = 33
+
+
+
+{'Test Purpose': 'Verify the GetTotalNumberOfItems command issued by the IUT (CT) for the Virtual Media Player\nFilesystem scope.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - AVCTP control and browsing channels between the IUT and the Lower Tester are established.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has successfully issued a SetBrowsedPlayer command to the player specified in [6] as\nthe browsable player.', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a GetTotalNumberOfItems command to the Lower\nTester with the scope parameter set to Virtual Media Player Filesystem.\n2. Upon receipt of a GetTotalNumberOfItems command from the IUT, the Lower Tester issues an\nappropriate GetTotalNumberOfItems response message.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetTotalNumberOfItems command to the Lower Tester with the scope parameter\nset to Virtual Media Player Filesystem.'}
+
+
+
+IDX = 34
+
+
+
+{'Test Purpose': 'Verify the GetTotalNumberOfItems command issued by the IUT (CT) for the Search scope.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - AVCTP control and browsing channels between the IUT and the Lower Tester are established.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - IUT has successfully issued a SetBrowsedPlayer command to the player specified in [6] as the\nbrowsable player.\n   - A successful Search operation has been performed by the IUT with the Search results still being\nvalid; see AVRCP/CT/MCN/SRC/BV-01-C [Search – CT].', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a GetTotalNumberOfItems command to the Lower\nTester with the scope parameter set to Search.\n2. Upon receipt of a GetTotalNumberOfItems command from the IUT, the Lower Tester issues an\nappropriate GetTotalNumberOfItems response message.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetTotalNumberOfItems command to the Lower Tester with the scope parameter\nset to Search.'}
+
+
+
+IDX = 35
+
+
+
+{'Test Purpose': 'Verify the GetTotalNumberOfItems command issued from the IUT (CT) for the Now Playing scope.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - AVCTP control and browsing channels between the IUT and the Lower Tester are established.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has successfully issued a SetBrowsedPlayer command to the player specified in [6] as\nthe browsable player.', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a GetTotalNumberOfItems command to the Lower\nTester with the scope parameter set to Now Playing.\n2. Upon receipt of a GetTotalNumberOfItems command from the IUT, the Lower Tester issues an\nappropriate GetTotalNumberOfItems response message.\n|Lower Tester IUT Upper Tester<br>One ACL connection exists between the IUT and the test system.<br>AVCTP connection exists between the IUT and the test system.<br>GetTotalNumberOfItems(Now<br>Playing) initiated<br>(Manufacturer Specific)<br>GetTotalNumberOfItems Command<br>(Now Playing)<br>GetTotalNumberOfItems Response|Col2|\n|---|---|\n|||', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetTotalNumberOfItems command to the Lower Tester with the scope parameter\nset to Now Playing.'}
+
+
+
+IDX = 36
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly use the GetFolderItems function with the scope of Virtual Media\nPlayer Filesystem to retrieve the Cover Art Image Handle.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has successfully issued a SetBrowsedPlayer command to the player specified in [6] as\nthe browsable player.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX client and the Lower\nTester is the OBEX server.\n   - At least one item with Cover Art is available in the default folder on the Browsed Player on the\nLower Tester.', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a GetFolderItems command to the Lower Tester with\nthe scope parameter set to Virtual Media Player Filesystem and the attribute list containing the\nCover Art attribute.\n2. Upon receipt of a GetFolderItems command from the IUT, the Lower Tester issues an appropriate\nGetFolderItems response message.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetFolderItems command to the Lower Tester.\nThe GetFolderItems command has the scope parameter set to Virtual Media Player Filesystem.\nThe Cover Art attribute is among the attributes requested in the GetFolderItems command.\n\nNotes:\nNote that although the test does not directly use the Cover Art OBEX connection, it must exist for\nthere to be valid Image Handles available on the TG (Imaging Responder).'}
+
+
+
+IDX = 37
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly use the GetItemAttributes function with the scope of Virtual Media\nPlayer Filesystem to retrieve the Cover Art Image Handle.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has successfully issued a SetBrowsedPlayer command to the player specified in [6] as\nthe browsable player.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX client and the Lower\nTester is the OBEX server.\n   - At least one item with Cover Art is available in the default folder on the Browsed Player at the\nLower Tester.', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a GetItemAttributes command to the Lower Tester\nwith the scope parameter set to Virtual Media Player Filesystem and the AttributeID list containing\nthe Cover Art AttributeID.\n2. Upon receipt of a GetItemAttributes command from the IUT, the Lower Tester issues an\nappropriate GetItemAttributes response message.\n|Lower Tester IUT Upper Tester<br>OBEX connection where IUT is client<br>AVCTP control connection<br>AVCTP browsing connection<br>Trigger GetItemAttributes<br>(Manufacturer specific)<br>GetItemAttributes Command (Virtual<br>} Cover Art<br>Filesystem)<br>attribute is<br>(Cover Art Attribute)<br>requested<br>GetItemAttributes Response<br>(Cover Art Image Handle)|Col2|\n|---|---|\n|||', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetItemAttributes command to the Lower Tester.\nThe GetItemAttributes command has the scope parameter set to Virtual Media Player Filesystem.\nThe Cover Art AttributeID is among the AttributeIDs requested in the GetItemAttributes command.'}
+
+
+
+IDX = 38
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly use the GetElementAttributes function to retrieve the Cover Art\nImage Handle of the currently playing item.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control channel between the IUT and the Lower Tester is established.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX client and the Lower\nTester is the OBEX server.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - An item with Cover Art is playing on the default Addressed Player at the Lower Tester.', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a GetElementAttributes command to the Lower Tester\nwith the identifier parameter set to Playing and the AttributeID list containing the Cover Art\nAttributeID.\n2. Upon receipt of a GetElementAttributes command from the IUT, the Lower Tester issues an\nappropriate GetElementAttributes response message.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetElementAttributes command to the Lower Tester.\nThe GetElementAttributes command has the identifier parameter set to Playing.\nThe Cover Art AttributeID is among the AttributeIDs requested in the GetElementAttributes command.'}
+
+
+
+IDX = 39
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly use the image-properties object to individually check images for\nversions other than the native format, and request an image in a format other than the native one or\nthe mandatory imaging thumbnail.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control channel between the IUT and the Lower Tester is established.\n   - If the IUT uses GetItemAttributes, the browsing channel (ALT 1 only) between the IUT and the\nLower Tester is established.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX client and the Lower\nTester is the OBEX server.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has successfully retrieved a Cover Art Image Handle by using either of the following\nmethods:\n         - ALT 1: The IUT issues a SetBrowsedPlayer command to the player specified in the IXIT\n[6] as the browsable player. The IUT issues the GetItemAttributes or GetFolderItems\ncommands to the Lower Tester. At least one item with Cover Art is available in the default\nfolder on the Browsed Player at the Lower Tester.\n         - ALT 2: An item with Cover Art is playing on the default Addressed Player at the Lower\nTester. The IUT issues the GetElementAttributes command to the Lower Tester.', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a GetImageProperties request to the Lower Tester\nwith the Image Handle parameter set to one of the handles retrieved during the setup of the initial\ncondition.\n2. Upon receipt of a GetImageProperties request from the IUT, the Lower Tester issues an\nappropriate GetImageProperties response message containing an image-properties object.\n3. Repeat Steps 1 and 2 until the Lower Tester returns an image-properties object indicating an\nimage in a format other than the native and the mandatory imaging thumbnail. The imageproperties object for the image at least contains a non-empty variant element with at least\n<variant encoding=”JPEG” pixel=”200*200” /> and another variant (for example, <variant\nencoding=”GIF” pixel =”640*420” />) that is different from the native image.\n4. The IUT is triggered to issue a GetImage request to the Lower Tester with the Image Handle\nparameter corresponding to the image identified from Step 3 and an Image Descriptor parameter\ndescribing a non-thumbnail image variant.\n5. Upon receipt of a GetImage request from the IUT, the Lower Tester issues an appropriate\nGetImage response message.\nRepeated\nimage with\na variantimage that\nis not a\nthumbnail is\n## discovered [{]\n|Lower Tester|Col2|Col3|\n|---|---|---|\n||||\n||OBEX connection w<br>AVCTP control<br>AVCTP browsing conn<br>Valid image handles f|here IUT is client<br>  connection<br>  ection (ALT 1 only)<br>   or all images exist|\n||||\n|loop|GET Request: GetImageProperties||\n|loop|<br>(Image handle)<br>GET Response: Success|<br>(Image handle)<br>GET Response: Success|\n|loop|(Imaging properties object)|(Imaging properties object)|\n||GET Request: GetImage|GET Request: GetImage|\n||(Image handle, image descriptor)<br>GET Response: Success|(Image handle, image descriptor)<br>GET Response: Success|\n||||', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetImageProperties requests to the Lower Tester.\nEach GetImageProperties request includes a valid Connection ID, a Type header of “x-bt/imgproperties”, and a valid Image Handle.\nThe IUT issues a well-formatted GetImage request to the Lower Tester.\nThe GetImage request includes a valid ConnectionID, a Type header of x-bt/img-img, a valid Image\nHandle, and a well-formatted Image Descriptor.\nThe Image Handle used in the GetImage request is that of an image that has a non-thumbnail variant.\nThe Image Descriptor used in the GetImage request describes a non-thumbnail format.\n\nNotes:\nThe Lower Tester will make sure that the variant is offered in at least one format that is supported by\nthe IUT as declared in [6] for the Cover Art feature. For IUTs that support only the mandatory imaging\nthumbnail format, this test does not apply.'}
+
+
+
+IDX = 40
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly retrieve the thumbnail format of the available images.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control channel between the IUT and the Lower Tester is established.\n   - If the IUT uses GetItemAttributes, the browsing channel between the IUT and the Lower Tester is\nestablished.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX client and the Lower\nTester is the OBEX server.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has successfully retrieved a Cover Art Image Handle by using either of the following\nmethods:\n         - ALT 1: The IUT issues a SetBrowsedPlayer command to the player specified in the IXIT\n[6] as the browsable player. The IUT issues the GetItemAttributes or GetFolderItems\ncommands to the Lower Tester. At least one item with Cover Art is available in the default\nfolder on the Browsed Player at the Lower Tester.\n         - ALT 2: An item with Cover Art is playing on the default Addressed Player at the Lower\nTester. The IUT issues the GetElementAttributes command to the Lower Tester.', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a GetImage request to the Lower Tester with the\nImage Handle parameter set to one of the handles retrieved during the setup of the initial\ncondition and an Image Descriptor parameter describing the thumbnail format.\n2. Upon receipt of a GetImage request from the IUT, the Lower Tester issues an appropriate\nGetImage response message.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetImage request to the Lower Tester.\nThe ConnectionID, Image Handle, and Image Descriptor parameters in the GetImage request are\npresent and valid.\nThe Image Descriptor parameter in the GetImage request describes an imaging thumbnail.'}
+
+
+
+IDX = 41
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly retrieve thumbnails.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control channel between the IUT and the Lower Tester is established.\n   - If the IUT uses GetItemAttributes or GetFolderItems, the browsing channel between the IUT and\nthe Lower Tester is established.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX client and the Lower\nTester is the OBEX server.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The IUT has successfully retrieved a Cover Art Image Handle by using either of the following\nmethods:\n         - ALT 1: The IUT issues a SetBrowsedPlayer command to the player specified in the IXIT\n[6] as the browsable player. The IUT issues the GetItemAttributes or GetFolderItems\ncommands to the Lower Tester. At least one item with Cover Art is available in the default\nfolder on the Browsed Player at the Lower Tester.\n         - ALT 2: An item with Cover Art is playing on the default Addressed Player at the Lower\nTester. The IUT issues the GetElementAttributes command to the Lower Tester.', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a GetLinkedThumbnail request to the Lower Tester\nwith the Image Handle parameter set to the handle retrieved during the setup of the initial\ncondition.\n2. Upon receipt of a GetLinkedThumbnail request from the IUT, the Lower Tester issues an\nappropriate GetLinkedThumbnail response message.\n|OBEX connection wh<br>AVCTP control<br>AVCTP browsing conne<br>A valid image hand|ere IUT is client<br>connection<br>ction (ALT 1 only)<br>le must exist|\n|---|---|\n|GET Request: GetLinkedThumbnail<br>|Trigger GetLinkedThumbnail<br>|\n|GET Response: Success<br> <br>~~(Image handle)~~|GET Response: Success<br> <br>~~(Image handle)~~|', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetLinkedThumbnail request to the Lower Tester.\nThe GetLinkedThumbnail request includes a valid Connection ID, a Type header of “x-bt/img-thm”,\nand a valid Image Handle.'}
+
+
+
+IDX = 42
+
+
+
+{'Test Purpose': 'Verify that when there is an OBEX Cover Art connection and the Lower Tester is a database aware\nplayer, the IUT disconnects OBEX connection when Lower Tester issues a UIDs Changed\nnotification.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX client and the Lower\nTester is the OBEX server.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The Browsed Player and the default Addressed Player at the Lower Tester are the same player,\ncalled the Cover Art Player.\n   - At least one item with Cover Art is available in the default folder on the Cover Art Player.\n   - The Cover Art Player is database-aware.\n   - The IUT has registered for a UIDs Changed notification via the AVRCP RegisterNotification\ncommand.', 'Test Procedure': '1. The Lower Tester issues a Register Notification response message to the IUT with the EventID\nparameter set to EVENT_UIDS_CHANGED.\n2. As a result of receiving notification, the IUT issues an OBEX DISCONNECT request to the Lower\nTester.\n3. The Lower Tester sends an appropriate OBEX DISCONNECT response to the IUT, and upon\nsuccessful response, the OBEX connection is disconnected.\n4. The IUT issues an AVRCP RegisterNotification command to the Lower Tester with the EventID\nparameter set to EVENT_UIDS_CHANGED to register again for notification of UID changes.\n5. The Lower Tester issues an appropriate AVRCP RegisterNotification interim response to the IUT.\nNote that the OBEX DISCONNECT transaction in Steps 2–3 and the Register notification\ntransaction in Steps 4–5 can occur in either order.\n6. Subsequent to successful disconnection, the IUT issues an OBEX CONNECT request to the\nLower Tester.\n7. The Lower Tester sends an appropriate OBEX CONNECT response to the IUT, and upon\nsuccessful response, the OBEX connection is established.\n8. The IUT issues a request for a Cover Art Image Handle to the Lower Tester using either the\nAVRCP GetFolderItems or GetItemAttributes command.\n9. The Lower Tester sends an appropriate response to the command from Step 8, which if\nsuccessful, contains a Cover Art Image Handle.\n10. The IUT sends a GetImage or GetLinkedThumbnail request to the Lower Tester with the Image\nHandle parameter set to the handle received in Step 9.\n11. The Lower Tester sends an appropriate GetImage or GetLinkedThumbnail response message to\nthe IUT, which if successful, contains the requested image.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formed and valid OBEX DISCONNECT request.\nThe IUT issues a well-formed RegisterNotification command with the EventID parameter set to\nEVENT_UIDS_CHANGED.\nThe IUT issues a well-formed and valid OBEX CONNECT request.\nThe IUT issues a well-formed and valid GetFolderItems or GetItemAttributes command.\nThe IUT issues a well-formed and valid GetImage request, with the Image Handle parameter set to\nthe handle supplied by the Lower Tester.'}
+
+
+
+IDX = 43
+
+
+
+{'Test Purpose': 'Verify that when there is an OBEX Cover Art connection and the Lower Tester is a database-unaware\nplayer, then when the IUT changes folder, OBEX is disconnected by the IUT.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX client and the Lower\nTester is the OBEX server.\n   - The IUT is acting as AVRCP CT role in category 1.\n   - The Browsed Player and the default Addressed Player at the Lower Tester are the same player,\ncalled the Cover Art Player.\n   - At least one item with Cover Art is available in the default folder on the Cover Art Player.\n   - The Cover Art Player is database-unaware but supports browsing.', 'Test Procedure': '1. The Upper Tester triggers the IUT to issue a request for a Cover Art Image Handle to the Lower\nTester using either the AVRCP GetFolderItems or GetItemAttributes command.\n2. The Lower Tester sends an appropriate response to the command from Step 1, which if\nsuccessful, contains a Cover Art Image Handle.\n3. The IUT issues an AVRCP ChangePath command to the Lower Tester to navigate to another part\nof the virtual filesystem.\n4. The Lower Tester issues an appropriate ChangePath response message to the IUT.\n5. Upon receipt of a successful ChangePath response, the IUT issues an OBEX DISCONNECT\nrequest.\n6. The Lower Tester sends an appropriate OBEX DISCONNECT response to the IUT, and upon\nsuccessful response, the OBEX connection is disconnected.\n7. Subsequent to successful disconnection, the IUT issues an OBEX CONNECT request to the\nLower Tester.\n8. The Lower Tester sends an appropriate OBEX CONNECT response to the IUT, and upon\nsuccessful response, the OBEX connection is established.\n9. The IUT issues a request for a Cover Art Image Handle to the Lower Tester using either the\nAVRCP GetFolderItems or GetItemAttributes commands.\n10. The Lower Tester sends an appropriate response to the command from Step 9, which if\nsuccessful, contains a Cover Art Image Handle.\n11. The IUT sends a GetImage or GetLinkedThumbnail request to the Lower Tester with the Image\nHandle parameter set to the handle received in Step 10.\n12. The Lower Tester sends an appropriate GetImage or GetLinkedThumbnail response to the IUT,\nwhich if successful, contains the requested image.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formed and valid GetFolderItems or GetItemAttributes command.\nThe IUT issues a well-formed and valid ChangePath command.\nThe IUT issues a well-formed and valid OBEX DISCONNECT request.\nThe IUT issues a well-formed and valid OBEX CONNECT request.\nThe IUT issues a well-formed and valid GetImage or GetLinkedThumbnail request, with the Image\nHandle parameter set to the handle supplied by the Lower Tester after OBEX reconnection.'}
+
+
+
+IDX = 44
+
+
+
+{'Test Purpose': 'Verify that the CT is able to request metadata information for a track other than currently playing one\nfrom the Virtual Filesystem when the TG supports a later profile version.', 'Initial Condition': '- The Lower Tester supports an SDP version that is greater than the current published version,\ne.g., AVRCP v1.9.\n   - The Lower Tester has all the bits in its Supported Features SDP attributes set, including those\nthat are RFA.\n   - A connection for control is established.\n   - The Lower Tester acting as TG is currently playing a track.', 'Test Procedure': 'Initiate the action on the CT to request metadata information for a track other than the currently\nplaying one from the Virtual Filesystem.', 'Expected Outcome': 'Pass verdict\nThe CT receives the correct metadata information for the desired track and can provide it to the\nUpper Tester.'}
+
+
+
+IDX = 45
+
+
+
+{'Test Purpose': 'Verify the Get Capabilities response issued from the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.', 'Test Procedure': 'The Lower Tester sends a GetCapabilities message to the IUT with the METADATA\nTRANSFER_GetCapabilities PDU parameter value set to COMPANY_ID.', 'Expected Outcome': 'Pass verdict\nThe Lower Tester receives from the IUT the supported COMPANY_IDs. The first COMPANY_ID is\nthe Bluetooth SIG COMPANY_ID.'}
+
+
+
+IDX = 46
+
+
+
+{'Test Purpose': 'Verify the Get Capabilities response issued from the TG when an invalid capability is requested.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.', 'Test Procedure': 'The Lower Tester sends a GetCapabilities message to the IUT with the METADATA\nTRANSFER_GetCapabilities PDU parameter value set to an invalid capability ID – for example 0x7F.\n|Lower Tester IUT Upper Tester<br>One ACL connection exists between the IUT and the test system.<br>AVCTP connection exists between the IUT and the test system.<br>GetCapabilities<br>(An Invalid ID)<br>Rejected<br>(Invalid parameter)|Col2|\n|---|---|\n|||', 'Expected Outcome': 'Pass verdict\nThe IUT responds to the Lower Tester with the Error status Invalid Parameter indicating that the\ncapability ID issued was invalid.'}
+
+
+
+IDX = 47
+
+
+
+{'Test Purpose': 'Verify the List Player Application Setting Attributes response issued from the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.', 'Test Procedure': 'The Lower Tester sends a ListPlayerApplicationSettingAttributes command to the IUT. No parameter\nneeds to be passed for this PDU.', 'Expected Outcome': 'Pass verdict\nThe IUT returns a response with zero or more attributes.'}
+
+
+
+IDX = 48
+
+
+
+{'Test Purpose': 'Verify the List Player Application Setting Values response issued from the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The Lower Tester is aware of the available attributes for the IUT. This can be retrieved from the\nresult of AVRCP/TG/PAS/BV-02-C [List Player Application Setting Attributes – TG].', 'Test Procedure': 'The Lower Tester sends a ListPlayerApplicationSettingValues command to the IUT with an attribute\nID listed in the available attributes for the IUT.', 'Expected Outcome': 'Pass verdict\nThe IUT returns the list of setting values for that Attribute ID as defined by the manufacturer.'}
+
+
+
+IDX = 49
+
+
+
+{'Test Purpose': 'Verify the ability of the TG to respond to a List Player Application Setting Values command with\ninvalid parameters.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.', 'Test Procedure': 'The Lower Tester sends a List Player Application Setting Value command to the IUT with parameter\nPlayer Application Attribute ID = 0x7F.', 'Expected Outcome': 'Pass verdict\nThe IUT returns an error response with error code 0x01 indicating that an invalid parameter was\npassed.'}
+
+
+
+IDX = 50
+
+
+
+{'Test Purpose': 'Verify the Get Current Player Application Setting Value response issued from the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The Lower Tester is aware of the available attributes on the IUT. This can be retrieved from the\nresult of AVRCP/TG/PAS/BV-02-C [List Player Application Setting Attributes – TG].', 'Test Procedure': 'The Lower Tester sends a Get Current Player Application Setting Value command to the IUT with an\nattribute ID listed in the available attributes for the IUT.', 'Expected Outcome': 'Pass verdict\nThe IUT returns the list of values for the requested Attribute IDs as defined by the manufacturer.'}
+
+
+
+IDX = 51
+
+
+
+{'Test Purpose': 'Verify the ability of the TG to respond to a Get Current Player Application Setting Value command\nwith invalid parameters.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.', 'Test Procedure': 'The Lower Tester sends a Get Current Player Application Setting Value command to the IUT with\nparameters Num Player Application Settings = 1 and Player Application Setting Value = 0x7F.\n_MSC_', 'Expected Outcome': 'Pass verdict\nThe IUT returns an error response with error code 0x01 indicating that an invalid parameter was\npassed.'}
+
+
+
+IDX = 52
+
+
+
+{'Test Purpose': 'Verify the ability of the TG to respond to a Set Player Application Setting Value command with invalid\nparameters.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.', 'Test Procedure': 'The Lower Tester sends a Set Player Application Setting Value command to the IUT with parameters\nNum Player Application Setting = 1, Player Application Setting Attribute ID = 0x02 and Player\nApplication Setting Value = 0x7F.', 'Expected Outcome': 'Pass verdict\nThe IUT returns an error response with error code 0x01 indicating that an invalid parameter was\npassed.'}
+
+
+
+IDX = 53
+
+
+
+{'Test Purpose': 'Verify the Get Player Application Setting Attribute Text response issued from the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The Lower Tester is aware of the available attributes for the IUT. This can be retrieved from the\nresult of AVRCP/TG/PAS/BV-02-C [List Player Application Setting Attributes – TG].', 'Test Procedure': 'The Lower Tester sends a GetPlayerApplicationSettingAttributeText command to the IUT with an\nattribute ID listed in the available attributes for the IUT.', 'Expected Outcome': 'Pass verdict\nThe IUT returns the values in UTF-8 format as specified by the Lower Tester. The values are\nManufacturer dependent.'}
+
+
+
+IDX = 54
+
+
+
+{'Test Purpose': 'Verify the behavior of the target when a Get Player Application Settings Attribute Text command is\nissued with an invalid parameter.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.', 'Test Procedure': 'The Lower Tester sends a Get Player Application Setting Attribute Text command to the IUT with\nparameters Num Player Application Setting Attributes = 1 and Player Application Setting Attribute\nID 1 = 0x7F.\n_MSC_', 'Expected Outcome': 'Pass verdict\nThe IUT returns an error response with error code 0x01 indicating that an invalid parameter was\npassed.'}
+
+
+
+IDX = 55
+
+
+
+{'Test Purpose': 'Verify the Get Player Application Setting Value Text response issued from the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The Lower Tester is aware of the available attributes and corresponding values for the IUT. This\ncan be retrieved from the result of AVRCP/TG/PAS/BV-02-C [List Player Application Setting\nAttributes – TG] and AVRCP/TG/PAS/BV-06-C [List Player Application Setting Values – TG].', 'Test Procedure': 'The Lower Tester sends a Get Player Application Setting Value Text command to the IUT, with\nattribute and value IDs listed in the available attributes and corresponding values for the IUT.', 'Expected Outcome': 'Pass verdict\nThe IUT returns the values in UTF-8 format as requested by the Lower Tester. The values are\nmanufacturer dependent.'}
+
+
+
+IDX = 56
+
+
+
+{'Test Purpose': 'Verify the ability of the TG to respond to a Get Player Application Setting Value Text command with\ninvalid parameters.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The Lower Tester is aware of the available attributes for the IUT. This can be retrieved from the\nresult of AVRCP/TG/PAS/BV-02-C [List Player Application Setting Attributes – TG].', 'Test Procedure': 'The Lower Tester sends a Get Player Application Setting Value Text command to the IUT. The\nattribute ID passed is listed in the available attributes for the IUT. The other parameter settings are\nNum Player Application Settings = 1 and Player Application Setting Value = 0x7F.', 'Expected Outcome': 'Pass verdict\nThe IUT returns an error response with error code 0x01 indicating that an invalid parameter was\npassed.'}
+
+
+
+IDX = 57
+
+
+
+{'Test Purpose': 'Verify the Get Element Attributes response for getting all attributes issued from the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': 'The Lower Tester sends a Get Element Attributes command to the IUT with the parameters Identifier\n= Playing and NumAttributes = 0.', 'Expected Outcome': 'Pass verdict\nThe IUT returns all attribute information.\n\nNotes:\nThe test case is used to retrieve all the elements (NumAttributes = 0x00) of a selected entry on the\ntarget.'}
+
+
+
+IDX = 58
+
+
+
+{'Test Purpose': 'Verify the Get Element Attributes response for getting selected attributes issued from the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': 'The Lower Tester sends a Get Element Attributes command to the IUT with the parameters Identifier\n= Playing, NumAttributes = n and AttributeId = n Attribute Ids.', 'Expected Outcome': 'Pass verdict\nThe IUT returns attribute information.\n\nNotes:\nThe test case is used to retrieve specific elements of a selected entry on the target.'}
+
+
+
+IDX = 59
+
+
+
+{'Test Purpose': 'Verify the Get Play Status response issued from the TG. Test to be conducted for all three modes of\nplay status on the TG – Playing, Paused, and Stop status.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': 'The Lower Tester sends a Get Play Status command to the IUT. No parameters need to be passed\nfor this command.', 'Expected Outcome': 'Pass verdict\nThe IUT returns the correct current play status of the MP.'}
+
+
+
+IDX = 60
+
+
+
+{'Test Purpose': 'Verify that the IUT, which does not support browsing, can retrieve the Metadata for the currently\nplaying track when the TG supports a later profile version.', 'Initial Condition': '- The Lower Tester supports an SDP version that is greater than the current published version,\ne.g., AVRCP v1.9.\n   - The Lower Tester has all the bits in its Supported Features SDP attributes set, including those\nthat are RFA.\n   - A connection for control is established.\n   - The Lower Tester acting as TG is currently playing a track.', 'Test Procedure': 'Initiated by the Upper Tester, the IUT sends a Get Element Attributes command to the Lower Tester.\n_with future SDP version – Get Element Attributes] MSC_', 'Expected Outcome': 'Pass verdict\nThe IUT is able to successfully retrieve Metadata from the Lower Tester and provide it to the Upper\nTester.'}
+
+
+
+IDX = 61
+
+
+
+{'Test Purpose': 'Verify that the TG can handle an invalid event ID sent from the CT.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': 'The Lower Tester sends a Register Notification command to the IUT with parameter EventID = 0xFF.\nThe Playback Interval parameter is not needed.', 'Expected Outcome': 'Pass verdict\nThe IUT returns the error code 0x01 indicating that an invalid parameter has been passed.'}
+
+
+
+IDX = 62
+
+
+
+{'Test Purpose': 'Verify the Register Notification response issued from the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': 'The Lower Tester sends a Register Notification command to the IUT with parameters EventID =\n0x0002. The Playback Interval parameter is not needed.', 'Expected Outcome': 'Pass verdict\nThe IUT returns an INTERIM response with the current status.\nAfter the track change happens, the IUT sends a CHANGED response indicating that the event\nEVENT_TRACK_CHANGED has been triggered.\n\nNotes:\nThe event used for the test is EVENT_TRACK_CHANGED (ID 0x02) which is registered with the IUT.'}
+
+
+
+IDX = 63
+
+
+
+{'Test Purpose': 'Verify the TG response for a register notification command for\nEVENT_PLAYER_APPLICATION_SETTING_CHANGED with all player application setting attributes.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': 'The Lower Tester sends a Register Notification command to the IUT with parameters EventID = 0x08.\nThe Playback Interval parameter is not needed.\n__CHANGED – TG] MSC_', 'Expected Outcome': 'Pass verdict\nThe IUT returns an INTERIM response with the current status.\nFollowing the player application setting changes, the IUT sends a CHANGED response indicating that\nthe event EVENT_PLAYER_APPLICATION_SETTING_CHANGED has been triggered.\nThe notification response contains all player application setting attributes with their current values.\n\nNotes:\nThe event used for the test is EVENT_PLAYER_APPLICATION_SETTING_CHANGED (ID 0x08),\nwhich is registered with the IUT.'}
+
+
+
+IDX = 64
+
+
+
+{'Test Purpose': 'Verify the Track Changed INTERIM response when no track is selected.', 'Initial Condition': '- The IUT is active as AVRCP TG role.\n   - No Track is currently selected on the IUT.', 'Test Procedure': 'The Lower Tester issues a valid RegisterNotification for the EVENT_TRACK_CHANGED.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a correctly formatted RegisterNotification Interim Response for the\nEVENT_TRACK_CHANGED with the Identifier Parameter set to 0xFFFFFFFFFFFFFFFF.'}
+
+
+
+IDX = 65
+
+
+
+{'Test Purpose': 'Verify the Track Changed INTERIM response when a track is playing.', 'Initial Condition': '- The IUT is active as AVRCP v1.3 or later TG role.\n   - A Track is currently playing on the IUT.', 'Test Procedure': 'The Lower Tester issues a valid RegisterNotification for the EVENT_TRACK_CHANGED.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a correctly formatted RegisterNotification Interim Response for the\nEVENT_TRACK_CHANGED with the Identifier Parameter set to 0x0.'}
+
+
+
+IDX = 66
+
+
+
+{'Test Purpose': 'Verify the Track Changed INTERIM response when the track is SELECTED.', 'Initial Condition': '- The IUT is active as AVRCP TG role.\n   - A track is currently SELECTED on the IUT.', 'Test Procedure': 'The Lower Tester issues a valid RegisterNotification for the EVENT_TRACK_CHANGED.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a correctly formatted RegisterNotification Interim Response for the\nEVENT_TRACK_CHANGED.\nThe Identifier Parameter is set to a value other than 0xFFFFFFFF for an IUT that supports\nAVRCP v1.3.\nThe Identifier Parameter is set to 0x0 for an IUT that supports AVRCP v1.4 or later.'}
+
+
+
+IDX = 67
+
+
+
+{'Test Purpose': 'Verify the Track Changed INTERIM response in the context of the Now Playing list when a track is\nplaying.', 'Initial Condition': '- The IUT is active as AVRCP v1.4 or later TG role.\n   - A track is currently playing on the IUT.', 'Test Procedure': '1. The Lower Tester retrieves the Now Playing list from the IUT with the GetFolderItems\nCommand/Response in the scope of NowPlaying.\n2. The Lower Tester issues a valid RegisterNotification for the EVENT_TRACK_CHANGED.\n|The IUT is active<br>A track is currently pla|as TG role.<br>ying on the IUT.|\n|---|---|\n|GetFolderItems Command<br>|GetFolderItems Command<br>|\n|~~(NowPlaying)~~<br>GetFolderItems Response|~~(NowPlaying)~~<br>GetFolderItems Response|\n|RegisterNotification<br>(NowPlaying)|RegisterNotification<br>(NowPlaying)|\n|(EVENT_TRACK_CHANGED)<br>RegisterNotification Interim<br>|(EVENT_TRACK_CHANGED)<br>RegisterNotification Interim<br>|', 'Expected Outcome': 'Pass verdict\nThe IUT issues a correctly formatted RegisterNotification Interim Response for the\nEVENT_TRACK_CHANGED with:\n   - The Identifier Parameter set to a UID that is listed in the Now Playing list\n   - That UID being the UID of the track that is currently played'}
+
+
+
+IDX = 68
+
+
+
+{'Test Purpose': 'Verify the Track Changed INTERIM response when changing a track in NowPlaying.', 'Initial Condition': '- The IUT is active as AVRCP v1.4 or later TG role and supports the browsing feature.\n   - A track is currently playing on the IUT.\n   - EVENT_TRACK_CHANGED is registered.', 'Test Procedure': '1. The Lower Tester retrieves the Now Playing list from the IUT with the GetFolderItems\nCommand/Response in the scope of NowPlaying.\n2. The Lower Tester issues a valid RegisterNotification for the EVENT_TRACK_CHANGED.\n3. The track is changed.\n4. After receiving notification of the track change, the Lower Tester issues a valid\nRegisterNotification for the EVENT_TRACK_CHANGED.\n|The IUT is active<br>A track is currently pla|as TG role.<br>ying on the IUT.|\n|---|---|\n|GetFolderItems Command<br>|hanged|\n|(NowPlaying)<br>GetFolderItems Response|(NowPlaying)<br>GetFolderItems Response|\n|RegisterNotification<br>(NowPlaying)|RegisterNotification<br>(NowPlaying)|\n|(EVENT_TRACK_CHANGED)<br>RegisterNotification Interim<br>|(EVENT_TRACK_CHANGED)<br>RegisterNotification Interim<br>|\n|(EVENT_TRACK_CHANGED)<br>The track is c|(EVENT_TRACK_CHANGED)<br>The track is c|\n|RegisterNotification<br><br>RegisterNotification Changed<br>(EVENT_TRACK_CHANGED)|RegisterNotification<br><br>RegisterNotification Changed<br>(EVENT_TRACK_CHANGED)|', 'Expected Outcome': 'Pass verdict\nThe IUT returns the UID of the track in the Now Playing list that is currently played.\nThe IUT returns an interim response for each RegisterNotification command received.\nThe IUT returns the response for the EVENT_TRACK_CHANGED notification.'}
+
+
+
+IDX = 69
+
+
+
+{'Test Purpose': 'Verify that the TG can handle fragmentation correctly.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': '1. The Lower Tester sends a Get Element Attributes command to the IUT, which meets the test\ncondition (see below).\n2. The IUT sends a 512-byte response with UTF-8 characters for the attribute string(s), along with\nthe START indication (0x1) as packet type.\n3. The Lower Tester sends a Request Continuing Response command to the IUT.\n4. The IUT sends a Get Element Attributes response with more characters.\n5. Repeat Steps 3 and 4, as necessary, until the Lower Tester receives all of the remaining\ncharacters from the IUT. The final Get Element Attributes response is indicated with 0x3 (END)\nfor packet type. Any additional Get Element Attributes responses between the START (0x1) and\nEND (0x3) should have a packet type of CONTINUE (0x2).\n\nTest Condition:\nThe IUT is configured so a GetElementAttributes command response is larger than the 512-byte limit\non AV/C frames.', 'Expected Outcome': 'Pass verdict\nFor each GetElementAttributes command and continuing response packets sent to the IUT, the IUT\nresponds with a GetElementAtttributes response containing the proper fragmentation indication via\nthe control channel.'}
+
+
+
+IDX = 70
+
+
+
+{'Test Purpose': 'Verify that the TG can accept abort fragmentation correctly.', 'Initial Condition': '- One ACL connection exists between the IUT and the test system.\n   - AVCTP connection exists between the IUT and the test system.', 'Test Procedure': '1. The Lower Tester sends a Get Element Attributes command to the IUT, which meets the test\ncondition (see below).\n2. The IUT sends a 512-byte response with UTF-8 characters for the attribute string(s), along with\nthe START indication (0x1) as packet type.\n3. The Lower Tester sends an Abort Continuing Response command to the IUT.\n4. The IUT sends an Abort Continuing Response to the Lower Tester.\n\nTest Condition:\nThe IUT is configured so a GetElementAttributes command response will be larger than the 512-byte\nlimit on AV/C frames.', 'Expected Outcome': 'Pass verdict\nThe IUT does not send any fragmented GetElementAttributes responses via the control channel to\nthe Lower Tester, after an AbortContinuingResponse command is received.'}
+
+
+
+IDX = 71
+
+
+
+{'Test Purpose': 'Verify the connection establishment for the control channel and the browsing channel, both initiated\nby the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - No AVCTP connection is established between the IUT and the Lower Tester.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The IUT has performed an SDP query with the Lower Tester exposing AVRCP browse support.', 'Test Procedure': 'The Upper Tester triggers the IUT to establish an AVRCP connection.', 'Expected Outcome': 'Pass verdict\nThe IUT initiates the establishment of the AVCTP control channel and immediately afterwards the IUT\ninitiates the establishment of the AVCTP browsing channel.'}
+
+
+
+IDX = 72
+
+
+
+{'Test Purpose': 'Verify the connection establishment for browsing channel initiated by the CT after the TG has initiated\nthe control channel establishment.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - No AVCTP connection is established between the IUT and the Lower Tester.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The IUT has performed an SDP query with the Lower Tester exposing AVRCP browse support.', 'Test Procedure': '1. The Upper Tester triggers the IUT to initiate establishment of an AVCTP control channel.\n2. Upon receipt of control channel establishment signaling from the IUT the Lower Tester initiates\nthe establishment of an AVCTP browsing channel with the IUT.\n_CT initiates browsing channel] MSC_', 'Expected Outcome': 'Pass verdict\nThe IUT initiates the establishment of the AVCTP control channel.\nThe IUT successfully responds to the Lower Tester initiation to establish the AVCTP browsing\nchannel.\nIn the alternative scenario where the IUT supports browsing channel initiation and immediately\ninitiates the browsing channel establishment following the control channel establishment, the IUT\nsuccessfully responds to the Lower Tester’s request to initiate the browsing channel release and\nsubsequently allows the Lower Tester to initiate the AVCTP browsing channel establishment.'}
+
+
+
+IDX = 73
+
+
+
+{'Test Purpose': 'Verify the connection release for browsing initiated by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - An AVCTP Control and an AVCTP Browsing channel are established.\n   - The IUT is acting as AVRCP TG role in category 1.', 'Test Procedure': 'The Upper Tester triggers the IUT to release the AVRCP connection.', 'Expected Outcome': 'Pass verdict\nThe IUT initiates the release of the AVCTP browsing channel and immediately afterwards the IUT\ninitiates the release of the AVCTP control channel.'}
+
+
+
+IDX = 74
+
+
+
+{'Test Purpose': 'Verify the SetAddressedPlayer response issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has retrieved the valid PlayerIds of the IUT. This can be retrieved by executing\nAVRCP/TG/MPS/BV-09-C [GetFolderItems – TG].', 'Test Procedure': 'The Lower Tester sends a SetAddressedPlayer command containing a valid PlayerId to the IUT.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a valid status field indicating that no error occurred.'}
+
+
+
+IDX = 75
+
+
+
+{'Test Purpose': 'Verify the SetAddressedPlayer response issued by the TG when an invalid player is requested.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has retrieved the valid PlayerIds of the IUT. This can be retrieved by executing\nAVRCP/TG/MPS/BV-09-C [GetFolderItems – TG].', 'Test Procedure': 'The Lower Tester sends a SetAddressedPlayer command to the IUT with an invalid PlayerID.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with an ‘Invalid Player Id’ status response.'}
+
+
+
+IDX = 76
+
+
+
+{'Test Purpose': 'Verify the SetBrowsedPlayer response issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has retrieved the valid PlayerIds of the IUT. This can be retrieved by executing\nAVRCP/TG/MPS/BV-09-C [GetFolderItems – TG].', 'Test Procedure': 'The Lower Tester sends a valid SetBrowsedPlayer command to the IUT.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a valid Status field in the SetBrowsedPlayer response. The fields UID\nCounter, Number of Items, Character Set Id, Folder Depth, Folder Name Size and Folder Name are\ncorrectly formatted reflecting the current folder.'}
+
+
+
+IDX = 77
+
+
+
+{'Test Purpose': 'Verify the SetBrowsedPlayer response issued by the TG when an invalid player is requested.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has retrieved the valid PlayerIds of the IUT. This can be retrieved by executing\nAVRCP/TG/MPS/BV-09-C [GetFolderItems – TG].', 'Test Procedure': 'The Lower Tester sends a SetBrowsedPlayer command to the IUT with an invalid PlayerID.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with an ‘Invalid Player Id’ status response.'}
+
+
+
+IDX = 78
+
+
+
+{'Test Purpose': 'Verify the AddressedPlayerChanged Notification issued by the TG and the procedure associated to\nthis.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - At least one player specific notification is registered with the IUT.', 'Test Procedure': '1. The Lower Tester sends a RegisterNotificationCommand to the IUT to register for\nAddressedPlayerChanged.\n2. The Upper Tester subsequently triggers a change of addressed player in the IUT by selecting a\nnew Addressed Player.\n|Lower Tester IUT Upper Tester<br>One ACL connection exists between the IUT and the test system.<br>AVCTP connection exists between the IUT and the test system.<br>At least one player specific notification is registered with the IUT.<br>Register Notification Command<br>(AddressedPlayerChanged)<br>Register Notification Interim<br>(AddressedPlayerChanged) Trigger AddressedPlayerChanged<br>(Manufacturer Specific)<br>Register Notification Changed<br>(AddressedPlayerChanged)<br>RegisterNotificationReject<br>(all player specific notifications)|Col2|\n|---|---|\n|||', 'Expected Outcome': 'Pass verdict\nThe IUT issues a correctly AddressedPlayerChanged notification final response with the correct value\nof PlayerId and UID Counter for the Player selected by the Upper Tester.\nThe IUT completes all player specific notifications with AV/C type rejected.'}
+
+
+
+IDX = 79
+
+
+
+{'Test Purpose': 'Verify the PlayerFeatureBitmask issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - There is an IXIT feature list for each Media Player application on the TG [6].', 'Test Procedure': 'The Lower Tester sends a GetFolderItems command to the IUT.', 'Expected Outcome': 'Pass verdict\nThe features announced in each Media Player’s feature bitmask are according to the Media Player’s\nIXIT entry.'}
+
+
+
+IDX = 80
+
+
+
+{'Test Purpose': 'Verify the AvailablePlayersChanged Notification issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.', 'Test Procedure': '1. The Lower Tester sends a RegisterNotificationCommand to the IUT to register for\nAvailablePlayersChanged.\n2. The Upper Tester subsequently triggers a change of available players in the IUT.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a correctly formatted AvailablePlayersChanged notification final response.'}
+
+
+
+IDX = 81
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems response for the Media Player List issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.', 'Test Procedure': 'The Lower Tester sends a valid GetFolderItems command to the IUT to retrieve the MediaPlayerList.\nThe command contains the MediaPlayerList as Scope parameter and valid entries for Start Item, End\nItem, AttributeCount and AttributeList.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted list of available Media Player Items with correct entries\nfor each field in each Media Player Item.'}
+
+
+
+IDX = 82
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems response issued by the TG for a folder.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester sends a GetFolderItems command to the IUT with the VirtualFilesystem as Scope\nparameter and valid entries for Start Item, End Item, AttributeCount and AttributeList.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted list of only Folder Items and Media Items.'}
+
+
+
+IDX = 83
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems response issued by the TG while the BrowsedPlayer is other than the\nAddressedPlayer.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has retrieved a list of available players. This can be achieved by executing\nAVRCP/TG/MPS/BV-09-C [GetFolderItems – TG].\n   - The IUT has at least two media player applications available.', 'Test Procedure': '1. The Lower Tester sets the addressed and browsed players on the IUT to valid PlayerID values\n2. The Lower Tester sends a GetFolderItems command to the IUT with the VirtualFilesystem as\nScope parameter and valid entries for Start Item, End Item, AttributeCount and AttributeList.\n|Lower Tester IUT Upper Tester<br>One ACL connection exists between the IUT and the test system.<br>AVCTP connection exists between the IUT and the test system.<br>SetAddressedPlayer (PlayerA)<br>SetBrowsedPlayer (PlayerB)<br>GetFolderItems Command<br>(Virtual Filesystem)<br>GetFolderItems Response|Col2|\n|---|---|\n|||', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted list of only Folder Items and Media Items of the current\nfolder on PlayerB.'}
+
+
+
+IDX = 84
+
+
+
+{'Test Purpose': 'Verify the ChangePath response issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester is aware of the currently valid FolderUIDs exposed by the IUT. This can be\nachieved by executing AVRCP/TG/MCN/CB/BV-02-C [GetFolderItems – TG].\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester sends a ChangePath command to the IUT containing a currently valid UIDCounter,\nFolderUID, and the Direction indication Folder Down.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted ChangePath Response with the correct Number of Items\nof the current folder on the IUT.'}
+
+
+
+IDX = 85
+
+
+
+{'Test Purpose': 'Verify the ChangePath response issued by the TG when an invalid Folder UID is requested.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester is aware of the currently valid FolderUIDs exposed by the IUT. This can be\nachieved by executing AVRCP/TG/MCN/CB/BV-02-C [GetFolderItems – TG].\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester sends a ChangePath command to the IUT containing a currently invalid\nUIDCounter, FolderUID and the Direction indicating Folder Down.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with an error code indicating an invalid Folder UID.'}
+
+
+
+IDX = 86
+
+
+
+{'Test Purpose': 'Verify the ChangePath response issued by the TG when the Direction is FolderUp.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The IUT is in a state that allows the ChangePath direction of FolderUp.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester sends a ChangePath command to the IUT containing the Direction indication\nFolder Up.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted ChangePath Response with the correct Number of Items\nof the current folder on the IUT.'}
+
+
+
+IDX = 87
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems response issued by the TG when the command contains invalid\nparameters.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester sends a GetFolderItems command to the IUT with invalid parameters: a StartItem\nparameter larger than the EndItem.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with error code 0x0B (Range out of Bounds).'}
+
+
+
+IDX = 88
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems response issued by the TG for an empty folder when the command\ncontains invalid parameters.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The IUT has issued ChangePath to the folder defined in the IXIT [6] as an empty folder.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester sends a GetFolderItems command to the IUT specifying the empty folder and\nsetting StartItem=0 and EndItem=1.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with error code 0x0B (Range out of Bounds).'}
+
+
+
+IDX = 89
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems response issued by the TG when the command contains invalid\nparameters accessing items beyond the end of a folder.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has issued ChangePath to the folder defined in the IXIT [6] as a non-empty\nfolder.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester sends a GetFolderItems command to the IUT specifying the empty folder and\nsetting StartItem=n+1 and EndItem=n+2, where n is the number of items in the non-empty folder as\nretrieved by the ChangePath command.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with error code 0x0B (Range out of Bounds).'}
+
+
+
+IDX = 90
+
+
+
+{'Test Purpose': 'Verify the GetItemAttributes response issued by the TG on a Media Item in the Virtual Media Player\nFilesystem other than the currently playing one.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester is aware of the currently valid Media Item UIDs on the IUT. This can be\nachieved by executing AVRCP/TG/MCN/CB/BV-02-C [GetFolderItems – TG].\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester sends a GetItemAttributes command to the IUT containing the VirtualFilesystem as\nScope parameter and valid entries for UID, UIDcounter, Number of Attributes, and AttributeID list.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted GetItemAttributes Response with the expected values for\nNumber of Attributes and Attribute Value List.'}
+
+
+
+IDX = 91
+
+
+
+{'Test Purpose': 'Verify that the TG issues an error when receiving a command for an invalid UID counter.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': '1. The Lower Tester registers with the IUT for notification of UID change.\n2. The Lower Tester sends a GetItemAttributes command to the IUT, where the value of\nUIDcounterB in the GetItemAttributes is different from the UIDcounterA issued by the IUT in the\nInterimResponse.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a GetItemAttributes Response with Status Code UID Changed.'}
+
+
+
+IDX = 92
+
+
+
+{'Test Purpose': 'Verify the initial value of the UID counter if the TG is a database unaware player.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The IUT is reset to factory settings so that the UID counter is reset to the initial value.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester registers with the IUT for UID change notifications. No change to the database on\nthe IUT is applied between the reset and the RegisterNotification for EVENT_UIDS_CHANGED.', 'Expected Outcome': 'Pass verdict\nThe IUT issues an InterimResponse for the EVENT_UIDS_CHANGED with a UID Counter=0.'}
+
+
+
+IDX = 93
+
+
+
+{'Test Purpose': 'TG: Verify that the TG is able to reject browsing requests when browsing of non-addressed players is\nnot supported.', 'Initial Condition': '- A connection for control is established.', 'Test Procedure': 'Initiate the action on the CT to select a Player as the currently addressed one, e.g., by playing a\ntrack. Then browse into a Player different from that addressed Player.\n\nTest Condition:\nThere is a Player available on the TG that supports browsing and the OnlyBrowsableWhenAddressed\nbit is set in the Player Feature bitmask.', 'Expected Outcome': 'Pass verdict\nThe TG sends a properly formatted response PDU to the Lower Tester with status code = 0x13,\nPlayer Not Addressed.'}
+
+
+
+IDX = 94
+
+
+
+{'Test Purpose': 'Verify the initial value of the UID counter if the TG is a database aware player.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The IUT is reset to factory settings so that the UID counter is reset to the initial value.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester registers with the IUT for UID change notifications. No change to the database on\nthe IUT is applied between the reset and the RegisterNotification for EVENT_UIDS_CHANGED.', 'Expected Outcome': 'Pass verdict\nThe IUT issues an InterimResponse for the EVENT_UIDS_CHANGED with 0x1<=UID\nCounter<=0xFFFF.'}
+
+
+
+IDX = 95
+
+
+
+{'Test Purpose': 'Verify that the TG increments the UID counter and sends a UIDSChangedNotification when updates\non existing UIDs occur if the TG is database aware.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': '1. The Lower Tester registers with the IUT for UID change notifications.\n2. The Upper Tester triggers a database change on the IUT, e.g., by adding or removing media\ntracks.\n3. The Lower Tester registers with the IUT for UID change notifications. No database change occurs\nafterwards until after the second Interim Response has been sent to the Lower Tester.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a FinalResponse for the EVENT_UIDS_CHANGED with UIDcounterB not equal to\nUIDcounterA.\nThe IUT issues an Interim response after the second Registration for the EVENT_UIDS_CHANGED\nwith UIDcounterB.'}
+
+
+
+IDX = 96
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems response for the Search folder issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - A successful Search operation has been performed by the Lower Tester with the Search results\nstill being valid; see AVRCP/TG/MCN/SRC/BV-02-C [Search – TG].\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester sends a GetFolderItems command to the IUT containing the Search folder as\nScope parameter and valid entries for Start Item, End Item, AttributeCount and AttributeList.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted list of only Media Items.'}
+
+
+
+IDX = 97
+
+
+
+{'Test Purpose': 'Verify the GetItemAttributes response issued by the TG on a Media Item in the Search folder other\nthan the currently playing one.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - A successful Search operation has been performed by the Lower Tester with the Search results\nstill being valid; see AVRCP/TG/MCN/SRC/BV-02-C [Search – TG].\n   - The Lower Tester is aware of the currently valid Media Item UIDs in the Search folder exposed by\nthe IUT. This can be achieved by executing AVRCP/TG/MCN/SRC/BV-04-C [GetFolderItems –\nTG].\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester sends a GetItemAttributes command to the IUT containing the Search folder as\nScope parameter and valid entries for UID, UIDcounter, Number of Attributes and AttributeID list.\n|One ACL connection exists betwee<br>AVCTP connection exists between|n the IUT and the test system.<br>the IUT and the test system.|\n|---|---|\n|GetItemAttributes Command<br>|GetItemAttributes Command<br>|\n|~~(Scope=Search Folder, UID, UIDcounter,~~<br>NumberOfAttributes, AttributeID list)<br>GetItemAttributes Response<br>|~~(Scope=Search Folder, UID, UIDcounter,~~<br>NumberOfAttributes, AttributeID list)<br>GetItemAttributes Response<br>|', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted GetItemAttributes Response with the expected values for\nNumber of Attributes and Attribute Value List.'}
+
+
+
+IDX = 98
+
+
+
+{'Test Purpose': 'Verify the PlayItem response issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester is aware of the currently playable UIDs exposed by the IUT. This can be\nachieved by executing AVRCP/TG/MCN/CB/BV-02-C [GetFolderItems – TG].', 'Test Procedure': 'The Lower Tester sends a PlayItem Command to the IUT with valid entries for all parameters. The\nUID must be a UID for a currently playable UID.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted PlayItem Response with the status indicating success.'}
+
+
+
+IDX = 99
+
+
+
+{'Test Purpose': 'Verify the PlayItem response issued by the TG when an invalid UID is requested.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester is aware of the currently playable UIDs on the IUT. This can be achieved by\nexecuting AVRCP/TG/MCN/CB/BV-02-C [GetFolderItems – TG].', 'Test Procedure': 'The Lower Tester sends a PlayItem Command to the IUT with a UID that is currently not playable.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted PlayItem Response with the Status indicating the UID\ndoes not exist.'}
+
+
+
+IDX = 100
+
+
+
+{'Test Purpose': 'Verify the AddToNowPlaying response issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester is aware of the currently playable UIDs on the IUT. This can be achieved by\nexecuting AVRCP/TG/MCN/CB/BV-02-C [GetFolderItems – TG].', 'Test Procedure': 'The Lower Tester sends an AddToNowPlaying command with a currently playable UID to the IUT.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted AddToNowPlaying Response with the status indicating\nsuccess.'}
+
+
+
+IDX = 101
+
+
+
+{'Test Purpose': 'Verify the AddToNowPlaying response issued by the TG when an invalid UID is requested.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester is aware of the currently valid UIDs on the IUT. This can be achieved by\nexecuting AVRCP/TG/MCN/CB/BV-02-C [GetFolderItems – TG].', 'Test Procedure': 'The Lower Tester sends an AddToNowPlaying command to the IUT with an invalid UID.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted AddToNowPlaying Response with the status indicating\nthat the UID does not exist.'}
+
+
+
+IDX = 102
+
+
+
+{'Test Purpose': 'Verify the GetFolderItems response for the Now Playing folder issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The player on the IUT is currently playing media.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.', 'Test Procedure': 'The Lower Tester sends a GetFolderItems command to the IUT containing the Now Playing folder as\nScope parameter and valid entries for Start Item, End Item, AttributeCount and AttributeList.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted list of only Media Items.'}
+
+
+
+IDX = 103
+
+
+
+{'Test Purpose': 'Verify the NowPlayingContentChanged notification issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The EVENT_NOW_PLAYING_CONTENT_CHANGED is registered with the IUT', 'Test Procedure': 'The Upper Tester triggers the change of the Now Playing folder on the IUT.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a FinalResponse for the EVENT_NOW_PLAYING_CONTENT_CHANGED.'}
+
+
+
+IDX = 104
+
+
+
+{'Test Purpose': 'Verify the GetItemAttributes response issued by the TG on a Media Item in the Now Playing folder.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The player on the IUT is currently playing media.\n   - The Lower Tester is aware of the currently valid UIDs in the Now Playing folder. This can be\nachieved by executing AVRCP/TG/MCN/NP/BV-06-C [GetFolderItems – TG].', 'Test Procedure': 'The Lower Tester sends a GetItemAttributes command to the IUT containing the Now Playing folder\nas Scope parameter and valid entries for UID (other than 0x0), UID Counter, Number of Attributes,\nand AttributeID list.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted GetItemAttributes Response with the expected values for\nNumber of Attributes and Attribute Value List.'}
+
+
+
+IDX = 105
+
+
+
+{'Test Purpose': 'Verify the behavior of the TG receiving a valid SetAbsoluteVolume command.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is acting as AVRCP TG role in category 2.', 'Test Procedure': 'The Lower Tester sends a SetAbsoluteVolume command to the IUT with a valid value for volume.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted SetAbsoluteVolume Response with the current value for\nvolume.'}
+
+
+
+IDX = 106
+
+
+
+{'Test Purpose': 'Verify the behavior of the TG receiving an invalid SetAbsoluteVolume command.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is acting as AVRCP TG role in category 2.\n   - The EVENT_VOLUME_CHANGED notification is registered at the IUT.', 'Test Procedure': 'The Lower Tester sends a SetAbsoluteVolume command to the IUT with an invalid value for\nParameter Length (too short to carry the absolute value parameter).', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted SetAbsoluteVolume Response indicating failure. If the\nIUT does not return Invalid Parameter Content (0x02), then the Lower Tester gives a warning.'}
+
+
+
+IDX = 107
+
+
+
+{'Test Purpose': 'Verify the behavior of the TG receiving a SetAbsoluteVolume command with the top level bit set.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is acting as AVRCP TG role in category 2.\n   - The EVENT_VOLUME_CHANGED notification is registered at the IUT.', 'Test Procedure': 'The Lower Tester sends a SetAbsoluteVolume command to the IUT with the top bit of the level\nparameter set.', 'Expected Outcome': 'Pass verdict\nThe IUT responds with a correctly formatted SetAbsoluteVolume Response with the current value\nand the top bit set to zero.'}
+
+
+
+IDX = 108
+
+
+
+{'Test Purpose': 'Verify the NotifyVolumeChange response issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP connection between the IUT and the Lower Tester is completed.\n   - The IUT is acting as AVRCP TG role in category 2.', 'Test Procedure': '1. The Lower Tester registers with the IUT for Volume Change Notification.\n2. Subsequently the Upper Tester triggers a volume change on the IUT.\n|Lower Tester IUT Upper Tester<br>One ACL connection exists between the IUT and the test system.<br>AVCTP connection exists between the IUT and the test system.<br>RegisterNotification<br>(EVENT_VOLUME_CHANGED)<br>InterimResponse<br>(EVENT_VOLUME_CHANGED, Absolute<br>Volume)<br>Volume Change initiated<br>(Manufacturer Specific)<br>FinalResponse<br>(EVENT_VOLUME_CHANGED, Absolute<br>Volume)|Col2|\n|---|---|\n|||', 'Expected Outcome': 'Pass verdict\nThe IUT issues a FinalResponse for the EVENT_VOLUME_CHANGED with a valid value for\nAbsolute Volume.'}
+
+
+
+IDX = 109
+
+
+
+{'Test Purpose': 'Verify the General Reject response issued by the TG.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - AVCTP control and browsing channels are established between the IUT and the Lower Tester.\n   - The IUT is acting as AVRCP TG role in category 1 or 3.', 'Test Procedure': 'The Lower Tester sends an AVRCP specific Browsing command with an invalid PDU ID and the\nBrowsing channel.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a General Reject response with the error code indicating an invalid command.'}
+
+
+
+IDX = 110
+
+
+
+{'Test Purpose': 'Verify that the IUT (TG) correctly responds to the GetTotalNumberOfItems command issued from the\nCT for the Media Player List scope.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - AVCTP control and browsing channels between the IUT and the Lower Tester are established.\n   - The IUT is acting as AVRCP TG role in category 1.', 'Test Procedure': 'The Lower Tester issues a GetTotalNumberOfItems command to the IUT with the scope parameter\nset to Media Player List.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetTotalNumberOfItems response message to the Lower Tester.\nThe GetTotalNumberOfItems response message indicates the correct number of available media\nplayers.\nThe total number of items returned by the IUT is the correct number for the current folder as specified\nin the IXIT [6].'}
+
+
+
+IDX = 111
+
+
+
+{'Test Purpose': 'Verify that the IUT (TG) correctly responds to the GetTotalNumberOfItems command issued from the\nCT for the Virtual Media Player Filesystem scope.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - AVCTP control and browsing channels between the IUT and the Lower Tester are established.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin [6] as the browsable player.\n   - The Lower Tester has successfully issued any necessary ChangePath commands to navigate to\na folder on the Browsed Player on the IUT containing at least one item as specified in the IXIT [6].', 'Test Procedure': 'The Lower Tester issues a GetTotalNumberOfItems command to the IUT with the scope parameter\nset to Virtual Media Player Filesystem.', 'Expected Outcome': 'Pass verdict\nThe status parameter of the GetTotalNumberOfItems response message from the IUT to the Lower\nTester indicates that the operation completed without error.\nThe total number of items returned by the IUT is the correct number of playable media items in the\ncurrent folder [6].'}
+
+
+
+IDX = 112
+
+
+
+{'Test Purpose': 'Verify that the IUT (TG) correctly responds to the GetTotalNumberOfItems command issued from the\nCT for the Search scope.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - AVCTP control and browsing channels between the IUT and the Lower Tester are established.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin [6] as the browsable player.\n   - A successful Search operation has been performed by the Lower Tester with the Search results\nstill being valid; see AVRCP/TG/MCN/SRC/BV-02-C [Search – TG].', 'Test Procedure': 'The Lower Tester issues a GetTotalNumberOfItems command to the IUT with the scope parameter\nset to Search.', 'Expected Outcome': 'Pass verdict\nThe status parameter of the GetTotalNumberOfItems response message from the IUT to the Lower\nTester indicates that the operation completed without error.\nThe total number of items returned by the IUT is the correct number of playable media items in the\nsearch result as specified in the IXIT [6].'}
+
+
+
+IDX = 113
+
+
+
+{'Test Purpose': 'Verify that the IUT (TG) correctly responds to the GetTotalNumberOfItems command issued from the\nCT for the Now Playing scope.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - AVCTP control and browsing channels between the IUT and the Lower Tester are established.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin [6] as the browsable player.\n   - The player on the IUT is currently playing media.', 'Test Procedure': 'The Lower Tester issues a GetTotalNumberOfItems command to the IUT with the scope parameter\nset to Now Playing.', 'Expected Outcome': 'Pass verdict\nThe status parameter of the GetTotalNumberOfItems response message from the IUT to the Lower\nTester indicates that the operation completed without error.\nThe total number of items returned by the IUT is the correct number of the currently playable media\nitems as specified in the IXIT [6].'}
+
+
+
+IDX = 114
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly respond to a GetFolderItems request with the scope of Virtual Media\nPlayer Filesystem to retrieve the Cover Art Image Handle.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Tester has successfully issued a SetBrowsedPlayer command to the player specified in [6]\nas the browsable player.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX server and the Lower\nTester is the OBEX client.\n   - The Tester has successfully issued any necessary ChangePath commands to navigate to a folder\non the Browsed Player on the IUT containing at least one item with Cover Art [6].', 'Test Procedure': 'The Lower Tester issues a GetFolderItems command to the IUT with the scope parameter set to\nVirtual Media Player Filesystem and the attribute list containing the Cover Art attribute.\n|OBEX connection wh<br>AVCTP control<br>AVCTP browsin|ere IUT is server<br>connection<br>g connection|\n|---|---|\n|GetFolderItems Command (Virtual<br>Filesystem)|GetFolderItems Command (Virtual<br>Filesystem)|\n|(Cover Art Attribute)<br>GetFolderItems Response<br>|(Cover Art Attribute)<br>GetFolderItems Response<br>|', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetFolderItems response message to the Lower Tester.\nThe GetFolderItems response message contains at least one item with a Cover Art Image Handle.\n\nNotes:\nThe linkage between the returned Image Handle and retrieval of an image is covered in other tests\n(AVRCP/TG/CA/BV-08-C [Use the Imaging Property Object – TG], AVRCP/TG/CA/BV-10-C [Pull an\nImage as a Thumbnail – TG], AVRCP/TG/CA/BV-12-C [Pull a Thumbnail – TG] and\nAVRCP/TG/CA/BV-14-C [Pull a Native Image – TG]). Note that although the test does not directly use\nthe Cover Art OBEX connection, it must exist for there to be valid Image Handles available on the TG\n(Imaging Responder).'}
+
+
+
+IDX = 115
+
+
+
+{'Test Purpose': 'Verify that when the Lower Tester attempts to retrieve the Cover Art attribute using GetFolderItems,\nand when no item in the selected folder has associated Cover Art, then the IUT does not return an\nimage handle.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX server and the Lower\nTester is the OBEX client.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin the IXIT [6] as the browsable player.\n   - The Lower Tester has successfully issued any necessary ChangePath commands to navigate to\na folder on the Browsed Player of the IUT, containing only items with no associated Cover Art as\nspecified in the IXIT [6].', 'Test Procedure': 'The Lower Tester issues a GetFolderItems command to the IUT with the scope parameter set to\nVirtual Media Player Filesystem and the attribute list containing the Cover Art attribute.\nrequested', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetFolderItems response message to the Lower Tester.\nThe GetFolderItems response message does not contain a Cover Art Image Handle.\n\nNotes:\nNote that although the test does not directly use the Cover Art OBEX connection it must exist for\nthere to be valid Image Handles available on the TG (Imaging Responder).'}
+
+
+
+IDX = 116
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly respond to a GetItemAttributes with the scope of Virtual Media Player\nFilesystem to retrieve the Cover Art Image Handle.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX server and the Lower\nTester is the OBEX client.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Tester is aware of the currently valid Media Item UIDs on the IUT. This can be achieved by\nexecuting AVRCP/TG/MCN/CB/BV-02-C [GetFolderItems – TG].\n   - The Tester has successfully issued a SetBrowsedPlayer command to the player specified in the\nIXIT [6] as the browsable player.\n   - The Tester has successfully issued any necessary ChangePath commands to navigate to a folder\non the Browsed Player of the IUT, containing at least one item with Cover Art as specified in the\nIXIT [6].', 'Test Procedure': 'The Lower Tester issues a GetItemAttributes command to the IUT with the scope parameter set to\nVirtual Media Player Filesystem and with valid entries for UID, UID Counter, Number of Attributes and\nAttributeID list. The AttributeID list contains the Cover Art AttributeID.\n|OBEX connection wh<br>AVCTP control<br>AVCTP browsing|ere IUT is server<br>connection<br>connection|\n|---|---|\n|GetItemAttributes Command (Virtual<br>Filesystem)|GetItemAttributes Command (Virtual<br>Filesystem)|\n|(Cover Art Attribute)<br>GetItemAttributes Response<br>|(Cover Art Attribute)<br>GetItemAttributes Response<br>|', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetItemAttributes response message to the Lower Tester.\nThe GetItemAttributes response message contains at least one item with a Cover Art Image Handle.\n\nNotes:\nThe linkage between the returned Image Handle and retrieval of an image is covered in other tests\n(AVRCP/TG/CA/BV-08-C [Use the Imaging Property Object – TG], AVRCP/TG/CA/BV-10-C [Pull an\nImage as a Thumbnail – TG], AVRCP/TG/CA/BV-12-C [Pull a Thumbnail – TG] and\nAVRCP/TG/CA/BV-14-C [Pull a Native Image – TG]).'}
+
+
+
+IDX = 117
+
+
+
+{'Test Purpose': 'Verify that when the Lower Tester attempts to retrieve the Cover Art attribute using GetItemAttributes,\nand when the selected item has no associated Cover Art, then the IUT does not return an image\nhandle.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control channel between the IUT and the Lower Tester is established.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX server and the Lower\nTester is the OBEX client.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester is aware of the currently valid Media Item UIDs on the IUT. This can be\nachieved by executing AVRCP/TG/MCN/CB/BV-02-C [GetFolderItems – TG].\n   - The Lower Tester has successfully issued a SetBrowsedPlayer command to the player specified\nin [6] as the browsable player.\n   - The Lower Tester has successfully issued any necessary ChangePath commands to navigate to\na folder on the Browsed Player on the IUT containing only items with no associated Cover Art [6].', 'Test Procedure': 'The Lower Tester issues a GetItemAttributes command to the IUT, with the scope parameter set to\nVirtual Media Player Filesystem, and valid entries for UID, UIDcounter, Number of Attributes and\nAttributeID list. The AttributeID list contains the Cover Art AttributeID.\nrequested', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetItemAttributes response message to the Lower Tester.\nThe GetItemAttributes response message does not contain a Cover Art Image Handle.'}
+
+
+
+IDX = 118
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly respond to a GetElementAttributes command to retrieve the Cover\nArt Image Handle of the currently playing item.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control channel between the IUT and the Lower Tester is established.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX server and the Lower\nTester is the OBEX client.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - An item with Cover Art is playing on the default Addressed Player at the IUT.', 'Test Procedure': 'The Lower Tester issues a GetElementAttributes command to the IUT with the identifier parameter\nset to Playing and the AttributeID list containing the Cover Art AttributeID.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetElementAttributes response message to the Lower Tester.\nThe GetElementAttributes response message contains the Cover Art Image Handle.\n\nNotes:\nThe linkage between the returned Image Handle and retrieval of an image is covered in other tests\n(AVRCP/TG/CA/BV-08-C [Use the Imaging Property Object – TG], AVRCP/TG/CA/BV-10-C [Pull an\nImage as a Thumbnail – TG], AVRCP/TG/CA/BV-12-C [Pull a Thumbnail – TG] and\nAVRCP/TG/CA/BV-14-C [Pull a Native Image – TG]).'}
+
+
+
+IDX = 119
+
+
+
+{'Test Purpose': 'Verify that when the Lower Tester attempts to retrieve the Cover Art attribute using\nGetElementAttributes with the Playing identifier, and when the selected element has no associated\nCover Art, that the IUT does not return an image handle.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control channel between the IUT and the Lower Tester is established.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX server and the Lower\nTester is the OBEX client.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - An item with no associated Cover Art is playing on the default Addressed Player at the IUT.', 'Test Procedure': 'The Lower Tester issues a GetElementAttributes command to the IUT with the identifier parameter\nset to Playing and the AttributeID list containing the Cover Art AttributeID.\nrequested', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formatted GetElementAttributes response message to the Lower Tester.\nThe GetElementAttributes response message does not contain a Cover Art Image Handle.'}
+
+
+
+IDX = 120
+
+
+
+{'Test Purpose': 'Verify that when the Lower Tester attempts to retrieve the Cover Art attribute when no OBEX\nconnection exists, the IUT does not return an image handle.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - No OBEX connection exists.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Tester has successfully issued a SetBrowsedPlayer command to the player specified in [6]\nas the browsable player.\n   - The Tester has successfully issued any necessary ChangePath commands to navigate to a folder\non the Browsed Player of the IUT, containing at least one item with Cover Art [6].', 'Test Procedure': 'The Lower Tester issues a GetFolderItems command to the IUT, with the scope parameter set to\nVirtual Media Player Filesystem, and the attribute list containing only the Cover Art attribute.', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formed GetFolderItems response.\nThe number of returned items in the response is 0 and the Item List is empty.'}
+
+
+
+IDX = 121
+
+
+
+{'Test Purpose': 'Verify that the IUT does not return an image handle, when the Lower Tester attempts to retrieve the\nCover Art attribute using GetItemAttributes when no OBEX connection exists.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control and browsing channels between the IUT and the Lower Tester are\nestablished.\n   - No OBEX connection exists.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Tester has successfully issued a SetBrowsedPlayer command to the player specified in the\nIXIT [6] as the browsable player.\n   - The Tester has successfully issued any necessary ChangePath commands to navigate to a folder\non the Browsed Player of the IUT, containing at least one item with Cover Art [6].', 'Test Procedure': 'The Lower Tester issues a valid GetItemAttributes command to the IUT with the scope parameter set\nto Virtual Media Player Filesystem and the AttributeID list containing only the Cover Art AttributeID.\n_GetItemAttributes – TG] MSC_', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formed GetItemAttributes response.\nThe GetItemAttributes response does not contain an Attribute Value for the Cover Art attribute for any\nelements.'}
+
+
+
+IDX = 122
+
+
+
+{'Test Purpose': 'Verify that the IUT does not return an image handle, when the Lower Tester attempts to retrieve the\nCover Art attribute using GetElementAttributes when no OBEX connection exists.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control channel between the IUT and the Lower Tester is established.\n   - No OBEX connection exists.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - An item with Cover Art is currently playing on the default Addressed Player on the IUT.', 'Test Procedure': 'The Lower Tester issues a valid GetElementAttributes command to the IUT with the identifier\nparameter set to Playing and the AttributeID list containing only the Cover Art AttributeID.\n_GetElementAttributes – TG] MSC_', 'Expected Outcome': 'Pass verdict\nThe IUT issues a well-formed GetElementAttributes response.\nThe GetElementAttributes response does not contain an Attribute Value for the Cover Art attribute.'}
+
+
+
+IDX = 123
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly handle the image-properties object, and individually provide image\nversions other than the native format, and respond with an image in a format other than the native\none or the mandatory imaging thumbnail.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control channel between the IUT and the Lower Tester is established.\n   - If the Lower Tester uses GetItemAttributes (ALT 1), the browsing channel between the IUT and\nthe Lower Tester is established.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX server and the Lower\nTester is the OBEX client.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has successfully retrieved a Cover Art Image Handle by using either of the\nfollowing methods:\n         - ALT 1: The Lower Tester issues a SetBrowsedPlayer command to the player specified in\nthe IXIT [6] as the browsable player. The Lower Tester issues the GetItemAttributes or\nGetFolderItems commands to the IUT. At least one item with Cover Art is available in the\ndefault folder on the Browsed Player of the IUT.\n         - ALT 2: An item with Cover Art is playing on the default Addressed Player of the IUT. The\nLower Tester issues the GetElementAttributes command to the IUT.', 'Test Procedure': '1. The Lower Tester issues a GetImageProperties request to the IUT with the Image Handle\nparameter set to one of the handles retrieved during the setup of the initial condition.\n2. Upon receipt of a GetImageProperties request from the Lower Tester, the IUT issues an\nappropriate GetImageProperties response message containing an image-properties object.\n3. Repeat Steps 1 and 2 until the IUT returns an image-properties object indicating an image in a\nformat other than the native and the mandatory imaging thumbnail. The image-properties object\nfor the image at least contains a non-empty variant element with at least <variant\nencoding=“JPEG” pixel=“200*200” /> and another variant (for example, <variant encoding=“GIF”\npixel =“640*420” />) that is different from the native image.\n4. The Lower Tester issues a GetImage request to the IUT with the Image Handle parameter\ncorresponding to the image identified from Step 3 and an Image Descriptor parameter describing\na non-thumbnail image variant.\n5. Upon receipt of a GetImage request from the Lower Tester, the IUT issues an appropriate\nGetImage response message.\nan image with a\nvariant-image\nthat is not a\ndiscovered\nUse image\nwith variant\na thumbnail\n|Lower Tester|Col2|Col3|\n|---|---|---|\n||||\n||OBEX connection wh<br>AVCTP control<br>AVCTP browsing conn<br>Valid image handles f|OBEX connection wh<br>AVCTP control<br>AVCTP browsing conn<br>Valid image handles f|\n|loop|GET Request: GetImageProperties||\n|loop|<br>(Image handle)<br>GET Response: Success|<br>(Image handle)<br>GET Response: Success|\n|loop|(Imaging properties object)|(Imaging properties object)|\n|ge<br>   not<br>{|GET Request: GetImage|GET Request: GetImage|\n|ge<br>   not<br>{|(Image handle, image descriptor)<br>GET Response: Success|(Image handle, image descriptor)<br>GET Response: Success|\n||||', 'Expected Outcome': 'Pass verdict\nThe IUT responds to the GetImageProperties requests from the Lower Tester.\nThe IUT responds to the GetImage request from the Lower Tester with a non-thumbnail format\nImage.\n\nNotes:\nThe IUT will make sure that the variant is offered in at least one format other than the native one or\nthe mandatory imaging thumbnail. For IUTs that support only the mandatory imaging thumbnail\nformat, this test does not apply.'}
+
+
+
+IDX = 124
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly respond to requests for the thumbnail format of the available images.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control channel between the IUT and the Lower Tester is established.\n   - If the Lower Tester uses GetItemAttributes (ALT 1), the browsing channel between the IUT and\nthe Lower Tester is established.\n   - There is an active Cover Art OBEX connection where the Lower Tester is the OBEX client and\nthe IUT is the OBEX server.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has successfully retrieved a Cover Art Image Handle by using either of the\nfollowing methods:\n         - ALT 1: The Lower Tester issues a SetBrowsedPlayer command to the player specified in\nthe IXIT [6] as the browsable player. The Lower Tester issues the GetItemAttributes or\nGetFolderItems commands to the IUT. At least one item with Cover Art is available in the\ndefault folder on the Browsed Player at the IUT.\n         - ALT 2: An item with Cover Art is playing on the default Addressed Player at the IUT. The\nLower Tester issues the GetElementAttributes command to the IUT.', 'Test Procedure': '1. The Lower Tester issues a GetImage request to the IUT, with the Image Handle parameter set to\none of the handles retrieved during the setup of the initial condition, and an Image Descriptor\nparameter describing the thumbnail format.\n2. Upon receipt of a GetImage request from the Lower Tester, the IUT issues an appropriate\nGetImage response message.', 'Expected Outcome': 'Pass verdict\nThe IUT responds to the GetImage request from the Lower Tester with a Thumbnail Image.'}
+
+
+
+IDX = 125
+
+
+
+{'Test Purpose': 'Verify that the IUT can correctly respond to requests for thumbnails.', 'Initial Condition': '- One ACL connection exists between the IUT and the Lower Tester.\n   - The AVCTP control channel between the IUT and the Lower Tester is established.\n   - If the Lower Tester uses GetItemAttributes or GetFolderItems (both ALT 1), the browsing channel\nbetween the IUT and the Lower Tester is established.\n   - There is an active Cover Art OBEX connection where the IUT is the OBEX server and the Lower\nTester is the OBEX client.\n   - The IUT is acting as AVRCP TG role in category 1.\n   - The Lower Tester has successfully retrieved a Cover Art Image Handle by using either of the\nfollowing methods:\n         - ALT 1: The Lower Tester issues a SetBrowsedPlayer command to the player specified in\nthe IXIT [6] as the browsable player. The Lower Tester issues the GetItemAttributes or\nGetFolderItems commands to the IUT. At least one item with Cover Art is available in the\ndefault folder on the Browsed Player at the IUT.\n         - ALT 2: An item with Cover Art is playing on the default Addressed Player at the IUT. The\nLower Tester issues the GetElementAttributes command to the IUT.', 'Test Procedure': '1. The Lower Tester issues a GetLinkedThumbnail request to the IUT with the Image Handle\nparameter set to the handle retrieved during the setup of the initial condition.\n2. Upon receipt of a GetLinkedThumbnail request from the Lower Tester, the IUT issues an\nappropriate GetLinkedThumbnail response message.\n|Lower Tester IUT Upper Tester<br>OBEX connection where IUT is server<br>AVCTP control connection<br>AVCTP browsing connection (ALT 1 only)<br>A valid image handle must exist<br>GET Request: GetLinkedThumbnail<br>(Image handle)<br>GET Response: Success<br>(Thumbnail Image)|Col2|\n|---|---|\n|||', 'Expected Outcome': 'Pass verdict\nThe IUT responds to the GetLinkedThumbnail request from the Lower Tester with a Thumbnail\nImage.'}
+
+
+
+IDX = 126
+
+
+
+{'Test Purpose': 'TG: Verify that the CT is able to correctly browse the folder on a player that is not the currently\naddressed player as requested by the CT.', 'Initial Condition': '- A connection for control is established.\n   - Multiple Players are available on the TG with at least one Player supporting Browsing.', 'Test Procedure': 'Initiate the action on the CT to select a Player as the currently addressed one, e.g., by playing a\ntrack. Then browse into a Player different from that addressed Player.\n\nTest Condition:\nThere is a Player available on the TG that supports browsing and the OnlyBrowsableWhenAddressed\nbit is not set in the Player Feature bitmask.', 'Expected Outcome': 'Pass verdict\nThe CT is able to retrieve the media content of the browsed Player on the TG as requested.'}
+
+
+

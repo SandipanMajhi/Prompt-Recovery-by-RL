@@ -1,14 +1,21 @@
 import re
+import uuid
+import random
 import json
 from typing import List
-from utils.generate import OClientModel, OModelConfig
+from utils.generate import OClientModel, OModelConfig, OClientModelv2
+from typing import Union, List
+import evaluate
     
 ######################### Reward Functions ###########################
 
 class RewardFuncs:
     def __init__(self, ollama_model : OClientModel, ollama_config : OModelConfig):
+       
+
         self.ollama_model = ollama_model
         self.ollama_config = ollama_config
+       
 
     
     def extract_xml_tag(self, text : str, tag : str):
@@ -189,4 +196,229 @@ class RewardFuncs:
             rewards.append(reward_)
 
         return rewards
+
+
+
+class RewardFuncsv2(RewardFuncs):
+    def __init__(self, 
+                 ollama_model : Union[OClientModel, OClientModelv2], 
+                 ollama_config : OModelConfig,
+                 think_length_threshold : int = 150,
+                 output_length_threshold : int = 150,  
+                 tags : List[str] = None):
+        super().__init__(ollama_model, ollama_config)
+
+        if tags is None:
+            self.tags = ["Test Purpose", 
+                    "Initial Condition", 
+                    "Test Procedure", 
+                    "Expected Outcome"]
+        else:
+            self.tags = tags
+
+        self.think_length_threshold = think_length_threshold
+        self.output_length_threshold = output_length_threshold
+
+        self.experiment_id = uuid.uuid4()
+        self.rouge_scorer = evaluate.load("rouge", experiment_id=self.experiment_id)
+
+
+
+    def extract_xml_tag(self, text : str, tag : str):
+        text = text.split(f"<{tag}>")[-1]
+        text = text.split(f"</{tag}>")[0]
+        return text.strip()
+    
+    def gold_testcase_parser(self, text : str):
+        headers = ["Test Purpose", "Initial Condition", "Test Procedure", "Expected Outcome"]
+        pattern = "|".join(headers)
+        regex_pattern = rf"({pattern}):\s*(.*?)(?=\n(?:{'|'.join(headers)}):|$)"
+        matches = re.findall(regex_pattern, text, re.DOTALL)
+        extracted_data = {header.strip(): content.strip() for header, content in matches}
+        return extracted_data
+    
+
+    def response_parser(self, text : str):
+        pattern = r"### (.*?):\s*(.*?)(?=###|$)"
+        matches = re.findall(pattern, text, re.DOTALL)
+        parsed_data = {header.strip(): content.strip() for header, content in matches}
+        return parsed_data
+    
+    def output_length_reward(self, completions, **kwargs):
+        completions = [self.extract_xml_tag(completion[0]["content"], tag="output") for completion in completions]
+        rewards = []
+
+        for out_response in completions:
+            if len(out_response.split()) > self.output_length_threshold:
+                rewards.append(2.0)
+            else:
+                rewards.append(-1.0)
+
+        return rewards
+
+        
+    
+    def think_length_reward(self, completions, **kwargs):
+        completions = [self.extract_xml_tag(completion[0]["content"], tag="think") for completion in completions]
+
+        rewards = []
+
+        for out_response in completions:
+            if len(out_response.split()) > self.output_length_threshold:
+                rewards.append(2.0)
+            else:
+                rewards.append(-1.0)
+
+        return rewards
+    
+
+
+    def answer_format_reward(self, completions, item, references, features, name,  **kwargs):
+
+        def create_prompt(completion : str, 
+                          ref_ :str, 
+                          feat_ : str, 
+                          name_ : str,
+                          item_ : str):
             
+            modified_prefix_prompt = f"""{completion}
+Reference: {ref_}
+
+Item: {item_}
+Feature: {feat_}
+Test Case Name: {name_}"""
+            
+            return modified_prefix_prompt
+
+        completions = [self.extract_xml_tag(completion[0]["content"], tag="output") for completion in completions]
+        # print(f"Completions = {completions}", flush = True)
+        completions = [create_prompt(completion, ref_, feat_, name_, item_) for completion, ref_, feat_, item_, name_ in zip(completions, references, features, item, name)]
+
+        responses = [self.ollama_model(completion, **self.ollama_config.__dict__).response for completion in completions]
+        self.ollama_responses = [response for response in responses]
+        # print(f"Ollama Responses = {self.ollama_responses}", flush = True)
+
+        rewards = []
+        for response in self.ollama_responses:
+            if len(response) == 0:
+                rewards.append(0.0)
+            else:
+
+                rewards.append(2.0)
+
+        return rewards
+    
+
+    def section_presence_reward(self, completions, item, references, features, name, **kwargs):
+        parsed_responses = [self.response_parser(response) for response in self.ollama_responses]
+
+        rewards = []
+        for response in parsed_responses:
+            if len(response) == len(self.tags) and all([key in response for key in self.tags]):
+                rewards.append(2.0)
+            else:
+                rewards.append(-1.0)
+
+        return rewards
+    
+    def sectionwise_overlap_reward(self, completions, testcase, **kwargs):
+        parsed_responses = [self.response_parser(response) for response in self.ollama_responses]
+        testcase = [self.gold_testcase_parser(tc_) for tc_ in testcase]
+
+        rewards = []
+        for response, gold_tc in zip(parsed_responses, testcase):
+            if len(response) == len(self.tags):
+                all_scores = []
+                for tag in self.tags:
+                    if tag in response and tag in gold_tc:
+                        overlap_score = self.rouge_scorer.compute(predictions = [response[tag]], references= [gold_tc])["rougeL"]
+                        all_scores.append(overlap_score)
+                    else:
+                        all_scores.append(0.0)
+
+                rewards.append(sum(all_scores))
+                    
+            else:
+                rewards.append(0.0)
+
+        return rewards
+
+
+    def keyword_overlap_reward(self, completions, testcase, **kwargs):
+
+        def _compare(key_info_1 : List[str], key_info_2 : List[str]):
+            """
+                key_info_2 has to be reference
+            """
+
+            counts = 0
+
+            for key_2 in key_info_2:
+                for key_1 in key_info_1:
+                    if self.rouge_scorer.compute(predictions = [key_1.lower()], references= [key_2.lower()] )["rougeL"] >= 0.5 : 
+                        counts += 1
+                        break
+
+            return counts / len(key_info_2)
+        
+ 
+        def generate_keys(tc_ : str, num_trials : int = 1):
+            prompt = f"""Given the following test case find out the key information.
+A key information is a very short span (3-6 words) from the text which are very important factually. You must produce the list of key information in comma separated format only.
+
+Output format: key1, key2, key3, key4 ... 
+
+Test Case: {tc_}
+
+Only output your key information in the prescribed format and nothing else."""
+            
+            all_outputs = []
+        
+            for _ in range(num_trials):
+                config = OModelConfig(temperature=0.7, seed = random.randint(0, 34556))
+                # config = OModelConfig(temperature=0.7, seed = random.randint(0, 34556), think="low")
+                output = self.ollama_model(prompt, **config.__dict__).response
+                output = output.split(",")
+                output = [out.strip() for out in output]
+
+                all_outputs.extend(output)
+
+            all_outputs = list(set(all_outputs))
+            return all_outputs
+
+        parsed_responses = [self.response_parser(response) for response in self.ollama_responses]
+        parsed_responses = [(response, tc_) for response, tc_ in zip(parsed_responses, testcase)]
+
+        rewards = []
+
+        for gen_response, gold_tc_ in parsed_responses:
+            generated_keys = generate_keys(gen_response)
+            gold_keys = generate_keys(gold_tc_)
+            comparison_reward = _compare(generated_keys, gold_keys)
+            rewards.append(comparison_reward * 2.0)
+
+        return rewards
+    
+
+    def special_token_reward(self, completions, **kwargs):
+        completions  = [completion[0]["content"] for completion in completions]
+
+        rewards = []
+        for response in completions:
+            reward = 0.0
+
+            if "<think>" in response:
+                reward += 0.5
+
+            if "</think>" in response:
+                reward += 0.5
+
+            if "<output>" in response:
+                reward += 0.5
+
+            if "</output>" in response:
+                reward += 0.5
+
+            rewards.append(reward)
+
+        return rewards
