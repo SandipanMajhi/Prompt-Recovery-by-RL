@@ -23,43 +23,85 @@ def main():
     model_config = OModelConfig()
     # model_config = OModelConfig(think="low")
 
-    system_prompt = """A conversation between User and Assistant. The user gives a task, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user
-with the output. The reasoning process must be enclosed within <think> </think> tags and the output must be enclosed within <output> </output> tags, i.e., the format should be,
-<think>
-reasoning process here.
-</think>
-<output>
-output here 
-</output>"""
-        
+#     system_prompt = """A conversation between User and Assistant. The user gives a task, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user
+# with the output. The reasoning process must be enclosed within <think> </think> tags and the output must be enclosed within <output> </output> tags, i.e., the format should be,
+# <think>
+# reasoning process here.
+# </think>
+# <output>
+# output here 
+# </output>"""
+
+    system_prompt = """A conversation between User and Assistant. The user gives a task, and the Assistant solves it.
+The assistant first thinks about the reasoning process in the mind and then provides the user with the output. 
+The reasoning process must be enclosed within <think> </think> tags and the output must be enclosed within <output> </output> tags.
+
+### Role
+You are an expert Prompt Engineer specializing in Bluetooth QA and Test Automation. 
+
+### Objective
+Your goal is to optimize the provided "Base Task Prompt" into a "Refined Prompt Prefix." 
+The refined version must elicit high-quality, technically rigorous Bluetooth test cases while maintaining the requested output format.
+
+### Strict Constraints
+1. NO few-shot examples (no sample features or test names).
+2. NO arbitrary data or reference items.
+3. The refined prompt MUST instruct the model to use the specific sections: Test Purpose, Initial Condition, Test Procedure, and Expected Outcome.
+4. Output ONLY the refined prompt prefix inside the <output> tags.
+"""
     base_task_prompt = """You are an advanced Prompt Engineering Assistant specializing in QA Engineering and Test Automation specializing in Bluetooth.
-Your primary goal is to analyze a given base prompt prefix and generate a new refined prompt prefix that aims to elicit a proper test case for the feature. You only have to generate the refined prefix prompt. 
-Please do not generate any few-shot examples with arbitrary reference, feature, test case name and items. 
+Your primary goal is to analyze the following base prompt and generate a refined prefix prompt. 
 
-Constraints:
-- Do not generate any few-shot examples.
-- Do not provide reference, feature, test case name and items.
-- Output ONLY the refined prompt prefix.
-
-Base Task prompt prefix: Given the following feature, test case name, item and references you have to design testcases for it. 
+---
+Base Task Prompt Prefix:
+Given the following feature, test case name, item and references you have to design testcases for it. 
 Your test case must have the following sections section title, Test Purpose, Initial Condition, Test Procedure and Expected Outcome.
 
-Output Format:
+You must produce your test case in the following format.
 ### Test Purpose:
-<content>
+<test purpose content>
 
 ### Initial Condition:
-<content>
+<initial condition content>
 
 ### Test Procedure:
-<content>
+<test procedure content>
 
 ### Expected Outcome:
-<content>
+<expected outcome content>
 
 Only output your test case in the above output format with sections mentioned in markdown format and nothing else.
+---"""
+        
+#     base_task_prompt = """You are an advanced Prompt Engineering Assistant specializing in QA Engineering and Test Automation specializing in Bluetooth.
+# Your primary goal is to analyze a given base prompt and generate a new refined prompt that aims to elicit a proper test case for the feature. You only have to generate the refined prefix prompt. 
+# Please do not generate any few-shot examples with arbitrary reference, feature, test case name and items. 
 
-New Refined Prompt Prefix:"""
+# Constraints:
+# - Do not generate any few-shot examples.
+# - Do not provide reference, feature, test case name and items.
+# - Your Prompt must provide the output format similar to the base prompt.
+# - Output ONLY the refined prompt prefix.
+
+# Base Task prompt prefix: Given the following feature, test case name, item and references you have to design testcases for it. 
+# Your test case must have the following sections section title, Test Purpose, Initial Condition, Test Procedure and Expected Outcome.
+
+# You must produce your test case in the following format.
+# ### Test Purpose:
+# <test purpose content>
+
+# ### Initial Condition:
+# <initial condition content>
+
+# ### Test Procedure:
+# <test procedure content>
+
+# ### Expected Outcome:
+# <expected outcome content>
+
+# Only output your test case in the above output format with sections mentioned in markdown format and nothing else.
+
+# New Refined Prompt Prefix:"""
 
     
     rewards = RewardFuncsv2(ollama_model = model, ollama_config=model_config)

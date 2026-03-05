@@ -294,7 +294,7 @@ Parameters:
     
     def __init__(
         self,
-        exp_name = 'main_runner',
+        exp_name = 'main_inference',
         run_name = '',
         seed = 3407,
         log_with = None,

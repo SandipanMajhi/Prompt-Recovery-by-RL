@@ -13,10 +13,10 @@ CUDA_VISIBLE_DEVICES=1 nohup python main_runner.py \
 
 CUDA_VISIBLE_DEVICES=1 nohup python main_inference.py \
     --policy_model_name meta-llama/Llama-3.1-8B-Instruct \
-    --lora_adapter_path Models/prl_model_500.mdl \
+    --lora_adapter_path Outputs/prompt_optim_v1/checkpoint-200 \
     --ollama_model_name llama3.1:8b \
-    --port 11434 \
-    > prompt_optim_comp.log &
+    --port 11435 \
+    > prompt_optim_comp_2.log &
 
 
 CUDA_VISIBLE_DEVICES=1 nohup python test_deepseek_ocr.py \
@@ -42,5 +42,5 @@ nohup python generate_mozilla_references.py > mozilla_1_builder.log &
 
 
 #### Prompt Optim Training ####
-CUDA_VISIBLE_DEVICES=1 nohup python main_runner.py > prompt_optim_test.log &
+CUDA_VISIBLE_DEVICES=0 nohup python main_runner.py > prompt_optim_test.log &
 
