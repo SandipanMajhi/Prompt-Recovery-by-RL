@@ -1,5 +1,15 @@
 # Prompt-Recovery-by-RL
 
+## Combined Data
+```
+  import datasets
+  from datasets import load_from_disk
+
+  testcase_data = load_from_disk("Datasets/Testcase_Generation_Data")
+  train_data = testcase_data["train"]
+  test_data = testcase_data["test]
+```
+
 ## Generation Workflow 
 
 Inputs : Features, Sub Features, References, Item, High Level Test Case (May be ignore this)  
