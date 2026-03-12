@@ -17,6 +17,10 @@
     "source": {
       "dtype": "string",
       "_type": "Value"
+    },
+    "requirement_specification": {
+      "dtype": "string",
+      "_type": "Value"
     }
   },
   "homepage": "",

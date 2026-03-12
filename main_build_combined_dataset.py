@@ -41,51 +41,47 @@ def testcase_to_str(testcase : dict):
     return output
 
 
+# Maps each dataset path to its requirement specification label
+BLUETOOTH_SPEC_MAP = {
+    "Datasets/Generic_Extractions/AVRCP/bluetooth_1.hf": "AVRCP Specification",
+    "Datasets/Generic_Extractions/BAP/bluetooth_2.hf":   "BAP Specification",
+    "Datasets/Generic_Extractions/HFP/bluetooth_3.hf":   "HFP Specification",
+}
+
+MOZILLA_SPEC_MAP = {
+    "Datasets/Generic_Extractions/Mozilla_R1/Mozilla_R1.hf": "Mozilla Bookmarks Specification",
+    "Datasets/Generic_Extractions/Mozilla_R2/Mozilla_R2.hf": "Mozilla Themes Specification",
+    "Datasets/Generic_Extractions/Mozilla_R3/Mozilla_R3.hf": "Mozilla Password Manager Specification",
+    "Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4.hf": "Mozilla Browser History Specification",
+}
+
+
 if __name__ == "__main__":
-    augmented_dataset = defaultdict(list)
     combined_dataset_path = "Datasets/Testcase_Generation_Data.hf"
-
-
-    bluetooth_paths = ["Datasets/Generic_Extractions/AVRCP/bluetooth_1.hf",
-                        "Datasets/Generic_Extractions/BAP/bluetooth_2.hf",
-                        "Datasets/Generic_Extractions/HFP/bluetooth_3.hf"
-                        ]
-    
-    mozilla_paths = [
-        "Datasets/Generic_Extractions/Mozilla_R1/Mozilla_R1.hf",
-        "Datasets/Generic_Extractions/Mozilla_R2/Mozilla_R2.hf",
-        "Datasets/Generic_Extractions/Mozilla_R3/Mozilla_R3.hf",
-        "Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4.hf"
-    ]
-
-    bluetooth_datasets = concatenate_datasets([load_from_disk(path) for path in bluetooth_paths])
-    mozilla_datasets = concatenate_datasets([load_from_disk(path) for path in mozilla_paths])
-
-    print(bluetooth_datasets)
-    print(mozilla_datasets)
 
     augmented_samples = defaultdict(list)
 
-    for idx in tqdm(range(len(bluetooth_datasets))):
-        augmented_samples["references"].append(bluetooth_datasets[idx]["references"])
-        augmented_samples["testcase"].append(bluetooth_datasets[idx]["testcase"])
-        augmented_samples["feature"].append(f"{bluetooth_datasets[idx]["name"]} {bluetooth_datasets[idx]["feature"]}")
-        augmented_samples["source"].append("bluetooth")
+    # --- Bluetooth datasets ---
+    for path, spec_label in BLUETOOTH_SPEC_MAP.items():
+        dataset = load_from_disk(path)
+        for idx in tqdm(range(len(dataset)), desc=f"Processing {spec_label}"):
+            augmented_samples["references"].append(dataset[idx]["references"])
+            augmented_samples["testcase"].append(dataset[idx]["testcase"])
+            augmented_samples["feature"].append(f"{dataset[idx]['name']} {dataset[idx]['feature']}")
+            augmented_samples["source"].append("bluetooth")
+            augmented_samples["requirement_specification"].append(spec_label)
 
-
-    for idx in tqdm(range(len(mozilla_datasets))):
-        augmented_samples["references"].append(reference_to_str(mozilla_datasets[idx]["reference"]))
-        augmented_samples["testcase"].append(testcase_to_str(mozilla_datasets[idx]["testcase"]))
-        augmented_samples["feature"].append(f"{mozilla_datasets[idx]["feature"]} {mozilla_datasets[idx]["sub_feature"]}".strip())
-        augmented_samples["source"].append("mozilla")
+    # --- Mozilla datasets ---
+    for path, spec_label in MOZILLA_SPEC_MAP.items():
+        dataset = load_from_disk(path)
+        for idx in tqdm(range(len(dataset)), desc=f"Processing {spec_label}"):
+            augmented_samples["references"].append(reference_to_str(dataset[idx]["reference"]))
+            augmented_samples["testcase"].append(testcase_to_str(dataset[idx]["testcase"]))
+            augmented_samples["feature"].append(f"{dataset[idx]['feature']} {dataset[idx]['sub_feature']}".strip())
+            augmented_samples["source"].append("mozilla")
+            augmented_samples["requirement_specification"].append(spec_label)
 
     augmented_samples = datasets.Dataset.from_dict(augmented_samples)
     augmented_samples = augmented_samples.train_test_split(test_size=0.3, seed=42)
 
     augmented_samples.save_to_disk(combined_dataset_path)
-
-    
-
-
-    
-

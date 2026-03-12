@@ -39,7 +39,8 @@ if __name__ == "__main__":
     samples = load_from_disk("Datasets/Testcase_Generation_Data.hf")
 
     print(samples)
-    print(samples["train"][0])
+    print(samples["train"]["source"][:10])
+    print(samples["train"]["testcase"][:10])
     
     # for idx in tqdm(range(len(samples))):
     #     print(f"IDX = {idx}")
