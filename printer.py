@@ -36,10 +36,10 @@ if __name__ == "__main__":
     # print(samples["test_cases_ids"][id])
 
     # samples = load_from_disk("Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4_GPT_OSS_20b_references.hf")
-    samples = load_from_disk("Datasets/Generic_Extractions/AVRCP/bluetooth_1.hf")
+    samples = load_from_disk("Datasets/Testcase_Generation_Data")
 
     print(samples)
-    print(samples[0])
+    print(samples["train"][0])
     
     # for idx in tqdm(range(len(samples))):
     #     print(f"IDX = {idx}")

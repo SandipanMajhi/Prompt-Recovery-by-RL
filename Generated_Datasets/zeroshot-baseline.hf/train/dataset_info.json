@@ -17,6 +17,10 @@
     "source": {
       "dtype": "string",
       "_type": "Value"
+    },
+    "generated_testcase": {
+      "dtype": "string",
+      "_type": "Value"
     }
   },
   "homepage": "",

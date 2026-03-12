@@ -2,6 +2,10 @@
   "citation": "",
   "description": "",
   "features": {
+    "references": {
+      "dtype": "string",
+      "_type": "Value"
+    },
     "testcase": {
       "dtype": "string",
       "_type": "Value"

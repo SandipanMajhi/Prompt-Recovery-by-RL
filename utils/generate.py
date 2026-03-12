@@ -9,7 +9,7 @@ import torch
 import requests
 import re
 import ollama
-from ollama import chat
+from ollama import chat, Client
 from typing import Union
 import os
 import json
@@ -107,9 +107,11 @@ class OModel:
 class OClientModelv2:
     def __init__(self, model_name : str, port : str):
         self.model_name = model_name
+        self.port = port
+        self.client = Client(host=f'http://localhost:{port}')
     
     def __call__(self, prompt : str, **kwargs):
-        response = chat(
+        response = self.client.chat(
             model=self.model_name,
             messages=[
                 {"role": "user", "content": prompt}

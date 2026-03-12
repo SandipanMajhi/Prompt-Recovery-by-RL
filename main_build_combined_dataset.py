@@ -43,7 +43,7 @@ def testcase_to_str(testcase : dict):
 
 if __name__ == "__main__":
     augmented_dataset = defaultdict(list)
-    combined_dataset_path = "Datasets/Testcase_Generation_Data"
+    combined_dataset_path = "Datasets/Testcase_Generation_Data.hf"
 
 
     bluetooth_paths = ["Datasets/Generic_Extractions/AVRCP/bluetooth_1.hf",
@@ -75,11 +75,11 @@ if __name__ == "__main__":
 
     for idx in tqdm(range(len(mozilla_datasets))):
         augmented_samples["references"].append(reference_to_str(mozilla_datasets[idx]["reference"]))
-        augmented_dataset["testcase"].append(testcase_to_str(mozilla_datasets[idx]["testcase"]))
-        augmented_dataset["feature"].append(f"{mozilla_datasets[idx]["feature"]} {mozilla_datasets[idx]["sub_feature"]}".strip())
-        augmented_dataset["source"].append("mozilla")
+        augmented_samples["testcase"].append(testcase_to_str(mozilla_datasets[idx]["testcase"]))
+        augmented_samples["feature"].append(f"{mozilla_datasets[idx]["feature"]} {mozilla_datasets[idx]["sub_feature"]}".strip())
+        augmented_samples["source"].append("mozilla")
 
-    augmented_samples = datasets.Dataset.from_dict(augmented_dataset)
+    augmented_samples = datasets.Dataset.from_dict(augmented_samples)
     augmented_samples = augmented_samples.train_test_split(test_size=0.3, seed=42)
 
     augmented_samples.save_to_disk(combined_dataset_path)
