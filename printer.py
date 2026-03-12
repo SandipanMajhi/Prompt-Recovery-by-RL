@@ -36,7 +36,7 @@ if __name__ == "__main__":
     # print(samples["test_cases_ids"][id])
 
     # samples = load_from_disk("Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4_GPT_OSS_20b_references.hf")
-    samples = load_from_disk("Datasets/Testcase_Generation_Data")
+    samples = load_from_disk("Datasets/Testcase_Generation_Data.hf")
 
     print(samples)
     print(samples["train"][0])
