@@ -1,4 +1,5 @@
 import datasets
+from Configurations.fewshot_prompt import FEW_SHOT_PROMPT
 from tqdm import tqdm
 from collections import defaultdict
 from utils.generate import OClientModelv2, OModelConfig
@@ -8,39 +9,19 @@ from datasets import load_from_disk, Dataset
 if __name__ == "__main__":
 
     model_name = "gpt_oss_20b_20k_ctx:latest"
-    model_port = "11435"
+    model_port = "11434"
 
     model = OClientModelv2(model_name=model_name, port=model_port)
     model_config = OModelConfig(think="low", temperature=0.7)
 
-    dataset_save_path = "Generated_Datasets/zeroshot-baseline.hf"
+    dataset_save_path = "Generated_Datasets/fewshot-baseline.hf"
 
     test_predictions = defaultdict(list)
     train_predictions = defaultdict(list)
 
     data = load_from_disk("Datasets/Testcase_Generation_Data.hf")
 
-    prompt = """Given the following feature, item and references you have to design testcases for it.
-Your test case must have the following sections section title, Test Purpose, Initial Condition, Test Procedure and Expected Outcome.
-
-You must produce your test case in the following format.
-### Test Purpose:
-<test purpose content>
-
-### Initial Condition:
-<initial condition content>
-
-### Test Procedure:
-<test procedure content>
-
-### Expected Outcome:
-<expected outcome content>
-
-Only output your test case in the above output format with sections mentioned in markdown format and nothing else.
-
----
-
-Now, given the feature, item and references provided below, generate a new test case strictly following the format above."""
+    prompt = FEW_SHOT_PROMPT
 
     train_data = data["train"]
     test_data = data["test"]

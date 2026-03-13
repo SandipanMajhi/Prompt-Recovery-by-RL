@@ -1,0 +1,28 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "references": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "testcase": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "feature": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "source": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "generated_testcase": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

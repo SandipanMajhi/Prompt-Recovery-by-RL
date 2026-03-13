@@ -40,7 +40,9 @@ if __name__ == "__main__":
 
     print(samples)
     print(samples["train"]["source"][:10])
-    print(samples["train"]["testcase"][:10])
+    print(samples["train"]["feature"][:10])
+    print(samples["train"]["requirement_specification"][:10])
+    print(samples["train"]["source"][:10])
     
     # for idx in tqdm(range(len(samples))):
     #     print(f"IDX = {idx}")

@@ -1,4 +1,4 @@
-FEW_SHOT_PROMPT = """Given the following feature and references you have to design testcases for it.
+FEW_SHOT_PROMPT = """Given the following feature, item and references you have to design testcases for it.
 Your test case must have the following sections section title, Test Purpose, Initial Condition, Test Procedure and Expected Outcome.
 
 You must produce your test case in the following format.
@@ -23,8 +23,7 @@ Below are examples of well-formed test cases. Study their structure, tone, and l
 
 ## Example 1 (Bluetooth – TG Role, Simple Command Verification)
 
-Feature: AVRCP Media Player Selection
-Test Case Name: PlayerFeatureBitmask – TG
+Feature and Test Case Name: AVRCP Media Player Selection PlayerFeatureBitmask – TG
 Item: Bluetooth
 References: AVRCP Specification
 
@@ -48,8 +47,7 @@ The features announced in each Media Player's feature bitmask are according to t
 
 ## Example 2 (Bluetooth – TG Role, Invalid Parameter Handling)
 
-Feature: AVRCP Player Application Settings
-Test Case Name: SetAddressedPlayer – TG
+Feature and Test Case Name: AVRCP Player Application Settings SetAddressedPlayer – TG
 Item: Bluetooth
 References: AVRCP Specification
 
@@ -73,8 +71,7 @@ The IUT responds with an 'Invalid Player Id' status response.
 
 ## Example 3 (Bluetooth – CT Role, Multi-Step Procedure)
 
-Feature: AVRCP Media Browsing
-Test Case Name: GetTotalNumberOfItems – CT
+Feature and Test Case Name: AVRCP Media Browsing GetTotalNumberOfItems – CT 
 Item: Bluetooth
 References: AVRCP Specification
 
@@ -98,8 +95,7 @@ The IUT issues a GetTotalNumberOfItems command to the Lower Tester with the scop
 
 ## Example 4 (Bluetooth – CT Role, Invalid Response Behavior)
 
-Feature: AVRCP Absolute Volume Control
-Test Case Name: SetAbsoluteVolume invalid behavior – CT
+Feature and Test Case Name: AVRCP Absolute Volume Control SetAbsoluteVolume invalid behavior – CT
 Item: Bluetooth
 References: AVRCP Specification
 
@@ -124,8 +120,7 @@ The IUT ignores the top bit (bit 7) and considers only the lower seven bits for 
 
 ## Example 5 (Mozilla – Browser Session History Verification)
 
-Feature: Browser Session History
-Test Case Name: Session History Go Menu List Verification
+Feature and Test Case Name: Browser Session History Session History Go Menu List Verification
 Item: Mozilla
 References: Mozilla QA Browser Front-End Test Cases
 
@@ -155,5 +150,5 @@ In all steps, the currently visited page is checked off in the Go menu list.
 
 ---
 
-Now, given the feature and references provided below, generate a new test case strictly following the format above.
+Now, given the feature, item and references provided below, generate a new test case strictly following the format above.
 """

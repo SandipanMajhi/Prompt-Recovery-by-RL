@@ -67,7 +67,7 @@ if __name__ == "__main__":
         for idx in tqdm(range(len(dataset)), desc=f"Processing {spec_label}"):
             augmented_samples["references"].append(dataset[idx]["references"])
             augmented_samples["testcase"].append(dataset[idx]["testcase"])
-            augmented_samples["feature"].append(f"{dataset[idx]['name']} {dataset[idx]['feature']}")
+            augmented_samples["feature"].append(f"{dataset[idx]['feature']} {dataset[idx]['name']}")
             augmented_samples["source"].append("bluetooth")
             augmented_samples["requirement_specification"].append(spec_label)
 

@@ -1,6 +1,6 @@
 Experiment Name: "Zeroshot_Experiments"
 
-dataset_path: "Datasets/Generic_Extractions/AVRCP/bluetooth_1.hf"
+dataset_path: "Datasets/Testcase_Generation_Data.hf"
 
 model_name: "qwen3:14b"
 port: "11434"
