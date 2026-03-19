@@ -57,7 +57,7 @@ MOZILLA_SPEC_MAP = {
 
 
 if __name__ == "__main__":
-    combined_dataset_path = "Datasets/Testcase_Generation_Data_v2.hf"
+    combined_dataset_path = "Datasets/Testcase_Generation_Data_Bluetooth_v2.hf"
 
     augmented_samples = defaultdict(list)
 
@@ -72,14 +72,14 @@ if __name__ == "__main__":
             augmented_samples["requirement_specification"].append(spec_label)
 
     # --- Mozilla datasets ---
-    for path, spec_label in MOZILLA_SPEC_MAP.items():
-        dataset = load_from_disk(path)
-        for idx in tqdm(range(len(dataset)), desc=f"Processing {spec_label}"):
-            augmented_samples["references"].append(reference_to_str(dataset[idx]["reference"]))
-            augmented_samples["testcase"].append(testcase_to_str(dataset[idx]["testcase"]))
-            augmented_samples["feature"].append(f"{dataset[idx]['feature']} {dataset[idx]['sub_feature']}".strip())
-            augmented_samples["source"].append("mozilla")
-            augmented_samples["requirement_specification"].append(spec_label)
+    # for path, spec_label in MOZILLA_SPEC_MAP.items():
+    #     dataset = load_from_disk(path)
+    #     for idx in tqdm(range(len(dataset)), desc=f"Processing {spec_label}"):
+    #         augmented_samples["references"].append(reference_to_str(dataset[idx]["reference"]))
+    #         augmented_samples["testcase"].append(testcase_to_str(dataset[idx]["testcase"]))
+    #         augmented_samples["feature"].append(f"{dataset[idx]['feature']} {dataset[idx]['sub_feature']}".strip())
+    #         augmented_samples["source"].append("mozilla")
+    #         augmented_samples["requirement_specification"].append(spec_label)
 
     augmented_samples = datasets.Dataset.from_dict(augmented_samples)
     augmented_samples = augmented_samples.train_test_split(test_size=0.7, seed=42)
