@@ -7,11 +7,10 @@ CUDA_VISIBLE_DEVICES=1 nohup python main_runner.py \
     --train_steps 500 \
     --max_prompt_len 4196 \
     --max_seq_len 16000 \
-    --output_dir Outputs/prl_model_500_v2 \
-    --beta 0.01 \
+    --output_dir Outputs/prl_model_500_v3 \
     > prl_test.log &
 
-CUDA_VISIBLE_DEVICES=1 nohup python main_inference.py \
+CUDA_VISIBLE_DEVICES=0 nohup python main_inference.py \
     --policy_model_name meta-llama/Llama-3.1-8B-Instruct \
     --lora_adapter_path Outputs/prompt_optim_v1/checkpoint-200 \
     --ollama_model_name llama3.1:8b \
@@ -42,5 +41,5 @@ nohup python generate_mozilla_references.py > mozilla_1_builder.log &
 
 
 #### Prompt Optim Training ####
-CUDA_VISIBLE_DEVICES=0 nohup python main_runner.py > prompt_optim_test.log &
+CUDA_VISIBLE_DEVICES=1 nohup python main_runner.py > prompt_optim_test.log &
 

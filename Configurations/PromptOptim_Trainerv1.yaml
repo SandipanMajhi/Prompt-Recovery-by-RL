@@ -1,4 +1,4 @@
-Experiment Name: "Bluetooth_References_Prompt_Optim"
+Experiment Name: "Prompt_Optim"
 
 ollama_model_name: "llama3.1:8b"
 port: "11434"
@@ -16,4 +16,4 @@ saved_model_name: "Models/prompt_optim_v1.mdl"
 output_dir: "Outputs/prompt_optim_v1/"
 information_path: "Output/prompt_optim_test.json"
 
-data_paths: "Datasets/Generic_Extractions/AVRCP/bluetooth_1.hf"
+data_paths: "Datasets/Testcase_Generation_Data.hf"

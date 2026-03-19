@@ -23,31 +23,26 @@ class PromptOptimDataset(CustomDataset):
         self.seed = 42
 
     def prepare_dataset(self, 
-                        data_paths : Union[List[AnyStr], AnyStr],
+                        data_paths : str,
                         user_prompt : str,
                         system_prompt : str):
 
-        if isinstance(data_paths, list):
-            full_dataset = concatenate_datasets([load_from_disk(paths) for paths in data_paths])
-        else:
-            full_dataset = load_from_disk(data_paths)
-
+        full_dataset = load_from_disk(data_paths)["train"]
         full_dataset = full_dataset.shuffle(seed = self.seed)
+
+        self.num_samples = len(full_dataset)
 
         augmented_samples = defaultdict(list)
         for idx in tqdm(range(self.num_samples)):
-            # user_prompt_ = user_prompt.format(full_dataset["references"][idx],
-            #                                   full_dataset["name"][idx],
-            #                                   full_dataset["feature"][idx])
-
 
             augmented_samples["user_prompt"].append(user_prompt)
             augmented_samples["system_prompt"].append(system_prompt)
-            augmented_samples["name"].append(full_dataset["name"][idx])
+
+            augmented_samples["reference"].append(full_dataset["references"][idx])
+            augmented_samples["feature"].append(full_dataset["feature"][idx])
+            augmented_samples["source"].append(full_dataset["source"][idx])
+            augmented_samples["specification"].append(full_dataset["requirement_specification"][idx])
             augmented_samples["testcase"].append(full_dataset["testcase"][idx])
-            augmented_samples["item"].append(full_dataset["item"][idx])
-            augmented_samples["references"].append(full_dataset["references"][idx])
-            augmented_samples["features"].append(full_dataset["feature"][idx])
 
             augmented_samples["prompt"].append([
                 {"role" : "system", "content" : system_prompt},
@@ -56,10 +51,7 @@ class PromptOptimDataset(CustomDataset):
 
         augmented_samples = datasets.Dataset.from_dict(augmented_samples)
         return augmented_samples
-
-
-        
-
+    
 
 
 

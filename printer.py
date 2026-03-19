@@ -36,13 +36,17 @@ if __name__ == "__main__":
     # print(samples["test_cases_ids"][id])
 
     # samples = load_from_disk("Datasets/Generic_Extractions/Mozilla_R4/Mozilla_R4_GPT_OSS_20b_references.hf")
-    samples = load_from_disk("Datasets/Testcase_Generation_Data.hf")
+    samples = load_from_disk("Datasets/Testcase_Generation_Data_v2.hf")
+    # samples = load_from_disk("Datasets/Generic_Extractions/BAP/bluetooth_2.hf")
 
-    print(samples)
-    print(samples["train"]["source"][:10])
-    print(samples["train"]["feature"][:10])
-    print(samples["train"]["requirement_specification"][:10])
-    print(samples["train"]["source"][:10])
+    # print(samples[3])
+
+    print(samples["train"][3])
+    # print(samples)
+    # print(samples["train"]["references"][10])
+    # print(samples["train"]["feature"][10])
+    # print(samples["train"]["requirement_specification"][10])
+    # print(samples["train"]["source"][10])
     
     # for idx in tqdm(range(len(samples))):
     #     print(f"IDX = {idx}")

@@ -273,26 +273,43 @@ class RewardFuncsv2(RewardFuncs):
     
 
 
-    def answer_format_reward(self, completions, item, references, features, name,  **kwargs):
+    def answer_format_reward(self, completions, feature, source, specification, reference,  **kwargs):
 
         def create_prompt(completion : str, 
                           ref_ :str, 
                           feat_ : str, 
-                          name_ : str,
-                          item_ : str):
+                          source_ : str,
+                          specification_ : str):
+            
+            output_format_prompt = """You must produce your test case in the following format.
+### Test Purpose:
+<test purpose content>
+
+### Initial Condition:
+<initial condition content>
+
+### Test Procedure:
+<test procedure content>
+
+### Expected Outcome:
+<expected outcome content>
+
+Only output your test case in the above output format with sections mentioned in markdown format and nothing else.
+---"""
             
             modified_prefix_prompt = f"""{completion}
-Reference: {ref_}
 
-Item: {item_}
-Feature: {feat_}
-Test Case Name: {name_}"""
+{output_format_prompt}
+            
+Feature and Test Case Name: {feat_}
+Item: {source_}
+References: {specification_}\n\n{ref_}"""
             
             return modified_prefix_prompt
 
         completions = [self.extract_xml_tag(completion[0]["content"], tag="output") for completion in completions]
         # print(f"Completions = {completions}", flush = True)
-        completions = [create_prompt(completion, ref_, feat_, name_, item_) for completion, ref_, feat_, item_, name_ in zip(completions, references, features, item, name)]
+        completions = [create_prompt(completion, ref_, feat_, source_, specification_) for completion, ref_, feat_, source_, specification_ in zip(completions, reference, feature, source, specification)]
 
         responses = [self.ollama_model(completion, **self.ollama_config.__dict__).response for completion in completions]
         self.ollama_responses = [response for response in responses]
@@ -309,7 +326,7 @@ Test Case Name: {name_}"""
         return rewards
     
 
-    def section_presence_reward(self, completions, item, references, features, name, **kwargs):
+    def section_presence_reward(self, completions, **kwargs):
         parsed_responses = [self.response_parser(response) for response in self.ollama_responses]
 
         rewards = []

@@ -43,9 +43,9 @@ def testcase_to_str(testcase : dict):
 
 # Maps each dataset path to its requirement specification label
 BLUETOOTH_SPEC_MAP = {
-    "Datasets/Generic_Extractions/AVRCP/bluetooth_1.hf": "AVRCP Specification",
-    "Datasets/Generic_Extractions/BAP/bluetooth_2.hf":   "BAP Specification",
-    "Datasets/Generic_Extractions/HFP/bluetooth_3.hf":   "HFP Specification",
+    "Datasets/Generic_Extractions/AVRCP/bluetooth_1_v2.hf": "AVRCP Specification",
+    "Datasets/Generic_Extractions/BAP/bluetooth_2_v2.hf":   "BAP Specification",
+    "Datasets/Generic_Extractions/HFP/bluetooth_3_v2.hf":   "HFP Specification",
 }
 
 MOZILLA_SPEC_MAP = {
@@ -57,7 +57,7 @@ MOZILLA_SPEC_MAP = {
 
 
 if __name__ == "__main__":
-    combined_dataset_path = "Datasets/Testcase_Generation_Data.hf"
+    combined_dataset_path = "Datasets/Testcase_Generation_Data_v2.hf"
 
     augmented_samples = defaultdict(list)
 
@@ -82,6 +82,6 @@ if __name__ == "__main__":
             augmented_samples["requirement_specification"].append(spec_label)
 
     augmented_samples = datasets.Dataset.from_dict(augmented_samples)
-    augmented_samples = augmented_samples.train_test_split(test_size=0.3, seed=42)
+    augmented_samples = augmented_samples.train_test_split(test_size=0.7, seed=42)
 
     augmented_samples.save_to_disk(combined_dataset_path)

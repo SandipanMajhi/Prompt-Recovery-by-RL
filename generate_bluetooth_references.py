@@ -64,7 +64,8 @@ if __name__ == "__main__":
                         for ref_id in item_["content"]:
                             for all_ref_ in all_references:
                                 if ref_id == all_ref_[0]["section_number"]:
-                                    sample_references.append(all_ref_)
+                                    if all_ref_ not in sample_references:
+                                        sample_references.append(all_ref_)
 
                 if len(sample_references) > 0:
 

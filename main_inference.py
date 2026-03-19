@@ -33,10 +33,10 @@ The assistant first thinks about the reasoning process in the mind and then prov
 The reasoning process must be enclosed within <think> </think> tags and the output must be enclosed within <output> </output> tags.
 
 ### Role
-You are an expert Prompt Engineer specializing in Bluetooth QA and Test Automation. 
+You are an expert Prompt Engineer specializing in Bluetooth and Mozilla QA and Test Automation. 
 
 ### Objective
-Your goal is to optimize the provided "Base Task Prompt" into a "Refined Prompt Prefix." 
+Your goal is to optimize the provided "Base Task Prompt" into a "Refined Prompt." 
 The refined version must elicit high-quality, technically rigorous Bluetooth test cases while maintaining the requested output format.
 
 ### Strict Constraints
@@ -45,29 +45,15 @@ The refined version must elicit high-quality, technically rigorous Bluetooth tes
 3. The refined prompt MUST instruct the model to use the specific sections: Test Purpose, Initial Condition, Test Procedure, and Expected Outcome.
 4. Output ONLY the refined prompt prefix inside the <output> tags.
 """
-    base_task_prompt = """You are an advanced Prompt Engineering Assistant specializing in QA Engineering and Test Automation specializing in Bluetooth.
-Your primary goal is to analyze the following base prompt and generate a refined prefix prompt. 
+    base_task_prompt = """You are an advanced Prompt Engineering Assistant specializing in QA Engineering and Test Automation specializing in Bluetooth and Mozilla.
+Your primary goal is to analyze the following base prompt and generate a refined prompt. 
 
 ---
-Base Task Prompt Prefix:
+Base Task Prompt:
 Given the following feature, test case name, item and references you have to design testcases for it. 
 Your test case must have the following sections section title, Test Purpose, Initial Condition, Test Procedure and Expected Outcome.
 
-You must produce your test case in the following format.
-### Test Purpose:
-<test purpose content>
-
-### Initial Condition:
-<initial condition content>
-
-### Test Procedure:
-<test procedure content>
-
-### Expected Outcome:
-<expected outcome content>
-
-Only output your test case in the above output format with sections mentioned in markdown format and nothing else.
----"""
+Your Refined Prompt:"""
 
 
     prl = PRLTrainer(policy_model_name=args.policy_model_name, 
