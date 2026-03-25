@@ -1,9 +1,10 @@
 import argparse
 from functools import partial
 from utils.rl_trainer import PRLTrainer
-from utils.prepare_dataset import RLPRLDataset
+from utils.prepare_dataset import PromptOptimDataset
 from utils.generate import OClientModel, OModelConfig
-from utils.rewards import RewardFuncs
+from utils.rewards import RewardFuncsv2
+from tqdm import tqdm
 
 
 if __name__ == "__main__":
@@ -33,7 +34,7 @@ The assistant first thinks about the reasoning process in the mind and then prov
 The reasoning process must be enclosed within <think> </think> tags and the output must be enclosed within <output> </output> tags.
 
 ### Role
-You are an expert Prompt Engineer specializing in Bluetooth and Mozilla QA and Test Automation. 
+You are an expert Prompt Engineer specializing in Bluetooth QA and Test Automation. 
 
 ### Objective
 Your goal is to optimize the provided "Base Task Prompt" into a "Refined Prompt." 
@@ -45,7 +46,7 @@ The refined version must elicit high-quality, technically rigorous Bluetooth tes
 3. The refined prompt MUST instruct the model to use the specific sections: Test Purpose, Initial Condition, Test Procedure, and Expected Outcome.
 4. Output ONLY the refined prompt prefix inside the <output> tags.
 """
-    base_task_prompt = """You are an advanced Prompt Engineering Assistant specializing in QA Engineering and Test Automation specializing in Bluetooth and Mozilla.
+    base_task_prompt = """You are an advanced Prompt Engineering Assistant specializing in QA Engineering and Test Automation specializing in Bluetooth.
 Your primary goal is to analyze the following base prompt and generate a refined prompt. 
 
 ---
@@ -55,6 +56,38 @@ Your test case must have the following sections section title, Test Purpose, Ini
 
 Your Refined Prompt:"""
 
+    output_format_prompt = """You must produce your test case in the following format.
+### Test Purpose:
+<test purpose content>
+
+### Initial Condition:
+<initial condition content>
+
+### Test Procedure:
+<test procedure content>
+
+### Expected Outcome:
+<expected outcome content>
+
+Only output your test case in the above output format with sections mentioned in markdown format and nothing else.
+---"""
+    rewards = RewardFuncsv2(ollama_model = model, ollama_config=config)
+
+    reward_functions = [
+                        rewards.answer_format_reward,
+                        rewards.think_length_reward, 
+                        rewards.output_length_reward,
+                        rewards.section_presence_reward,
+                        rewards.sectionwise_overlap_reward,
+                        rewards.keyword_overlap_reward,
+                        rewards.special_token_reward
+                        ]
+    
+    reward_weights = [1.0] * 7
+
+
+    rl_dataset = PromptOptimDataset(num_samples=20)
+    train_dataset = rl_dataset.prepare_dataset(user_prompt=base_task_prompt, system_prompt=system_prompt, data_paths="Datasets/Testcase_Generation_Data_Bluetooth_v2.hf")
 
     prl = PRLTrainer(policy_model_name=args.policy_model_name, 
                                 lora_rank=int(args.lora_rank),
@@ -71,11 +104,40 @@ Your Refined Prompt:"""
                                                            max_seq_len=int(args.max_seq_len))
 
     sequences = [seq["prompt_with_think"] for seq in generated_sequences]
-    
 
-    for seq in sequences:
-        print(seq)
-        print("\n\n\n")
+    all_sequences = []
+    
+    for seq in tqdm(sequences):
+        completion = [[{"content": seq}]]
+        score = []
+
+        for idx in tqdm(range(len(train_dataset))):
+            testcase = train_dataset["testcase"][idx]
+            specification = train_dataset["specification"][idx]
+            source = train_dataset["source"][idx]
+            feature = train_dataset["feature"][idx]
+            reference = train_dataset["reference"][idx]
+
+            ans_format_reward = rewards.answer_format_reward(completions = completion, feature = feature, source = source, specification=specification, reference=reference)
+            section_presence_reward = rewards.section_presence_reward(completions=completion)
+            section_overlap = rewards.sectionwise_overlap_reward(completions = completion, testcase=testcase)
+
+            score.append(ans_format_reward+section_presence_reward+section_overlap)
+
+        all_sequences.append((seq, score))
+
+    all_sequences = sorted(all_sequences, key = lambda x : x[1] , reverse=True)
+
+    for seq in all_sequences:
+        print(seq[0])
+        print(f"Score = {seq[1]}")
+
+
+
+
+
+
+        
 
 
 

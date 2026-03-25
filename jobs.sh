@@ -15,7 +15,7 @@ CUDA_VISIBLE_DEVICES=0 nohup python main_inference.py \
     --lora_adapter_path Outputs/prompt_optim_v1/checkpoint-200 \
     --ollama_model_name llama3.1:8b \
     --port 11435 \
-    > prompt_optim_comp_2.log &
+    > prompt_optim_comp_3.log &
 
 
 CUDA_VISIBLE_DEVICES=1 nohup python test_deepseek_ocr.py \

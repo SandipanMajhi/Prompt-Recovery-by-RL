@@ -192,7 +192,7 @@ class PRLTrainer:
             for output in outputs:
                 decoded_output = {
                                 "prompt_with_think" : output,
-                                "prompt" : extract_xml_tag(output, tag="prompt")
+                                "prompt" : extract_xml_tag(output, tag="output")
                     }
                 
                 decoded_outputs.append(decoded_output)
@@ -224,7 +224,7 @@ class PRLTrainer:
                 # print(f"\n\n")
                 output = {
                                 "prompt_with_think" : output,
-                                "prompt" : extract_xml_tag(output, tag="prompt")
+                                "prompt" : extract_xml_tag(output, tag="output")
                     }
 
                 decoded_outputs.append(output)
