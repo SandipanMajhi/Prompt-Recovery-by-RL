@@ -43,3 +43,6 @@ nohup python generate_mozilla_references.py > mozilla_1_builder.log &
 #### Prompt Optim Training ####
 CUDA_VISIBLE_DEVICES=1 nohup python main_runner.py > prompt_optim_test.log &
 
+nohup python main_generate_zeroshots.py > zeroshots.log &
+nohup python main_generate_fewshots.py > fewshots.log &
+

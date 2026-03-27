@@ -19,7 +19,7 @@ if __name__ == "__main__":
     parser.add_argument("--lora_rank", type=int, help="Lora Rank", default=64)
     parser.add_argument("--temperature", type = float, default = 0.7)
     parser.add_argument("--top_p", type = float, default = 0.9)
-    parser.add_argument("--num_sequences", type = int, default=50)
+    parser.add_argument("--num_sequences", type = int, default=10)
     parser.add_argument("--seed", type = int, default=42)
 
 
@@ -87,7 +87,7 @@ Only output your test case in the above output format with sections mentioned in
 
 
     rl_dataset = PromptOptimDataset(num_samples=20)
-    train_dataset = rl_dataset.prepare_dataset(user_prompt=base_task_prompt, system_prompt=system_prompt, data_paths="Datasets/Testcase_Generation_Data_Bluetooth_v2.hf")
+    train_dataset = rl_dataset.prepare_dataset(user_prompt=base_task_prompt, system_prompt=system_prompt, data_paths="Datasets/Testcase_Generation_Data_Bluetooth_v2.hf", is_inference=True)
 
     prl = PRLTrainer(policy_model_name=args.policy_model_name, 
                                 lora_rank=int(args.lora_rank),
@@ -122,9 +122,9 @@ Only output your test case in the above output format with sections mentioned in
             section_presence_reward = rewards.section_presence_reward(completions=completion)
             section_overlap = rewards.sectionwise_overlap_reward(completions = completion, testcase=testcase)
 
-            score.append(ans_format_reward+section_presence_reward+section_overlap)
+            score.append(ans_format_reward[0]+section_presence_reward[0]+section_overlap[0])
 
-        all_sequences.append((seq, score))
+        all_sequences.append((seq, sum(score)/len(score)))
 
     all_sequences = sorted(all_sequences, key = lambda x : x[1] , reverse=True)
 

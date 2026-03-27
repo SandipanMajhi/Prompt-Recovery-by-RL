@@ -8,18 +8,18 @@ from datasets import load_from_disk, Dataset
 
 if __name__ == "__main__":
 
-    model_name = "gpt_oss_20b_20k_ctx:latest"
-    model_port = "11434"
+    model_name = "qwen-14b-32k:latest"
+    model_port = "11435"
 
     model = OClientModelv2(model_name=model_name, port=model_port)
-    model_config = OModelConfig(think="low", temperature=0.7)
+    model_config = OModelConfig(temperature=0.7)
 
-    dataset_save_path = "Generated_Datasets/fewshot-baseline.hf"
+    dataset_save_path = "Generated_Datasets/fewshot-baseline_bluetooth_qwen3_14b.hf"
 
     test_predictions = defaultdict(list)
     train_predictions = defaultdict(list)
 
-    data = load_from_disk("Datasets/Testcase_Generation_Data.hf")
+    data = load_from_disk("Datasets/Testcase_Generation_Data_Bluetooth_v2.hf")
 
     prompt = FEW_SHOT_PROMPT
 

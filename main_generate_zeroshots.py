@@ -7,21 +7,25 @@ from datasets import load_from_disk, Dataset
 
 if __name__ == "__main__":
 
-    model_name = "gpt_oss_20b_20k_ctx:latest"
-    model_port = "11435"
+    model_name = "qwen-14b-32k:latest"
+    model_port = "11434"
 
     model = OClientModelv2(model_name=model_name, port=model_port)
-    model_config = OModelConfig(think="low", temperature=0.7)
+    model_config = OModelConfig(temperature=0.7)
 
-    dataset_save_path = "Generated_Datasets/zeroshot-baseline.hf"
+    dataset_save_path = "Generated_Datasets/zeroshot-baseline_bluetooth_qwen3_14b.hf"
 
     test_predictions = defaultdict(list)
     train_predictions = defaultdict(list)
 
-    data = load_from_disk("Datasets/Testcase_Generation_Data.hf")
+    data = load_from_disk("Datasets/Testcase_Generation_Data_Bluetooth_v2.hf")
 
-    prompt = """Given the following feature, item and references you have to design testcases for it.
-Your test case must have the following sections section title, Test Purpose, Initial Condition, Test Procedure and Expected Outcome.
+    prompt = """Given a Bluetooth feature, test case name, item, and references, design test cases that include the following sections:
+
+1. **Test Purpose**: A clear description of the test case's objective and the feature being tested.
+2. **Initial Condition**: The initial state of the system or device before the test is performed.
+3. **Test Procedure**: A step-by-step guide on how to perform the test, including any necessary setup, execution, and observation of the test results.
+4. **Expected Outcome**: The desired result of the test, including any expected error messages, system responses, or other relevant outcomes.
 
 You must produce your test case in the following format.
 ### Test Purpose:
@@ -37,10 +41,7 @@ You must produce your test case in the following format.
 <expected outcome content>
 
 Only output your test case in the above output format with sections mentioned in markdown format and nothing else.
-
----
-
-Now, given the feature, item and references provided below, generate a new test case strictly following the format above."""
+---"""
 
     train_data = data["train"]
     test_data = data["test"]

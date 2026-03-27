@@ -25,12 +25,14 @@ class PromptOptimDataset(CustomDataset):
     def prepare_dataset(self, 
                         data_paths : str,
                         user_prompt : str,
-                        system_prompt : str):
+                        system_prompt : str,
+                        is_inference : bool = False):
 
         full_dataset = load_from_disk(data_paths)["train"]
         full_dataset = full_dataset.shuffle(seed = self.seed)
 
-        self.num_samples = len(full_dataset)
+        if not is_inference:
+            self.num_samples = len(full_dataset)
 
         augmented_samples = defaultdict(list)
         for idx in tqdm(range(self.num_samples)):
