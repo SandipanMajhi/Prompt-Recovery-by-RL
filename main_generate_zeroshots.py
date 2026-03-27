@@ -8,7 +8,7 @@ from datasets import load_from_disk, Dataset
 if __name__ == "__main__":
 
     model_name = "qwen-14b-32k:latest"
-    model_port = "11434"
+    model_port = "11435"
 
     model = OClientModelv2(model_name=model_name, port=model_port)
     model_config = OModelConfig(temperature=0.7)
